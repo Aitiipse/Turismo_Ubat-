@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;400&family=Raleway:ital,wght@1,900&family=Red+Hat+Display:ital,wght@1,500&display=swap');
+
+html{
+    font-family: 'Quicksand', 'Montserrat', Verdana, Geneva, Tahoma, sans-serif, cursive;
+    
+    color: black;
+}
+body {
+    background-color: antiquewhite;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 1%;
+    background-position: center;
+    background-size: 100% 100%;
+    text-align: center;
+  background-image: url(../img/sanluis.jpg);
+
+}
+
+.tabla{
+    border-color: black;
+    border-style: double;
+    background-color:aliceblue;
+}
+
+
+
+
+
+  
+  @media (min-width: 1200px) {
+  .formulario{
+   
+      
+      margin-top: 7%;
+      backdrop-filter: blur(6px) saturate(138%);
+      -webkit-backdrop-filter: blur(6px) saturate(138%);
+      border-radius: 50px;
+      }
+  }
+     
+  @media (min-width: 1400px) {
+    .formulario{
+     
+        
+        margin-top: 7%;
+        backdrop-filter: blur(6px) saturate(138%);
+        -webkit-backdrop-filter: blur(6px) saturate(138%);
+        border-radius: 50px;
+        }
+    }
+    @media (min-width: 992px) {
+      .formulario{
+       
+         
+          margin-top: 3%;
+          backdrop-filter: blur(6px) saturate(138%);
+          -webkit-backdrop-filter: blur(6px) saturate(138%);
+          border-radius: 50px;
+          }
+      }
+      @media (min-width: 760px) {
+        .formulario{
+         
+            
+            margin-top: 7%;
+            backdrop-filter: blur(6px) saturate(138%);
+            -webkit-backdrop-filter: blur(6px) saturate(138%);
+            border-radius: 50px;
+            }
+        }
+        @media (min-width: 540px) {
+          .formulario{
+           
+              
+              margin-top: 2%;
+              backdrop-filter: blur(6px) saturate(138%);
+              -webkit-backdrop-filter: blur(6px) saturate(138%);
+              border-radius: 50px;
+              }
+          }
+          @media (min-width: 300px) {
+            .formulario{
+             
+               
+                margin-top: 7%;
+                backdrop-filter: blur(6px) saturate(138%);
+                -webkit-backdrop-filter: blur(6px) saturate(138%);
+                border-radius: 50px;
+                }
+            }
+    
+  .eliminar{
+    width:min-content;
+    border: none;
+    border-radius: 4px;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;
+    background-color: rgb(184, 84, 84);
+    text-align: center;
+    color: black;
+  }
+
+  .editar{
+    width:min-content;
+    border: none;
+    border-radius: 4px;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;
+    background-color: rgb(84, 184, 117);
+  }
+
+  th, tbody, td{
+    border-color: black;
+  }

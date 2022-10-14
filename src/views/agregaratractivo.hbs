@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    {{!-- <script src="/js/app.js"></script> --}}
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <link rel="stylesheet" type="text/css" href="./principal/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="./principal/css/agregar.css">
+    <link rel="stylesheet" href="./principal/css/administrador.css">
+    <link rel="stylesheet" href="./principal/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./principal/css/sweetalert2.css" <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>UBATÉ, ¡¡¡ DESTINO DE TRADICIONES !!!</title>
+
+</head>
+
+<body>
+    {{!-- INICIO DE ATRACTIVOS --}}
+    <div class="  dashboard-sideBar col-4 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+
+        <div class="dashboard-sideBar-ct">
+            <!--SideBar Title -->
+            <div class="full-box text-uppercase text-center text-titles " style="color:white ;">
+                UBATÉ, ¡¡¡ DESTINO DE TRADICIONES !!! <i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
+
+            </div>
+            <!-- SideBar User info -->
+            <div class="full-box dashboard-sideBar-UserInfo">
+                <figure class="full-box">
+                    <img src="./principal/img/marca.png" style="background-color:white ;" alt="UserIcon">
+                    <figcaption class="text-center text-titles">
+                        <h3>Administrador</h3>
+                    </figcaption>
+                </figure>
+                <ul class="full-box  text-center">
+                    <li>
+                        <a href="javascript: history.go(-1)">
+                            <h5>VOLVER</h5>
+                            <i class="zmdi zmdi-power"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/" class="btn-exit-system">
+                            <h5>CERRAR SESION</h5>
+                            <i class="zmdi zmdi-power"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <!-- SideBar Menu -->
+            <ul class=" full-box dashboard-sideBar-Menu">
+                <li id="principal" class="principal">
+                    <a href="#!" class="btn-sideBar-SubMenu">
+                        <i class="zmdi zmdi-view-dashboard zmdi-hc-fw" id="principal"></i> Rutas
+                    </a>
+                    <ul class=" full-box">
+                        <li>
+                            <a href="#"><i class="zmdi zmdi-timer zmdi-hc-fw"></i> Agregar</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Editar - Eliminar</a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="atractivos" class="atractivoslista">
+                    <a href="#!" class="btn-sideBar-SubMenu">
+                        <i class="zmdi zmdi-case zmdi-hc-fw"></i> Atractivos<i
+                            class="zmdi zmdi-caret-down pull-right"></i>
+                    </a>
+                    <ul class=" full-box">
+                        <li>
+                            <a href="/agregaratractivo"><i class="zmdi zmdi-timer zmdi-hc-fw"></i> Agregar</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Editar - Eliminar</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#!" class="btn-sideBar-SubMenu">
+                        <i class="zmdi zmdi-account-add zmdi-hc-fw"></i> Eventos <i
+                            class="zmdi zmdi-caret-down pull-right"></i>
+                    </a>
+                    <ul class=" full-box">
+                        <li>
+                            <a href="#"><i class="zmdi zmdi-timer zmdi-hc-fw"></i> Agregar</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Editar - Eliminar</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#!" class="btn-sideBar-SubMenu">
+                        <i class="zmdi zmdi-card zmdi-hc-fw"></i> Calendario <i
+                            class="zmdi zmdi-caret-down pull-right"></i>
+                    </a>
+                    <ul class=" full-box">
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#!" class="btn-sideBar-SubMenu">
+                        <i class="zmdi zmdi-card zmdi-hc-fw"></i> Actividades <i
+                            class="zmdi zmdi-caret-down pull-right"></i>
+                    </a>
+                    <ul class=" full-box">
+                        <li>
+                            <a href="#"><i class="zmdi zmdi-timer zmdi-hc-fw"></i> Agregar</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Editar - Eliminar</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#!" class="btn-sideBar-SubMenu ">
+                        <i class="zmdi zmdi-shield-security zmdi-hc-fw"></i> Noticias <i
+                            class="zmdi zmdi-caret-down pull-right"></i>
+                    </a>
+                    <ul class=" full-box">
+                        <li>
+                            <a href="#"><i class="zmdi zmdi-timer zmdi-hc-fw"></i> Agregar</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Editar - Eliminar</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container full-box  col-7 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+        <div class="">
+            <main>
+                <div class="form">
+                    <form class="formulario" id="formularioatractivos">
+                        <h1>AGREGAR ATRACTIVO</h1>
+
+                        <h2> Ingrese los datos solicitados para una inscripcion correcta.</h2>
+
+                        <hr>
+
+                        <p>Nombre del nuevo atractivo: <input type="text" name="nombre"></p>
+
+                        <a>
+                            <h3>ubicación geográfica:</h3>
+                        </a>
+                        <tr>
+                            <td>
+                                <p >Recuerda agregarlo en <a href="https://www.google.com/maps/d/ " target="_blank">"Google
+                                        MyMaps" <br> </a>en la ruta apropiada
+                            </td>
+                        {{!-- </tr>
+
+                        <tr>
+                            <td><input type="text" name="mymaps" size="">
+                            </td>
+                        </tr> --}}
+                        <a>
+                            <h3>Actividades que se puden realizar:</h3>
+                        </a>
+                        <p>
+                            <td>
+                               
+                                <tr><input type="checkbox" name="a1"> Recorrer y observar
+                                    <input type="checkbox" name="a2"> Iglesia<br>
+                                    <input type="checkbox" name="a3"> Ideal para fotografías
+                                    <input type="checkbox" name="a4"> Descanso al aire libre<br>
+                                    <input type="checkbox" name="a5"> Gastronomía típica
+                                    <input type="checkbox" name="a6"> Ideal para ciclismo<br>
+                                    <input type="checkbox" name="a7"> Aviturismo
+                                    <input type="checkbox" name="a8"> Deportes de montaña<br>
+                                    <input type="checkbox" name="a9"> Paisaje de montaña
+                                    <input type="checkbox" name="a10"> Sitio Histórico
+                                </tr>
+                            </td>
+                        </p>
+                        <p>
+                        <h3>Multimedia e informacion adicional:</h3>
+                        </p>
+                        <p>Imagen: <input type="file" name="imagen"></p>
+                        <p>Descripción<textarea name="descripcion" rows="4" cols="20"></textarea></p>
+                        <p>Ruta a la que pertenece: <select name="ruta">
+                                <option value="0">Seleccione</option>
+                                <option value="1">Cultura e Historia</option>
+                                <option value="2">Gastronómico</option>
+                                <option value="3">Religioso</option>
+                                <option value="4">Naturaleza</option>
+                                <option value="5">Deportivo</option>
+                            </select></p>
+                        <h3>Para que los cambios sean guardados por favor ingrese su contraseña.</h3>
+
+                        <p>Contraseña: <input type="password" name="contraseña" minlength="6"></p>
+
+                        <p>Al ingresar sus datos acepta los <a href="#" style="color:dodgerblue">TÉRMINOS Y
+                                CONDICIONES</a>.</p>
+
+                        <div class="clearfix">
+                            <button type="submit" class="agregar">AGREGAR</button>
+                            <a href="administrador" class="cancelar">CANCELAR</a>
+                            <br>
+
+
+                        </div>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    {{!-- FIN DE ATRACTIVOS --}}
+    <footer class="footer text-center col-12 col-sm-12 col-lg-12 col-md-12 col-xl-12">
+        <div class="container">
+            <div class="row me-auto" id="contacto">
+
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">UBICACIÓN</h4>
+                    <p class="lead me-auto">
+                    <h6> VILLA DE SAN DIEGO DE UBATÉ
+                        <br />
+                        ESTUDIANTES 9° SEMESTRE <br> UNIVERSIDAD DE CUNDINAMARCA
+                        </p>
+                    </h6>
+                </div>
+
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">REDES TURISMO UBATÉ</h4>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i
+                            class="fab fa-fw fa-facebook-f"></i></a>
+                    {{!-- <a class="btn btn-outline-light btn-social mx-1" href="#!"><i
+                            class="fab fa-fw fa-twitter"></i></a> --}}
+                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i
+                            class="fab fa-fw fa-instagram"></i></a>
+                    {{!-- <a class="btn btn-outline-light btn-social mx-1" href="#!"><i
+                            class="fab fa-fw fa-whatsapp"></i></a> --}}
+                </div>
+
+                <div class="col-lg-4">
+                    <h4 class="text-uppercase mb-2">IIPA 2022</h4>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/jquery-3.1.1.min.js"></script>
+    <script src="/js/sweetalert2.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/main.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/9.12.0/firebase-app.js"></script>
+    <script src="/js/app.js" type="module"></script>
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyD4M-Klb_H-jTbI8D0pBj1MFJQNQeSTx6w",
+    authDomain: "ubate-travel.firebaseapp.com",
+    databaseURL: "https://ubate-travel-default-rtdb.firebaseio.com",
+    projectId: "ubate-travel",
+    storageBucket: "ubate-travel.appspot.com",
+    messagingSenderId: "950538745193",
+    appId: "1:950538745193:web:c68e75fc7dcdc74cde79f8"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script> 
+
+   
+   
+</body>
+
+</html>
