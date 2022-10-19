@@ -5,6 +5,10 @@ html{
     
     color: black;
 }
+header{
+  margin: 10pt;
+}
+
 body {
     background-color: antiquewhite;
     background-repeat: no-repeat;
@@ -104,4 +108,23 @@ border-radius: 12px;
     line-height: 20px;
     text-decoration: none;
     background-color: rgb(84, 184, 117);
+  }
+
+  .espaciotext1{
+    width: 40%;
+    justify-content: left;
+    padding: 20pt;
+  }
+  
+  .espaciotext2{
+    width: 50%;
+    justify-items:right;
+    padding: 20pt;
+    margin-left: 20pt;
+
+  }
+  
+  .noticia{
+    width: 100%;
+    background-color: aqua;
   }

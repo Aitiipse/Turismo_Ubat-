@@ -23,7 +23,7 @@
 
 <body id="page-top">
     <!-- {{!-- NAVBAR --}} -->
-    <section class="  dashboard-sideBar">
+    <div class="  dashboard-sideBar col-4 col-sm-3 col-md-3 col-lg-3 col-xl-3">
 		
 		<div class="dashboard-sideBar-ct">
 			<!--SideBar Title -->
@@ -129,60 +129,70 @@
 				</li>
 			</ul>
 		</div>
-	</section>
+	</div>
     
     {{!-- FIN DEL NAVBAR --}}
 
 
     <main>
-        <div class="form">
-            <form class="formulario">
-                <h1>AGREGAR ATRACTIVO</h1>
-                <p>
-                <h4> Ingrese los datos solicitados para una inscripcion correcta.</h4>
-                </p>
-                <hr>
+        <div class="form ">
+            <form class="formulario justify-content-center" id="formularionoticias">
 
-                <p>Nombre del nuevo atractivo: <input type="text" name="nombre"></p>
+  <header>
+    <h2>ADMINISTRADOR DE NOTICIAS</h2>
+    <div>En este espacio podras agregar, editar, eliminar noticias relacionadas con el turismo en la Villa de San Diego de Ubaté.</div>
+  </header>
+  
+  <div class="espaciotext">
+    <label class="" >TITULAR DE LA NOTICIA</label>
+    
+      <input id="titular" name="titular" type="text" placeholder="Titular de la Noticia" >
+   
+  </div>
+  <section class="row justify-content-center noticias">
+	<div  class="espaciotext1">
+    <div>
+	
+    <label class=""  >RESUMEN</label>
+  </div>
+    
+      <textarea id="resumen" name="resumen" spellcheck="true" rows="10" cols="25" tabindex="9" placeholder="Resumen de la noticia"></textarea>
+	  </div>
+	   <div  class="espaciotext2">
+		<div>
+    <label   for="Field4">
+      NOTICIA COMPLETA
+    </label>
+  </div>
+   
+      <textarea id="completa" name="completa" spellcheck="true" rows="10" cols="40" tabindex="4" placeholder="Noticia Completa"></textarea>
+   
+  </div>
+    </section>
+  <div>
+	<label>IMAGEN REPRESENTATIVA DE LA NOTICIA: </label> <input type="file" name="imagennoticia" id="imagennoticia"> <br>
+   <div class="espaciotext">
+    <p >En caso de haber extraido  la informacion de otra pagina, por favor,  agregue el link de la misma.</p>
+    
+      <input id="link" name="link" type="text" placeholder="Link del sitio" >
+   
+  </div>
+   
+   
+   
+  </div> <br>
+  <div class="clearfix">
+                            <button  class="agregar" id="agregar">AGREGAR</button>
+                            <a href="administrador" class="cancelar">CANCELAR</a>
+                            <br>
 
-                <p><h5>ubicación geográfica:</h5></p>
-                <tr>
-                    <td> <p>Latitud </td>
-                    </td><input type="text" name="apellidos" size="20">
-                </p></td>
-                </tr>
-                <tr>
-                    </td><p>longitud </td>
-                    </td>
-                    <input type="text" name="apellidos" size="20">
-                </p></td>
-                </tr>
-                <p><h5>multimedia e informacion adicional:</h5></p>
-                <p>Imagen: <input type="file" name="imagen" ></p>
-                <p>Descripción<textarea name="texto" rows="4" cols="20"></textarea></p>
-                <p>Ruta a la que pertenece: <select name="menu">
-                        <option value="0">Seleccione</option>
-                        <option value="1">Cultura e Historia</option>
-                        <option value="2">Gastronómico</option>
-                        <option value="3">Religioso</option>
-                        <option value="4">Naturaleza</option>
-                        <option value="5">Deportivo</option>
-                    </select></p>
-                <h6>para que los cambios sean guardados por favor ingrese su contraseña.</h6>
 
-                <p>Contraseña: <input type="password" name="password" minlength="6"></p>
-
-                <p>Al ingresar sus datos acepta los <a href="#" style="color:dodgerblue">TÉRMINOS Y CONDICIONES</a>.</p>
-
-                <div class="clearfix">
-                    <button type="submit" class="agregar">AGREGAR</button>
-                    <a href="./" class="cancelar">CANCELAR</a>
-
-
-                </div>
-            </form>
+                        </div>
+  
+</form>
         </div>
     </main>
+	 <div class="row" id="formulario-noticias"></div>
 </body>
 
 <footer class="footer text-center">
@@ -227,6 +237,7 @@
 	<script src="/js/sweetalert2.min.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="/js/main.js"></script>
+	<script src="/js/noticias.js" type="module"></script>
 </body>
 
 </html>

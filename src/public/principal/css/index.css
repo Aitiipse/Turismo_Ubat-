@@ -1,22 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;400&family=Raleway:ital,wght@1,900&family=Red+Hat+Display:ital,wght@1,500&display=swap');
 
+:root{
+
+    --bs-cont: #F0A500;
+    --bs-cont-rgb:240, 165, 0;
+}
+
+
+.bg-cont {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-cont-rgb), var(--bs-bg-opacity)) !important;
+  }
+
 html{
     font-family: 'Quicksand', 'Montserrat', Verdana, Geneva, Tahoma, sans-serif, cursive;
-    
+    background-color: #E6D5B8;
     color: black;
 }
 body {
 	/* background-image: url(../img/basilicainterno.jpg); */
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding: 1%;
     background-position: center;
     background-size: 100% 100%;
 }
 
+.slide{
+  width: 100%;
+}
+
+.tamimagenes{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius:80px 10% / 50px 10em 10px 25em  ;
+}
 .aaa{
-    margin-top: 0%;
+  max-height: 100%;
+  max-width: 100%;
+  contain: content;
+  object-fit:contain;
 }
 
 .iniciar{
@@ -58,13 +83,7 @@ img.imgmultimedia{
     text-align: center;
 }
 
-.rutas{
-    backdrop-filter: blur(3px) saturate(73%);
-    -webkit-backdrop-filter: blur(3px) saturate(73%);
-    background-color: rgba(255, 255, 255, 0.301);
-    border-radius: 12px;
-    border: 1px solid rgb(113, 117, 122)    ;
-  }
+
 
 .noticias{
     width:auto;
@@ -153,3 +172,143 @@ background-color: rgb(255, 255, 255);
   opacity: 10;
   background-color: rgba(24, 118, 16, 0.3);
  }
+
+ .card-a  h4 {
+    font-size: .8rem;
+    
+  }
+  
+  .card-a  h5 {
+    font-size: 1.5rem;
+  
+  }
+  
+  .card-a  h6 {
+    font-size: 1rem;
+  
+  }
+
+  .card-a{
+    width: 150px;
+   height: 200px;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .25s ease;
+    backface-visibility: hidden;
+    flex-direction: column;
+    word-wrap: break-word;
+    background-color: rgba(255, 255, 255, 0.289);
+    background-clip: border-box;
+    border: 0.125rem solid rgba(0, 0, 0, 0.125);
+    word-wrap: break-word;
+  }
+
+  
+.card-a :hover{
+    transform: scale(.8);
+  }
+  
+  .card-a :hover::after{
+    height: 20px;
+  }
+  
+  .card-a:hover .con-text p{
+    transform: translate(10);
+    opacity: 1;
+    margin: 10pt;
+    word-wrap: break-word;
+  }
+  .card-a:hover img{
+    transform: scale(9.25);
+  }
+  
+  .card-a:hover .ul{
+    transform: translate(0);
+    opacity: 10;
+  }
+  
+  .card-a::after{
+    width: 100%;
+    content:'';
+    left: 0px;
+    height: 150px;
+    position: absolute;
+    z-index: 20;
+    transition: all .25s ease;
+  }
+  
+  .card-a img {
+    height: 100%;
+    z-index: 10;
+    transition: all .25s ease;
+  }
+  
+  .card-a .con-text{
+    z-index: 30;
+    position:initial;
+    bottom: 0px;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    margin: 10%;
+    border: #000;
+  }
+  
+  .card-a .con-text p {
+    font-size: .7rem;
+    opacity: 0;
+    margin-bottom: -35px;
+    transition: all .25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    color: #000;
+  }
+  
+  
+  .card-a-group h4 {
+    font-size: .2rem;
+    color: #000;
+  
+  }
+  .card-a p button{
+    padding: 7px 17px;
+    border-radius: 12px;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    margin-top: 5px;
+    margin-left: auto;
+    cursor: pointer;
+    transition: all .25s ease;
+    font-family: poppins;
+    font-size: .75rem;
+    outline: none;
+  }
+  
+  .card-a .con-text p button:hover{
+    background: #aaafff;
+    color: #fff;
+  }
+
+  .carousel {
+    max-width: 100%;
+    height: 600px;
+    margin: 0 auto;
+    display: flex;
+}
+#imagen {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+}
+
+.imagenes{
+  width: 100%;
+
+}

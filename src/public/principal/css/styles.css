@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 
 :root {
+  --bs-transparent: #0d6dfd3a;
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -34,6 +35,7 @@
   --bs-dark: #212529;
   --bs-brown: #c97940;
   --bs-pink: #fa277c;
+  --bs-transparent-rgb: 0, 0, 0, 0.32;
   --bs-brown-rgb: 201, 121, 64;
   --bs-orange-rgb: 253, 126, 20;
   --bs-pink-rgb: 250, 39, 124;
@@ -389,7 +391,7 @@ textarea {
 
 button,
 select {
-  text-transform: none;
+  text-transform: none
 }
 
 [role=button] {
@@ -747,6 +749,8 @@ progress {
   margin-top: calc(-1 * var(--bs-gutter-y));
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
+  align-items: flex-end;
+  width: 100%;
 }
 
 .row>* {
@@ -1477,6 +1481,7 @@ progress {
   .col-lg-8 {
     flex: 0 0 auto;
     width: 66.66666667%;
+    
   }
 
   .col-lg-9 {
@@ -4486,7 +4491,7 @@ fieldset:disabled .btn {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
-  color: #1abc70;
+  color: #000000;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
@@ -4499,11 +4504,11 @@ fieldset:disabled .btn {
 
 .nav-link:hover,
 .nav-link:focus {
-  color: #55a046;
+  color: #1d2635;
 }
 
 .nav-link.disabled {
-  color: #6c757d;
+  color: #000000;
   pointer-events: none;
   cursor: default;
 }
@@ -4554,7 +4559,7 @@ fieldset:disabled .btn {
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
   color: #fff;
-  background-color: #1abc9c;
+  background-color: #000000;
 }
 
 .nav-fill>.nav-link,
@@ -5197,17 +5202,7 @@ fieldset:disabled .btn {
   height: 60%;
 }
 
-.card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border: 0.125rem solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.5rem;
-}
+
 
 .card>hr {
   margin-right: 0;
@@ -5368,6 +5363,117 @@ fieldset:disabled .btn {
   .card-group>.card:not(:first-child) .card-footer {
     border-bottom-left-radius: 0;
   }
+}
+
+.card{
+  width: 200px;
+ height: 300px;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .25s ease;
+  backface-visibility: hidden;
+  flex-direction: column;
+  word-wrap: break-word;
+  background-color: rgba(255, 255, 255, 0.289);
+  background-clip: border-box;
+  border: 0.125rem solid rgba(0, 0, 0, 0.125);
+}
+
+.word{
+  word-wrap: break-word;
+
+}
+
+.card :hover{
+  transform: scale(.9);
+}
+
+.card :hover::after{
+  height: 280px;
+}
+
+.card:hover .con-text p{
+  transform: translate(0);
+  opacity: 1;
+  margin: 10pt;
+}
+.card:hover img{
+  transform: scale(9.25);
+}
+
+.card:hover .ul{
+  transform: translate(0);
+  opacity: 10;
+}
+
+.card::after{
+  width: 100%;
+  content:'';
+  left: 0px;
+  height: 150px;
+  position: absolute;
+  z-index: 20;
+  transition: all .25s ease;
+}
+
+.card img {
+  height: 100%;
+  z-index: 10;
+  transition: all .25s ease;
+}
+
+.card .con-text{
+  z-index: 30;
+  position:initial;
+  bottom: 0px;
+  color: #fff;
+  padding: 20px;
+  padding-bottom: 30px;
+  margin: 10%;
+  border: #000;
+}
+
+.card .con-text p {
+  font-size: .7rem;
+  opacity: 0;
+  margin-bottom: -35px;
+  transition: all .25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  color: #000;
+}
+
+
+.card-group h4 {
+  font-size: .8rem;
+  color: #000;
+
+}
+.card p button{
+  padding: 7px 17px;
+  border-radius: 12px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  margin-top: 5px;
+  margin-left: auto;
+  cursor: pointer;
+  transition: all .25s ease;
+  font-family: poppins;
+  font-size: .75rem;
+  outline: none;
+}
+
+.card .con-text p button:hover{
+  background: #aaafff;
+  color: #fff;
 }
 
 .accordion-button {
@@ -6921,7 +7027,6 @@ fieldset:disabled .btn {
 .carousel-inner {
   position: relative;
   width: 100%;
-  overflow: hidden;
 }
 
 .carousel-inner::after {
@@ -7000,7 +7105,6 @@ fieldset:disabled .btn {
   top: 0;
   bottom: 0;
   z-index: 1;
-  display: flex;
   align-items: center;
   justify-content: center;
   width: 15%;
@@ -7497,11 +7601,11 @@ fieldset:disabled .btn {
 }
 
 .fixed-top {
-  position: fixed;
+  position:absolute;
   top: 0;
   right: 0;
   left: 0;
-  z-index: 1030;
+  z-index: 10;
 }
 
 .fixed-bottom {
@@ -8785,6 +8889,10 @@ fieldset:disabled .btn {
   --bs-text-opacity: 1;
 }
 
+.bg-transparent {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-transparent-rgb), var(--bs-bg-opacity)) !important;
+}
 .bg-brown {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-brown-rgb), var(--bs-bg-opacity)) !important;
@@ -8914,6 +9022,7 @@ fieldset:disabled .btn {
 
 .rounded {
   border-radius: 0.5rem !important;
+  background:#ffffff32;
 }
 
 .rounded-0 {
@@ -12378,11 +12487,13 @@ html {
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link {
-  color: #fff;
+  color: var(--bs-body-color);
+  text-shadow: var(--bs-body-bg);
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-  color: #1abc9c;
+  color: var(--bs-light);
+  text-shadow: #000000;
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:active,
@@ -12655,10 +12766,8 @@ html {
   background-color: #1a252f;
 }
 
-.rutas {
-  backdrop-filter: blur(3px) saturate(73%);
-  -webkit-backdrop-filter: blur(3px) saturate(73%);
-  background-color: rgba(255, 255, 255, 0.09);
-  border-radius: 12px;
-  border: 1px solid rgba(209, 213, 219, 0.3);
+
+
+.opciones{
+  color: #000;
 }

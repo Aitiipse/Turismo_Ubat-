@@ -161,9 +161,9 @@
                                 <p >Recuerda agregarlo en <a href="https://www.google.com/maps/d/ " target="_blank">"Google
                                         MyMaps" <br> </a>en la ruta apropiada
                             </td>
-                        {{!-- </tr>
+                        </tr>
 
-                        <tr>
+                       {{!--  <tr>
                             <td><input type="text" name="mymaps" size="">
                             </td>
                         </tr> --}}
@@ -193,11 +193,11 @@
                         <p>Descripción<textarea name="descripcion" rows="4" cols="20"></textarea></p>
                         <p>Ruta a la que pertenece: <select name="ruta">
                                 <option value="0">Seleccione</option>
-                                <option value="1">Cultura e Historia</option>
-                                <option value="2">Gastronómico</option>
-                                <option value="3">Religioso</option>
-                                <option value="4">Naturaleza</option>
-                                <option value="5">Deportivo</option>
+                                <option value="Cultura e Historia">Cultura e Historia</option>
+                                <option value="Gastronómico">Gastronómico</option>
+                                <option value="Religioso">Religioso</option>
+                                <option value="Naturaleza">Naturaleza</option>
+                                <option value="Deportivo">Deportivo</option>
                             </select></p>
                         <h3>Para que los cambios sean guardados por favor ingrese su contraseña.</h3>
 
@@ -207,79 +207,29 @@
                                 CONDICIONES</a>.</p>
 
                         <div class="clearfix">
-                            <button type="submit" class="agregar">AGREGAR</button>
+                            <button  class="agregar" id="agregar">AGREGAR</button>
                             <a href="administrador" class="cancelar">CANCELAR</a>
                             <br>
 
 
                         </div>
                     </form>
+                    <div id="listaatractivos"></div>
                 </div>
             </main>
+            <div class="row" id="formulario-container"></div>
         </div>
     </div>
 
     {{!-- FIN DE ATRACTIVOS --}}
-    <footer class="footer text-center col-12 col-sm-12 col-lg-12 col-md-12 col-xl-12">
-        <div class="container">
-            <div class="row me-auto" id="contacto">
-
-                <div class="col-lg-4 mb-5 mb-lg-0">
-                    <h4 class="text-uppercase mb-4">UBICACIÓN</h4>
-                    <p class="lead me-auto">
-                    <h6> VILLA DE SAN DIEGO DE UBATÉ
-                        <br />
-                        ESTUDIANTES 9° SEMESTRE <br> UNIVERSIDAD DE CUNDINAMARCA
-                        </p>
-                    </h6>
-                </div>
-
-                <div class="col-lg-4 mb-5 mb-lg-0">
-                    <h4 class="text-uppercase mb-4">REDES TURISMO UBATÉ</h4>
-                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i
-                            class="fab fa-fw fa-facebook-f"></i></a>
-                    {{!-- <a class="btn btn-outline-light btn-social mx-1" href="#!"><i
-                            class="fab fa-fw fa-twitter"></i></a> --}}
-                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i
-                            class="fab fa-fw fa-instagram"></i></a>
-                    {{!-- <a class="btn btn-outline-light btn-social mx-1" href="#!"><i
-                            class="fab fa-fw fa-whatsapp"></i></a> --}}
-                </div>
-
-                <div class="col-lg-4">
-                    <h4 class="text-uppercase mb-2">IIPA 2022</h4>
-
-                </div>
-            </div>
-        </div>
-    </footer>
+ 
+    <script src="/js/index.js" type="module"></script>
     <script src="/js/jquery-3.1.1.min.js"></script>
     <script src="/js/sweetalert2.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/main.js"></script>
     
-    <script src="https://www.gstatic.com/firebasejs/9.12.0/firebase-app.js"></script>
-    <script src="/js/app.js" type="module"></script>
-  <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.0/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyD4M-Klb_H-jTbI8D0pBj1MFJQNQeSTx6w",
-    authDomain: "ubate-travel.firebaseapp.com",
-    databaseURL: "https://ubate-travel-default-rtdb.firebaseio.com",
-    projectId: "ubate-travel",
-    storageBucket: "ubate-travel.appspot.com",
-    messagingSenderId: "950538745193",
-    appId: "1:950538745193:web:c68e75fc7dcdc74cde79f8"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-</script> 
+    
 
    
    

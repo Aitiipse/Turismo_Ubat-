@@ -42,8 +42,9 @@ router.get('/agregarnoticia',(req, res) => {
     res.render("agregarnoticia")
 })
 
-router.get('/agregarruta',(req, res) => {
-    res.render("agregarruta")
+
+router.get('/prueba',(req, res) => {
+    res.render("prueba")
 })
 
 
@@ -66,6 +67,27 @@ router.get('/editarruta',(req, res) => {
     res.render("editarruta")
 })
 
+// RUTAS
+
+router.get('/ruta1',(req, res) => {
+    res.render("ruta1")
+})
+
+router.get('/ruta2',(req, res) => {
+    res.render("ruta2")
+})
+
+router.get('/ruta3',(req, res) => {
+    res.render("ruta3")
+})
+
+router.get('/ruta4',(req, res) => {
+    res.render("ruta4")
+})
+
+router.get('/ruta5',(req, res) => {
+    res.render("ruta5")
+})
 
 
 
