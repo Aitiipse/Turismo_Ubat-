@@ -1,0 +1,151 @@
+:root{
+
+    --bs-cabecera1: rgb(167, 135, 30);
+    --bs-cont: #c56658;
+    --bs-cabecera1-rgb:207, 172, 52;
+    --bs-cont-rgb:240, 165, 0;
+
+}
+
+.texto{
+    font-size:normal;
+    font-weight:lighter;
+}
+
+.texto1{
+    background-color: #d8a83e65;
+}
+
+.round {
+    border-radius: 0.5rem !important;
+    background:#ffffffee;
+  }
+
+.fondo1{
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-cabecera1-rgb), var(--bs-bg-opacity)) !important;
+  
+}
+
+.ruta1{
+    max-height: 100%;
+    max-width: 100%;
+    contain: content;
+    object-fit:contain;
+}
+
+.ruta{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius:810px 10% / 30px 2em 90px 5em    ;
+  }
+
+  /* .rutas {
+    backdrop-filter: blur(3px) saturate(73%);
+    -webkit-backdrop-filter: blur(3px) saturate(73%);
+    background-color: rgba(255, 255, 255, 0.09);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+  } */
+
+    .info{
+
+    }
+
+    .mapa{
+        height: 430px;
+        display: inline-block;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    /* @media (min-width: 1400px) {
+        .mapa{
+            max-width:640px;
+            max-height:480px;
+            border-radius: 15px 50px 30px 5px;
+        }
+    }
+    @media (min-width: 1200px) {
+    }
+    @media (min-width: 992px) {
+    }
+    @media (min-width: 768px) {
+    }
+    @media (min-width: 456px) {
+    }
+    @media (min-width: 300px) {
+    } */
+
+    .sitiosruta{
+
+    }
+
+    .actividades{
+
+    }
+
+    .wrapper {
+        display: flex;  
+        flex-flow: row wrap;
+        font-weight: bold;
+        text-align: center; 
+      }
+      
+      .wrapper > * {
+        padding: 10px;
+        flex: 1 100%;
+      }
+      
+      .menu {
+        width: 100%;
+        height: auto;
+      } 
+      
+      .info p {
+        /* background: rgb(111, 116, 58); */
+        text-align: left;
+      }
+      
+      .footer {
+        background: rgba(24, 96, 196, 0.304);
+        color: black;
+      }
+      
+      .main {
+        background: deepskyblue;
+      }
+      
+      .aside-1 {
+        background: gold;
+      }
+      
+      .aside-2 {
+        background: hotpink;
+      }
+      
+      @media all and (min-width: 600px) {
+        .aside { flex: 2 0 0; }
+      }
+      
+      @media all and (min-width: 800px) {
+        .menu    { flex: 3 0px; }
+        .main    { flex: 3 0px; }
+        .aside-1  { order: 1; }
+        .main    { order: 2; }
+        .aside-2 { order: 3; }
+        .footer   { order: 4; }
+          
+      }
+      
+      body {
+        padding: 2em; 
+      }
+      .menu-fixed {
+        position:sticky;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+      }

@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
+html{
+    font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif, cursive;
+    
+    color: black;
+}
+header{
+  margin: 10pt;
+}
+
+body {
+    background-color: antiquewhite;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 1%;
+    background-position: center;
+    background-size: 100% 100%;
+    /* background-image: url(../img/No\ 1\ Promeseros\ \ \(1\).jpg); */
+
+}
+
+.formulario{
+ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(6px) saturate(138%);
+    -webkit-backdrop-filter: blur(6px) saturate(138%);
+    background-color: rgba(255, 255, 255, 0.36);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+
+}
+
+.form{
+ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(6px) saturate(138%);
+    -webkit-backdrop-filter: blur(6px) saturate(138%);
+    background-color: rgba(255, 255, 255, 0.36);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+
+}
+
+@media (min-width: 992px) {
+.form{
+ 
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-top:5%;
+backdrop-filter: blur(6px) saturate(138%);
+-webkit-backdrop-filter: blur(6px) saturate(138%);
+/* background-color: rgba(63, 94, 197, 0.36); */
+border-radius: 12px;
+/* border: 1px solid rgba(209, 213, 219, 0.3); */
+}
+}
+
+@media (min-width: 1200px) {
+.form{
+ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+    backdrop-filter: blur(6px) saturate(138%);
+    -webkit-backdrop-filter: blur(6px) saturate(138%);
+    /* background-color: rgba(219, 89, 89, 0.879); */
+    border-radius: 50px;
+    /* border: 1px solid rgba(0, 0, 0, 0.3); */
+    }
+}
+    
+  .cancelar{
+    width:min-content;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    margin: 5px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;
+    background-color: rgb(184, 84, 84);
+    text-align: center;
+    color: black;
+  }
+
+  .agregar{
+    width:min-content;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    margin: 5px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;
+    background-color: rgb(84, 184, 117);
+  }
+
+  .espaciotext1{
+    width: auto;
+    justify-content: left;
+    padding: 20pt;
+  }
+  
+  .espaciotext2{
+    width: 50%;
+    justify-items:right;
+    padding: 20pt;
+    margin-left: 20pt;
+
+  }
+  
+  .noticia{
+    width: 100%;
+    background-color: aqua;
+  }
+
+  .word{
+    width: 100%;
+   height: 350px;
+    overflow: scroll;
+  }
+
+  .word1{
+    width: 100%;
+    overflow: hidden;
+    max-height: 70px;
+  }
+  .word2{
+    width: 100%;
+    max-height: 60px;
+  }
+  .word3{
+    width: 100%;
+    max-height: 100px;
+    overflow: hidden;
+  }
+
+  .word4{
+    width: 100%;
+    max-height: 100px;
+    overflow: scroll;
+    border-color: black 1px;
+
+  }
+
+  .img_p{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100vh;
+    cursor: pointer;
+}
+
+.imagen div{
+  width: 30px;
+  height: 30px;
+  top: calc(100% - 35px);
+  left: calc(100% - 35px);
+}
+
+
+input[type=submit]{
+  margin-bottom: 5%;
+  margin-top: 5%;
+  width: 50%;
+  border: none;
+  background-color: rgb(81, 138, 187);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: bold;
+}

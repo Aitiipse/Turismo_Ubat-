@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <link rel="stylesheet" type="text/css" href="./principal/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="./principal/css/administrador.css">
+    <link rel="stylesheet" href="./principal/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./principal/css/sweetalert2.css" <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Port+Lligat+Sans&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<link rel="stylesheet" href="./usuarios/menu/CSS/movile.css">
+	<link rel="stylesheet" href="./usuarios/menu/CSS/tablet.css" media="screen and (min-width:600px)">
+	<link rel="stylesheet" href="./usuarios/menu/CSS/web.css" media="screen and (min-width:1000px)">
+	<title>UBATÉ, ¡¡¡ DESTINO DE TRADICIONES !!!</title>
+</head>
+<body >
+<div style="position: sticky;">
+	 <div class=" " >
+
+        <div class="dashboard-sideBar-ct">
+            <!--SideBar Title -->
+            <div class="full-box text-uppercase text-center text-titles " style="color:white ;">
+                UBATÉ, ¡¡¡ DESTINO DE TRADICIONES !!! <i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
+
+            </div>
+            <!-- SideBar User info -->
+            <div class="full-box dashboard-sideBar-UserInfo">
+                <figure class="full-box">
+                    <img src="./principal/img/marca.png" style="background-color:white ;" alt="UserIcon">
+                    <figcaption class="text-center text-titles">
+                       <a href="/atractivos"> <h3>ADMINISTRADOR</h3></a>
+                    </figcaption>
+                </figure>
+                <ul class="full-box  text-center">
+                    
+                    <li>
+                        <a href="/logout" class="zmdi zmdi-power" id="logout"> 
+                            
+                            <h5>CERRAR SESION</h5>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <!-- SideBar Menu -->
+            <ul class="  dashboard-sideBar-Menu">
+                <li id="atractivos" class="atractivoslist">
+                    <a href="#!" class="btn-sideBar-SubMenu">
+                        <i class="zmdi zmdi-case zmdi-hc-fw"></i> Atractivos<i
+                            class="zmdi zmdi-caret-down pull-right"></i>
+                    </a>
+                    <ul class=" full-box">
+                        <li>
+                            <a href="/crearPublicacion"><i class="zmdi zmdi-timer zmdi-hc-fw"></i> Agregar <br>Editar - Eliminar</a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="#!" class="btn-sideBar-SubMenu">
+                        <i class="zmdi zmdi-account-add zmdi-hc-fw"></i> Eventos <i
+                            class="zmdi zmdi-caret-down pull-right"></i>
+                    </a>
+                    <ul class=" full-box">
+                        <li>
+                            <a href="https://calendar.google.com/calendar/u/0/r/month/2022/10/19?pli=1"
+                                target="_blank"><i class="zmdi zmdi-timer zmdi-hc-fw"></i> Agregar <br>
+                                Editar/Eliminar</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#!" class="btn-sideBar-SubMenu ">
+                        <i class="zmdi zmdi-shield-security zmdi-hc-fw"></i> Noticias <i
+                            class="zmdi zmdi-caret-down pull-right"></i>
+                    </a>
+                    <ul class=" full-box">
+                        <li>
+                            <a href="/crearacarreo"><i class="zmdi zmdi-timer zmdi-hc-fw"></i> Agregar <br> Editar - Eliminar</a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="principal" class="principal">
+                    <a href="#!" class="btn-sideBar-SubMenu">
+                        <i class="zmdi zmdi-view-dashboard zmdi-hc-fw" id="principal"></i> Rutas
+                    </a>
+                    <ul class=" full-box">
+                        <li>
+                            <a href="/editarruta"><i class="zmdi zmdi-timer zmdi-hc-fw"></i> Ver <br> </a>
+                          </li>
+                        <li>
+                            <a href="#"><i class="zmdi zmdi-book zmdi-hc-fw"></i> </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+
+
+            </ul>
+			
+        </div>
+    </div>
+</div>
+
+	{{{body}}}
+		
+	
+	<script>
+		function link(){
+			window.location="/atractivos"
+		}
+	</script>
+	<script src="https://code.jquery.com/jquery-3.4.0.min.js"
+        integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+ <script src="/js/main.js"></script>
+    <script src="/js/administrador.js"></script>
+<script>
+    cerrarSesion.addEventListener("click", function () {
+    modalSesion2.classList.toggle("modal_cerrado_p");
+    setTimeout(function () {
+        modalSesion.style.opacity = "0";
+        modalSesion.style.visibility = "hidden";
+        id.value = "";
+    }, 500)
+})
+</script>
+</body>
+</html>

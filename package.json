@@ -1,0 +1,32 @@
+{
+  "name": "turismoubate_",
+  "version": "1.0.0",
+  "description": "TurismoUbate",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aitiipse/Turismo_Ubat-.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Aitiipse/Turismo_Ubat-/issues"
+  },
+  "homepage": "https://github.com/Aitiipse/Turismo_Ubat-#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "firebase": "^9.9.0",
+    "firebase-admin": "^11.0.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
