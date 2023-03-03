@@ -159,8 +159,8 @@ router.post('/login-email', async (req, res) => {
 							setTimeout(() => {
 								// globalThis.photo = data[0].photo;
 								// globalThis.name = data[0].name;
-								req.session.name = data[0].name;
-								req.session.photo = data[0].photo;
+								// req.session.name = data[0].name;
+								// req.session.photo = data[0].photo;
 								res.redirect('/atractivos', );
 							}, 1000);
 						})
@@ -481,18 +481,19 @@ router.get('/misacarreos', async (req, res) => {
 	// 	//...
 	// });
 });
-router.get('/buscarPublicaciones', async (req, res) => {
+router.get('/editarAtractivos', async (req, res) => {
 	modal = false;
-	verificarEstado(req, res, 'buscarPublicaciones', 'index', datos = '', data = '', () => {
+	// modal = true;
+	verificarEstado(req, res, 'editarAtractivos', 'index', datos = '', data = '', () => {
 		//...
 	});
 });
-router.get('/buscarAcarreos', async (req, res) => {
-	modal = false;
-	verificarEstado(req, res, 'buscarAcarreos', 'index', datos = '', data = '', () => {
-		//...
-	});
-});
+// router.get('/buscarAcarreos', async (req, res) => {
+// 	modal = false;
+// 	verificarEstado(req, res, 'buscarAcarreos', 'index', datos = '', data = '', () => {
+// 		//...
+// 	});
+// });
 
 // ruta del perfil
 router.get('/perfil', async (req, res) => {
@@ -1096,15 +1097,15 @@ async function publicaciones(dataBase) {
 		id: doc.id,
 		...doc.data(),
 	}));
-	userRegister.sort(function (x, y) {
-		a = x.updatedAt;
-		a = a.split('/');
-		a = a[2] + a[1] + a[0];
-		let b = y.updatedAt;
-		b = b.split('/');
-		b = b[2] + b[1] + b[0];
-		return b - a;
-	});
+	// userRegister.sort(function (x, y) {
+	// 	a = x.updatedAt;
+	// 	a = a.split('/');
+	// 	a = a[2] + a[1] + a[0];
+	// 	let b = y.updatedAt;
+	// 	b = b.split('/');
+	// 	b = b[2] + b[1] + b[0];
+	// 	return b - a;
+	// });
 	console.log(typeof (userRegister));//-> salida: object
 	//console.log(userRegister);//-> Estructura de datos
 	if (userRegister.length > 0) {
@@ -1274,7 +1275,7 @@ router.get('/storage', async (req, res) => {
 });
 
 router.get('/tipos',(req, res) => {
-    res.render("tipos",  { layout: false })
+    res.render("tipos",  { layout: 'rutas.hbs' })
 })
 
 // RUTAS
@@ -1297,6 +1298,10 @@ router.get('/ruta4',(req, res) => {
 
 router.get('/ruta5',(req, res) => {
     res.render("ruta5",{ layout: 'rutas.hbs' })
+})
+
+router.get('/lista',(req, res) => {
+    res.render("lista",{ layout: 'rutas.hbs' })
 })
 
 

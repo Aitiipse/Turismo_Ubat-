@@ -1,11 +1,14 @@
-import { listar,listarsitios1,listarsitios2,listarsitios3,listarsitios4,listarsitios5, listarnoticia, listarruta } from "./firebaseConfig.js";
+import { getAtractivo, listar, listarAtractivos ,listarsitios1,listarsitios2,listarsitios3,listarsitios4,listarsitios5, listarnoticia, listarruta } from "./firebaseConfig.js";
   
   const formrespuesta = document.getElementById("formulario-container");
+  var span = document.getElementsByClassName("close")[0];
+  const modal = document.getElementById("modal");
   const formsitios1 = document.getElementById("sitios-container1");
   const formsitios2 = document.getElementById("sitios-container2");
   const formsitios3 = document.getElementById("sitios-container3");
   const formsitios4 = document.getElementById("sitios-container4");
   const formsitios5 = document.getElementById("sitios-container5");
+  const formlista = document.getElementById("lista");
   const formrespuestan = document.getElementById("formulario-noticias");
   const formrespuestaruta = document.getElementById("formulario-rutas");
   
@@ -31,30 +34,81 @@ let input0 = document.querySelectorAll(".input0")[0];
         <div class="card3" >
         <div class="imgcard3 "  style=" background-image: url(${atractivo.input0});"   >
         
-        <div class="nombre">
-            <a><b>${atractivo.nombre} </b> </a>
+        <div>
+            <a><button class="btn btn-secondary btn-modal" data-id="${doc.id}">
+          <b>${atractivo.nombre} </b> </button></a>
             </div></div>
              
-            <div class="card4" style=" background-image: url(${atractivo.input0});" display="none"   >
-            <div class="to-contents"  onclick="document.querySelector('.modal1').classList.remove('expand');event.stopPropagation();">
-               <a><b>${atractivo.nombre} </b> </a>
-              <div class="top">
-                 <a><b>${atractivo.ruta} </b> </a>
-                <div class="name-large"> </div>
-                 <a><b>${atractivo.descripcion} </b> </a>
-              </div>
+            
             </div>
-          <script>
-          document.getElementById("card3").addEventListener("click", myFunction);
+      `;
+       });
+      
+    const btnsModal = formrespuesta.querySelectorAll(".btn-modal");
+    btnsModal.forEach((btn) => {
+      btn.addEventListener("click", async (e) => {
+        try {
+          const doc = await getAtractivo(e.target.dataset.id);
+          const task = doc.data();
+          modal.style.display="block";
+          modal["nombre"].value = task.nombre;
+          modal["descripcion"].value = task.descripcion;
+          modal["ruta"].value = task.ruta;
+          modal["updatedAt"].value = task.updatedAt;
+          modal["iframe"].src = task.input0;
+         
+          
+          // formularioAtractivos["task-title"].value = task.nombre;
+          // formularioAtractivos["task-description"].value = task.ruta;
 
-function myFunction() {
-  document.getElementById("card4").style.visible="visible";
-}
-          </script>
+          // editStatus = true;
+          // id = doc.id;
+          // formularioAtractivos["btn-task-form"].innerText = "modal";
+        } catch (error) {
+          console.log(error);
+        }
+      });
+    });
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+      });
+    
+
+    listarAtractivos((querySnapshot) => {
+     
+      querySnapshot.forEach((doc) => {
+        const atractivo = doc.data();
+        
+        formlista.innerHTML += `
+
+        <div class="grid-container" >
+                <div class="" >
+                <div class="">
+            <a><b>${atractivo.nombre} </b> </a>
+            
+                  <div class="street ">  <p class="texto">${atractivo.descripcion} 
+                    </p><b>${atractivo.ruta}</b></div>
+                    <section class="cstreet" style=" background-image: url(${atractivo.input0});" >
+                    <div class="streetview"   >          
+                </div>
+                    <div class="streetview" >          
+                    ${atractivo.street} 
+                </div>
+                </section>
+                
+            </div><br><br>
+        </div>
+</div>
+  
       `;
       });
     });
-
     
 
     listarnoticia((querySnapshot) => {
@@ -269,6 +323,11 @@ document.getElementById("card4").style.visible="visible";
   `;
 }});
 });
+
+
+
+
+
 
 
 

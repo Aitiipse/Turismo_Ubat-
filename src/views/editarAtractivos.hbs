@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <link rel="stylesheet" type="text/css" href="./principal/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="./principal/css/agregar.css">
+    <link rel="stylesheet" href="./principal/css/administrador.css">
+	<link rel="stylesheet" href="./principal/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./principal/css/sweetalert2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>UBATÉ, ¡¡¡ DESTINO DE TRADICIONES !!!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Port+Lligat+Sans&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./usuarios/crearP/CSS/movile.css">
+    <link rel="stylesheet" href="./usuarios/crearP/CSS/tablet.css" media="screen and (min-width:600px)">
+    <link rel="stylesheet" href="./usuarios/crearP/CSS/web.css" media="screen and (min-width:1000px)">
+</head>
+<body class="body gridContainer " >
+{{!-- <div class=" col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4"></div> --}}
+<div class="">
+    <h2>EDITAR ATRACTIVO</h2>
+    <div class=" eContenido " id="contenedor"> <h4>Ingrese los datos solicitados.</h4></div>
+    <div>
+        <button  class="volver " onclick="window. history. back();"> Regresar</button>
+    <form action="" method="" enctype="multipart/form-data" class="" id="formulario">
+        <div class="espaciotext">
+    <label class="" >NOMBRE DEL ATRACTIVO</label>
+    
+      <input id="nombre" name="nombre" type="text" placeholder="Nombre" >
+                            <h5>Ubicación geográfica:</h5>
+                        <tr>
+                            <td>
+                               <h6> <div>Recuerda agregarlo en <a href="https://www.google.com/maps/d/ " target="_blank">"Google
+                                        MyMaps" <br> </a>en la ruta apropiada </div></h6>
+                            </td>
+                        </tr>
+   
+  </div>
+                            <h5>Actividades que se puden realizar:</h5>
+                        <p>
+                            <td>
+                               
+                               <h6> <tr><input type="checkbox" name="a1" id="a1"> Recorrer y observar
+                                    <input type="checkbox" name="a2" id=""> Iglesia
+                                    <input type="checkbox" name="a3" id="a3"> Ideal para fotografías
+                                    <input type="checkbox" name="a4" id="a4"> Descanso al aire libre
+                                    <input type="checkbox" name="a5" id="a5"> Gastronomía típica
+                                    <input type="checkbox" name="a6" id="a6"> Ideal para ciclismo
+                                    <input type="checkbox" name="a7" id="a7"> Aviturismo
+                                    <input type="checkbox" name="a8" id="a8"> Deportes de montaña
+                                    <input type="checkbox" name="a9" id="a9"> Paisaje de montaña
+                                    <input type="checkbox" name="a10" id="a10"> Sitio Histórico
+                                </tr></h6>
+                            </td>
+                        </p>
+  <section class="row justify-content-center noticias">
+	<div  class="espaciotext1">
+    <div>
+	
+    <h5><label class=""  >Descripción</label></h5>
+  </div>
+    
+      <h6><textarea id="descripcion" name="descripcion" spellcheck="true" rows="10" cols="90" tabindex="" placeholder="Descripción"></textarea></h6>
+	  </div>
+      <div  class="espaciotext1">
+    <div>
+	
+    <h5><label class=""  >Street View</label></h5>
+  </div>
+    
+     <h6> <textarea id="street" name="street" spellcheck="true" rows="10" cols="90" tabindex="" placeholder="Link de Street View"></textarea></h6>
+	  </div>
+	   <div  class="espaciotext2">
+		<div>
+    <label  >RUTA A LA QUE PERTENECE</label>
+    <select id="ruta" name="ruta" >
+                                <option value="0">Seleccione</option>
+                                <option value="Cultura e Historia">Cultura e Historia</option>
+                                <option value="Gastronómico">Gastronómico</option>
+                                <option value="Religioso">Religioso</option>
+                                <option value="Naturaleza">Naturaleza</option>
+                                <option value="Deportivo">Deportivo</option>
+                            </select>
+  </div>
+
+   
+  </div>
+    </section>
+
+            <div class="modal_Cuerpof">
+                <input type="file" name="input0" class="foto_publicacion f1" accept="image/png, .jpeg, .jpg" required>
+                </div>
+
+        
+       
+
+
+        <button class="btn btn-primary" id="btn-task-form">Agregar</button>
+    </form>
+    </div>
+    
+    
+    <script src="/js/editar.js" type="module"></script>
+   
+
+</body>
+
+</html>

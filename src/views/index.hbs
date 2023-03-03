@@ -17,7 +17,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" type="text/css" href="./principal/css/index.css">
     <link rel="stylesheet" type="text/css" href="./principal/css/iniciar.css">
-    <link rel="stylesheet" type="text/css" href="./principal/css/principal.scss">
+    <link rel="stylesheet" type="text/css" href="./principal/css/indexAtractivos.css">
+    <link rel="icon" type="image/png" href="./principal/images/logo1n.png" sizes="100x100">
     <title>UBATÉ, ¡¡¡ DESTINO DE TRADICIONES !!!</title>
 </head>
 
@@ -32,7 +33,7 @@
                 MENÚ
                 <i class="fas fa-bars"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
+            <div class="opc collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto rounded" >
                         
                     <li> <a href="#page-top"> <img class="navbar-brand"  src="/principal/img/marca.png" width="120" height="50"></a> </li>
@@ -104,13 +105,7 @@
             </button>
         </div>
         </div>
-        <nav class="header_navegacio">
-            <ul>
-                <a id="homes" ></a>
-                <a id="cow"  ></a>
-                <a id="mail"  ></a>
-            </ul>
-        </nav>
+       
     </header>
     {{!-- FIN DE MULTIMEDIA --}}
     {{!-- INICIO DE RUTAS --}}
@@ -184,70 +179,39 @@
     {{!-- FIN DE RUTAS --}}
     {{!-- INICIO DE ATRACTIVOS --}}
 
-    <section class="page-section portfolio atractivos" id="atractivos">
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">ATRACTIVOS TURÍSTICOS</h2>
+    <section class="page-section portfolio atractivos" id="atractivos"> 
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0" style="font-color: black ;">ATRACTIVOS TURÍSTICOS</h2>
 
         <div class="container-flud flex-wrap d-flex align-content-around text-center ">
 
             <br>
 {{!-- ACA INICIA EL BUCLE PARA LOS ATRACTIVOS --}}
 
-          <section class="row justify-content-center " id="formulario-containe" >
-              {{#each datos}}
-    <form class="publicacion" id="publicacion" action="/abrir-publicaciones" method="POST">
-        <input value={{id}} type="text" class="id" style="display:none;">
-        <input name="id_p" type="text" id="id2" value="" style="display:none;">
-        <!--ocultos -->
-        <input class="phone" type="text" value="{{phone}}" style="display:none;">
-        <input class="categoria" type="text" value="{{categoria}}" style="display:none;">
-        <input class="updateAt" type="text" value="{{updatedAt}}" style="display:none;">
-        <input class="raza" type="text" value="{{raza}}" style="display:none;">
-        <input class="precio" type="text" value="{{precio}}" style="display:none;">
-        <input class="nombre" type="text" value="{{name}}" style="display:none;">
+          <div class="row justify-content-center " id="formulario-container" >
 
-        <!--En  esta division esta la imagen del bovino a vender-->
-        <div class="publicacion_imagen" onclick="posicion({{@index}})" title="Click para ver descripción">
-            <img src={{input0}} alt="">
-        </div>
-        <!--En esta división esta la fecha, los me gusta y el chat-->
-        <div class="publicacion_linea1">
-            <p id="updateAt">{{updatedAt}}</p>
-            <div>
-                <div onclick="posicion4({{@index}})" class="chat"></div>
             </div>
-        </div>
-        <!--En esta división esta:-->
-        <div class="publicacion_linea2">
-            <div class="publicacion_perfil">
-                <!--foto de perfil del publicador-->
-                <div id="foto" onclick="posicion3({{@index}})" style="background-image: url({{photo}})"></div>
-                <!--nombre del publicador-->
-                <p id="nombre" onclick="posicion2({{@index}})">{{name}}</p>
+            <form id="modal" class="modal"  style="display: ;">
+        
+           <!-- Modal content -->
+           <div class="modal-content">
+            <div class="modal-header">
+              <span class="close">Cerrar</span>
+              <output  id="nombre" style="border: none;" ></output>
             </div>
-            <!--ubicación del bovino-->
-            <p>{{ubication}}</p>
+            <div class="modal-body">
+              <output id="descripcion" style="border: none;" ></output>
+              <output id="ruta" style="border: none;" ></output>
+            </div>
+            <div class="modal-footer">
+              <output id="updatedAt" style="border: none;" ></output>
+            </div>
+            <img id="iframe" src=""  frameborder="0"></img>
+          </div>
+        
+        </form>
 
-        </div>
-        </div>
-        <div class="publicacion_linea3">
-            <!--precio del bovino-->
-            <p id="precio">{{precio}}</p>
-            <!--tipo de bovino-->
-            <p id="raza">{{raza}}</p>
-        </div>
-    </form>
-    <!--Formulario para dirigirse al perfil-->
-    <form style="display:none;" action="/perfilU" method="POST" class="perfilS">
-        <input name="id_p" id="id3" type="text" value="">
-        {{!-- <input type="submit" value="" class="perfilS"> --}}
-    </form>
-    {{/each}}
-    <section class="modal_container_p ">
-        <section class="modal_p modal_cerrado_p">
-            <div class="modal_Contendorp"><span class="cerrar_modal_p"></span></div>
-            <iframe scrolling="no" id="framer" src="/modalpublicaciones"></iframe>
-        </section>
-    </section>
+        <div class="col-md-6" id="tasks-container"></div>
+        <div class="col-md-6" id="modal" > <a href="" id="nombre"></a></div>
           </section>        
 
 {{!-- ACA FINALIZA EL BUCLE PARALOS ATRACTIVOS --}}
@@ -272,11 +236,39 @@
                 </div>
                <div class="col-lg-5 me-auto  ">
                     {{!-- <iframe class="calendario" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FBogota&showPrint=0&showCalendars=0&showTz=0&src=d2VidHVyaXNtb3ViYXRlQGdtYWlsLmNvbQ&color=%23039BE5" style="border:solid 1px #777" style="border:solid 1px #777"  frameborder="0" scrolling="no"></iframe> --}}
-                     <iframe class="calendario" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%234e95e6&ctz=America%2FBogota&mode=MONTH&showTitle=0&showNav=1&showPrint=0&showTabs=1&showCalendars=0&showTz=0&src=d2VidHVyaXNtb3ViYXRlQGdtYWlsLmNvbQ&color=%23039BE5" style="border:solid 2px rgb(217, 194, 144)"  frameborder="0" scrolling="no"></iframe> 
+                     <iframe class="calendario" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%234e95e6&ctz=America%2FBogota&mode=MONTH&showTitle=0&showNav=0&showPrint=0&showTabs=&showCalendars=0&showTz=0&src=d2VidHVyaXNtb3ViYXRlQGdtYWlsLmNvbQ&color=%23039BE5" style="border:solid 2px rgb(217, 194, 144)"  frameborder="0" scrolling="no"></iframe> 
                 </div>
             </div>
         </div>
     </section>
+<section class="modal_container_IS ">
+        <section class="modal_IS modal_cerrado_IS align-content-center">
+            <div class="modal_ContendorC"><span class="cerrar_modal_IS">CANCELAR</span></div>
+            <div class="modal_Cuerpo">
+                <img class="modal_logo" src="/principal/img/marca.png" alt="">
+                <form class="modal_formulario_IS modal_formulario" id="login-form" action="/login-email" method="POST">
+                <h5>CORREO</h5>
+                    <input type="email" name="email" id="email" placeholder="Correo Electronico" required>
+                    <input type="email" name="emailb" id="emailb" placeholder="Correo Electronico" style="display:none">
+                <h5>CONTRASEÑA</h5>
+                    <input type="password" name="password" id="password" placeholder="Contraseña" minlength="7" required>
+                    <button type="submit" class="ingresar">Ingresar</button>
+                </form>
+                
+            </div>
+        </section>
+    </section>
+    <script src="/principal/js/index.js"></script>
+
+    <script src="/js/index.js"></script>
+    <script src="/js/principal.js" type="module"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
+    <script src="./js/firebaseAuth.js"></script>
+<script src="./usuarios/publicaciones/JS/index.js"></script>
+</body>
+
 <footer class="footer text-center" id="contactanos" name="contactanos">
     <div class="container">
         <div class="row me-auto" id="contacto">
@@ -307,98 +299,6 @@
         </div>
     </div>
 </footer>
-<section class="modal_container_IS ">
-        <section class="modal_IS modal_cerrado_IS align-content-center">
-            <div class="modal_ContendorC"><span class="cerrar_modal_IS">CANCELAR</span></div>
-            <div class="modal_Cuerpo">
-                <img class="modal_logo" src="/principal/img/marca.png" alt="">
-                <form class="modal_formulario_IS modal_formulario" id="login-form" action="/login-email" method="POST">
-                <h5>CORREO</h5>
-                    <input type="email" name="email" id="email" placeholder="Correo Electronico" required>
-                    <input type="email" name="emailb" id="emailb" placeholder="Correo Electronico" style="display:none">
-                <h5>CONTRASEÑA</h5>
-                    <input type="password" name="password" id="password" placeholder="Contraseña" minlength="7" required>
-                    <button type="submit" class="ingresar">Ingresar</button>
-                </form>
-                
-            </div>
-        </section>
-    </section>
-
-    <section class="modal_container_R ">
-        <section class="modal_R modal_cerrado_R">
-            <div class="modal_ContendorC" id="cerrar"><span class="cerrar_modal_R"></span></div>
-            <div class="modal_Cuerpo">
-                <img class="modal_logo" src="./principal/images/logo2.png" alt="">
-                <h1 id="titulo" style="display:none">Completar Registro</h1>
-                <form class=" modal_formulario_R modal_formulario" id="register-form" action="/new-user-email"
-                    method="POST">
-                    <input type="text" name="id" id="id" type="text" style="display:none">
-                    <input type="text" name="photo" id="photo" type="text" style="display:none">
-                    <input type="text" name="name" id="name" placeholder="Nombre Completo" required>
-                    <input type="text" name="nameb" id="nameb" placeholder="Nombre Completo" style="display:none">
-                    <input type="number" name="phone" id="phone" placeholder="Número de Teléfono" min="3000000000"
-                        max="9999999999" required>
-                    <input type="email" name="email" id="email-a" placeholder="Correo Electronico" required>
-                    <input type="email" name="emailb" id="emailbb" placeholder="Correo Electronico" style="display:none">
-                    <input type="text" name="ubication" id="ubication" list="municipios" placeholder="Municipio"
-                        required>
-                    <datalist id="municipios">
-                        <option value="Ubaté"></option>
-                        <option value="Carmen de Carupa"></option>
-                        <option value="Tausa"></option>
-                        <option value="Suta"></option>
-                        <option value="Lenguazaque"></option>
-                        <option value="Guacheta"></option>
-                        <option value="Cucunuba"></option>
-                        <option value="Simijaca"></option>
-                        <option value="Susa"></option>
-                    </datalist>
-                    <input type="password" name="passwordd" id="passwordd" placeholder="Contraseña" minlength="7"
-                        required>
-                    <input type="password" name="confirmPassword" id="confirmPassword"
-                        placeholder="Verificar Contraseña" minlength="7" required>
-                    <p id="nn"></p>
-                    <button id="boton" disabled style="background-color:#A6A6A6 ;">Registrarse</button>
-                </form>
-                <div class="check">
-                    <input type="checkbox" id="cbox">
-                    <a href="javascript:popUp('/condiciones')">Acepto terminos y condiciones</a>
-                </div>
-
-                <div class="modal_separador"></div>
-                <div class="modal_google" id="google" style="pointer-events: none;">
-                    <span></span>
-                    <a id="registergoogle"> Registrarse con Google</a>
-                </div>
-                <div class="modal_facebook" id="facebook" style="pointer-events: none;">
-                    <span></span>
-                    <a id="registerfacebook">Registrarse con Facebook</a>
-                </div>
-            </div>
-        </section>
-    </section>
-    
-
-    
-  
-    <script src="/principal/js/index.js"></script>
-    <script src="/js/index.js"></script>
-    <script src="/js/principal.js" type="module"></script>
-    <script src="bootstrap/popper/bootstrap.min.js"></script>
-    <script src="bootstrap/popper/popper.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
-    <script src="./js/firebaseAuth.js"></script>
-<script src="./usuarios/publicaciones/JS/index.js"></script>
-<script
-    src=" https :// cdnjs . cloudflare . com / ajax / libs / handlebars . js / 3 . 0 . 1 / handlebars . min . js "></script>
-<script src="/try/examples/js/handlebars_helpers_if_eq.js"></script>
-</body>
 
 
 </html>

@@ -4622,8 +4622,6 @@ fieldset:disabled .btn {
 .navbar-nav {
   display: flex;
   flex-direction: column;
-  padding-left: 0;
-  margin-bottom: 0;
   list-style: none;
 }
 
@@ -12787,13 +12785,20 @@ background: linear-gradient(285deg, #a3a3a3 0%, #928888 50%, #403b5c 100%);
 .opc{
   color: #000;
   position: absolute;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  display: flex;
+  margin-top: 2pt;
+
 }
 
 .opciones{
   position: sticky;
   color: #000;
-  align-items: flex-end;
-  justify-content: end;
+  padding: auto;
+ 
 }
 
 .card2{
@@ -13057,7 +13062,49 @@ form button {
   background: none;
 }
 
-/* CLASS TO HIDE MODAL */
-.hidden {
-  display: none;
+.lista{
+  background: rgb(34,193,195);
+background: linear-gradient(266deg, rgba(24,183,185,1) 0%, rgba(243,177,35,0.5883620689655172) 100%);
+border-radius: 50px;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 100% auto auto auto;
+  gap: 10px;
+  background: rgb(34,193,195);
+  background: linear-gradient(292deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  padding: 10px;
+  border-radius: 30px 50%;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.3 );
+  border-radius: 20px 50%;
+  border:1px var(--bs-gray-600);
+  text-align: center;
+  
+}
+
+.streetview{
+  max-width: 300px;
+  max-height: 200px;
+  margin-left: 20pt;
+}
+
+.streetview > iframe{
+  max-width: 300px;
+  max-height: 200px;
+}
+
+.bstreet {
+  max-width: 300px;
+  max-height: 200px;
+}
+
+.cstreet{
+  width: 100%;
+  display: flex;
+  align-items: left;
+  justify-content: right;
 }

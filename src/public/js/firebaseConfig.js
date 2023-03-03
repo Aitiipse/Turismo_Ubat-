@@ -52,12 +52,14 @@ export const provider = new GoogleAuthProvider(app);
 
 
  
-export const guardarformulario = (nombre,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,descripcion, ruta ) =>
+export const guardarAtractivo = (nombre,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,descripcion, ruta ) =>
   addDoc(collection(db, "atractivos"), { nombre,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,descripcion, ruta });
 
+// listar pagina principal
+  export const listar = (callback) =>
+  onSnapshot(collection(db, "atractivos"), callback);
 
-  
-export const listar = (callback) =>
+  export const listarAtractivos = (callback) =>
   onSnapshot(collection(db, "atractivos"), callback);
 
 export const listar_p = (callback) =>
@@ -75,18 +77,24 @@ export const listarsitios4 = (callback) =>
 export const listarsitios5 = (callback) =>
   onSnapshot(collection(db, "atractivos"), callback);
 
+// editar-eliminar atractivos
+
+export const listaEdAt = (callback) =>
+  onSnapshot(collection(db, "atractivos"), callback);
+
 /**
  *
  * @param {string} id ID atractivo
  */
-export const eliminarformulario = (id) => deleteDoc(doc(db, "atractivos", id));
 
-export const getTask = (id) => getDoc(doc(db, "atractivos", id));
+export const eliminarAtractivo = (id) => deleteDoc(doc(db, "atractivos", id));
 
-export const actualizarformulario = (id, newFields) =>
+export const getAtractivo = (id) => getDoc(doc(db, "atractivos", id));
+
+export const actualizarAtractivo = (id, newFields) =>
   updateDoc(doc(db, "atractivos", id), newFields);
 
-export const getatractivos = () => getDocs(collection(db, "atractivos"));
+export const getAtractivos = () => getDocs(collection(db, "atractivos"));
 
 
 
