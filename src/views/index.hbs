@@ -30,7 +30,7 @@
             <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button"
                 data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
                 aria-expanded="false" aria-label="Toggle navigation">
-                MENÚ
+                MEN
                 <i class="fas fa-bars"></i>
             </button>
             <div class="opc collapse navbar-collapse" id="navbarResponsive">
@@ -189,32 +189,9 @@
 
           <div class="row justify-content-center " id="formulario-container" >
 
-            </div>
-            <form id="modal" class="modal"  style="display: ;">
-        
-           <!-- Modal content -->
-           <div class="modal-content">
-            <div class="modal-header">
-              <span class="close">Cerrar</span>
-              <output  id="nombre" style="border: none;" ></output>
-            </div>
-            <div class="modal-body">
-              <output id="descripcion" style="border: none;" ></output>
-              <output id="ruta" style="border: none;" ></output>
-            </div>
-            <div class="modal-footer">
-              <output id="updatedAt" style="border: none;" ></output>
-            </div>
-            <img id="iframe" src=""  frameborder="0"></img>
-          </div>
-        
-        </form>
+            </div>     
 
-        <div class="col-md-6" id="tasks-container"></div>
-        <div class="col-md-6" id="modal" > <a href="" id="nombre"></a></div>
-          </section>        
-
-{{!-- ACA FINALIZA EL BUCLE PARALOS ATRACTIVOS --}}
+{{!-- ACA FINALIZA EL BUCLE PARA LOS ATRACTIVOS --}}
             
         </div>
     </section>
@@ -258,6 +235,32 @@
             </div>
         </section>
     </section>
+    
+            <form id="modal" class="modalAtractivos" >
+        
+           <!-- modalAtractivos content -->
+           <div class="modalAtractivos-content">
+            <div class="modalAtractivos-header">
+              <output  id="nombre" style="border: none;" ></output>
+            </div>
+            <div class="modalAtractivos-body">
+              <output id="descripcion" style="border: none;" ></output>
+              <output id="ruta" style="border: none;" ></output>
+            </div>
+            <div class="modalAtractivos-footer">
+              <output id="updatedAt" style="border: none;" ></output>
+            </div>
+            <img id="iframe" src=""  frameborder="0"></img>
+              <span class="close">Cerrar</span>
+
+          </div>
+          
+        
+        </form>
+
+        <div class="col-md-6" id="tasks-container"></div>
+        <div class="col-md-6" id="modal" > <a href="" id="nombre"></a></div>
+          </section>   
     <script src="/principal/js/index.js"></script>
 
     <script src="/js/index.js"></script>

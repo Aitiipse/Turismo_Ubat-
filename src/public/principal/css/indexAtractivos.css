@@ -24,7 +24,7 @@ display: flex;
 body {font-family: Arial, Helvetica, sans-serif;}
 
 /* The Modal (background) */
-.modal {
+.modalAtractivos {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -39,9 +39,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 /* Modal Content */
-.modal-content {
+.modalAtractivos-content {
   position: relative;
-  background-color: #9800fe;
+  background-color: #eef9f7b7;
   margin: auto;
   padding: 0;
   border: 1px solid #888;
@@ -67,8 +67,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 /* The Close Button */
 .close {
-  color: rgb(218, 100, 100);
+  color: rgb(13, 13, 13);
   float: right;
+  background-color: red;
   font-size: 28px;
   font-weight: bold;
   border-radius: 50%;
@@ -82,14 +83,14 @@ body {font-family: Arial, Helvetica, sans-serif;}
   cursor: pointer;
 }
 
-.modal-header {
+.modalAtractivos-header {
   padding: 2px 16px;
-  background-color: #5cb85c;
+  background-color: #c6c6c6;
 }
 
-.modal-body {padding: 2px 16px;}
+.modalAtractivos-body {padding: 2px 16px;}
 
-.modal-footer {
+.modalAtractivos-footer {
   padding: 2px 16px;
   background-color: #5cb85c;
   color: white;

@@ -34,9 +34,9 @@ let input0 = document.querySelectorAll(".input0")[0];
         <div class="card3" >
         <div class="imgcard3 "  style=" background-image: url(${atractivo.input0});"   >
         
-        <div>
-            <a><button class="btn btn-secondary btn-modal" data-id="${doc.id}">
-          <b>${atractivo.nombre} </b> </button></a>
+        <div >
+            <button  class="btn btn-secondary btn-modal" data-id="${doc.id}">
+          ${atractivo.nombre} </button>
             </div></div>
              
             

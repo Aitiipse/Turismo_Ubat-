@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	 <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
         type="text/css" />
     <link rel="stylesheet" type="text/css" href="./principal/css/styles.css">
-    <link rel="stylesheet" type="text/css" href="./principal/css/administrador.css">
     <link rel="stylesheet" href="./principal/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./principal/css/sweetalert2.css" <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./principal/css/sweetalert2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Port+Lligat+Sans&display=swap"
@@ -25,100 +25,235 @@
 	<title>UBATÉ, ¡¡¡ DESTINO DE TRADICIONES !!!</title>
 </head>
 <body >
-<div style="position: sticky;">
-	 <div class=" " >
+ 
+    <style>
+    /* Estilos comunes */
+    .header {
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #2aacb8;
+      padding: 1rem;
+    }
 
-        <div class="dashboard-sideBar-ct">
-            <!--SideBar Title -->
-            <div class="full-box text-uppercase text-center text-titles " style="color:white ;">
-                UBATÉ, ¡¡¡ DESTINO DE TRADICIONES !!! <i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
+    /* Estilos móvil/celular */
+    @media all and (max-width: 700px) {
 
+      /* Oculta el nav en la parte izquiera */
+      .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: red;
+        transform: translateX(-100vw);
+        transition: 0.5s;
+      }
+
+      /* Muestra el nav */
+      .nav--show {
+        transform: translateX(0);
+      }
+
+      .nav__button {
+        text-align: right;
+        margin: 1rem;
+      }
+
+      .nav__ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .nav__link {
+        display: block;
+        padding: 1rem;
+        font-size: 1.5rem;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+      }
+    }
+
+    /* Estilos Escritorio */
+    @media all and (min-width: 701px) {
+
+      /* Oculta botón de abrir o cerrar */
+      .nav__button,
+      .header__button-nav--open {
+        display: none;
+      }
+
+      /* Adapta el nav en horizontal */
+      .nav__ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+      }
+
+      .nav__link {
+        display: block;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        color: black;
+        transition: 0.5s;
+      }
+
+      .nav__link:hover {
+        opacity: 0.5;
+      }
+    }
+
+
+
+
+
+    .navegacion1{
+  width: 1000px;
+  margin: 30px auto;
+  background: #fff;
+}
+
+.navegacion1 ul{
+  list-style: none;
+}
+
+.menuAdmin > li{
+  overflow: hidden;
+}
+
+.menuAdmin > li > a{
+  display: block;
+  padding: 15px 20px;
+  color: #000000;
+  text-decoration: none;
+  overflow: visible;
+}
+
+.menuAdmin li a:hover{
+  color: #CE7D35;
+  transition: all .3s;
+}
+
+/* Submenu*/
+
+.submenu{
+  position: absolute;
+  background: #333333;
+  width: 120%;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+
+.submenu li a{
+  display: block;
+  padding: 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.menuAdmin li:hover .submenu{
+  visibility: visible;
+  opacity: 1;
+  color: aliceblue;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header x-data="{ open: false }" class="header">
+      <!-- Logo -->
+      <div class="header__logo">
+         <figure class="full-box">
+                         <figcaption class="text-center text-titles">
+                            <a href="/atractivos"> <h4>ADMINISTRADOR</h4></a>
+                         </figcaption>
+                     </figure>
+      </div>
+      <!-- Boton abrir -->
+      <button class="header__button-nav--open" x-on:click="open = true">MENÚ</button>
+      <!-- Navegador -->
+      <nav class=" fo dashboard-Navbar ">
+        <ul>
+            <div class="svg-container">
             </div>
-            <!-- SideBar User info -->
-            <div class="full-box dashboard-sideBar-UserInfo">
-                <figure class="full-box">
-                    <img src="./principal/img/marca.png" style="background-color:white ;" alt="UserIcon">
-                    <figcaption class="text-center text-titles">
-                       <a href="/atractivos"> <h3>ADMINISTRADOR</h3></a>
-                    </figcaption>
-                </figure>
-                <ul class="full-box  text-center">
-                    
-                    <li>
-                        <a href="/logout" class="zmdi zmdi-power" id="logout"> 
-                            
-                            <h5>CERRAR SESION</h5>
-                        </a>
-                    </li>
-                </ul>
-
-            </div>
-
-            <!-- SideBar Menu -->
-            <ul class="  dashboard-sideBar-Menu">
-                <li id="atractivos" class="atractivoslist">
-                    <a href="#!" class="btn-sideBar-SubMenu">
-                        <i class="zmdi zmdi-case zmdi-hc-fw"></i> Atractivos<i
-                            class="zmdi zmdi-caret-down pull-right"></i>
-                    </a>
-                    <ul class=" full-box">
-                        <li>
-                            <a href="/crearPublicacion"><i class="zmdi zmdi-timer zmdi-hc-fw"></i> Agregar</a>
-                        </li>
-                        <li>
-                            <a href="/editarAtractivos"><i class="zmdi zmdi-timer zmdi-hc-fw"></i> Editar - Eliminar</a>
-                        </li>
-                    </ul>
-                </li>
-                
-                <li>
-                    <a href="#!" class="btn-sideBar-SubMenu">
-                        <i class="zmdi zmdi-account-add zmdi-hc-fw"></i> Eventos <i
-                            class="zmdi zmdi-caret-down pull-right"></i>
-                    </a>
-                    <ul class=" full-box">
-                        <li>
-                            <a href="https://calendar.google.com/calendar/u/0/r/month/2022/10/19?pli=1"
-                                target="_blank"><i class="zmdi zmdi-timer zmdi-hc-fw"></i> Agregar <br>
-                                Editar/Eliminar</a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="#!" class="btn-sideBar-SubMenu ">
-                        <i class="zmdi zmdi-shield-security zmdi-hc-fw"></i> Noticias <i
-                            class="zmdi zmdi-caret-down pull-right"></i>
-                    </a>
-                    <ul class=" full-box">
-                        <li>
-                            <a href="/crearacarreo"><i class="zmdi zmdi-timer zmdi-hc-fw"></i> Agregar <br> Editar - Eliminar</a>
-                        </li>
-                    </ul>
-                </li>
-                <li id="principal" class="principal">
-                    <a href="#!" class="btn-sideBar-SubMenu">
-                        <i class="zmdi zmdi-view-dashboard zmdi-hc-fw" id="principal"></i> Rutas
-                    </a>
-                    <ul class=" full-box">
-                        <li>
-                            <a href="/editarruta"><i class="zmdi zmdi-timer zmdi-hc-fw"></i> Ver <br> </a>
-                          </li>
-                        <li>
-                            <a href="#"><i class="zmdi zmdi-book zmdi-hc-fw"></i> </a>
-                        </li>
-                    </ul>
-                </li>
-
-
-
-
-            </ul>
-			
+        </ul>
+    </nav>
+      <nav class="nav navegacion" x-bind:class="open ? 'nav--show' : ''">
+        <!-- Boton cerrar -->
+        <div class="nav__button" x-on:click="open = false">
+          <button class="header__button-nav--close">Cerrar</button>
         </div>
-    </div>
-</div>
-
+        <!-- Menu -->
+        <ul class="nav__ul menuAdmin ">
+          <li >
+                         <a href="#!" class="btn-sideBar-SubMenu">
+                             <i class="zmdi zmdi-case zmdi-hc-fw"></i><h5> Atractivos</h5><i
+                                 class="zmdi zmdi-caret-down pull-right"></i>
+                         </a>
+                         <ul class=" full-box submenu">
+                             <li>
+                                 <a href="/crearPublicacion"><i class="zmdi zmdi-timer zmdi-hc-fw"></i><h5> Agregar</h5></a>
+                             </li>
+                             <li>
+                                 <a href="/editarAtractivos"><i class="zmdi zmdi-timer zmdi-hc-fw"></i> <h5>Editar - Eliminar</h5></a>
+                             </li>
+                         </ul>
+                     </li>
+                     
+                     <li>
+                         <a href="#!" class="btn-sideBar-SubMenu">
+                             <i class="zmdi zmdi-account-add zmdi-hc-fw"></i> <h5>Eventos</h5> <i
+                                 class="zmdi zmdi-caret-down pull-right"></i>
+                         </a>
+                         <ul class=" full-box submenu">
+                             <li>
+                                 <a href="https://calendar.google.com/calendar/u/0/r/month/2022/10/19?pli=1"
+                                     target="_blank"><i class="zmdi zmdi-timer zmdi-hc-fw"></i> <h5>Agregar <br>
+                                     Editar/Eliminar</h5></a>
+                             </li>
+                         </ul>
+                     </li>
+     
+                     <li>
+                         <a href="#!" class="btn-sideBar-SubMenu ">
+                             <i class="zmdi zmdi-shield-security zmdi-hc-fw"></i><h5> Noticias</h5> <i
+                                 class="zmdi zmdi-caret-down pull-right"></i>
+                         </a>
+                         <ul class=" full-box submenu">
+                             <li>
+                                 <a href="/crearacarreo"><i class="zmdi zmdi-timer zmdi-hc-fw"></i> <h5>Agregar <br> Editar - Eliminar</h5></a>
+                             </li>
+                         </ul>
+                     </li>
+                     <li id="principal" class="principal">
+                         <a href="#!" class="btn-sideBar-SubMenu">
+                             <i class="zmdi zmdi-view-dashboard zmdi-hc-fw" id="principal"></i> <h5>Rutas</h5>
+                         </a>
+                         <ul class=" full-box submenu">
+                             <li>
+                                 <a href="/editarruta"><i class="zmdi zmdi-timer zmdi-hc-fw"></i> <h5>Ver</h5> <br> </a>
+                               </li>
+                             <li>
+                                 <a href="#"><i class="zmdi zmdi-book zmdi-hc-fw"></i> </a>
+                             </li>
+                         </ul>
+                     </li>
+          <li><a href="/logout" class="zmdi zmdi-power" id="logout"> <h6>CERRAR SESION</h6></a></li>
+        </ul>
+      </nav>
+      <!-- Fin Navegador -->
+    </header>
+    <!-- Fin Header -->
+    
 	{{{body}}}
 		
 	
