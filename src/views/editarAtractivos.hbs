@@ -1,42 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
-        type="text/css" />
-    <link rel="stylesheet" type="text/css" href="./principal/css/styles.css">
     <link rel="stylesheet" type="text/css" href="./principal/css/agregar.css">
-    <link rel="stylesheet" href="./principal/css/administrador.css">
 	<link rel="stylesheet" href="./principal/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./principal/css/sweetalert2.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <title>UBATÉ, ¡¡¡ DESTINO DE TRADICIONES !!!</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Port+Lligat+Sans&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="./usuarios/crearP/CSS/movile.css">
     <link rel="stylesheet" href="./usuarios/crearP/CSS/tablet.css" media="screen and (min-width:600px)">
     <link rel="stylesheet" href="./usuarios/crearP/CSS/web.css" media="screen and (min-width:1000px)">
 </head>
 <body class="body gridContainer " >
-{{!-- <div class=" col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4"></div> --}}
 <div class="">
-    <h2>EDITAR ATRACTIVO</h2>
-    <div class=" eContenido " id="contenedor"> <h4>Ingrese los datos solicitados.</h4></div>
+    <h2>ATRACTIVOS REGISTRADOS</h2>
+    <div class=" eContenido " id="contenedor"></div>
+    <br>
+    <h2> REGISTRAR</h2>
     <div>
-        <button  class="volver " onclick="window. history. back();"> Regresar</button>
-    <form action="" method="" enctype="multipart/form-data" class="" id="formulario">
-        <div class="espaciotext">
+    <form action="/new_publication" method="POST" enctype="multipart/form-data" class="formulario" id="formulario">
+        <div class="espaciotext1">
     <label class="" >NOMBRE DEL ATRACTIVO</label>
     
       <input id="nombre" name="nombre" type="text" placeholder="Nombre" >
-                            <h5>Ubicación geográfica:</h5>
+                            <label>Ubicación geográfica:</label>
                         <tr>
                             <td>
                                <h6> <div>Recuerda agregarlo en <a href="https://www.google.com/maps/d/ " target="_blank">"Google
@@ -63,7 +44,7 @@
                             </td>
                         </p>
   <section class="row justify-content-center noticias">
-	<div  class="espaciotext1">
+	<div  class="espaciotext2">
     <div>
 	
     <h5><label class=""  >Descripción</label></h5>
@@ -71,13 +52,13 @@
     
       <h6><textarea id="descripcion" name="descripcion" spellcheck="true" rows="10" cols="90" tabindex="" placeholder="Descripción"></textarea></h6>
 	  </div>
-      <div  class="espaciotext1">
+      <div  class="espaciotext2">
     <div>
 	
     <h5><label class=""  >Street View</label></h5>
   </div>
     
-     <h6> <textarea id="street" name="street" spellcheck="true" rows="10" cols="90" tabindex="" placeholder="Link de Street View"></textarea></h6>
+     <h6> <textarea id="street" class="street"  name="street" spellcheck="true" rows="10" cols="90" tabindex="" placeholder="Link de Street View"></textarea></h6>
 	  </div>
 	   <div  class="espaciotext2">
 		<div>
@@ -91,25 +72,22 @@
                                 <option value="Deportivo">Deportivo</option>
                             </select>
   </div>
-
-   
-  </div>
-    </section>
-
-            <div class="modal_Cuerpof">
+<div class="file">
                 <input type="file" name="input0" class="foto_publicacion f1" accept="image/png, .jpeg, .jpg" required>
                 </div>
+   
+  </div>
+  
+    </section>
 
-        
-       
-
-
-        <button class="btn btn-primary" id="btn-task-form">Agregar</button>
+            <br>
+                <input type="submit" value="AGREGAR"  id="btn-task-form" class="subir btn btn-primary">
     </form>
     </div>
     
     
     <script src="/js/editar.js" type="module"></script>
+     <script src="./usuarios/crearP/JS/index.js"></script>
    
 
 </body>

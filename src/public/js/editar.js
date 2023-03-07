@@ -21,18 +21,18 @@ import {listaEdAt,guardarAtractivo, eliminarAtractivo, getAtractivo, actualizarA
         containerAtractivos.innerHTML += `
 
 
-        <div class="lista_editar">
+        <div class="lisa_editar">
   
     
       <div><b>${atractivo.nombre}</b> - - - </div> 
       <div>${atractivo.ruta}</div>
       <div><button class="btn  btn-delete" data-id="${doc.id}">
       🗑 
-    </button></div>
-      <div><button class="btn btn-secondary btn-edit" data-id="${doc.id}">
+    </button>
+    <button class="btn btn-secondary btn-edit" data-id="${doc.id}">
       🖉 
     </button></div>
-    </tr>
+    
   
     </div>
     

@@ -1,59 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
-        type="text/css" />
-    <link rel="stylesheet" type="text/css" href="./principal/css/styles.css">
-    <link rel="stylesheet" type="text/css" href="./principal/css/administrador.css">
-    <link rel="stylesheet" href="./principal/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Port+Lligat+Sans&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="./usuarios/publicaciones/CSS/movile.css">
-    <link rel="stylesheet" href="./usuarios/publicaciones/CSS/tablet.css" media="screen and (min-width:600px)">
-    <link rel="stylesheet" href="./usuarios/publicaciones/CSS/web.css" media="screen and (min-width:1000px)">
-    <title>UBATÉ, ¡¡¡ DESTINO DE TRADICIONES !!!</title>
-</head>
-
-<body class=" body" onload="cargar()">        
+</header>
+ <!-- Fin Header -->
+<body class=" body row" onload="cargar()">        
 
     {{!-- INICIO DE ATRACTIVOS --}}
-    <div class="row contenido"> 
-         <div class="  dashboard-sideBar col-6 col-sm-6 col-md-6 col-lg-56col-xl-6"></div>
-     <div class="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-11">
-    <nav class=" dashboard-Navbar ">
-    </nav>
+    <div class=" contenido"> 
+         <div class="  dashboard-sideBar"></div>
+        <div>
+            <section >
+                <div class="opciones"></div>
 
-    <div class="  ">
-        <div class="">
-
-
-            <section class="page-section portfolio atractivoslista" id="atractivos">
+            </section>
+            <section class="page-section page-header portfolio atractivoslista" id="atractivos">
 
                 <div class="container-fluid flex-wrap d-flex align-content-around ">
                     <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"><a href="/crearPublicacion"> ATRACTIVOS
                         REGISTRADOS</a></h2>
-
+                </div><div>
 
                     <section class="row justify-content-center" id="formulario-container" scrolling="si"></section>
                 </div>
             </section>
-            <section class="modal_container_p ">
-        <section class="modal_p modal_cerrado_p">
-            <div class="modal_Contendorp"><span class="cerrar_modal_p"></span></div>
-            <iframe scrolling="no" id="framer" src="/modalpublicaciones"></iframe>
-        </section>
-    </section>
+            
         </div>
         <div class="calendario" id="calendario">
             <tr>
@@ -109,8 +77,9 @@
     src=" https :// cdnjs . cloudflare . com / ajax / libs / handlebars . js / 3 . 0 . 1 / handlebars . min . js "></script>
 <script src="/try/examples/js/handlebars_helpers_if_eq.js"></script>
 
-   </div></div>
+
    
-    </body>
-</html>
+  
+    
+
 

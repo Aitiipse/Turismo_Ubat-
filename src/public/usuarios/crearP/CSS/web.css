@@ -10,7 +10,7 @@ form{
     width: 50%;
 }
 
-input,select,textarea{
+input,select{
     width: 40%;
 }
 ::placeholder, select,textarea {

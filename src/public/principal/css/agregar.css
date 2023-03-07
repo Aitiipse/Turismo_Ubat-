@@ -11,27 +11,20 @@ header{
 
 body {
     background-color: antiquewhite;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    padding: 1%;
-    background-position: center;
-    background-size: 100% 100%;
-    /* background-image: url(../img/No\ 1\ Promeseros\ \ \(1\).jpg); */
 
 }
 
 .formulario{
  
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    backdrop-filter: blur(6px) saturate(138%);
-    -webkit-backdrop-filter: blur(6px) saturate(138%);
     background-color: rgba(255, 255, 255, 0.36);
     border-radius: 12px;
     border: 1px solid rgba(0, 0, 0, 0.3);
-
+    width: 100%;
+    height: 100%;
+    margin: 2px;
 }
 
 .form{
@@ -117,10 +110,7 @@ border-radius: 12px;
   }
   
   .espaciotext2{
-    width: 50%;
-    justify-items:right;
-    padding: 20pt;
-    margin-left: 20pt;
+    width: 100%;
 
   }
   
@@ -190,9 +180,7 @@ input[type=submit]{
 .gridContainer {
   display: grid;
   grid-template-columns: auto auto;
-  gap: 10px;
   background-color: #2196F3;
-  padding: 10px;
 }
 
 .gridContainer > div {
@@ -203,6 +191,14 @@ input[type=submit]{
 .eContenido{
 	background-color: rgba(255, 250, 250, 0.407);
 	color: #000;
+  display: flex;
+  flex-flow: row wrap;
+  border-color: #000;
+}
+
+.street{
+  width: 70%;
+  height: 20px;
 }
 
 .lista_editar{
@@ -211,6 +207,7 @@ input[type=submit]{
   display: flex;
   flex-flow: row wrap;
   align-items: baseline;
+  border-color: #000;
 }
 
 

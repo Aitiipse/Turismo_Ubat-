@@ -222,6 +222,7 @@ router.get('/publicacioness', async (req, res) => {
 		.catch((error) => { console.log("No hay publicaiones", error); });
 });
 router.get('/crearPublicacion', async (req, res) => {
+	modal = true;
 	//res.render('crearPublicacion');
 	// verificarEstado(req, res, 'crearPublicacion', 'index', datos = '', /*globalThis.photo*/ req.session.photo, () => {
 	verificarEstado(req, res, 'crearPublicacion', 'crearPublicacion', datos = '', /*globalThis.photo*/ req.session.photo, () => {
