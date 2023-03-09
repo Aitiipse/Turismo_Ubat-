@@ -238,7 +238,7 @@
     left: 0;
     background: rgb(0, 0, 0, 0.5);
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
 }
 .modal_container_IS2 {
@@ -286,9 +286,12 @@
    padding: 5pt;
     width: min-content;
    font-size: medium;
-   background-color: rgb(177, 55, 55);
+   background-color: rgb(175, 104, 104);
    margin-top: 5pt;
    border-radius: 5px;
+   color: #000;
+   border-style: solid;
+   border-bottom-color: #000;
 }
 
 
@@ -432,10 +435,13 @@ input[type=number]::-webkit-outer-spin-button {
     font-weight: bold;
 }
 .modal_ContendorC {
-    width: 40%;
+    width: 100%;
     margin-top: 20pt;
     display:grid;
     justify-content: center;
+    align-items: center;
+    
+   
 }
 .modal_logo {
     width: 140px;
@@ -464,71 +470,6 @@ l
     color:rgba(0, 0, 0, 0.25);
     font-weight: bold;
     font-size: 1.2rem;
-}
-.modal_google {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    width: 60%;
-    margin-bottom: 15px;
-}
-.modal_google:hover>span {
-    background-image: url(../icons/Google.png);
-}
-.modal_google:hover>a {
-    color: var(--cafe);
-}
-.modal_google span {
-    background-image: url(../icons/Google-1.png);
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-.modal_google a {
-    border: none;
-    text-decoration: none;
-    font-size: var(--font2);
-    color: var(--gris_oscuro);
-    font-size: 1.4rem;
-    background-color: transparent;
-    font-weight: bold;
-    cursor: pointer;
-}
-.modal_facebook {
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    justify-content: center;
-    width: 60%;
-}
-.modal_facebook:hover>span {
-    background-image: url(../icons/Facebook\ F.png);
-}
-.modal_facebook:hover>a {
-    color: var(--cafe);
-}
-.modal_facebook span {
-    background-image: url(../icons/Facebook\ F-1.png);
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-.modal_facebook a {
-    border: none;
-    background-color: transparent;
-    text-decoration: none;
-    font-size: var(--font2);
-    color: var(--gris_oscuro);
-    font-size: 1.4rem;
-    font-weight: bold;
-    cursor: pointer;
 }
 /************************Main***********************************/
 .main{

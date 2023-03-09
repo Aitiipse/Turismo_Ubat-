@@ -27,17 +27,16 @@
 <body class="body" onload="cargar()">
 {{!-- <div class=" col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4"></div> --}}
 <div class=" row contenido col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
-    <h2>ADMINISTRADOR DE NOTICIAS</h2>
-    <div>En este espacio podras agregar, editar, eliminar noticias relacionadas con el turismo en la Villa de San Diego de Ubaté.</div>
+    <h2>REGISTRAR USUARIO NUEVO</h2>
+    <div>Espacio para <b>REGISTRAR</b> un nuevo usuario para la colaboracion en el manejo de la página.</div>
+    <div>Por favor llenar todos los espacios correctamente</div>
 
-   <form class=" modal_formulario_R modal_formulario" id="register-form" action="/new-user-email" method="POST" class="contenido">
-                    <input type="text" name="name" id="name" placeholder="Nombre Completo" required>
-                    <input type="number" name="phone" id="phone" placeholder="Número de Teléfono" min="3000000000" max="9999999999" required>
-                    <input type="email" name="email" id="email-a" placeholder="Correo Electronico" required>
-
-                    <input type="password" name="passwordd" id="passwordd" placeholder="Contraseña" minlength="7" required>
-                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Verificar Contraseña" minlength="7" required>
-                    <p id="nn"></p>
+   <form class=" modal_formulario_R modal_formulario" id="register-form" action="/new-user-email" method="POST" class="contenido">  
+                   <div> NOMBRE<input type="text" name="name" id="name" placeholder="Nombre Completo" required></div>
+                   <div> NUMERO DE TELEFONO<input type="number" name="phone" id="phone" placeholder="Número de Teléfono" min="3000000000" max="9999999999" required></div>
+                   <div>CORREO ELECTRÓNICO<input type="email" name="email" id="email-a" placeholder="Correo Electronico" required></div><BR></BR>
+                   <div> CONTRASEÑA<input type="password" name="passwordd" id="passwordd" placeholder="Contraseña" minlength="7" required>
+                    VERIFICAR CONTRASEÑA<input type="password" name="confirmPassword" id="confirmPassword" placeholder="Verificar Contraseña" minlength="7" required></div>
                     <br>
                     <button id="boton" type="submit">Registrar</button>
                 </form>

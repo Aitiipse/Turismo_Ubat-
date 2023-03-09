@@ -136,12 +136,59 @@ router.use('/logout', async (req, res, next) => {
 	});
 });
 
+
+
+// -------------------------------------------- register ------------------------------------------ //
+// new user email
+router.post('/new-user-email', async (req, res) => {
+	//console.log('hola dentro de ');
+	let { passwordd, confirmPassword, email, phone, ubication, name } = req.body;
+
+	if (passwordd !== confirmPassword) {
+		mensaje = 'Las contraseñas no coinciden';
+		res.redirect('/registro');
+	} else {
+		verficEmail(res, email, () => {
+			createUserWithEmailAndPassword(auth, email, passwordd)
+				.then((userCredential) => {
+					// Signed in
+					const user = userCredential.user;
+					//console.log(user);
+					//console.log('registro exitoso');
+					// ...
+					const userRef = auth.currentUser;
+					//obteniendo el id del usuario userRef.uid
+					db.collection('users').doc(userRef.uid).set({
+						name,
+						email,
+						phone,
+						ubication,
+						photo: 'https://static.vecteezy.com/system/resources/previews/007/319/933/non_2x/black-avatar-person-icons-user-profile-icon-vector.jpg',
+					});
+					res.redirect('/iniciosesion');
+				})
+				.catch((error) => {
+					const errorCode = error.code;
+					const errorMessage = error.message;
+					// ..
+					//console.log('fatal', errorCode);
+					//res.sendStatus(errorCode).send(errorMessage);
+				});
+		});
+	}
+});
+
+
 //------------------------------------------------- Logins ----------------------------------------------//
 //login user email
 router.post('/login-email', async (req, res) => {
 	let { email, password } = req.body;
+	let contador = 0;
+
 	setPersistence(auth, browserSessionPersistence)
 		//console.log('entro')
+
+		
 		.then(() => {
 			console.log('aca si entro');
 			//res.render('home');
@@ -175,12 +222,27 @@ router.post('/login-email', async (req, res) => {
 					//res.render('error', { layout: false });
 					console.log('Este es el mensaje de error ', errorMessage);
 					if (errorCode === 'auth/user-not-found') {
-						mensaje = 'CREDENCIALES INCORRECTAS';
+						console.log(`Intento: ${contador}`);
+						if(contador === 3){
+							document.getElementById('validar').disabled = 'true';
+							document.getElementById('campo').disabled = 'true';
+							alert('CANTIDAD DE INTENTOS EXCEDIDA, RECARGUE LA PÁGINA E INTENTE NUEVAMENTE');
+							
+							setTimeout(myFunction, 2000);
+							campo.style.enable='true';
+			
+							alert(contador);
+							contador =-1;
+						  }
+						mensaje = 'CREDENCIALES INCORRECTAS'; 
+						
 						res.redirect('/');
 					} else {
 						mensaje = 'CREDENCIALES INCORRECTAS';
+
 						res.redirect('/');
 					}
+					contador++;
 				});
 		})
 		.catch((error) => {
@@ -197,16 +259,12 @@ router.post('/login-email', async (req, res) => {
 
 
 //---------------------------------------------- other actions --------------------------------------------//
-router.get('/iniciosesion', async (req, res) => {
-	//res.render('InicioSesion');
-	verificarEstado(req, res, 'atractivos', 'InicioSesion', datos = '', data = '', () => {
-		//...
-	});
-});
+
 
 // formulario de registro y solicitudes en la pagina de inicio
 router.get('/registro', async (req, res) => {
-	verificarEstado(req, res, 'atractivos', 'registro', datos = '', data = '', () => {
+	modal = true;
+	verificarEstado(req, res, 'registro', 'index', datos = '', data = '', () => {
 		//...
 	});
 });
@@ -224,8 +282,8 @@ router.get('/publicacioness', async (req, res) => {
 router.get('/crearPublicacion', async (req, res) => {
 	modal = true;
 	//res.render('crearPublicacion');
-	// verificarEstado(req, res, 'crearPublicacion', 'index', datos = '', /*globalThis.photo*/ req.session.photo, () => {
-	verificarEstado(req, res, 'crearPublicacion', 'crearPublicacion', datos = '', /*globalThis.photo*/ req.session.photo, () => {
+	 verificarEstado(req, res, 'crearPublicacion', 'index', datos = '', /*globalThis.photo*/ req.session.photo, () => {
+	//verificarEstado(req, res, 'crearPublicacion', 'crearPublicacion', datos = '', /*globalThis.photo*/ req.session.photo, () => {
 		//...
 	});
 });
