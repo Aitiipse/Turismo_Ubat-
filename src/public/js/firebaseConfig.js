@@ -43,7 +43,6 @@ export const provider = new GoogleAuthProvider(app);
  * @param {string} titular Titular que recoge la info de la noticia
  * @param {string} resumen Resumen de la noticia en cuestion
  * @param {string} completa Noticia completa 
- * @param {string} link link de la publicación
  *PARAMETROS DE RUTAS
  * @param {string} rut Nombre de la ruta
  * @param {string} info Informacion de la ruta
@@ -77,10 +76,6 @@ export const listarsitios4 = (callback) =>
 export const listarsitios5 = (callback) =>
   onSnapshot(collection(db, "atractivos"), callback);
 
-// editar-eliminar atractivos
-
-export const listaEdAt = (callback) =>
-  onSnapshot(collection(db, "atractivos"), callback);
 
 /**
  *
@@ -102,27 +97,30 @@ export const getAtractivos = () => getDocs(collection(db, "atractivos"));
 // -----------------------------------------------------------------------------------
 /* NOTICIAS */
 
-export const guardarnoticia = (titular,resumen,completa,link ) =>
-  addDoc(collection(db, "noticias"), { titular,resumen,completa,link});
+export const guardarNoticia = (titular,resumen,completa ) =>
+  addDoc(collection(db, "noticias"), { titular,resumen,completa});
 
-export const listarnoticia = (callback) =>
+export const listarNoticia = (callback) =>
   onSnapshot(collection(db, "noticias"), callback);
 
-  export const listarnoticia_p = (callback) =>
+  export const listarNoticias = (callback) =>
+  onSnapshot(collection(db, "noticias"), callback);
+
+  export const listarNoticia_p = (callback) =>
   onSnapshot(collection(db, "noticias"), callback);
 
 /**
  *
  * @param {string} id ID Noticia
  */
-export const eliminarnoticia = (id) => deleteDoc(doc(db, "noticias", id));
+export const eliminarNoticia = (id) => deleteDoc(doc(db, "noticias", id));
 
-export const getnoticia = (id) => getDoc(doc(db, "noticias", id));
+export const getNoticia = (id) => getDoc(doc(db, "noticias", id));
 
-export const actualizarnoticia = (id, newFields) =>
+export const actualizarNoticia = (id, newFields) =>
   updateDoc(doc(db, "noticias", id), newFields);
 
-export const getnoticias = () => getDocs(collection(db, "noticias"));
+export const getNoticias = () => getDocs(collection(db, "noticias"));
 
 
 /* IMAGENES NOTICIAS */

@@ -1,4 +1,4 @@
-import { getAtractivo, listar, listarAtractivos ,listarsitios1,listarsitios2,listarsitios3,listarsitios4,listarsitios5, listarnoticia, listarruta } from "./firebaseConfig.js";
+import { getAtractivo, listar, listarAtractivos ,listarsitios1,listarsitios2,listarsitios3,listarsitios4,listarsitios5, listarNoticia, listarruta } from "./firebaseConfig.js";
   
   const formrespuesta = document.getElementById("formulario-container");
   var span = document.getElementsByClassName("close")[0];
@@ -111,7 +111,7 @@ let input0 = document.querySelectorAll(".input0")[0];
     });
     
 
-    listarnoticia((querySnapshot) => {
+    listarNoticia((querySnapshot) => {
       formrespuestan.innerHTML = "";
       querySnapshot.forEach((doc) => {
         const noticia = doc.data();

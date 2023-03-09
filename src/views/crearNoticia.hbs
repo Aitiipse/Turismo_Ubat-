@@ -1,0 +1,59 @@
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./principal/css/agregar.css">
+	<link rel="stylesheet" href="./principal/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./usuarios/crearp/CSS/movile.css">
+    <link rel="stylesheet" href="./usuarios/crearA/CSS/tablet.css" media="screen and (min-width:600px)">
+    <link rel="stylesheet" href="./usuarios/crearA/CSS/web.css" media="screen and (min-width:1000px)">
+</head>
+
+    
+    
+    
+<body class="body gridContainer " >
+<div class="">
+         <h2>ADMINISTRADOR DE NOTICIAS</h2>
+    <div class=" eContenido " id="contenedorn"></div>
+    <br>
+    <h2> REGISTRAR</h2>
+    <div>
+    <form action="/new-noticia" method="POST" enctype="multipart/form-data" class="formulario" id="formularion" >
+      
+
+        <label class="" >TITULAR DE LA NOTICIA</label>
+    
+      <input id="titular" name="titular" type="text" placeholder="Titular de la Noticia" >
+   
+  
+  <section class="row justify-content-center noticias">
+	<div  class="espaciotext1">
+    <div>
+	
+    <label class=""  >RESUMEN</label>
+  </div>
+    
+      <textarea id="resumen" name="resumen" spellcheck="true" rows="10" cols="25" tabindex="9" placeholder="Resumen de la noticia"></textarea>
+	  </div>
+	   <div  class="espaciotext2">
+		<div>
+    <label  >NOTICIA COMPLETA</label>
+  </div>
+   
+      <textarea id="completa" name="completa" spellcheck="true" rows="10" cols="40" tabindex="4" placeholder="Noticia Completa"></textarea>
+   
+  </div>
+    </section>
+        <div class="imagen">
+            <div class="fotos"></div>
+            <input type="file" class="img_f" name="vehiculo" value="Guardar Cambios"
+                accept="image/png, .jpeg, .jpg, image/mp4" required>
+        </div>
+        <input type="submit" value="AGREGAR"  id="btn-task-form" class="subir btn btn-primary">
+    </form>
+    </div>
+    <script src="/js/editarn.js" type="module"></script>
+    <script src="./usuarios/crearP/JS/index2.js"></script>
+
+</body>
+
+</html>
