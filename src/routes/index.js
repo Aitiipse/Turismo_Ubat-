@@ -143,9 +143,13 @@ router.use('/logout', async (req, res, next) => {
 router.post('/new-user-email', async (req, res) => {
 	//console.log('hola dentro de ');
 	let { passwordd, confirmPassword, email, phone, name } = req.body;
+	var contra = " ";
+
 
 	if (passwordd !== confirmPassword) {
+		contra ==="no coinciden";
 		mensaje = 'Las contraseñas no coinciden';
+		console.log ('Las contraseñas no coinciden'); 
 		res.redirect('/registro');
 	} else {
 		verficEmail(res, email, () => {
@@ -221,17 +225,7 @@ router.post('/login-email', async (req, res) => {
 					console.log('Este es el mensaje de error ', errorMessage);
 					if (errorCode === 'auth/user-not-found') {
 						console.log(`Intento: ${contador}`);
-						if(contador === 3){
-							document.getElementById('validar').disabled = 'true';
-							document.getElementById('campo').disabled = 'true';
-							alert('CANTIDAD DE INTENTOS EXCEDIDA, RECARGUE LA PÁGINA E INTENTE NUEVAMENTE');
-							
-							setTimeout(myFunction, 2000);
-							campo.style.enable='true';
-			
-							alert(contador);
-							contador =-1;
-						  }
+						
 						mensaje = 'CREDENCIALES INCORRECTAS'; 
 						
 						res.redirect('/');
@@ -240,7 +234,6 @@ router.post('/login-email', async (req, res) => {
 
 						res.redirect('/');
 					}
-					contador++;
 				});
 		})
 		.catch((error) => {
