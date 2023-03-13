@@ -7,8 +7,24 @@
 </head>
 <body class="body gridContainer " >
 <div class="">
-    <h2><b>ATRACTIVOS REGISTRADOS </b></h2> <br>
-    <div class=" eContenido formulario " id="contenedor"></div>
+    <h2><b>ATRACTIVOS REGISTRADOS </b></h2> 
+        <button id="ver" class="ver" onclick="ver">VER TODOS</button><br>
+
+        <script>
+function ver() {
+  document.getElementById("formulario").style.display = "flex";
+}
+</script>
+
+       <div class=" eContenido formulario " id="formulario" style="display:none ;" >
+        <table style="width:100%">
+        
+        </table>
+        <table style="width:100%"id="contenedor">
+        
+        </table>
+
+    </div>
     <br>
     <h2> REGISTRAR</h2>
     <div>

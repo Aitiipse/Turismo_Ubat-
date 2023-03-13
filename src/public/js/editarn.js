@@ -22,21 +22,29 @@ import {listarNoticias,guardarNoticia, eliminarNoticia, getNoticia, actualizarNo
   
         containerNoticias.innerHTML += `
 
+        <tr>
+          <th>Noticia</th>
+          <th>Actualizado</th>
+          <th>Editar</th>
+          <th>Eliminar</th>
+        </tr>
+        <tr>
+          <td style="font-style: italic;">${noticia.titular} </td>
+          <td>${noticia.updatedAt}</td>
+          <td><button class="btn btn-secondary btn-edit" data-id="${doc.id}">
+          <b> 🖉 </b>
+        </button>
+          </td>
+          <td><button class="btn  btn-delete" data-id="${doc.id}">
+          <b>🗑</b> 
+        </button></td>
+        </tr>
 
-        <div class="lisa_editar">
-  
-    
-      <div><b>${noticia.titular}</b> - - - </div> 
-      <div>${noticia.updatedAt}</div>
-      <div><button class="btn  btn-delete" data-id="${doc.id}">
-      🗑 
-    </button>
-    <button class="btn btn-secondary btn-edit" data-id="${doc.id}">
-      🖉 
-    </button></div>
-    
-  
-    </div>
+        
+      
+
+
+        
     
     `;
       });

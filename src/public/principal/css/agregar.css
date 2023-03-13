@@ -104,9 +104,9 @@ border-radius: 12px;
   }
 
   .espaciotext1{
-    width: auto;
-    justify-content: left;
-    padding: 20pt;
+    justify-content: center;
+    font-style: italic;
+
   }
   
   .espaciotext2{
@@ -220,3 +220,16 @@ input[type=submit]{
 }
 
 
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #8eb5e4b8;
+}
