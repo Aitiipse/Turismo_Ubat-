@@ -13,23 +13,20 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Port+Lligat+Sans&display=swap"rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="./principal/css/styles.css">
-    <link rel="stylesheet" type="text/css" href="./principal/css/administrador.css">
-    <link rel="stylesheet" href="./principal/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./principal/css/sweetalert2.css">
+	<link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link rel="stylesheet" type="text/css" href="./css/administrador.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" type="text/css" href="./principal/css/indexAtractivos.css">
-	<link rel="stylesheet" href="./usuarios/menu/CSS/movile.css">
-	<link rel="stylesheet" href="./usuarios/menu/CSS/tablet.css" media="screen and (min-width:600px)">
-	<link rel="stylesheet" href="./usuarios/menu/CSS/web.css" media="screen and (min-width:1000px)">
+    <link rel="stylesheet" type="text/css" href="./css/indexAtractivos.css">
+	<link rel="stylesheet" href="./css/menu/bannerm.css">
+	<link rel="stylesheet" href="./css/menu/bannert.css" media="screen and (min-width:600px)">
+	<link rel="stylesheet" href="./css/menu/bannerw.css" media="screen and (min-width:1000px)">
 	<link rel="stylesheet" href="./usuarios/publicaciones/CSS/movile.css">
     <link rel="stylesheet" href="./usuarios/publicaciones/CSS/tablet.css" media="screen and (min-width:600px)">
     <link rel="stylesheet" href="./usuarios/publicaciones/CSS/web.css" media="screen and (min-width:1000px)">
     <title>UBATÉ, ¡¡¡ DESTINO DE TRADICIONES !!!</title>
 </head>
- 
-    
-</head>
+
 
     <!-- Header -->
     <header x-data="{ open: false }" class="header opciones">
@@ -49,32 +46,30 @@
         
         <!-- Menu -->
         <ul class="nav__ul menuAdmin ">
-          <li >
+                     <li >
                          <a href="/editarAtractivos" class="btn-sideBar-SubMenu">
                              <i class="zmdi zmdi-case zmdi-hc-fw"></i><h5> Atractivos</h5><i
                                  class="zmdi zmdi-caret-down pull-right"></i>
                          </a>
                      </li>
-                     
                      <li>
                          <a href="#calendario" class="btn-sideBar-SubMenu">
                              <i class="zmdi zmdi-account-add zmdi-hc-fw"></i> <h5>Eventos</h5> <i
                                  class="zmdi zmdi-caret-down pull-right"></i>
                          </a>
                      </li>
-     
                      <li>
                          <a href="/crearNoticia" class="btn-sideBar-SubMenu ">
                              <i class="zmdi zmdi-shield-security zmdi-hc-fw"></i><h5> Noticias</h5> <i
                                  class="zmdi zmdi-caret-down pull-right"></i>
                          </a>
                      </li>
-                     <li id="principal" class="principal">
+                     <li>
                          <a href="/editarruta" class="btn-sideBar-SubMenu">
                              <i class="zmdi zmdi-view-dashboard zmdi-hc-fw" id="principal"></i> <h5>Rutas</h5>
                          </a>
                      </li>
-                     <li id="principal" class="principal">
+                     <li>
                          <a href="/registro" class="btn-sideBar-SubMenu">
                              <i class="zmdi zmdi-view-dashboard zmdi-hc-fw" id="principal"></i> <h5>Registrar usuario nuevo</h5>
                          </a>

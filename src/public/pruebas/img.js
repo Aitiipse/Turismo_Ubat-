@@ -67,13 +67,14 @@ const showImage = async (docData) => {
 async function main() {
 	var firebaseConfig = {
 		// YOUR FIREBASE CREDENTIALS HERE
-		apiKey: "AIzaSyDlasdrgnXPMmIqioRVObso5lwBp1e5UCs",
-		authDomain: "tuvaca-ce478.firebaseapp.com",
-		projectId: "tuvaca-ce478",
-		storageBucket: "tuvaca-ce478.appspot.com",
-		messagingSenderId: "487906553455",
-		appId: "1:487906553455:web:35cd78dd5c339b1d3ba79a",
-		measurementId: "G-3LYFGJK1ET"
+		apiKey: "AIzaSyD4M-Klb_H-jTbI8D0pBj1MFJQNQeSTx6w",
+	authDomain: "ubate-travel.firebaseapp.com",
+	databaseURL: "https://ubate-travel-default-rtdb.firebaseio.com",
+	projectId: "ubate-travel",
+	storageBucket: "ubate-travel.appspot.com",
+	messagingSenderId: "950538745193",
+	appId: "1:950538745193:web:c68e75fc7dcdc74cde79f8",
+	measurementId: "G-MZCQJVDRPV"
 	};
 	// Initialize Firebase
 	firebase.initializeApp(firebaseConfig);
