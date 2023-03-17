@@ -149,3 +149,13 @@
         left: 0;
         z-index: 10;
       }
+
+      .navP{
+        background-color: white;
+        border-radius:10px;
+      }
+
+      .flecha{
+        margin: auto;
+        align-items: center;
+      }

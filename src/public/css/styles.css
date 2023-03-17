@@ -12791,14 +12791,14 @@ background: linear-gradient(285deg, #a3a3a3 0%, #928888 50%, #403b5c 100%);
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 2pt;
+  margin-top: 20px;
 
 }
 
 .opciones{
-  position: sticky;
   color: #000;
   padding: auto;
+  background-color: white;
  
 }
 
