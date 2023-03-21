@@ -501,6 +501,19 @@ background-color: rgb(255, 255, 255);
   top: 0;
   right: 0;
   left: 0;
+  bottom: 0;
   z-index: 10;
+}
+
+.rutaOrden{
+ 
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(1 * var(--bs-gutter-x));
+    margin-left: calc(1 * var(--bs-gutter-x));
+    align-items: flex-end;
+    width: 100%;
+  
 }
 /* fin de solucion del error del menu en responsive (index.hbs) */
