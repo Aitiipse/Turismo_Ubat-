@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="./css/banner/bannerm.css">
 	<link rel="stylesheet" href="./css/banner/bannert.css" media="screen and (min-width:600px)">
 	<link rel="stylesheet" href="./css/banner/bannerw.css" media="screen and (min-width:1000px)">
+
     <title>UBATÉ, ¡¡¡ DESTINO DE TRADICIONES !!!</title>
 </head>
 
@@ -38,7 +39,7 @@
       
       <!-- Navegador -->
      
-      <nav class="nav navegacion" x-bind:class="open ? 'nav--show' : ''">
+      <nav class="nav navegacion" x-bind:class="open ? 'nav--show' : ''" >
         <!-- Boton cerrar -->
         
         <!-- Menu -->
@@ -122,8 +123,6 @@
 	</script>
 	<script src="https://code.jquery.com/jquery-3.4.0.min.js"
         integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
- <script src="/js/main.js"></script>
-    <script src="/js/administrador.js"></script>
 <script>
     cerrarSesion.addEventListener("click", function () {
     modalSesion2.classList.toggle("modal_cerrado_p");

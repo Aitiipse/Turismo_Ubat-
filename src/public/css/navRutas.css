@@ -1,0 +1,324 @@
+      /* navegador de las rutas el de inicio de sesion para ser responsive */
+
+      .lista_editar{
+        width: 100%;
+        padding: 12pt;
+        margin: 2px;
+        text-align: center;
+      grid-template-columns: 40% 40% 10% 10%;
+    display: flex;
+      }
+    
+    .lista_editar td {
+        background-color: cornflowerblue;
+    
+    }
+    
+    .lista_editar thead{
+     background-color: tomato;
+    }
+    
+    
+    
+    
+    /* ------------------------------ */
+    
+    body {font-family: Arial, Helvetica, sans-serif;}
+    
+    /* The Modal (background) */
+    .modalAtractivos {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      text-align: left;
+    
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    
+    /* Modal Content */
+    .modalAtractivos-content {
+      position: relative;
+      background-color: #eef9f7b7;
+      margin: auto;
+      padding: 0;
+      border: 1px solid #888;
+      width: 80%;
+      cursor: pointer;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+      -webkit-animation-name: animatetop;
+      -webkit-animation-duration: 0.4s;
+      animation-name: animatetop;
+      animation-duration: 0.4s
+    }
+    
+    /* Add Animation */
+    @-webkit-keyframes animatetop {
+      from {top:-300px; opacity:0} 
+      to {top:0; opacity:1}
+    }
+    
+    @keyframes animatetop {
+      from {top:-300px; opacity:0}
+      to {top:0; opacity:1}
+    }
+    
+    /* The Close Button */
+    .close {
+      color: rgb(13, 13, 13);
+      float: right;
+      font-size: 28px;
+      cursor:pointer;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: rgb(88, 84, 84);
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .modalAtractivos-header {
+      padding: 2px 16px;
+      /* background-color: #c6c6c6; */
+    }
+    
+    .modalAtractivos-body {padding: 2px 16px;}
+    
+    .modalAtractivos-footer {
+      padding: 2px 16px;
+      /* background-color: #5cb85c; */
+      color: rgb(0, 0, 0);
+    }
+    
+    
+    /* ---------------------------------------------------------------------------------------- */
+    
+        /* Estilos comunes */
+        .header {
+          display:flex;
+          flex-flow: column wrap;
+          justify-content: space-between;
+          align-items: center;
+          position:relative;
+          top: 0;
+          left: 0;
+          right: 0;
+          background: #d1e1e2;
+        }
+    
+        
+    
+        /* Estilos móvil/celular */
+        @media all and (max-width: 700px) {
+    
+          /* Oculta el nav en la parte izquiera */
+          .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(189, 239, 238, 0.63);
+            transform: translateX(-100vw);
+            transition: 0.5s;
+          }
+    
+          /* Muestra el nav */
+          .nav--show {
+            transform: translateX(0);
+            z-index:initial;
+          }
+    
+          .nav__button {
+            text-align: right;
+            margin: 1rem;
+          }
+    
+          .nav__ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          }
+    
+          .nav__link {
+            display: block;
+            padding: 1rem;
+            font-size: 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+          }
+        }
+    
+        /* Estilos Escritorio */
+        @media all and (min-width: 701px) {
+    
+          /* Oculta botón de abrir o cerrar */
+          .nav__button,
+          .header__button-nav--open {
+            display: none;
+          }
+    
+          /* Adapta el nav en horizontal */
+          .nav__ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+          }
+    
+          .nav__link {
+            display: block;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            color: black;
+            transition: 0.5s;
+          }
+    
+          .nav__link:hover {
+            opacity: 0.5;
+          }
+        }
+    
+        .header__button-nav--close{
+          background-color: #d75353;
+          flex-direction: end;
+        }
+    
+    
+    
+        .navegacion1{
+      width: 1000px;
+      margin: 30px auto;
+      background: #fff;
+    }
+    
+    .navegacion1 ul{
+      list-style: none;
+    }
+    
+    .menuAdmin > li{
+      overflow: hidden;
+    }
+    
+    .menuAdmin > li > a{
+      display: block;
+      padding: 15px 20px;
+      color: #000000;
+      text-decoration: none;
+      overflow: visible;
+    }
+    
+    .menuAdmin li a:hover{
+      color: #CE7D35;
+      transition: all .3s;
+    }
+    
+    
+    .menuAdmin li:hover .submenu{
+      visibility: visible;
+      opacity: 1;
+      color: aliceblue;
+    }
+    
+      
+    
+    
+    
+    
+    
+    /* ------------------------ */
+    
+    .modal {
+      opacity: 0;
+      visibility: hidden;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      text-align: left;
+      background: rgba(0,0,0, .9);
+      transition: opacity .25s ease;
+    }
+    
+    .caja {
+      transition: top .25s ease;
+      position: absolute;
+      top: 10%;
+      right: 0;
+      bottom:10%;
+      left: 0;
+      width: 50%;
+      margin: auto;
+      overflow: auto;
+      background: #fff;
+      border-radius: 5px;
+      padding: 1em 2em;
+      height: auto;
+    }
+    
+    .cerrar_modal {
+      position: absolute;
+      right: 1em;
+      top: 1em;
+      width: 1.1em;
+      height: 1.1em;
+      cursor: pointer;
+    }
+    
+    .cerrar_modal:after,
+    .cerrar_modal:before {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 1.5em;
+      background: #ccc;
+      display: block;
+      transform: rotate(45deg);
+      left: 50%;
+      margin: -3px 0 0 -1px;
+      top: 0;
+    }
+    
+    .cerrar_modal:hover:after,
+    .cerrar_modal:hover:before {
+      background: #aaa;
+    }
+    
+    .cerrar_modal:before {
+      transform: rotate(-45deg);
+    }
+    
+    @media screen and (max-width: 768px) {
+      
+      .caja {
+        width: 90%;
+        height: 90%;
+        box-sizing: border-box;
+      }
+    }
+    
+    .imagen_modal {
+      object-fit:fill;
+      width:100%;
+      height:50%;
+      background-color: white;
+      overflow: hidden;
+      
+    }
+    
+    #nombre .nombre{
+      text-transform: uppercase;
+    }
+    
+    /* fin del navegador de rutas */
+    

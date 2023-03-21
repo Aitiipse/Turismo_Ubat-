@@ -1,7 +1,3 @@
-const registergoogle = document.getElementById("registergoogle");
-const registerfacebook = document.getElementById("registerfacebook");
-const google=document.getElementById("google");
-const facebook=document.getElementById("facebook");
 const contra = document.getElementById("passwordd");
 const ccontraseña = document.getElementById("confirmPassword");
 const cerrar=document.getElementById("cerrar");

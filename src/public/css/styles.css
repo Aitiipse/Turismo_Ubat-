@@ -7025,7 +7025,6 @@ fieldset:disabled .btn {
 .carousel-inner::after {
   display: block;
   clear: both;
-  content: "hols";
 }
 
 .carousel-item {

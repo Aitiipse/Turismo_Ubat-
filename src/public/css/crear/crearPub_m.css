@@ -22,22 +22,7 @@ html {
     scroll-padding: 10vh;
 }
 
-.body_crearP{
-    background-color:  #F8F8F8;
-    width: 100%;
-    min-width: 320px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.body_crearP p{
-    font-size: 1.3rem;
-    margin-bottom: 2%;
-}
-.body_crearP span{
-    font-size: 1.3rem;
-}
+
 main{
     display: flex;
     align-items: center;
@@ -52,6 +37,7 @@ form{
     width: 80%;
     height: auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;

@@ -9,38 +9,41 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
         type="text/css" />
-    <link rel="stylesheet" type="text/css" href="./css/styles.css">
-    <link rel="stylesheet" type="text/css" href="./css/agregar.css">
-    <link rel="stylesheet" href="./css/administrador.css">
-	<link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/sweetalert2.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/agregar.css">
+    <link rel="stylesheet" href="../public/css/administrador.css">
+	<link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/sweetalert2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>UBATÉ, ¡¡¡ DESTINO DE TRADICIONES !!!</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Port+Lligat+Sans&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./css/crear/crearPub_m.css">
-    <link rel="stylesheet" href="./css/crear/crearPub_t.css" media="screen and (min-width:600px)">
-    <link rel="stylesheet" href="./css/crear/crearPub_w.css" media="screen and (min-width:1000px)">
+    <link rel="stylesheet" href="../public/css/crear/crearPub_m.css">
+    <link rel="stylesheet" href="../public/css/crear/crearPub_t.css" media="screen and (min-width:600px)">
+    <link rel="stylesheet" href="../public/css/crear/crearPub_w.css" media="screen and (min-width:1000px)">
 </head>
+
+
+
 <body class="body" onload="cargar()">
 
     <div class="errores" ><p ><h5 >{{mensajeError}}</h5></p></div>
 
 {{!-- <div class=" col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4"></div> --}}
-<div class=" formRegistro ">
+<div class=" row contenido col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
     <h2>REGISTRAR USUARIO NUEVO</h2>
     <div>Espacio para <b>REGISTRAR</b> un nuevo usuario para la colaboracion en el manejo de la página.</div>
     <div>Por favor llenar todos los espacios correctamente</div>
 
-   <form class=" " id="register-form" action="/new-user-email" method="POST" class="contenido" autocomplete="off" >  
-                 <b>  <div> NOMBRE<input type="text" name="name" id="name" placeholder="Nombre Completo" required></div>
+   <form class=" modal_formulario_R modal_formulario" id="register-form" action="/new-user-email" method="POST" class="contenido" autocomplete="off" >  
+                   <div> NOMBRE<input type="text" name="name" id="name" placeholder="Nombre Completo" required></div>
                    <div> NUMERO DE TELEFONO<input type="number" name="phone" id="phone" placeholder="Número de Teléfono" min="3000000000" max="9999999999" required></div>
-                   <div>CORREO ELECTRÓNICO<input type="email" name="email" id="email-a" placeholder="Correo Electronico" required></div>
+                   <div>CORREO ELECTRÓNICO<input type="email" name="email" id="email-a" placeholder="Correo Electronico" required></div><br></br>
                    <div> CONTRASEÑA<input type="password" name="passwordd" id="passwordd" placeholder="Contraseña" minlength="7" required>
                     VERIFICAR CONTRASEÑA<input type="password" name="confirmPassword" id="confirmPassword" placeholder="Verificar Contraseña" minlength="7" required></div>
-                    <br></b>
+                    <br>
                     <button id="boton" type="submit">Registrar</button>
                 </form>
     </div>

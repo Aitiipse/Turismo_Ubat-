@@ -7,17 +7,17 @@
     --font2: 'Inter', sans-serif;
 }
 form{
-    width: 50%;
+    width: 100%;
 }
 
 input,select{
-    width: 40%;
+    width: 70%;
 }
 ::placeholder, select,textarea {
     font-size: 1.6rem;
 }
 input[type=submit]{
-    width: 40%;
+    width: 70%;
     font-size: 1.6rem;
 }
 .imagen div{

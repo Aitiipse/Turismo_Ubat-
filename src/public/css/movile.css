@@ -324,105 +324,19 @@
 }
 
 /************************Registrarse***********************************/
-.modal_container_R {
-    opacity: 0;
-    visibility: hidden;
-    position: fixed;
-    z-index: 9;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background: rgb(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.modal_container_R2 {
-    position: fixed;
-    z-index: 9;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background: rgb(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.formRegistro{
+    margin-left:25%;
+		margin-right:25%;
+		border: 1px solid #000000;
+		margin-bottom: 5px;
+		padding: 0px 15px 0 15px;
+        align-content: center;
+
 }
 
-.modal_R {
-    width: 90%;
-    background-color: rgb(229, 229, 229);
-    height: 90%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 5px;
-    position: relative;
-    transform: translateY(0%);
-    transition: transform 1s;
-}
-.modal_R2 {
-    width: 90%;
-    background-color: rgb(229, 229, 229);
-    height: 90%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 5px;
-    position: relative;
-}
 
-.modal_cerrado_R {
-    transform: translateY(-200%);
-}
 
-.cerrar_modal_R {
-    background-image: url(../icons/Cancel.png);
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-
-.cerrar_modal_R:hover {
-    background-image: url(../icons/Cancel-1.png);
-}
-
-.modal_formulario_R {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    flex-wrap: wrap;
-    gap: 5px;
-}
-
-.modal_formulario_R input {
-    background-color: transparent;
-    margin-bottom: 5px;
-    border-radius: 10px;
-    padding: 5px;
-    width: 70%;
-    height: 30px;
-}
-
-.modal_formulario_R input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-.modal_formulario_R input:focus {
-    outline: 0 none;
-    border: 1px solid var(--cafe);
-    box-shadow: 2px 2px 8px 0 var(--cafe);
-}
 
 /************************Comunes***********************************/
 .modal_Cuerpo {

@@ -324,12 +324,5 @@ document.getElementById("card4").style.visible="visible";
 }});
 });
 
-
-
-
-
-
-
-
 });
 
