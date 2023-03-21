@@ -494,3 +494,13 @@ background-color: rgb(255, 255, 255);
   cursor: pointer;
 }
 /* ---------------------------------------------- prueba */
+
+/* solucion del error del menu en responsive (index.hbs) */
+.frente {
+  position:absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+}
+/* fin de solucion del error del menu en responsive (index.hbs) */
