@@ -261,7 +261,7 @@ router.get('/registro', async (req, res) => {
 });
 
 //ruta inicial para renderizar publicaciones
-router.get('/publicaciones', async (req, res) => {
+router.get('/publicacioness', async (req, res) => {
 	publicaciones()
 		.then((publicaciones) => {
 			verificarEstado(req, res, 'atractivos', 'index', publicaciones, data = '', () => {
@@ -271,7 +271,7 @@ router.get('/publicaciones', async (req, res) => {
 		.catch((error) => { console.log("No hay publicaiones", error); });
 });
 router.get('/crearPublicacion', async (req, res) => {
-	modal = false;
+	modal = true;
 	//res.render('crearPublicacion');
 	 verificarEstado(req, res, 'crearPublicacion', 'index', datos = '', /*globalThis.photo*/ req.session.photo, () => {
 	//verificarEstado(req, res, 'crearPublicacion', 'crearPublicacion', datos = '', /*globalThis.photo*/ req.session.photo, () => {

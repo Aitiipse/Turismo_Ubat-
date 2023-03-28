@@ -61,16 +61,43 @@ router.post('/new_publication', multpleInput,  (req, res) => {
 		a8,
 		a9,
 		a10,
-	
+		// prenada,
+		// tipoprenada,
+		// toro,
+		// meses,
+		// nprenadas,
+		// descripcion,
+		// edad_es,
+		// anos,
+		// otro_R,
+		// otro_T,
 	} = req.body;
 	console.log(data);
-	
-	let fecha = getDate(); 
+	// if(data['raza'] === 'Otra'){
+	// 	data.raza=data.otro_R;
+	// }
+	// if(data['toro'] === 'Otra'){
+	// 	console.log("cambiando toro");
+	// 	data.toro=data.otro_T;
+	// }
+	// if (data['prenada'] === 'Esta preñada'){
+	// 	data.toro = 'Con toro ' + data.toro;
+	// 	data.meses = meses;
+	// }
+	// if(data['edad_es'==='']){
+	// 	data.edad_es=data.anos;
+	// }
+	// data.edad=data.edad+' '+ data.edad_es;
+	let fecha = getDate(); //obtener la fecha actual
 	let publication = {
 		createdAt : fecha,
 		iduser : globalThis.idUser,
 		...data,
 		input0: '',
+		// input1: '',
+		// input2: '',
+		// input3: '',
+		// input4: '',
 		updatedAt : fecha,
 	};
 	console.log(publication);
@@ -86,7 +113,7 @@ router.post('/new_publication', multpleInput,  (req, res) => {
 			//redireccion al momento de subir la publicacion
 			//utiliza tiempo para alcanzar a cargar la informacion
 			setTimeout(() => {
-				res.redirect('/atractivos');
+				res.redirect('/publicaciones');
 			}, 2300);
 		})
 		.catch(function (error) {
