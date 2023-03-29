@@ -1,344 +1,359 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;400&family=Raleway:ital,wght@1,900&family=Red+Hat+Display:ital,wght@1,500&display=swap'); */
 
-:root{
+:root {
 
-    --bs-cont: #F0A500;
-    --bs-cont-rgb:240, 165, 0;
+  --bs-cont: #F0A500;
+  --bs-cont-rgb: 240, 165, 0;
 }
 
 
 .bg-cont {
-    --bs-bg-opacity: 1;
-    background-color: rgba(var(--bs-cont-rgb), var(--bs-bg-opacity)) !important;
-  }
-
-html{
-    font-family: 'Quicksand', 'Montserrat', Verdana, Geneva, Tahoma, sans-serif, cursive;
-    background:radial-gradient(200px top, ellipse, white, #1162ac, black);
-    color: black;
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-cont-rgb), var(--bs-bg-opacity)) !important;
 }
+
+html {
+  font-family: 'Quicksand', 'Montserrat', Verdana, Geneva, Tahoma, sans-serif, cursive;
+  background: radial-gradient(200px top, ellipse, white, #1162ac, black);
+  color: black;
+}
+
 body {
-	/* background-image: url(../img/basilicainterno.jpg); */
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: 100% 100%;
+  /* background-image: url(../img/basilicainterno.jpg); */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 100% 100%;
 }
 
 
-.tamimagenes{
+.tamimagenes {
   overflow: hidden;
-  border-radius:80px 10% / 50px 10em 10px 25em  ;
+  border-radius: 80px 10% / 50px 10em 10px 25em;
 }
-.aaa{
+
+.aaa {
   width: 100%;
   height: 100%;
   contain: content;
-  object-fit:cover;
+  object-fit: cover;
   overflow: hidden;
   background-size: cover;
-  
+
 
 }
 
-.iniciar{
-    padding-top: 10%;
+.iniciar {
+  padding-top: 10%;
 }
 
-img.imgmultimedia{
-    /*background-color: rgb(122, 11, 11);*/
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    /*position:absolute;
-*/  top: 40px;
-  left : 40px;
+img.imgmultimedia {
+  /*background-color: rgb(122, 11, 11);*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  /*position:absolute;
+*/
+  top: 40px;
+  left: 40px;
   z-index: -1;
   background-size: contain;
   background-size: 200px;
 }
 
-.informacion{
-    width:auto;
-    height: 40%;
-    border-radius: 30px;
-    margin: 0% 1% 0% 1%;
-    background-color: aqua;
-    border: solid 0px;
-    text-align: center;
+.informacion {
+  width: auto;
+  height: 40%;
+  border-radius: 30px;
+  margin: 0% 1% 0% 1%;
+  background-color: aqua;
+  border: solid 0px;
+  text-align: center;
 }
 
 
-.atractivos{
-    width:auto;
-    height: 40%;
-    border-radius: 30px;
-    margin: 0% 1% 0% 1%;
-    background-color: rgba(138, 177, 189, 0.534);
-    border: solid 0px;
-    text-align: center;
+.atractivos {
+  width: auto;
+  height: 40%;
+  border-radius: 30px;
+  margin: 0% 1% 0% 1%;
+  background-color: rgba(138, 177, 189, 0.534);
+  border: solid 0px;
+  text-align: center;
 }
 
 
 
-.noticias{
-    width:auto;
-    height: 40%;
-    border-radius: 30px;
-    margin: 0px;
-    background-color: rgb(0, 0, 0);
-    border: solid 0px;
+.noticias {
+  width: auto;
+  height: 40%;
+  border-radius: 30px;
+  margin: 0px;
+  background-color: rgb(0, 0, 0);
+  border: solid 0px;
 }
 
 
 li:hover {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 .containeratractivos {
-    display: grid; 
-    grid-auto-flow: row dense; 
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr 1fr 1fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-      ". . . . ."
-      ". . . . ."
-      ". . . . ."
-      ". . . . ."; 
-  }
-  /* RUTAS */
+  display: grid;
+  grid-auto-flow: row dense;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . . . ."
+    ". . . . ."
+    ". . . . ."
+    ". . . . .";
+}
 
-  .pr{
-    cursor: pointer;
-    display: block;
-    max-width: 50rem;
-    border-radius: 0.5rem;
-    overflow: hidden;}
+/* RUTAS */
+
+.pr {
+  cursor: pointer;
+  display: block;
+  max-width: 50rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
 
 
- .pu{
-background-color: rgb(255, 255, 255);
+.pu {
+  background-color: rgb(255, 255, 255);
 
- }
+}
 
- .pu:hover{
+.pu:hover {
   top: 0;
   left: 0;
   transition: all 0.2s ease-in-out;
   opacity: 10;
   background-color: rgba(196, 104, 23, 0.279);
- }
+}
 
- .pb{
-background-color: rgb(255, 255, 255);
+.pb {
+  background-color: rgb(255, 255, 255);
 
- }
- .pb:hover{
+}
+
+.pb:hover {
   top: 0;
   left: 0;
   transition: all 0.2s ease-in-out;
   opacity: 10;
   background-color: rgba(221, 32, 155, 0.3);
- }
+}
 
- .pa{
-background-color: rgb(255, 255, 255);
+.pa {
+  background-color: rgb(255, 255, 255);
 
- }
- .pa:hover{
+}
+
+.pa:hover {
   top: 0;
   left: 0;
   transition: all 0.2s ease-in-out;
   opacity: 10;
   background-color: rgba(52, 113, 211, 0.3);
- }
+}
 
- .pt{
-background-color: rgb(255, 255, 255);
+.pt {
+  background-color: rgb(255, 255, 255);
 
- }
- .pt:hover{
+}
+
+.pt:hover {
   top: 0;
   left: 0;
   transition: all 0.2s ease-in-out;
   opacity: 10;
   background-color: rgba(218, 116, 20, 0.3);
- }
+}
 
- .pe{
-background-color: rgb(255, 255, 255);
+.pe {
+  background-color: rgb(255, 255, 255);
 
- }
- .pe:hover{
+}
+
+.pe:hover {
   top: 0;
   left: 0;
   transition: all 0.2s ease-in-out;
   opacity: 10;
   background-color: rgba(24, 118, 16, 0.3);
- }
+}
 
- .card-a  h4 {
-    font-size: .8rem;
-    
-  }
-  
-  .card-a  h5 {
-    font-size: 1.5rem;
-  
-  }
-  
-  .card-a  h6 {
-    font-size: 1rem;
-  
-  }
+.card-a h4 {
+  font-size: .8rem;
 
-  .card-a{
-    width: 150px;
-   height: 200px;
-    border-radius: 30px;
-    overflow: hidden;
-    position: relative;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all .25s ease;
-    backface-visibility: hidden;
-    flex-direction: column;
-    word-wrap: break-word;
-    background-color: rgba(255, 255, 255, 0.289);
-    background-clip: border-box;
-    border: 0.125rem solid rgba(0, 0, 0, 0.125);
-    word-wrap: break-word;
-  }
+}
 
-  
-.card-a :hover{
-    transform: scale(.8);
-  }
-  
-  .card-a :hover::after{
-    height: 20px;
-  }
-  
-  .card-a:hover .con-text p{
-    transform: translate(10);
-    opacity: 1;
-    margin: 10pt;
-    word-wrap: break-word;
-  }
-  .card-a:hover img{
-    transform: scale(9.25);
-  }
-  
-  .card-a:hover .ul{
-    transform: translate(0);
-    opacity: 10;
-  }
-  
-  .card-a::after{
-    width: 100%;
-    content:'';
-    left: 0px;
-    height: 150px;
-    position: absolute;
-    z-index: 20;
-    transition: all .25s ease;
-  }
-  
-  .card-a img {
-    height: 100%;
-    z-index: 10;
-    transition: all .25s ease;
-  }
-  
-  .card-a .con-text{
-    z-index: 30;
-    position:initial;
-    bottom: 0px;
-    color: rgb(0, 0, 0);
-    padding: 20px;
-    margin: 10%;
-    border: #000;
-  }
-  
-  .card-a .con-text p {
-    font-size: .7rem;
-    opacity: 0;
-    margin-bottom: -35px;
-    transition: all .25s ease;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-direction: column;
-    color: #000;
-  }
-  
-  
-  .card-a-group h4 {
-    font-size: .2rem;
-    color: #000;
-  
-  }
-  .card-a p button{
-    padding: 7px 17px;
-    border-radius: 12px;
-    background: transparent;
-    border: 2px solid #fff;
-    color: #fff;
-    margin-top: 5px;
-    margin-left: auto;
-    cursor: pointer;
-    transition: all .25s ease;
-    font-family: poppins;
-    font-size: .75rem;
-    outline: none;
-  }
-  
-  .card-a .con-text p button:hover{
-    background: #aaafff;
-    color: #fff;
-  }
+.card-a h5 {
+  font-size: 1.5rem;
+
+}
+
+.card-a h6 {
+  font-size: 1rem;
+
+}
+
+.card-a {
+  width: 150px;
+  height: 200px;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .25s ease;
+  backface-visibility: hidden;
+  flex-direction: column;
+  word-wrap: break-word;
+  background-color: rgba(255, 255, 255, 0.289);
+  background-clip: border-box;
+  border: 0.125rem solid rgba(0, 0, 0, 0.125);
+  word-wrap: break-word;
+}
+
+
+.card-a :hover {
+  transform: scale(.8);
+}
+
+.card-a :hover::after {
+  height: 20px;
+}
+
+.card-a:hover .con-text p {
+  transform: translate(10);
+  opacity: 1;
+  margin: 10pt;
+  word-wrap: break-word;
+}
+
+.card-a:hover img {
+  transform: scale(9.25);
+}
+
+.card-a:hover .ul {
+  transform: translate(0);
+  opacity: 10;
+}
+
+.card-a::after {
+  width: 100%;
+  content: '';
+  left: 0px;
+  height: 150px;
+  position: absolute;
+  z-index: 20;
+  transition: all .25s ease;
+}
+
+.card-a img {
+  height: 100%;
+  z-index: 10;
+  transition: all .25s ease;
+}
+
+.card-a .con-text {
+  z-index: 30;
+  position: initial;
+  bottom: 0px;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  margin: 10%;
+  border: #000;
+}
+
+.card-a .con-text p {
+  font-size: .7rem;
+  opacity: 0;
+  margin-bottom: -35px;
+  transition: all .25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  color: #000;
+}
+
+
+.card-a-group h4 {
+  font-size: .2rem;
+  color: #000;
+
+}
+
+.card-a p button {
+  padding: 7px 17px;
+  border-radius: 12px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  margin-top: 5px;
+  margin-left: auto;
+  cursor: pointer;
+  transition: all .25s ease;
+  font-family: poppins;
+  font-size: .75rem;
+  outline: none;
+}
+
+.card-a .con-text p button:hover {
+  background: #aaafff;
+  color: #fff;
+}
+
+.carousel {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (max-width: 300px) {
 
   .carousel {
     width: 100%;
-    height: 500px;
+    height: 100px;
     overflow: hidden;
     position: relative;
-  }
-  @media (max-width: 300px) {
 
-    .carousel {
-      width: 100%;
-      height: 100px;
-      overflow: hidden;
-      position: relative;
-  
   }
-  }
-  @media (min-width: 300px) {
+}
 
-    .carousel {
-      width: 100%;
-      height: 150px;
-      overflow: hidden;
-      position: relative;
-  
-  }
-  }
-  @media (min-width: 490px) {
+@media (min-width: 300px) {
 
-    .carousel {
-      width: 100%;
-      height: 210px;
-      overflow: hidden;
-      position: relative;
-  
+  .carousel {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+
   }
+}
+
+@media (min-width: 490px) {
+
+  .carousel {
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+    position: relative;
+
   }
+}
+
 @media (min-width: 576px) {
 
   .carousel {
@@ -347,7 +362,7 @@ background-color: rgb(255, 255, 255);
     overflow: hidden;
     position: relative;
 
-}
+  }
 }
 
 @media (min-width: 768px) {
@@ -357,7 +372,7 @@ background-color: rgb(255, 255, 255);
     height: 390px;
     overflow: hidden;
     position: relative;
-  
+
   }
 }
 
@@ -368,7 +383,7 @@ background-color: rgb(255, 255, 255);
     height: 410px;
     overflow: hidden;
     position: relative;
-}
+  }
 }
 
 @media (min-width: 1200px) {
@@ -388,76 +403,96 @@ background-color: rgb(255, 255, 255);
     overflow: hidden;
     position: relative;
   }
- 
+
 }
 
 #imagen {
-    width: 100%;
-    height: 400px;
+  width: 100%;
+  height: 400px;
 }
 
-.imagenes{
+.imagenes {
   width: 100%;
 
 }
 
 .slider {
-	width: 95%;
-	margin: auto;
-	overflow: hidden;
+  width: 95%;
+  margin: auto;
+  overflow: hidden;
 }
 
 .slider ul {
-	display: flex;
-	padding: 0;
-	animation: cambio 20s infinite alternate linear;
+  display: flex;
+  padding: 0;
+  animation: cambio 20s infinite alternate linear;
 }
 
 .slider li {
-	width: 100%;
-	list-style: none;
+  width: 100%;
+  list-style: none;
 }
 
 .slider img {
-	width: 100%;
+  width: 100%;
   max-height: 400px;
   position: absolute;
   overflow: hidden;
   background-size: cover;
-  
+
 }
 
 @keyframes cambio {
-	0% {margin-left: 0;}
-	20% {margin-left: 0;}
-	
-	25% {margin-left: -100%;}
-	45% {margin-left: -100%;}
-	
-	50% {margin-left: -200%;}
-	70% {margin-left: -200%;}
-	
-	75% {margin-left: -300%;}
-	100% {margin-left: -300%;}
+  0% {
+    margin-left: 0;
+  }
+
+  20% {
+    margin-left: 0;
+  }
+
+  25% {
+    margin-left: -100%;
+  }
+
+  45% {
+    margin-left: -100%;
+  }
+
+  50% {
+    margin-left: -200%;
+  }
+
+  70% {
+    margin-left: -200%;
+  }
+
+  75% {
+    margin-left: -300%;
+  }
+
+  100% {
+    margin-left: -300%;
+  }
 }
 
-.tamaño{
+.tamaño {
   overflow: hidden;
-  
+
 }
 
-.calendario{
-  width:100%;
-   height:400px;
+.calendario {
+  width: 100%;
+  height: 400px;
 }
 
-.noticiaespacio{
+.noticiaespacio {
   background-color: #ffffff72;
 }
 
 
 
-.noticiaespacio{
+.noticiaespacio {
   max-height: 400px;
   position: relative;
   overflow: scroll;
@@ -466,17 +501,26 @@ background-color: rgb(255, 255, 255);
 /* ---------------------------------------------- prueba */
 
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
 }
 
 /* Modal Content */
@@ -502,6 +546,7 @@ background-color: rgb(255, 255, 255);
   text-decoration: none;
   cursor: pointer;
 }
+
 /* ---------------------------------------------- prueba */
 
 /* solucion del error del menu en responsive (index.hbs) */
@@ -514,15 +559,16 @@ background-color: rgb(255, 255, 255);
   z-index: 9;
 }
 
-.rutaOrden{
- 
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: calc(-1 * var(--bs-gutter-y));
-    margin-right: calc(1 * var(--bs-gutter-x));
-    margin-left: calc(1 * var(--bs-gutter-x));
-    align-items: flex-end;
-    width: 100%;
-  
+.rutaOrden {
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(1 * var(--bs-gutter-x));
+  margin-left: calc(1 * var(--bs-gutter-x));
+  align-items: flex-end;
+  width: 100%;
+
 }
+
 /* fin de solucion del error del menu en responsive (index.hbs) */

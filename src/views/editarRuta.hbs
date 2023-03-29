@@ -1,0 +1,77 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/agregar.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/crear/crearPub_m.css">
+    <link rel="stylesheet" href="./css/crear/crearPub_t.css" media="screen and (min-width:600px)">
+    <link rel="stylesheet" href="./css/crear/crearPub_w.css" media="screen and (min-width:1000px)">
+</head>
+
+<body class="body gridContainer ">
+    <div class="">
+        <h2><b>RUTAS DISPONIBLES </b></h2>
+        <button id="ver" class="ver" onclick="ver">VER TODAS</button><br>
+
+        <script>
+            function ver() {
+                document.getElementById("formularioR").style.display = "flex";
+            }
+        </script>
+
+        <div class=" eContenido formulario " id="formularioR">
+            <table style="width:100%" id="contenedorR">
+
+            </table>
+
+        </div>
+        <br>
+        <h2> REGISTRAR</h2>
+        <div>
+            <form action="/new_publication" method="POST" enctype="multipart/form-data" class="formulario"
+                id="formulario">
+                <div class="espaciotext1">
+                    <label class="">NOMBRE DE LA RUTA</label>
+
+                    <input id="nombre" name="nombre" type="text" placeholder="Nombre">
+                    <label>MAPA:</label>
+                    <tr>
+                        <td>
+                            <h6>
+                                <div>Recuerda agregarlo en <a href="https://www.google.com/maps/d/ "
+                                        target="_blank">"Google
+                                        MyMaps" <br> </a>en la ruta apropiada </div>
+                            </h6>
+                        </td>
+                    </tr>
+
+                </div>
+
+                <section class="row justify-content-center noticias">
+                    <div class="espaciotext2">
+                        <div>
+
+                            <h5><label class="">Descripción</label></h5>
+                        </div>
+                        <h6><textarea id="descripcion" name="descripcion" spellcheck="true" rows="10" cols="90"
+                                tabindex="" placeholder="Descripción"></textarea></h6>
+                    </div>
+                    <div class="espaciotext2">
+                        <div class="file">
+                            <input type="file" name="input0" class="foto_publicacion f1" accept="image/png, .jpeg, .jpg"
+                                required>
+                        </div>
+
+                    </div>
+                </section>
+
+                <br>
+                <input type="submit" value="AGREGAR" id="btn-task-form" class="subir btn btn-primary">
+            </form>
+        </div>
+
+
+        <script src="/js/editarR.js" type="module"></script>
+
+
+</body>
+
+</html>

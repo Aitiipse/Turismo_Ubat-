@@ -32,7 +32,7 @@ globalThis.photo = '';
 globalThis.name = '';
 //verificando estados de la sesion con las rutas
 function verificarEstado(req, res, ruta, ruta2, datos = '', data = '', callback) {
-	
+
 	//console.log(mensaje);
 	// if (estado) {
 	if (req.session.idUser !== undefined) {
@@ -56,34 +56,34 @@ function verificarEstado(req, res, ruta, ruta2, datos = '', data = '', callback)
 	}
 }
 
-function verificar( req, res, ruta, ruta2, datos = '', data = '') {
+function verificar(req, res, ruta, ruta2, datos = '', data = '') {
 	//console.log(mensaje);
 	// if (estado) {
-		
-		if (req.session.idUser !== undefined) {
-			console.log('home raiz');
-			// res.render('home');
-			// callback();
-			if (modal) {
-				res.render(ruta, { datos, data });
-			} else {
-				res.render(ruta, { layout: false, datos });
-				modal = true;
-			}
-		} else if (mensaje !== undefined) {
-			let mensajeError = mensaje;
-			mensaje = undefined;
-			res.render(ruta2, { layout: false, mensajeError });
+
+	if (req.session.idUser !== undefined) {
+		console.log('home raiz');
+		// res.render('home');
+		// callback();
+		if (modal) {
+			res.render(ruta, { datos, data });
 		} else {
-			console.log('raiz raiz');
-			if (modal) {
-				res.render(ruta, { datos, data });
-			} else {
-				res.render(ruta, { datos, data });
-			}
-			
+			res.render(ruta, { layout: false, datos });
+			modal = true;
 		}
-	
+	} else if (mensaje !== undefined) {
+		let mensajeError = mensaje;
+		mensaje = undefined;
+		res.render(ruta2, { layout: false, mensajeError });
+	} else {
+		console.log('raiz raiz');
+		if (modal) {
+			res.render(ruta, { datos, data });
+		} else {
+			res.render(ruta, { datos, data });
+		}
+
+	}
+
 }
 
 // ------------------------------------ Rutas iniciales --------------------------------------------------//
@@ -97,9 +97,9 @@ router.get('/', async (req, res) => {
 					let publicacion = unir(publicaciones, users);
 					//res.send(a);
 					let info = {
-					// 	name: globalThis.name,
-					// 	photo: globalThis.photo,
-					// }
+						// 	name: globalThis.name,
+						// 	photo: globalThis.photo,
+						// }
 						name: req.session.name,
 						photo: req.session.photo,
 					}
@@ -147,9 +147,9 @@ router.post('/new-user-email', async (req, res) => {
 
 
 	if (passwordd !== confirmPassword) {
-		contra ==="no coinciden";
+		contra === "no coinciden";
 		mensaje = 'Las contraseñas no coinciden';
-		console.log ('Las contraseñas no coinciden'); 
+		console.log('Las contraseñas no coinciden');
 		res.redirect('/registro');
 	} else {
 		verficEmail(res, email, () => {
@@ -190,7 +190,7 @@ router.post('/login-email', async (req, res) => {
 	setPersistence(auth, browserSessionPersistence)
 		//console.log('entro')
 
-		
+
 		.then(() => {
 			console.log('aca si entro');
 			//res.render('home');
@@ -210,7 +210,7 @@ router.post('/login-email', async (req, res) => {
 								// globalThis.name = data[0].name;
 								// req.session.name = data[0].name;
 								// req.session.photo = data[0].photo;
-								res.redirect('/atractivos', );
+								res.redirect('/atractivos',);
 							}, 1000);
 						})
 				})
@@ -225,9 +225,9 @@ router.post('/login-email', async (req, res) => {
 					console.log('Este es el mensaje de error ', errorMessage);
 					if (errorCode === 'auth/user-not-found') {
 						console.log(`Intento: ${contador}`);
-						
-						mensaje = 'CREDENCIALES INCORRECTAS'; 
-						
+
+						mensaje = 'CREDENCIALES INCORRECTAS';
+
 						res.redirect('/');
 					} else {
 						mensaje = 'CREDENCIALES INCORRECTAS';
@@ -273,8 +273,16 @@ router.get('/publicaciones', async (req, res) => {
 router.get('/crearPublicacion', async (req, res) => {
 	modal = false;
 	//res.render('crearPublicacion');
-	 verificarEstado(req, res, 'crearPublicacion', 'index', datos = '', /*globalThis.photo*/ req.session.photo, () => {
-	//verificarEstado(req, res, 'crearPublicacion', 'crearPublicacion', datos = '', /*globalThis.photo*/ req.session.photo, () => {
+	verificarEstado(req, res, 'crearPublicacion', 'index', datos = '', /*globalThis.photo*/ req.session.photo, () => {
+		//verificarEstado(req, res, 'crearPublicacion', 'crearPublicacion', datos = '', /*globalThis.photo*/ req.session.photo, () => {
+		//...
+	});
+});
+router.get('/editarRuta', async (req, res) => {
+	modal = true;
+	//res.render('crearPublicacion');
+	verificarEstado(req, res, 'editarRuta', 'index', datos = '', /*globalThis.photo*/ req.session.photo, () => {
+		//verificarEstado(req, res, 'crearPublicacion', 'crearPublicacion', datos = '', /*globalThis.photo*/ req.session.photo, () => {
 		//...
 	});
 });
@@ -317,8 +325,8 @@ router.get('/noticias', async (req, res) => {
 					let publicacion2 = publicacion.sort(function (x, y) {
 						let a = x.updatedAt;
 						a = a.split('/');
-						let d ;
-						if (a[1].length === 1){
+						let d;
+						if (a[1].length === 1) {
 							d = a[2] + +"0" + a[1] + a[0];
 						} else {
 							d = a[2] + a[1] + a[0];
@@ -404,7 +412,7 @@ router.post('/perfilA', async (req, res) => {
 
 router.get('/editarAtractivos', async (req, res) => {
 	//modal = false;
-	 modal = true;
+	modal = true;
 	verificarEstado(req, res, 'editarAtractivos', 'index', datos = '', data = '', () => {
 		//...
 	});
@@ -522,10 +530,10 @@ router.get('/atractivos', async (req, res) => {
 					let publicacion = unir(publicaciones, users);
 					//res.send(a);
 					setTimeout(() => {
-						let actual= req.session.idUser
+						let actual = req.session.idUser
 						let users = db.collection('usuarios');
-						if (actual === users){
-							
+						if (actual === users) {
+
 						}
 						let info = {
 							// photo: globalThis.photo,
@@ -534,7 +542,7 @@ router.get('/atractivos', async (req, res) => {
 							name: req.session.name,
 						}
 
-						
+
 
 						console.log("usuario actual ", actual);
 						verificarEstado(req, res, 'atractivos', 'index', publicacion, info, () => {
@@ -783,34 +791,34 @@ router.get('/storage', async (req, res) => {
 	res.render('error', { layout: false });
 });
 
-router.get('/tipos',(req, res) => {
-    res.render("tipos",  { layout: 'rutas.hbs' })
+router.get('/tipos', (req, res) => {
+	res.render("tipos", { layout: 'rutas.hbs' })
 })
 
 // RUTAS
 
-router.get('/ruta1',(req, res) => {
-    res.render("ruta1" ,{ layout:'rutas.hbs' })
+router.get('/ruta1', (req, res) => {
+	res.render("ruta1", { layout: 'rutas.hbs' })
 })
 
-router.get('/ruta2',(req, res) => {
-    res.render("ruta2",{ layout: 'rutas.hbs' })
+router.get('/ruta2', (req, res) => {
+	res.render("ruta2", { layout: 'rutas.hbs' })
 })
 
-router.get('/ruta3',(req, res) => {
-    res.render("ruta3",{ layout: 'rutas.hbs' })
+router.get('/ruta3', (req, res) => {
+	res.render("ruta3", { layout: 'rutas.hbs' })
 })
 
-router.get('/ruta4',(req, res) => {
-    res.render("ruta4",{ layout: 'rutas.hbs' })
+router.get('/ruta4', (req, res) => {
+	res.render("ruta4", { layout: 'rutas.hbs' })
 })
 
-router.get('/ruta5',(req, res) => {
-    res.render("ruta5",{ layout: 'rutas.hbs' })
+router.get('/ruta5', (req, res) => {
+	res.render("ruta5", { layout: 'rutas.hbs' })
 })
 
-router.get('/lista',(req, res) => {
-    res.render("lista",{ layout: 'rutas.hbs' })
+router.get('/lista', (req, res) => {
+	res.render("lista", { layout: 'rutas.hbs' })
 })
 
 

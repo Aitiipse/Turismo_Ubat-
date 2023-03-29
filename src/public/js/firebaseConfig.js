@@ -1,20 +1,20 @@
 
-  // Import the functions you need from the SDKs you need
+// Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.0/firebase-app.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-import { getFirestore, collection, getDocs, onSnapshot, addDoc, deleteDoc, doc, getDoc,updateDoc,} from "https://www.gstatic.com/firebasejs/9.12.0/firebase-firestore.js";
+import { getFirestore, collection, getDocs, onSnapshot, addDoc, deleteDoc, doc, getDoc, updateDoc, } from "https://www.gstatic.com/firebasejs/9.12.0/firebase-firestore.js";
 import { getStorage } from "https://www.gstatic.com/firebasejs/9.12.0/firebase-storage.js";
 import { getAuth, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/9.12.0/firebase-auth.js";
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyD4M-Klb_H-jTbI8D0pBj1MFJQNQeSTx6w",
-    authDomain: "ubate-travel.firebaseapp.com",
-    databaseURL: "https://ubate-travel-default-rtdb.firebaseio.com",
-    projectId: "ubate-travel",
-    storageBucket: "ubate-travel.appspot.com",
-    messagingSenderId: "950538745193",
-    appId: "1:950538745193:web:c68e75fc7dcdc74cde79f8"
+  apiKey: "AIzaSyD4M-Klb_H-jTbI8D0pBj1MFJQNQeSTx6w",
+  authDomain: "ubate-travel.firebaseapp.com",
+  databaseURL: "https://ubate-travel-default-rtdb.firebaseio.com",
+  projectId: "ubate-travel",
+  storageBucket: "ubate-travel.appspot.com",
+  messagingSenderId: "950538745193",
+  appId: "1:950538745193:web:c68e75fc7dcdc74cde79f8"
 };
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
@@ -50,21 +50,21 @@ export const provider = new GoogleAuthProvider(app);
  */
 
 
- 
-export const guardarAtractivo = (nombre,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,descripcion, ruta ) =>
-  addDoc(collection(db, "atractivos"), { nombre,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,descripcion, ruta });
+
+export const guardarAtractivo = (nombre, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, descripcion, ruta) =>
+  addDoc(collection(db, "atractivos"), { nombre, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, descripcion, ruta });
 
 // listar pagina principal
-  export const listar = (callback) =>
+export const listar = (callback) =>
   onSnapshot(collection(db, "atractivos"), callback);
 
-  export const listarAtractivos = (callback) =>
+export const listarAtractivos = (callback) =>
   onSnapshot(collection(db, "atractivos"), callback);
 
 export const listar_p = (callback) =>
   onSnapshot(collection(db, "atractivos"), callback);
 
-  // Listar sitios en cada una de las rutas
+// Listar sitios en cada una de las rutas
 export const listarsitios1 = (callback) =>
   onSnapshot(collection(db, "atractivos"), callback);
 export const listarsitios2 = (callback) =>
@@ -97,16 +97,16 @@ export const getAtractivos = () => getDocs(collection(db, "atractivos"));
 // -----------------------------------------------------------------------------------
 /* NOTICIAS */
 
-export const guardarNoticia = (titular,resumen,completa ) =>
-  addDoc(collection(db, "noticias"), { titular,resumen,completa});
+export const guardarNoticia = (titular, resumen, completa) =>
+  addDoc(collection(db, "noticias"), { titular, resumen, completa });
 
 export const listarNoticia = (callback) =>
   onSnapshot(collection(db, "noticias"), callback);
 
-  export const listarNoticias = (callback) =>
+export const listarNoticias = (callback) =>
   onSnapshot(collection(db, "noticias"), callback);
 
-  export const listarNoticia_p = (callback) =>
+export const listarNoticia_p = (callback) =>
   onSnapshot(collection(db, "noticias"), callback);
 
 /**
@@ -125,16 +125,16 @@ export const getNoticias = () => getDocs(collection(db, "noticias"));
 
 /* IMAGENES NOTICIAS */
 
-export const guardarimgnoticia = (imagen ) =>
-  addDoc(collection(db, "noticias"), { imagen});
+export const guardarimgnoticia = (imagen) =>
+  addDoc(collection(db, "noticias"), { imagen });
 
-  // -----------------------------------------------------------------------------------
-  /* RUTAS */
+// -----------------------------------------------------------------------------------
+/* RUTAS */
 
-  export const guardarruta = (rut, info ) =>
-  addDoc(collection(db, "rutas"), { rut, info});
+export const guardarRuta = (ruta, info) =>
+  addDoc(collection(db, "rutas"), { ruta, info });
 
-export const listarruta = (callback) =>
+export const listarRutas = (callback) =>
   onSnapshot(collection(db, "rutas"), callback);
 
 
@@ -142,13 +142,13 @@ export const listarruta = (callback) =>
  *
  * @param {string} id ID RUTA
  */
-export const eliminarruta = (id) => deleteDoc(doc(db, "rutas", id));
+export const eliminarRuta = (id) => deleteDoc(doc(db, "rutas", id));
 
-export const getruta = (id) => getDoc(doc(db, "rutas", id));
+export const getRuta = (id) => getDoc(doc(db, "rutas", id));
 
-export const actualizarruta = (id, newFields) =>
+export const actualizarRuta = (id, newFields) =>
   updateDoc(doc(db, "rutas", id), newFields);
 
-export const getrutas = () => getDocs(collection(db, "rutas"));
+export const getRutas = () => getDocs(collection(db, "rutas"));
 
 

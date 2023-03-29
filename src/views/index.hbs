@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/1245d29a02.js" crossorigin="anonymous"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
     <link rel="stylesheet" href="./css/tablet.css" media="screen and (min-width:600px)">
     <link rel="stylesheet" href="./css/movile.css">
     <link rel="stylesheet" href="./css/web.css" media="screen and (min-width:1000px)">
@@ -23,43 +24,60 @@
 </head>
 
 <body id="page-top">
-        <div class="errores" ><p align=""><h5 >{{mensajeError}}</h5></p></div>
-  <header x-data="{ open: false }" class="header" id="page-top" >
-      <!-- Logo -->
-      
+    <div class="errores">
+        <p align="">
+        <h5>{{mensajeError}}</h5>
+        </p>
+    </div>
+    <header x-data="{ open: false }" class="header" id="page-top">
+        <!-- Logo -->
+
         <button class="header__button-nav--open" x-on:click="open = true">MENÚ</button>
-               
-     <nav class="navPrin   text-uppercase frente" x-bind:class="open ? 'nav--show' : ''" id="mainNav">
-         <ul class="nav__ul menuAdmin navP">
-                   <li ><a class="btn-sideBar-SubMenu " x-on:click="open = false"href="./#page-top"><i class="zmdi zmdi-shield-security zmdi-hc-fw"></i><h6>INICIO</h6><i
-                                 class="zmdi zmdi-caret-down pull-right"></i></a></li>
-                    <li ><a class="btn-sideBar-SubMenu " x-on:click="open = false"href="#rutas"><i class="zmdi zmdi-shield-security zmdi-hc-fw"></i><h6>RUTAS</h6><i
-                                 class="zmdi zmdi-caret-down pull-right"></i></a></li>
-                    <li ><a class="btn-sideBar-SubMenu " x-on:click="open = false"href="/lista"><i class="zmdi zmdi-shield-security zmdi-hc-fw"></i><h6>ATRACTIVOS</h6><i
-                                 class="zmdi zmdi-caret-down pull-right"></i></a></li>
-                    <li ><a class="btn-sideBar-SubMenu " x-on:click="open = false"href="./#noticias"><i class="zmdi zmdi-shield-security zmdi-hc-fw"></i><h6>NOTICIAS</h6><i
-                                 class="zmdi zmdi-caret-down pull-right"></i></a></li>
-                    <li ><a class="btn-sideBar-SubMenu " x-on:click="open = false"href="./tipos"><i class="zmdi zmdi-shield-security zmdi-hc-fw"></i><h6>TIPOS DE TURISMO</h6><i
-                                 class="zmdi zmdi-caret-down pull-right"></i></a></li>
-                    <li ><a class="btn-sideBar-SubMenu " x-on:click="open = false"href="./#contactanos"><i class="zmdi zmdi-shield-security zmdi-hc-fw"></i><h6>CONTACTANOS!!!</h6><i
-                                 class="zmdi zmdi-caret-down pull-right"></i></a></li>
-                    <li class="modal_IS_abrir mx-0 mx-lg-1 rounded-1  " x-on:click="open = false"><a class="  px-lg-4 "
-                            ><i class="zmdi zmdi-shield-security zmdi-hc-fw"></i><svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" color="black" fill="currentColor" class="" viewBox="0 0 16 16">
-  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
-</svg><i
-                                 class="zmdi zmdi-caret-down pull-right"></i></a></li>
-                   </ul>
-         <div class="nav__button" x-on:click="open = false">
-          <button class="header__button-nav--close">Cerrar</button>
+
+        <nav class="navPrin   text-uppercase frente" x-bind:class="open ? 'nav--show' : ''" id="mainNav">
+            <ul class="nav__ul menuAdmin navP">
+                <li><a class="btn-sideBar-SubMenu " x-on:click="open = false" href="./#page-top"><i
+                            class="zmdi zmdi-shield-security zmdi-hc-fw"></i>
+                        <h6>INICIO</h6><i class="zmdi zmdi-caret-down pull-right"></i>
+                    </a></li>
+                <li><a class="btn-sideBar-SubMenu " x-on:click="open = false" href="#rutas"><i
+                            class="zmdi zmdi-shield-security zmdi-hc-fw"></i>
+                        <h6>RUTAS</h6><i class="zmdi zmdi-caret-down pull-right"></i>
+                    </a></li>
+                <li><a class="btn-sideBar-SubMenu " x-on:click="open = false" href="/lista"><i
+                            class="zmdi zmdi-shield-security zmdi-hc-fw"></i>
+                        <h6>ATRACTIVOS</h6><i class="zmdi zmdi-caret-down pull-right"></i>
+                    </a></li>
+                <li><a class="btn-sideBar-SubMenu " x-on:click="open = false" href="./#noticias"><i
+                            class="zmdi zmdi-shield-security zmdi-hc-fw"></i>
+                        <h6>NOTICIAS</h6><i class="zmdi zmdi-caret-down pull-right"></i>
+                    </a></li>
+                <li><a class="btn-sideBar-SubMenu " x-on:click="open = false" href="./tipos"><i
+                            class="zmdi zmdi-shield-security zmdi-hc-fw"></i>
+                        <h6>TIPOS DE TURISMO</h6><i class="zmdi zmdi-caret-down pull-right"></i>
+                    </a></li>
+                <li><a class="btn-sideBar-SubMenu " x-on:click="open = false" href="./#contactanos"><i
+                            class="zmdi zmdi-shield-security zmdi-hc-fw"></i>
+                        <h6>CONTACTANOS!!!</h6><i class="zmdi zmdi-caret-down pull-right"></i>
+                    </a></li>
+                <li class="modal_IS_abrir mx-0 mx-lg-1 rounded-1  " x-on:click="open = false"><a class="  px-lg-4 "><i
+                            class="zmdi zmdi-shield-security zmdi-hc-fw"></i><svg xmlns="http://www.w3.org/2000/svg"
+                            width="46" height="46" color="black" fill="currentColor" class="" viewBox="0 0 16 16">
+                            <path
+                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                        </svg><i class="zmdi zmdi-caret-down pull-right"></i></a></li>
+            </ul>
+            <div class="nav__button" x-on:click="open = false">
+                <button class="header__button-nav--close">Cerrar</button>
+            </div>
+        </nav>
+        <!--header-->
         </div>
-    </nav>
-    <!--header-->
-    </div> 
-    
-   
-    
-        
-       <div id="carouselExampleCaptions" class="carousel" data-bs-ride="true">
+
+
+
+
+        <div id="carouselExampleCaptions" class="carousel" data-bs-ride="true">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -102,9 +120,9 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-        
-       
-   </header>
+
+
+    </header>
     {{!-- FIN DE MULTIMEDIA --}}
     {{!-- INICIO DE RUTAS --}}
     <section class="page-section portfolio rutas" id="rutas">
@@ -116,81 +134,92 @@
 
             <div class="rutaOrden justify-content-center ">
 
-              <div class="col-sm-2 col-md-2 col-lg-2  col-2 px-0"> <a href="/ruta1">
-                    <div class="pu portfolio-item mx-0" data-bs-toggle="modal" data-bs-target="#ruta1">
-                        <div
-                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white"><i class=" fa-3x"></i>
+                <div class="col-sm-2 col-md-2 col-lg-2  col-2 px-0"> <a href="/ruta1">
+                        <div class="pu portfolio-item mx-0" data-bs-toggle="modal" data-bs-target="#ruta1">
+                            <div
+                                class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i
+                                        class=" fa-3x"></i>
+                                </div>
                             </div>
+                            <img class="img-fluid" src="/img/PU.png" alt="..." />
                         </div>
-                        <img class="img-fluid" src="/img/PU.png" alt="..." />
-                    </div></a>
-                </div> 
+                    </a>
+                </div>
 
                 <div class="col-sm-2 col-md-2 col-lg-2  col-2 px-0"><a href="/ruta2">
-                    <div class="pb portfolio-item mx-0" data-bs-toggle="modal" data-bs-target="#ruta2">
-                        <div
-                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white"><i class=" fa-3x"></i>
+                        <div class="pb portfolio-item mx-0" data-bs-toggle="modal" data-bs-target="#ruta2">
+                            <div
+                                class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i
+                                        class=" fa-3x"></i>
+                                </div>
                             </div>
+                            <img class="img-fluid" src="/img/PB.png" alt="..." />
                         </div>
-                        <img class="img-fluid" src="/img/PB.png" alt="..." />
-                    </div></a>
+                    </a>
                 </div>
 
                 <div class="col-sm-2 col-md-2 col-lg-2  col-2 px-0 "><a href="/ruta3">
-                    <div class="pa portfolio-item mx-0" data-bs-toggle="modal" data-bs-target="#ruta3">
-                        <div
-                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white"><i class=" fa-3x"></i>
+                        <div class="pa portfolio-item mx-0" data-bs-toggle="modal" data-bs-target="#ruta3">
+                            <div
+                                class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i
+                                        class=" fa-3x"></i>
+                                </div>
                             </div>
+                            <img class="img-fluid" src="/img/PA.png" alt="..." />
                         </div>
-                        <img class="img-fluid" src="/img/PA.png" alt="..." />
-                    </div></a>
+                    </a>
                 </div>
 
                 <div class="col-sm-2 col-md-2 col-lg-2  col-2 px-0"><a href="/ruta4">
-                    <div class="pt portfolio-item mx-0" data-bs-toggle="modal" data-bs-target="#ruta4">
-                        <div
-                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white"><i class=" fa-3x"></i>
+                        <div class="pt portfolio-item mx-0" data-bs-toggle="modal" data-bs-target="#ruta4">
+                            <div
+                                class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i
+                                        class=" fa-3x"></i>
+                                </div>
                             </div>
+                            <img class="img-fluid" src="/img/PT.png" alt="..." />
                         </div>
-                        <img class="img-fluid" src="/img/PT.png" alt="..." />
-                    </div></a>
+                    </a>
                 </div>
 
                 <div class="col-sm-2 col-md-2 col-lg-2  col-2 px-0">
                     <a href="/ruta5">
-                    <div class="pe portfolio-item mx-0" data-bs-toggle="modal" data-bs-target="#ruta5">
-                        <div
-                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white"><i class=" fa-3x"></i>
+                        <div class="pe portfolio-item mx-0" data-bs-toggle="modal" data-bs-target="#ruta5">
+                            <div
+                                class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i
+                                        class=" fa-3x"></i>
+                                </div>
                             </div>
+                            <img class="img-fluid" src="..//img/PE.png" alt="..." />
                         </div>
-                        <img class="img-fluid" src="..//img/PE.png" alt="..." />
-                    </div></a>
-                </div> 
+                    </a>
+                </div>
             </div>
         </div>
     </section>
     {{!-- FIN DE RUTAS --}}
     {{!-- INICIO DE ATRACTIVOS --}}
 
-    <section class="page-section portfolio atractivos" id="atractivos"> 
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0" style="font-color: black ;">ATRACTIVOS TURÍSTICOS</h2>
+    <section class="page-section portfolio atractivos" id="atractivos">
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0" style="font-color: black ;">
+            ATRACTIVOS TURÍSTICOS</h2>
 
         <div class="container-flud flex-wrap d-flex align-content-around text-center ">
 
             <br>
-{{!-- ACA INICIA EL BUCLE PARA LOS ATRACTIVOS --}}
+            {{!-- ACA INICIA EL BUCLE PARA LOS ATRACTIVOS --}}
 
-          <div class="row justify-content-center " id="formulario-container" >
+            <div class="row justify-content-center " id="formulario-container">
 
-            </div>     
+            </div>
 
-{{!-- ACA FINALIZA EL BUCLE PARA LOS ATRACTIVOS --}}
-            
+            {{!-- ACA FINALIZA EL BUCLE PARA LOS ATRACTIVOS --}}
+
         </div>
     </section>
     {{!-- FIN DE ATRACTIVOS --}}
@@ -198,62 +227,68 @@
     <section class="page-section bg-cont text-white page-section portfolio" id="noticias">
         <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">NOTICIAS</h2><br>
         <div class="page-section portfolio ">
-             
-                <div class=" page-section portfolio   " >
-                    <section class="page-section portfolio " id="formulario-noticias" ></section>
 
-                </div>
-               <div class="  ">
-                    {{!-- <iframe class="calendario" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FBogota&showPrint=0&showCalendars=0&showTz=0&src=d2VidHVyaXNtb3ViYXRlQGdtYWlsLmNvbQ&color=%23039BE5" style="border:solid 1px #777" style="border:solid 1px #777"  frameborder="0" scrolling="no"></iframe> --}}
-                     <iframe class="calendario" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%234e95e6&ctz=America%2FBogota&mode=MONTH&showTitle=0&showNav=0&showPrint=0&showTabs=&showCalendars=0&showTz=0&src=d2VidHVyaXNtb3ViYXRlQGdtYWlsLmNvbQ&color=%23039BE5" style="border:solid 2px rgb(217, 194, 144)"  frameborder="0" scrolling="no"></iframe> 
-                </div>
+            <div class=" page-section portfolio   ">
+                <section class="page-section portfolio " id="formulario-noticias"></section>
+
+            </div>
+            <div class="  ">
+                {{!-- <iframe class="calendario"
+                    src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FBogota&showPrint=0&showCalendars=0&showTz=0&src=d2VidHVyaXNtb3ViYXRlQGdtYWlsLmNvbQ&color=%23039BE5"
+                    style="border:solid 1px #777" style="border:solid 1px #777" frameborder="0" scrolling="no"></iframe>
+                --}}
+                <iframe class="calendario"
+                    src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%234e95e6&ctz=America%2FBogota&mode=MONTH&showTitle=0&showNav=0&showPrint=0&showTabs=&showCalendars=0&showTz=0&src=d2VidHVyaXNtb3ViYXRlQGdtYWlsLmNvbQ&color=%23039BE5"
+                    style="border:solid 2px rgb(217, 194, 144)" frameborder="0" scrolling="no"></iframe>
+            </div>
         </div>
     </section>
-<section class="modal_container_IS ">
+    <section class="modal_container_IS ">
         <section class="modal_IS modal_cerrado_IS align-content-center">
             <div class="modal_ContendorC"><span class="cerrar_modal_IS">CANCELAR</span></div>
             <div class="modal_Cuerpo">
                 <form class="modal_formulario_IS modal_formulario" id="login-form" action="/login-email" method="POST">
-                <h5>CORREO</h5>
+                    <h5>CORREO</h5>
                     <input type="email" name="email" id="email" placeholder="Correo Electronico" required>
                     <input type="email" name="emailb" id="emailb" placeholder="Correo Electronico" style="display:none">
-                <h5>CONTRASEÑA</h5>
-                    <input type="password" name="password" id="password" placeholder="Contraseña" minlength="7" required>
+                    <h5>CONTRASEÑA</h5>
+                    <input type="password" name="password" id="password" placeholder="Contraseña" minlength="7"
+                        required>
                     <button type="submit" class="ingresar ">Ingresar</button>
                 </form>
-                
+
             </div>
         </section>
     </section>
-    
-            <form id="modal" class="modalAtractivos "  >
-        
-           <!-- modalAtractivos content -->
-           <div class="caja">
+
+    <form id="modal" class="modalAtractivos ">
+
+        <!-- modalAtractivos content -->
+        <div class="caja">
             <span class="close">&#88;</span>
             <div class="modalAtractivos-header">
-              <b><output  id="nombre" style="border: none;" ></output></b>
+                <b><output id="nombre" style="border: none;"></output></b>
             </div>
             <div class="modalAtractivos-body">
-              
-              <output id="ruta" style="border: none;" ></output>
+
+                <output id="ruta" style="border: none;"></output>
             </div>
             <div class="modalAtractivos-footer">
-              <output id="updatedAt" style="border: none;" ></output>
+                <output id="updatedAt" style="border: none;"></output>
             </div>
-            <div class=" imagen_modal"><img  id="iframe" src=""  frameborder="0" style="width:100%"/></div>
-            <output id="descripcion" style="border: none;" ></output>
-              
-              <button><a href="/lista"> Ver Más</a></button>
+            <div class=" imagen_modal"><img id="iframe" src="" frameborder="0" style="width:100%" /></div>
+            <output id="descripcion" style="border: none;"></output>
 
-          </div>
-          
-        
-        </form>
+            <button><a href="/lista"> Ver Más</a></button>
 
-        <div class="col-md-6" id="tasks-container"></div>
-        <div class="col-md-6" id="modal" > <a href="" id="nombre"></a></div>
-          </section>   
+        </div>
+
+
+    </form>
+
+    <div class="col-md-6" id="tasks-container"></div>
+    <div class="col-md-6" id="modal"> <a href="" id="nombre"></a></div>
+    </section>
     <script src="/js/inicio_sesion.js"></script>
 
     <script src="/js/index.js"></script>
@@ -268,28 +303,28 @@
     <div class="container">
         <div class="" id="contacto">
 
-            <div >
+            <div>
                 <h4 class="text-uppercase mb-4">UBICACIÓN</h4>
                 <p class="lead me-auto">
-                   <h6> VILLA DE SAN DIEGO DE UBATÉ
+                <h6> VILLA DE SAN DIEGO DE UBATÉ
                     <br />
                     ESTUDIANTES 9° SEMESTRE <br> UNIVERSIDAD DE CUNDINAMARCA
-                </p></h6><br>
-            
+                    </p>
+                </h6><br>
 
-            
+
+
                 <h4 class="text-uppercase mb-4">REDES TURISMO UBATÉ</h4><br>
-              
-            </div>
-
-            
-                <h4 class="text-uppercase mb-2">IIPA 2022</h4><br>
 
             </div>
+
+
+            <h4 class="text-uppercase mb-2">IIPA 2022</h4><br>
+
         </div>
+    </div>
     </div>
 </footer>
 
 
 </html>
-
