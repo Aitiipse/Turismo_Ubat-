@@ -111,8 +111,17 @@ li:hover {
   }
   /* RUTAS */
 
+  .pr{
+    cursor: pointer;
+    display: block;
+    max-width: 50rem;
+    border-radius: 0.5rem;
+    overflow: hidden;}
+
+
  .pu{
 background-color: rgb(255, 255, 255);
+
  }
 
  .pu:hover{

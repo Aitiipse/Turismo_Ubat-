@@ -641,7 +641,6 @@ html{
     padding: 0 2em;
     position:flex;
     align-items: center;
-    background-color: var(--bgColorMenu);
     
 }
 
@@ -860,5 +859,5 @@ html *::after {
 	position: sticky;
 	color: #000;
 	padding: auto;
-   
+	width: 100%;
   }

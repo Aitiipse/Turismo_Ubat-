@@ -109,7 +109,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
       top: 0;
       left: 0;
       right: 0;
-      background: #d1e1e2;
     }
 
     .header {
@@ -174,6 +173,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
         display: flex;
         list-style: none;
         padding: 0;
+        background: #d1e1e25d;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px 220px;
       }
 
       .nav__link {
@@ -208,6 +211,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 .menuAdmin > li{
   overflow: hidden;
+  background-color: rgba(179, 189, 194, 0.638);
 }
 
 .menuAdmin > li > a{
@@ -219,7 +223,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 .menuAdmin li a:hover{
-  color: #CE7D35;
+  color: #010303;
+  background-color: rgb(179, 189, 194);;
   transition: all .3s;
 }
 
@@ -231,7 +236,13 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
   
-
+.rutarow{
+  
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  width: 100%;
+}
 
 
 
