@@ -237,6 +237,8 @@
     
     /* ------------------------ */
     
+
+
     .modal {
       opacity: 0;
       visibility: hidden;
@@ -322,3 +324,7 @@
     
     /* fin del navegador de rutas */
     
+
+    .navrutas{
+      position:-webkit-sticky;
+    }

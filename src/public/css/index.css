@@ -506,7 +506,7 @@ background-color: rgb(255, 255, 255);
 
 /* solucion del error del menu en responsive (index.hbs) */
 .frente {
-  position:absolute;
+  /* position:absolute; */
   top: 0;
   right: 0;
   left: 0;
