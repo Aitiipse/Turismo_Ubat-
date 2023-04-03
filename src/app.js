@@ -26,6 +26,7 @@ app.use(session({
 	resave: false,
 }));//para poder usar sesiones
 app.use(require('./routes/index'));
+app.use(require('./routes/noticias'));
 app.use(require('./routes/publicaciones'));
 app.use(express.static(path.join(__dirname, 'public')));//archivos estaticos
 
