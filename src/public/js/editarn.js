@@ -1,6 +1,6 @@
 import {listarNoticias,guardarNoticia, eliminarNoticia, getNoticia, actualizarNoticia, getNoticias} from "./firebaseConfig.js";
   
-  const formularioNoticias = document.getElementById("formularion");
+  const formularioNoticias = document.getElementById("formulario");
   const containerNoticias = document.getElementById("contenedorn");
   
   let editStatus = false;
@@ -40,11 +40,6 @@ import {listarNoticias,guardarNoticia, eliminarNoticia, getNoticia, actualizarNo
         </button></td>
         </tr>
 
-        
-      
-
-
-        
     
     `;
       });
