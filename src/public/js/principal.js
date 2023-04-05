@@ -31,11 +31,11 @@ let input0 = document.querySelectorAll(".input0")[0];
         
         formrespuesta.innerHTML += `
 
-        <div class="card3" >
+        <div class="card3-sm card3-md card3-lg  card3-2 card3-xl card3-xxl " >
         <div class="imgcard3 "  style=" background-image: url(${atractivo.input0});"   >
         
         <div >
-            <button  class="btn btn-secondary btn-modal" data-id="${doc.id}">
+            <button  class="tn btn-secondary btn-modal" data-id="${doc.id}">
           ${atractivo.nombre} </button>
             </div></div>
              
