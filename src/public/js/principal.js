@@ -34,10 +34,10 @@ let input0 = document.querySelectorAll(".input0")[0];
         <div class="card3-sm card3-md card3-lg  card3-2 card3-xl card3-xxl " >
         <div class="imgcard3 "  style=" background-image: url(${atractivo.input0});"   >
         
-        <div >
+        
             <button  class="tn btn-secondary btn-modal" data-id="${doc.id}">
           ${atractivo.nombre} </button>
-            </div></div>
+            </div>
              
             
             </div>
@@ -116,13 +116,17 @@ let input0 = document.querySelectorAll(".input0")[0];
       querySnapshot.forEach((doc) => {
         const noticia = doc.data();
         formrespuestan.innerHTML += `
-        <div class="card-n" style="  background-image: url(${noticia.url});">
-        <article class= "con-text">
-            <h5>${noticia.titular}   </h5>
-            <h6>RESUMEN ${noticia.resumen}</h6>
-            <p>FECHA ${noticia.updatedAt}</p>
-            </article>
+       
+            <div class="cardnoticias cardnoticias-sm cardnoticias-md cardnoticias-lg  cardnoticias-2 cardnoticias-xl cardnoticias-xxl" style="  background-image: url(${noticia.url});">
+            <div class=""></div>
+            <div class="cardnoticias-content">
+              <div class="title">
+              ${noticia.titular}
+              </div>
+              <div class="description">${noticia.resumen}</div>
             </div>
+          </div>
+          
       `;
       });   
   });

@@ -1,0 +1,177 @@
+*
+{
+  transition:all 0.5s ease-in-out;
+}
+.scroll-lateral {
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+    white-space: nowrap; /* Evita que el contenido se divida en varias líneas */
+  }
+  
+
+.cardnoticias
+{
+/*   border:1px solid black; */
+  height:250px;
+ display:inline-block;
+  margin:5px;
+  /* background:url("https://media.istockphoto.com/id/1288385045/photo/snowcapped-k2-peak.jpg?s=612x612&w=0&k=20&c=sfA4jU8kXKZZqQiy0pHlQ4CeDR0DxCxXhtuTDEW81oo="); */
+  background-size:230%;
+  background-position:-120px 0px;
+  box-shadow:0px 15px 20px rgba(0,0,50,0.5);
+  position:relative;
+  overflow:hidden;
+  font-size: smaller;
+
+
+  width: 33%;
+  height: 250px;
+  border-radius:1rem;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  margin: 6pt;
+  cursor: pointer;
+  font-size: 16px;
+
+
+}
+
+@media (min-width: 576px) {
+    .cardnoticias-sm 
+    {
+    /*   border:1px solid black; */
+      height:250px;
+      width:200px;
+     display:inline-block;
+      margin:5px;
+      /* background:url("https://media.istockphoto.com/id/1288385045/photo/snowcapped-k2-peak.jpg?s=612x612&w=0&k=20&c=sfA4jU8kXKZZqQiy0pHlQ4CeDR0DxCxXhtuTDEW81oo="); */
+      background-size:230%;
+      background-position:-120px 0px;
+      box-shadow:0px 15px 20px rgba(0,0,50,0.5);
+      position:relative;
+      overflow:hidden;
+      font-size: smaller;
+    }  
+
+}
+
+@media (min-width: 768px) {
+    .cardnoticias-md
+    {
+    /*   border:1px solid black; */
+      height:250px;
+      width:200px;
+     display:inline-block;
+      margin:5px;
+      /* background:url("https://media.istockphoto.com/id/1288385045/photo/snowcapped-k2-peak.jpg?s=612x612&w=0&k=20&c=sfA4jU8kXKZZqQiy0pHlQ4CeDR0DxCxXhtuTDEW81oo="); */
+      background-size:230%;
+      background-position:-120px 0px;
+      box-shadow:0px 15px 20px rgba(0,0,50,0.5);
+      position:relative;
+      overflow:hidden;
+      font-size: smaller;
+    }
+
+}
+@media (min-width: 992px) {
+    .cardnoticias-lg
+    {
+    /*   border:1px solid black; */
+      height:250px;
+      width:200px;
+     display:inline-block;
+      margin:5px;
+      /* background:url("https://media.istockphoto.com/id/1288385045/photo/snowcapped-k2-peak.jpg?s=612x612&w=0&k=20&c=sfA4jU8kXKZZqQiy0pHlQ4CeDR0DxCxXhtuTDEW81oo="); */
+      background-size:230%;
+      background-position:-120px 0px;
+      box-shadow:0px 15px 20px rgba(0,0,50,0.5);
+      position:relative;
+      overflow:hidden;
+      font-size: smaller;
+    }
+
+}
+@media (min-width: 1200px) {
+    .cardnoticias-xl
+    {
+    /*   border:1px solid black; */
+      height:250px;
+      width:200px;
+     display:inline-block;
+      margin:5px;
+      /* background:url("https://media.istockphoto.com/id/1288385045/photo/snowcapped-k2-peak.jpg?s=612x612&w=0&k=20&c=sfA4jU8kXKZZqQiy0pHlQ4CeDR0DxCxXhtuTDEW81oo="); */
+      background-size:230%;
+      background-position:-120px 0px;
+      box-shadow:0px 15px 20px rgba(0,0,50,0.5);
+      position:relative;
+      overflow:hidden;
+      font-size: smaller;
+    }
+
+}
+@media (min-width: 1400px) {
+    .cardnoticias-xxl
+    {
+    /*   border:1px solid black; */
+      height:250px;
+      width:200px;
+     display:inline-block;
+      margin:5px;
+      /* background:url("https://media.istockphoto.com/id/1288385045/photo/snowcapped-k2-peak.jpg?s=612x612&w=0&k=20&c=sfA4jU8kXKZZqQiy0pHlQ4CeDR0DxCxXhtuTDEW81oo="); */
+      background-size:230%;
+      background-position:-120px 0px;
+      box-shadow:0px 15px 20px rgba(0,0,50,0.5);
+      position:relative;
+      overflow:hidden;
+      font-size: smaller;
+    }
+
+}
+.cardnoticias:hover
+{
+  background-position:-100px -15px;
+  background-size:210%;
+}
+.cardnoticias>*
+{
+  position:absolute; 
+}
+.overlay
+{
+  background:rgba(0,0,100,0);
+  height:100%;
+  width:100%;
+}
+.cardnoticias:hover .overlay
+{
+   background:rgba(0,50,100,0.7);
+}
+
+.cardnoticias-content
+{
+    color: #000;
+    text-align: center;
+    padding: 20px;
+    top: 170px;
+    opacity: 0;
+    transform: scale(0);
+    font-size: 11px;
+    background-color: ghostwhite;
+    margin: auto;
+}
+
+.cardnoticias-content .title
+{
+  font-size: 12px;
+  font-weight:bold;
+  text-transform:uppercase;
+  font-family:arial;
+  padding:0px 0px 15px 0px;
+}
+
+.cardnoticias:hover .cardnoticias-content
+{
+  top:0px;
+  opacity:1;
+  transform:scale(1);
+}

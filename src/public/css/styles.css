@@ -12866,7 +12866,7 @@ html {
 .card3 {
   width: 250px;
   height: 250px;
-  border-radius: 30px;
+  border-radius:1rem;
   overflow: hidden;
   align-items: center;
   justify-content: center;
@@ -12943,8 +12943,9 @@ html {
   width: 100%;
   height: 100%;
   border: 0.125rem solid rgba(0, 0, 0, 0.125);
-  border-radius: 50px;
-  margin-top: 10pt;
+  border-radius:30%;
+  overflow: hidden;
+  margin: 10pt;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
