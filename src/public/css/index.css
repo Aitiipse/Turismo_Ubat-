@@ -576,6 +576,8 @@ li:hover {
 .espacio-noticias{
   overflow: auto;
   -webkit-overflow-scrolling:unset;
+  white-space: nowrap;
+
 }
 .botonglobal{
 background-color: rgba(138, 177, 189, 0.534);

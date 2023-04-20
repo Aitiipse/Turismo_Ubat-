@@ -117,8 +117,7 @@ let input0 = document.querySelectorAll(".input0")[0];
       querySnapshot.forEach((doc) => {
         const noticia = doc.data();
         formrespuestan.innerHTML += `
-       
-           <button class"btn-modaln"> <div class=" cardnoticias cardnoticias-sm cardnoticias-md cardnoticias-lg  cardnoticias-2 cardnoticias-xl cardnoticias-xxl" style="  background-image: url(${noticia.url});">
+        <div class=" cardnoticias cardnoticias-sm cardnoticias-md cardnoticias-lg  cardnoticias-2 cardnoticias-xl cardnoticias-xxl" style="  background-image: url(${noticia.url});">
             <div class=""></div>
             <div class="cardnoticias-content">
               <div class="title">
@@ -127,7 +126,7 @@ let input0 = document.querySelectorAll(".input0")[0];
               <div class="description">${noticia.resumen}</div>
             </div>
           </div>
-          </button>
+          
           
       `;
       });  
