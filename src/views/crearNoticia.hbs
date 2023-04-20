@@ -13,7 +13,7 @@
 <body class="body gridContainer " >
 <div class="">
          <h2><b> ADMINISTRADOR DE NOTICIAS</b></h2>
-    <div class=" eContenido formulario " >
+    <div class=" eContenido formulario " id="fo" >
         <table style="width:100%">
         
         </table>
@@ -25,7 +25,7 @@
     <br>
     <h2> REGISTRAR</h2>
     <div>
-    <form action="/new-noticia" method="POST" enctype="multipart/form-data" class="formulario" id="formulario" >
+    <form action="/new-noticia" method="POST" enctype="multipart/form-data" class="formulario" id="formularioN" >
       <div>
             <label class="" >TITULAR DE LA NOTICIA</label>
     
@@ -52,12 +52,13 @@
       <textarea id="completa" name="completa" spellcheck="true" rows="10" cols="40" tabindex="4" placeholder="Noticia Completa"></textarea>
    
   </div>
-    </section>
-        <div class="imagen">
+   <div class="imagen">
             <div class="fotos"></div>
             <input type="file" class="img_f" name="vehiculo" value="Guardar Cambios"
                 accept="image/png, .jpeg, .jpg, image/mp4" required>
         </div>
+    </section>
+       
         <input type="submit" value="AGREGAR"  id="btn-task-form" class="subir btn btn-primary">
     </form>
     </div>

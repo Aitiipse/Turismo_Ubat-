@@ -1,8 +1,9 @@
-import { getAtractivo, listar, listarAtractivos ,listarsitios1,listarsitios2,listarsitios3,listarsitios4,listarsitios5, listarNoticia, listarRutas } from "./firebaseConfig.js";
+import { getAtractivo, listar, listarAtractivos ,listarsitios1,listarsitios2,listarsitios3,listarsitios4,listarsitios5, listarNoticia, listarRutas, getNoticia } from "./firebaseConfig.js";
   
   const formrespuesta = document.getElementById("formulario-container");
   var span = document.getElementsByClassName("close")[0];
   const modal = document.getElementById("modal");
+  const modaln = document.getElementById("modaln");
   const formsitios1 = document.getElementById("sitios-container1");
   const formsitios2 = document.getElementById("sitios-container2");
   const formsitios3 = document.getElementById("sitios-container3");
@@ -117,7 +118,7 @@ let input0 = document.querySelectorAll(".input0")[0];
         const noticia = doc.data();
         formrespuestan.innerHTML += `
        
-            <div class="cardnoticias cardnoticias-sm cardnoticias-md cardnoticias-lg  cardnoticias-2 cardnoticias-xl cardnoticias-xxl" style="  background-image: url(${noticia.url});">
+           <button class"btn-modaln"> <div class=" cardnoticias cardnoticias-sm cardnoticias-md cardnoticias-lg  cardnoticias-2 cardnoticias-xl cardnoticias-xxl" style="  background-image: url(${noticia.url});">
             <div class=""></div>
             <div class="cardnoticias-content">
               <div class="title">
@@ -126,9 +127,44 @@ let input0 = document.querySelectorAll(".input0")[0];
               <div class="description">${noticia.resumen}</div>
             </div>
           </div>
+          </button>
           
       `;
-      });   
+      });  
+      
+      const btnsModal = formrespuestan.querySelectorAll(".btn-modaln");
+      btnsModal.forEach((btn) => {
+        btn.addEventListener("click", async (e) => {
+          try {
+            const doc = await getNoticia(e.target.dataset.id);
+            const task = doc.data();
+            modaln.style.display="block";
+            modaln["nombre"].value = task.titular;
+            modaln["descripcion"].value = task.completa  ;
+            modaln["updatedAt"].value = task.updatedAt;
+            modaln["iframe"].src = task.url;
+           
+            
+            // formularioAtractivos["task-title"].value = task.nombre;
+            // formularioAtractivos["task-description"].value = task.ruta;
+  
+            // editStatus = true;
+            // id = doc.id;
+            // formularioAtractivos["btn-task-form"].innerText = "modal";
+          } catch (error) {
+            console.log(error);
+          }
+        });
+      });
+      span.onclick = function() {
+        modaln.style.display = "none";
+      }
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modaln.style.display = "none";
+        }
+      }
+
   });
 
 

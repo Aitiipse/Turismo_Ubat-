@@ -149,15 +149,38 @@
 
 .cardnoticias-content
 {
-    color: #000;
-    text-align: center;
-    padding: 20px;
-    top: 170px;
-    opacity: 0;
-    transform: scale(0);
-    font-size: 11px;
-    background-color: ghostwhite;
-    margin: auto;
+  color: #000;
+  /* overflow: scroll; */
+  white-space: normal;
+  text-overflow: ellipsis;
+  text-align: center; 
+  justify-items: center; 
+  padding: 10px;
+  top: 170px; 
+  opacity: 0; 
+  transform: scale(0);
+  font-size: 11px;
+  background-color: rgba(248, 248, 255, 0.528);
+  /* margin: auto; */
+  height: 100%;
+  width: 100%;
+  word-wrap: break-word;
+  justify-self: center;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #555;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #ccc;
 }
 
 .cardnoticias-content .title

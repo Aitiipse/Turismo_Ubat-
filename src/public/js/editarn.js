@@ -1,6 +1,6 @@
 import {listarNoticias,guardarNoticia, eliminarNoticia, getNoticia, actualizarNoticia, getNoticias} from "./firebaseConfig.js";
   
-  const formularioNoticias = document.getElementById("formulario");
+  const formularioNoticias = document.getElementById("formularioN");
   const containerNoticias = document.getElementById("contenedorn");
   
   let editStatus = false;
@@ -24,7 +24,7 @@ import {listarNoticias,guardarNoticia, eliminarNoticia, getNoticia, actualizarNo
 
         <tr>
           <th>Noticia</th>
-          <th>Actualizado</th>
+          <th>Creado</th>
           <th>Editar</th>
           <th>Eliminar</th>
         </tr>
@@ -59,7 +59,7 @@ import {listarNoticias,guardarNoticia, eliminarNoticia, getNoticia, actualizarNo
       
       btnsEdit.forEach((btn) => {
         btn.addEventListener("click", async (e) => {
-            formularioNoticias.reset();
+            // formularioNoticias.reset();
           try {
             const doc = await getNoticia(e.target.dataset.id);
             const noticia = doc.data();

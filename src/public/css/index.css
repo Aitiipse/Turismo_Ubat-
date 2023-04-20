@@ -572,3 +572,11 @@ li:hover {
 }
 
 /* fin de solucion del error del menu en responsive (index.hbs) */
+
+.espacio-noticias{
+  overflow: auto;
+  -webkit-overflow-scrolling:unset;
+}
+.botonglobal{
+background-color: rgba(138, 177, 189, 0.534);
+}

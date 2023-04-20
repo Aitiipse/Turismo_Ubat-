@@ -22,24 +22,10 @@ router.get('/imgaa', (req, res) => {
 router.post('/new-noticia', upload.single('vehiculo'), (req, res) => {
 	let img = req.file;
 	let data = {
-		otro_R,
-		ubication,
-		tipoveh,
-		ubate,
-		carupa,
-		tausa,
-		suta,
-		lenguazaque,
-		guacheta,
-		simijaca,
-		susa,
-		cucunuba,
-		descripcion,
+		titular,
+		resumen,
+		completa,
 	} = req.body;
-
-	if(tipoveh === 'Otro'){
-		data.tipoveh = otro_R;
-	}
 
 	console.log("-------------------");
 	console.log(data);
