@@ -113,11 +113,11 @@ let input0 = document.querySelectorAll(".input0")[0];
     
 
     listarNoticia((querySnapshot) => {
-      formrespuestan.innerHTML = "";
+  
       querySnapshot.forEach((doc) => {
         const noticia = doc.data();
         formrespuestan.innerHTML += `
-        <div class=" cardnoticias cardnoticias-sm cardnoticias-md cardnoticias-lg  cardnoticias-2 cardnoticias-xl cardnoticias-xxl" style="  background-image: url(${noticia.url});">
+        <div class="  cardnoticias " style="  background-image: url(${noticia.url});">
             <div class=""></div>
             <div class="cardnoticias-content">
               <div class="title">
@@ -138,11 +138,11 @@ let input0 = document.querySelectorAll(".input0")[0];
 
 
   listarRutas((querySnapshot) => {
-    formrespuestaruta.innerHTML = "";
+    
     querySnapshot.forEach((doc) => {
       const rut = doc.data();
       formrespuestaruta.innerHTML += `
-      <div class="card-n">
+      <div class="ruta-admin card-n">
       <article class= "con-text">
           <h5>${rut.ruta}   </h5>
           <h6>RESUMEN ${rut.info}</h6>

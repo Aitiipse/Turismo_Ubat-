@@ -1,7 +1,7 @@
 
 /*****************************modal de inicio de sesion*******************************/
 let abrirSesion = document.querySelectorAll(".modal_IS_abrir")[0];
-let navP = document.querySelectorAll(".navP")[0];
+let navP = document.querySelectorAll(".menuAdmin")[0];
 let cerrarSesion = document.querySelectorAll(".cerrar_modal_IS")[0];
 let modalSesion = document.querySelectorAll(".modal_container_IS")[0];
 let modalSesion2 = document.querySelectorAll(".modal_IS")[0];

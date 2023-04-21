@@ -89,12 +89,24 @@ function ver() {
                             </select>
   </div>
 <div class="file">
-                <input type="file" name="input0" class="foto_publicacion f1" accept="image/png, .jpeg, .jpg" required>
+                <img id="imagenicono" class="imagenicono" src="/img/imagenicono.png" alt="Imagen" />
+                <input id="archivo" type="file" name="input0" class="foto_publicacion f1" accept="image/png, .jpeg, .jpg" style="display:none" required>
+
                 </div>
    
   </div>
   
     </section>
+
+    <script>
+        const imagen = document.getElementById('imagenicono');
+const archivo = document.getElementById('archivo');
+
+imagen.addEventListener('click', () => {
+  archivo.click();
+});
+        
+    </script>
 
             <br>
                 <input type="submit" value="AGREGAR"  id="btn-task-form" class="subir btn btn-primary">

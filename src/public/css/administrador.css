@@ -866,3 +866,25 @@ html *::after {
 	width: 60px;
 	height: 60px;
   }
+
+  .ruta-admin {
+	width: 20%;
+	height: 200px;
+	font-size: 24px;
+  }
+  
+  /* Definimos el estilo que queremos aplicar para anchuras de 700px o menos */
+  @media screen and (max-width: 700px) {
+	.ruta-admin {
+		width: 100%;
+	height: auto;
+	  font-size: 12px;
+	}
+  }
+
+  .cardnoticias{
+	border: 1px solid rgb(42, 40, 40);
+  }
+  .cardnoticias-content{
+	background-color: #89a6be60;
+  }

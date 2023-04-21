@@ -54,11 +54,23 @@
   </div>
    <div class="imagen">
             <div class="fotos"></div>
-            <input type="file" class="img_f" name="vehiculo" value="Guardar Cambios"
-                accept="image/png, .jpeg, .jpg, image/mp4" required>
+           <img id="imagenicono" class="imagenicono" src="/img/imagenicono.png" alt="Imagen" />
+                <input id="archivo" type="file" name="input0" class="foto_publicacion f1" accept="image/png, .jpeg, .jpg" style="display:none" required>
+
         </div>
     </section>
-       
+        </section>
+
+    <script>
+        const imagen = document.getElementById('imagenicono');
+const archivo = document.getElementById('archivo');
+
+imagen.addEventListener('click', () => {
+  archivo.click();
+});
+        
+    </script>
+    <br>
         <input type="submit" value="AGREGAR"  id="btn-task-form" class="subir btn btn-primary">
     </form>
     </div>

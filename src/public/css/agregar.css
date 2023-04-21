@@ -233,3 +233,9 @@ th, td {
 tr:nth-child(even) {
   background-color: #8eb5e4b8;
 }
+
+.imagenicono{
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
