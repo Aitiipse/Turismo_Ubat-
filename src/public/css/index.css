@@ -393,6 +393,8 @@ li:hover {
     height: 450px;
     overflow: hidden;
     position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
@@ -581,4 +583,9 @@ li:hover {
 }
 .botonglobal{
 background-color: rgba(138, 177, 189, 0.534);
+}
+
+.marquilla{
+  width: 60px;
+  height: 60px;
 }

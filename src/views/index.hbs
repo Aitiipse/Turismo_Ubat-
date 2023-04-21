@@ -35,16 +35,17 @@
 
         <button class="header__button-nav--open" x-on:click="open = true">MENÚ</button>
 
-        <nav class="navPrin   text-uppercase frente" x-bind:class="open ? 'nav--show' : ''" id="mainNav">
-            <ul class="nav__ul menuAdmin navP">
-                <li><a class="btn-sideBar-SubMenu " x-on:click="open = false" href="./#page-top"><i
+        <nav class="navPrin text-uppercase frente " x-bind:class="open ? 'nav--show' : ''">
+        <ul class="nav__ul menuAdmin ">
+             <li><a class="btn-sideBar-SubMenu " x-on:click="open = false" href="./#page-top"><i
                             class="zmdi zmdi-shield-security zmdi-hc-fw"></i>
-                        <h6>INICIO</h6><i class="zmdi zmdi-caret-down pull-right"></i>
+                        <img src="/img/marca.png" class="marquilla" alt=""><h6>INICIO</h6><i class="zmdi zmdi-caret-down pull-right"></i>
                     </a></li>
-                <li><a class="btn-sideBar-SubMenu " x-on:click="open = false" href="#rutas"><i
-                            class="zmdi zmdi-shield-security zmdi-hc-fw"></i>
-                        <h6>RUTAS</h6><i class="zmdi zmdi-caret-down pull-right"></i>
-                    </a></li>
+            
+            <li><a class="btn-sideBar-SubMenu " x-on:click="open = false" href="#rutas"><i
+                        class="zmdi zmdi-shield-security zmdi-hc-fw"></i>
+                    <h6>RUTAS</h6><i class="zmdi zmdi-caret-down pull-right"></i>
+                </a></li>
                 <li><a class="btn-sideBar-SubMenu " x-on:click="open = false" href="/lista"><i
                             class="zmdi zmdi-shield-security zmdi-hc-fw"></i>
                         <h6>ATRACTIVOS</h6><i class="zmdi zmdi-caret-down pull-right"></i>
@@ -78,50 +79,16 @@
 
 
 
-        <div id="carouselExampleCaptions" class="carousel" data-bs-ride="true">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner tamimagenes">
-                <div class="carousel-item active ">
-                    <img src="/img/basilica2.jpg" class="aaa" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
-                    </div>
-                </div>
-                <div class="carousel-item ">
-                    <img src="/img/vaca.jpg" class="aaa" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
-                    </div>
-                </div>
-                <div class="carousel-item ">
-                    <img src="/img/basilica3.JPG" class="aaa" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+        <div id="carousel" class="carousel">
         </div>
 
+        <script>
+            var backgrounds = ['/img/banner1.jpg','/img/banner2.jpg','/img/banner3.jpg','/img/banner4.jpg','/img/banner5.jpg','/img/banner6.jpg']; // aquí debes reemplazar las imágenes con las que desees utilizar
+var randomIndex = Math.floor(Math.random() * backgrounds.length);
+var selectedBackground = backgrounds[randomIndex];
+document.getElementById('carousel').style.backgroundImage = 'url(' + selectedBackground + ')';
+
+        </script>
 
     </header>
     {{!-- FIN DE MULTIMEDIA --}}

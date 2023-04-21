@@ -861,3 +861,8 @@ html *::after {
 	padding: auto;
 	width: 100%;
   }
+
+  .marquilla{
+	width: 60px;
+	height: 60px;
+  }
