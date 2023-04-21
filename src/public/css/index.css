@@ -320,6 +320,9 @@ li:hover {
   height: 500px;
   overflow: hidden;
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
 }
 
 @media (max-width: 300px) {
@@ -329,6 +332,9 @@ li:hover {
     height: 100px;
     overflow: hidden;
     position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
 
   }
 }
@@ -340,6 +346,9 @@ li:hover {
     height: 150px;
     overflow: hidden;
     position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
 
   }
 }
@@ -351,6 +360,9 @@ li:hover {
     height: 210px;
     overflow: hidden;
     position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
 
   }
 }
@@ -362,6 +374,9 @@ li:hover {
     height: 350px;
     overflow: hidden;
     position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
 
   }
 }
@@ -373,6 +388,9 @@ li:hover {
     height: 390px;
     overflow: hidden;
     position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
 
   }
 }
@@ -384,6 +402,9 @@ li:hover {
     height: 410px;
     overflow: hidden;
     position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
   }
 }
 
@@ -410,6 +431,9 @@ li:hover {
     height: 500px;
     overflow: hidden;
     position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
   }
 
 }
