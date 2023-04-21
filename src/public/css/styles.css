@@ -12458,6 +12458,7 @@ html {
 
 .page-section {
   padding: 0.5rem 0;
+  width: 100%;
 }
 
 .page-section .page-section-heading {

@@ -91,7 +91,7 @@ let input0 = document.querySelectorAll(".input0")[0];
         <div class="lista-item" >
                 <div class="" >
                 <div class="">
-            <a><b>${atractivo.nombre} </b> </a>
+            <a><b><h4>${atractivo.nombre} </h4></b> </a>
             
                   <div class="street ">  <p class="texto">${atractivo.descripcion} 
                     </p><b>${atractivo.ruta}</b></div>

@@ -91,11 +91,8 @@
     <!-- Navegador -->
     <!--header-->
     <div id="carouselExampleCaptions" class="ocultar carousel" data-bs-ride="true">
-        <div class="carousel-inner ruta">
-            <div class="carousel-item active">
-                <img src="/img/No 3 Promeseros .jpg" class="ruta ruta1" alt="...">
-
-            </div>
+        <div class="carousel-inner ruta " id="imgBanner">
+            
 
         </div>
     </div>
@@ -305,6 +302,64 @@
             </div>
         </div>
     </footer>
+
+    <style>
+		.ruta11 {
+			background-image: url(/img/siguiendolospasosebatensesbanner.jpg);
+             background-repeat: no-repeat;
+            background-size: cover;
+		}
+        .ruta2 {
+			background-image: url(/img/saboresysaberesbanner.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+		}
+        .ruta3 {
+			background-image: url(/img/promeserosyromerosbanner.jpg);
+             background-repeat: no-repeat;
+            background-size: cover;
+		}
+        .ruta4 {
+			background-image: url(/img/naturalezaenubatebanner.jpg);
+             background-repeat: no-repeat;
+            background-size: cover;
+		}
+        .ruta5 {
+			background-image: url(/img/biciturismoenubatebanner.jpg);
+             background-repeat: no-repeat;
+            background-size: cover;
+		}
+        .rutaextra {
+			background-image: url(/img/rutaextrabanner.jpg);
+             background-repeat: no-repeat;
+            background-size: cover;
+		}
+        
+	</style>
+    <script>
+		// Obtener la ruta actual
+		var ruta = location.pathname;
+        var imgb = document.getElementById("imgBanner");
+		// Quitar la barra diagonal inicial
+		ruta = ruta.substring(1);
+
+		// Cambiar el fondo de la página según la ruta
+		if (ruta === "") {
+			imgb.classList.add("");
+		} else if (ruta === "ruta1") {
+			imgb.classList.add("ruta11");
+		} else if (ruta === "ruta2") {
+			imgb.classList.add("ruta2");
+		} else if (ruta === "ruta3") {
+			imgb.classList.add("ruta3");
+		}else if (ruta === "ruta4") {
+			imgb.classList.add("ruta4");
+		}else if (ruta === "ruta5") {
+			imgb.classList.add("ruta5");
+		} else {
+            imgb.classList.add("rutaextra");
+        }
+	</script>
 
 
     <script>
