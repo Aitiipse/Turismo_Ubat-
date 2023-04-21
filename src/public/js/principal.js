@@ -88,7 +88,7 @@ let input0 = document.querySelectorAll(".input0")[0];
         
         formlista.innerHTML += `
 
-        <div class="grid-container" >
+        <div class="lista-item" >
                 <div class="" >
                 <div class="">
             <a><b>${atractivo.nombre} </b> </a>
@@ -131,38 +131,7 @@ let input0 = document.querySelectorAll(".input0")[0];
       `;
       });  
       
-      const btnsModal = formrespuestan.querySelectorAll(".btn-modaln");
-      btnsModal.forEach((btn) => {
-        btn.addEventListener("click", async (e) => {
-          try {
-            const doc = await getNoticia(e.target.dataset.id);
-            const task = doc.data();
-            modaln.style.display="block";
-            modaln["nombre"].value = task.titular;
-            modaln["descripcion"].value = task.completa  ;
-            modaln["updatedAt"].value = task.updatedAt;
-            modaln["iframe"].src = task.url;
-           
-            
-            // formularioAtractivos["task-title"].value = task.nombre;
-            // formularioAtractivos["task-description"].value = task.ruta;
-  
-            // editStatus = true;
-            // id = doc.id;
-            // formularioAtractivos["btn-task-form"].innerText = "modal";
-          } catch (error) {
-            console.log(error);
-          }
-        });
-      });
-      span.onclick = function() {
-        modaln.style.display = "none";
-      }
-      window.onclick = function(event) {
-        if (event.target == modal) {
-          modaln.style.display = "none";
-        }
-      }
+     
 
   });
 

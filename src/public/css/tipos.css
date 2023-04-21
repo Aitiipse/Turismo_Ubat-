@@ -54,3 +54,17 @@ li:hover {
     font-weight: 200;
   }
 }
+
+ .listalista {
+      /* background: rgb(34, 193, 195); */
+      /* background: linear-gradient(266deg, rgba(24, 183, 185, 1) 0%, rgba(243, 177, 35, 0.5883620689655172) 100%); */
+      width: auto;
+      height: 100%;
+    }
+
+.listaitem{
+  padding: 5px;
+  border-color: black;
+  
+}
+    

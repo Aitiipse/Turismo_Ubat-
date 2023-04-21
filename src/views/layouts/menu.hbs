@@ -51,11 +51,22 @@
                          </a>
                      </li>
                      <li>
-                         <a href="#calendario" class="btn-sideBar-SubMenu">
+                         <a href="https://calendar.google.com/calendar/u/0/r?pli=1" target="_blank" onclick="mostrarmensaje()" class="btn-sideBar-SubMenu">
                              <i class="zmdi zmdi-account-add zmdi-hc-fw"></i> <h5>Eventos</h5> <i
                                  class="zmdi zmdi-caret-down pull-right"></i>
                          </a>
                      </li>
+                     <script>
+                        function mostrarmensaje() {
+  // Muestra una alerta de redireccionamiento
+  alert("Estamos redireccionando a Google Calendar para ingresar eventos");
+
+  // Espera 3 segundos antes de redireccionar a la URL especificada
+  setTimeout(function() {
+    window.location.href = "/Atractivos";
+  }, 3000);
+}
+                     </script>
                      <li>
                          <a href="/crearNoticia" class="btn-sideBar-SubMenu ">
                              <i class="zmdi zmdi-shield-security zmdi-hc-fw"></i><h5> Noticias</h5> <i
