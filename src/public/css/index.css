@@ -336,7 +336,7 @@ li:hover {
 @media (min-width: 300px) {
 
   .carousel {
-    width: 100%;
+    width: 96%;
     height: 150px;
     overflow: hidden;
     position: relative;
@@ -347,7 +347,7 @@ li:hover {
 @media (min-width: 490px) {
 
   .carousel {
-    width: 100%;
+    width: 92%;
     height: 210px;
     overflow: hidden;
     position: relative;
@@ -358,7 +358,7 @@ li:hover {
 @media (min-width: 576px) {
 
   .carousel {
-    width: 100%;
+    width: 92%;
     height: 350px;
     overflow: hidden;
     position: relative;
@@ -369,7 +369,7 @@ li:hover {
 @media (min-width: 768px) {
 
   .carousel {
-    width: 100%;
+    width: 92%;
     height: 390px;
     overflow: hidden;
     position: relative;
@@ -380,7 +380,7 @@ li:hover {
 @media (min-width: 992px) {
 
   .carousel {
-    width: 100%;
+    width: 92%;
     height: 410px;
     overflow: hidden;
     position: relative;
@@ -397,13 +397,12 @@ li:hover {
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 450px;
-    overflow: hidden;
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-position: center bottom;
+   
+    
   }
 }
+
 
 @media (min-width: 1400px) {
   .carousel {
@@ -413,6 +412,11 @@ li:hover {
     position: relative;
   }
 
+}
+
+.carousel img {
+  width: 100%; /* ajustar la imagen al ancho del contenedor */
+  height: auto; /* altura automática para mantener la proporción */
 }
 
 #imagen {
