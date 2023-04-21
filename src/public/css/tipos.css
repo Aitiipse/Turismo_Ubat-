@@ -11,6 +11,8 @@ html {
 .info {
   color: black;
   border-color: black;
+  border-radius: 50px;
+  margin: 50px,50px;
 }
 
 .texto-blanco {
