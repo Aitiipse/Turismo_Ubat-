@@ -104,6 +104,9 @@
     {{!-- NAVBAR --}}
 
     {{!-- FIN DEL NAVBAR --}}
+
+   <b><h1> <div id="titulo-ruta" class="info page-section-heading titulo-rutas text-uppercase">Nombre de la Pagina Actual</div></h1></b>
+
     {{!-- CONTENIDO DE LA PAGINA --}}
 
 
@@ -346,6 +349,8 @@
 		// Obtener la ruta actual
 		var ruta = location.pathname;
         var imgb = document.getElementById("imgBanner");
+        var miDiv = document.getElementById('titulo-ruta');
+
 		// Quitar la barra diagonal inicial
 		ruta = ruta.substring(1);
 
@@ -354,19 +359,27 @@
 			imgb.classList.add("");
 		} else if (ruta === "ruta1") {
 			imgb.classList.add("ruta11");
+            miDiv.innerHTML = 'SIGUIENDO LOS PASOS EBATENSES';
             
 		} else if (ruta === "ruta2") {
 			imgb.classList.add("ruta2");
+            miDiv.innerHTML = 'SABORES Y SABERES EBATENSES';
+
 		} else if (ruta === "ruta3") {
 			imgb.classList.add("ruta3");
+            miDiv.innerHTML = 'PROMESEROS Y ROMEROS UBATENSES';
 		}else if (ruta === "ruta4") {
 			imgb.classList.add("ruta4");
+            miDiv.innerHTML = 'NATURALEZA EN UBATÉ';
 		}else if (ruta === "ruta5") {
 			imgb.classList.add("ruta5");
+            miDiv.innerHTML = 'BICITURISMO EN UBATÉ';
 		}else if (ruta === "tipos") {
 			imgb.classList.add("rutatipos");
+            miDiv.innerHTML = 'RUTA1';
 		} else {
             imgb.classList.add("rutaextra");
+            miDiv.innerHTML = 'RUTA1';
         }
 	</script>
 
