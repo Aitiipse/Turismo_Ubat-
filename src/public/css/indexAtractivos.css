@@ -173,10 +173,10 @@ body {font-family: Montserrat, Arial, Helvetica, sans-serif;}
         display: flex;
         list-style: none;
         padding: 0;
-        background: #d1e1e25d;
+        background: rgba(3, 91, 123, 0.548);
         justify-content: center;
         align-items: center;
-        border-radius: 20px 220px;
+        border-radius: 30px 20px 20px 30px;
         flex-wrap: wrap;
       }
 
@@ -212,6 +212,7 @@ body {font-family: Montserrat, Arial, Helvetica, sans-serif;}
 
 .menuAdmin > li{
   overflow: hidden;
+  border-radius:  30px 20px 20px 30px;
   background-color: rgba(179, 189, 194, 0.638);
 }
 
@@ -333,3 +334,9 @@ body {font-family: Montserrat, Arial, Helvetica, sans-serif;}
   text-transform: uppercase;
 }
 
+.linea{
+  border: 1px solid rgba(94, 22, 22, 0.293);
+  width: 90%;
+  margin: auto;
+  height: 2px; /* Altura personalizada */
+}

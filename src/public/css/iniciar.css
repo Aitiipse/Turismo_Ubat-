@@ -368,3 +368,18 @@ body {
     font-size: 14px;
     font-weight: 500;
 }
+
+.inicio-boton{
+border-top-left-radius: 30px;
+border-top-right-radius: 30px;
+border-bottom-right-radius: 30px;
+border-bottom-left-radius: 30px;
+}
+
+.perfil-boton{
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  background-color: rgb(3 91 123);
+  }
