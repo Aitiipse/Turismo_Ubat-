@@ -106,18 +106,14 @@ body {font-family: Montserrat, Arial, Helvetica, sans-serif;}
       flex-flow: column wrap;
       align-items: center;
       position:relative;
-      top: 0;
-      left: 0;
-      right: 0;
-    }
-
-    .header {
+     border-radius: 30px;
       width: 100%;
       text-align: center;
-      display: flex;
       justify-content: center;
-  }
+      background-color: rgba(3, 91, 123, 0.214);
+    }
 
+  
     /* Estilos móvil/celular */
     @media all and (max-width: 700px) {
 
@@ -340,4 +336,10 @@ body {font-family: Montserrat, Arial, Helvetica, sans-serif;}
   width: 90%;
   margin: auto;
   height: 2px; /* Altura personalizada */
+}
+
+.burguer{
+  align-items: flex-start;
+  width: 100%;
+  display: flex;
 }
