@@ -883,8 +883,24 @@ html *::after {
   }
 
   .cardnoticias{
-	border: 1px solid rgb(42, 40, 40);
+	border: 3px solid rgba(74, 74, 74, 0.962);
+	border-radius: 0px 20px 12px 5px ;
   }
   .cardnoticias-content{
-	background-color: #89a6be60;
+	background-color: #99b1c490;
   }
+
+  .centrado{
+	display:flex ;
+	justify-content: center;
+  }
+  .centrado-content{
+	display:flex ;
+	flex-direction: column;
+  }
+  .centrado-content-align{
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+  }
+  
