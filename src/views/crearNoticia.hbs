@@ -29,7 +29,7 @@
       <div>
             <label class="" >TITULAR DE LA NOTICIA</label>
     
-      <input id="titular" name="titular" type="text" placeholder="Titular de la Noticia" class="espaciotext1" >
+      <input required id="titular" name="titular" type="text" placeholder="Titular de la Noticia" class="espaciotext1" >
    
       </div>
 
@@ -42,20 +42,20 @@
     <label class=""  >RESUMEN</label>
   </div>
     
-      <textarea id="resumen" name="resumen" spellcheck="true" rows="10" cols="25" tabindex="9" placeholder="Resumen de la noticia"></textarea>
+      <textarea id="resumen" required name="resumen" spellcheck="true" rows="10" cols="25" tabindex="9" placeholder="Resumen de la noticia"></textarea>
 	  </div>
 	   <div  class="espaciotext2">
 		<div>
     <label  >NOTICIA COMPLETA</label>
   </div>
    
-      <textarea id="completa" name="completa" spellcheck="true" rows="10" cols="40" tabindex="4" placeholder="Noticia Completa"></textarea>
+      <textarea id="completa" name="completa" required spellcheck="true" rows="10" cols="40" tabindex="4" placeholder="Noticia Completa"></textarea>
    
   </div>
    <div class="imagen">
             <div class="fotos"></div>
-           <img id="imagenicono" class="imagenicono" src="/img/imagenicono.png" alt="Imagen" />
-                <input id="archivo" type="file" name="input0" class="foto_publicacion f1" accept="image/png, .jpeg, .jpg" style="display:none" required>
+           <img  id="imagenicono" class="imagenicono" src="/img/imagenicono.png" alt="Imagen" />
+                <input required id="archivo" type="file" name="input0" class="foto_publicacion f1" accept="image/png, .jpeg, .jpg" style="display:none" >
 
         </div>
     </section>

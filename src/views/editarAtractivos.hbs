@@ -32,7 +32,7 @@ function ver() {
         <div class="espaciotext1">
     <label class="" >NOMBRE DEL ATRACTIVO</label>
     
-      <input id="nombre" name="nombre" type="text" placeholder="Nombre" >
+      <input required id="nombre" name="nombre" type="text" placeholder="Nombre" >
                             <label>Ubicación geográfica:</label>
                         <tr>
                             <td>
@@ -66,7 +66,7 @@ function ver() {
     <h5><label class=""  >Descripción</label></h5>
   </div>
     
-      <h6><textarea id="descripcion" name="descripcion" spellcheck="true" rows="10" cols="90" tabindex="" placeholder="Descripción"></textarea></h6>
+      <h6><textarea required id="descripcion" name="descripcion" spellcheck="true" rows="10" cols="90" tabindex="" placeholder="Descripción"></textarea></h6>
 	  </div>
       <div  class="espaciotext2">
     <div>
@@ -74,13 +74,13 @@ function ver() {
     <h5><label class=""  >Street View</label></h5>
   </div>
     
-     <h6> <textarea id="street" class="st"  name="street" spellcheck="true" rows="10" cols="90" tabindex="" placeholder="Link de Street View"></textarea></h6>
+     <h6> <textarea required id="street" class="st"  name="street" spellcheck="true" rows="10" cols="90" tabindex="" placeholder="Link de Street View"></textarea></h6>
 	  </div>
 	   <div  class="espaciotext2">
 		<div>
     <label  >RUTA A LA QUE PERTENECE</label>
-    <select id="ruta" name="ruta" >
-                                <option value="0">Seleccione</option>
+    <select required id="ruta" name="ruta" >
+                                {{!-- <option value="0">Seleccione</option> --}}
                                 <option value="Cultura e Historia">Cultura e Historia</option>
                                 <option value="Gastronómico">Gastronómico</option>
                                 <option value="Religioso">Religioso</option>
@@ -88,7 +88,7 @@ function ver() {
                                 <option value="Deportivo">Deportivo</option>
                             </select>
   </div>
-<div class="file">
+<div class="file" required>
                 <img id="imagenicono" class="imagenicono" src="/img/imagenicono.png" alt="Imagen" />
                 <input id="archivo" type="file" name="input0" class="foto_publicacion f1" accept="image/png, .jpeg, .jpg" style="display:none" required>
 
@@ -99,6 +99,19 @@ function ver() {
     </section>
 
     <script>
+
+  function enviarFormulario() {
+    var inputImagen = document.getElementById('imagen');
+    if (inputImagen.value === '') {
+      alert('Por favor selecciona una imagen');
+      return;
+    }
+    
+    // Resto del código para enviar el formulario
+  }
+
+
+
         const imagen = document.getElementById('imagenicono');
 const archivo = document.getElementById('archivo');
 
