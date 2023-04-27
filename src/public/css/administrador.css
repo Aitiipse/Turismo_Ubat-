@@ -693,7 +693,7 @@ html{
     
     width: 1.6em;
     height: 1.6em;
-    stroke: white;
+    stroke: rgb(19, 17, 17);
     fill: transparent;
     stroke-width: 0.8pt;
     stroke-miterlimit: 2;

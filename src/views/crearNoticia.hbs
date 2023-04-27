@@ -13,7 +13,9 @@
 <body class="body gridContainer " >
 <div class="">
          <h2><b> ADMINISTRADOR DE NOTICIAS</b></h2>
-    <div class=" eContenido formulario " id="fo" >
+    <button id="ver" class="ver" onclick="verLista">VER TODOS</button><br>
+
+    <div class=" eContenido formulario " style="display: none;" id="fo" >
         <table style="width:100%">
         
         </table>
@@ -68,6 +70,23 @@ const archivo = document.getElementById('archivo');
 imagen.addEventListener('click', () => {
   archivo.click();
 });
+
+const listaVer = document.getElementById("fo");
+const botonVer = document.getElementById("ver");
+
+
+
+
+  botonVer.addEventListener('click', () =>{
+
+     if (listaVer.style.display === "block") {
+    listaVer.style.display = "none";
+  } else {
+        listaVer.style.display = "block";
+
+  }
+
+  })
         
     </script>
     <br>

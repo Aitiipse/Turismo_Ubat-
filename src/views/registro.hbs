@@ -12,9 +12,12 @@
 </head>
 <body class="body gridContainer" onload="cargar()">
 
-    <div class="errores" ><p ><h5 >{{mensajeError}}</h5></p></div>
+    <div class="errores">
+        <p align="">
+        <h5>{{mensajeError}}</h5>
+        </p>
+    </div>
 
-{{!-- <div class=" col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4"></div> --}}
 <div class=" formRegisto ">
     <h2>REGISTRAR USUARIO NUEVO</h2>
     <div>Espacio para <b>REGISTRAR</b> un nuevo usuario para la colaboracion en el manejo de la página.</div>
@@ -23,8 +26,8 @@
    <form class=" formRegisto " id="register-form" action="/new-user-email" method="POST" class="contenido" autocomplete="off" >  
                  <b>  <div> NOMBRE<input type="text" name="name" id="name" placeholder="Nombre Completo" required></div>
                    <div> NUMERO DE TELEFONO<input type="number" name="phone" id="phone" placeholder="Número de Teléfono" min="3000000000" max="9999999999" required></div>
-                   <div>CORREO ELECTRÓNICO<input type="email" name="email" id="email-a" placeholder="Correo Electronico" required></div>
-                   <div> CONTRASEÑA<input type="password" name="passwordd" id="passwordd" placeholder="Contraseña" minlength="" required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"  >
+                   <div>CORREO ELECTRÓNICO<input type="email" name="email" id="email-a" placeholder="Correo Electronico"  required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></div>
+                   <div> CONTRASEÑA<input type="password" name="passwordd" id="passwordd" placeholder="Contraseña" minlength="" required  >
                     VERIFICAR CONTRASEÑA<input type="password" name="confirmPassword" id="confirmPassword" placeholder="Verificar Contraseña" minlength="7" required></div>
                     <br></b>
                     <button id="boton" type="submit">Registrar</button>

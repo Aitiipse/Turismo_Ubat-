@@ -8,15 +8,13 @@
 <body class="body gridContainer " >
 <div class="">
     <h2><b>ATRACTIVOS REGISTRADOS </b></h2> 
-        <button id="ver" class="ver" onclick="ver">VER TODOS</button><br>
+        <button id="ver" class="ver" onclick="verLista">VER TODOS</button><br>
 
         <script>
-function ver() {
-  document.getElementById("formulario").style.display = "flex";
-}
+
 </script>
 
-       <div class=" eContenido formulario " id="formulario" >
+       <div class=" eContenido formulario " style="display: none;" id="formulario" >
         <table style="width:100%">
         
         </table>
@@ -28,7 +26,7 @@ function ver() {
     <br>
     <h2> REGISTRAR</h2>
     <div>
-    <form action="/new_publication" method="POST" enctype="multipart/form-data" class="formulario" id="formulario">
+    <form action="/new_publication" method="POST" enctype="multipart/form-data" class="formulario" id="formularioeditar">
         <div class="espaciotext1">
     <label class="" >NOMBRE DEL ATRACTIVO</label>
     
@@ -118,6 +116,26 @@ const archivo = document.getElementById('archivo');
 imagen.addEventListener('click', () => {
   archivo.click();
 });
+
+const listaVer = document.getElementById("formulario");
+const botonVer = document.getElementById("ver");
+
+
+
+
+  botonVer.addEventListener('click', () =>{
+
+     if (listaVer.style.display === "block") {
+    listaVer.style.display = "none";
+    
+  } else {
+        listaVer.style.display = "block";
+
+  }
+
+  })
+ 
+
         
     </script>
 

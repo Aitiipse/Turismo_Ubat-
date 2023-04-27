@@ -11,13 +11,8 @@
         <h2><b>RUTAS DISPONIBLES </b></h2>
         <button id="ver" class="ver" onclick="ver">VER TODAS</button><br>
 
-        <script>
-            function ver() {
-                document.getElementById("formularioR").style.display = "flex";
-            }
-        </script>
 
-        <div class=" eContenido formulario " id="formularioR">
+        <div class=" eContenido formulario " style="display: none;" id="formularioR">
             <table style="width:100%" id="contenedorR">
 
             </table>
@@ -62,6 +57,24 @@
             </form>
         </div>
 
+
+        
+<script>const listaVer = document.getElementById("formularioR");
+const botonVer = document.getElementById("ver");
+
+
+
+
+  botonVer.addEventListener('click', () =>{
+
+     if (listaVer.style.display === "block") {
+    listaVer.style.display = "none";
+  } else {
+        listaVer.style.display = "block";
+
+  }
+
+  })</script>
 
         <script src="/js/editarr.js" type="module"></script>
 
