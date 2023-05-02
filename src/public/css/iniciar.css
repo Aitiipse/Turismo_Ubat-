@@ -365,8 +365,16 @@ body {
     display:flex;
     align-items: flex-end;
     color: rgb(199, 48, 48);
-    font-size: 14px;
+    font-size: 24px;
     font-weight: 500;
+    justify-content: center;
+}
+
+.errores h5{
+  
+  color: rgb(199, 48, 48);
+  font-size: 24px;
+  font-weight: 500;
 }
 
 .inicio-boton{

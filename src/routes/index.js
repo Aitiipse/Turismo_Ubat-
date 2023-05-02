@@ -37,6 +37,7 @@ function verificarEstado(req, res, ruta, ruta2, datos = '', data = '', callback)
 	// if (estado) {
 	if (req.session.idUser !== undefined) {
 		console.log(req.session.idUser);
+		console.log("req.session.idUser");
 		// res.render('home');
 		callback();
 		if (modal) {
@@ -150,7 +151,13 @@ router.post('/new-user-email', async (req, res) => {
 		contra === "no coinciden";
 		mensaje = 'Las contraseñas no coinciden';
 		console.log('Las contraseñas no coinciden');
-		res.redirect('/registro');
+		console.log(passwordd);
+		console.log(mensaje);
+		console.log(confirmPassword);
+		if (mensaje !== undefined) {
+		let mensajeError = mensaje;
+		mensaje = undefined;
+		res.render('registro', { mensajeError });}
 	} else {
 		verficEmail(res, email, () => {
 			createUserWithEmailAndPassword(auth, email, passwordd)
@@ -161,13 +168,17 @@ router.post('/new-user-email', async (req, res) => {
 					//console.log('registro exitoso');
 					// ...
 					const userRef = auth.currentUser;
+					mensaje = 'Usuario creado exitosamente';
 					//obteniendo el id del usuario userRef.uid
 					db.collection('usuarios').doc(userRef.uid).set({
 						name,
 						email,
 						phone,
 					});
-					res.redirect('/atractivos');
+					if (mensaje !== undefined) {
+						let mensajeError = mensaje;
+						mensaje = undefined;
+						res.render('atractivos', { mensajeError });}
 				})
 				.catch((error) => {
 					const errorCode = error.code;
@@ -414,7 +425,9 @@ router.get('/editarAtractivos', async (req, res) => {
 	//modal = false;
 	modal = true;
 	verificarEstado(req, res, 'editarAtractivos', 'index', datos = '', data = '', () => {
-		//...
+const usuarioactual = req.session.idUser 
+		console.log(usuarioactual +"hola estoy aqui")
+		console.log("usuarioactuadsfdsjfhsdfjl")
 	});
 });
 // router.get('/buscarAcarreos', async (req, res) => {
@@ -602,8 +615,11 @@ async function verficEmail(res, email, callback) {
 		callback();
 	} else {
 		//ya esta registrado el email
-		mensaje = 'El email ya esta registrado, inicia sesion';
-		res.redirect('/iniciosesion');
+		mensaje = 'El email ya esta registrado';
+		if (mensaje !== undefined) {
+			let mensajeError = mensaje;
+			mensaje = undefined;
+			res.render('registro', { mensajeError });}
 	}
 }
 
