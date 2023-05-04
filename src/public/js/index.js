@@ -251,15 +251,23 @@ window.location="/"
 
   async function main() {
     var firebaseConfig = {
-      // YOUR FIREBASE CREDENTIALS HERE
-      apiKey: "AIzaSyD4M-Klb_H-jTbI8D0pBj1MFJQNQeSTx6w",
-      authDomain: "ubate-travel.firebaseapp.com",
-      databaseURL: "https://ubate-travel-default-rtdb.firebaseio.com",
-      projectId: "ubate-travel",
-      storageBucket: "ubate-travel.appspot.com",
-      messagingSenderId: "950538745193",
-      appId: "1:950538745193:web:c68e75fc7dcdc74cde79f8"
-      // measurementId: "G-3LYFGJK1ET"
+      // // YOUR FIREBASE CREDENTIALS HERE
+      // apiKey: "AIzaSyD4M-Klb_H-jTbI8D0pBj1MFJQNQeSTx6w",
+      // authDomain: "ubate-travel.firebaseapp.com",
+      // databaseURL: "https://ubate-travel-default-rtdb.firebaseio.com",
+      // projectId: "ubate-travel",
+      // storageBucket: "ubate-travel.appspot.com",
+      // messagingSenderId: "950538745193",
+      // appId: "1:950538745193:web:c68e75fc7dcdc74cde79f8"
+      // // measurementId: "G-3LYFGJK1ET"
+
+      apiKey: "AIzaSyDN5a3o6NRPefmK6swUbpTUWKa8s4HetTM",
+      authDomain: "ubate-travel-6306e.firebaseapp.com",
+      projectId: "ubate-travel-6306e",
+      storageBucket: "ubate-travel-6306e.appspot.com",
+      messagingSenderId: "1003894638308",
+      appId: "1:1003894638308:web:52c84d3d8ccad38d384ef1"
+
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
