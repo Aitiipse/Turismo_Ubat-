@@ -64,7 +64,19 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 
     btnsEdit.forEach((btn) => {
       btn.addEventListener("click", async (e) => {
+        formularioAtractivos.addEventListener("submit", (event) => {
+          event.preventDefault();
         
+          // Limpiar los campos del formulario
+          const campos = formularioAtractivos.querySelectorAll("input, textarea");
+          campos.forEach((campo) => {
+            campo.value = "";
+          });
+        
+          // Resto del código...
+        });
+
+
         try {
           const doc = await getAtractivo(e.target.dataset.id);
           const atractivo = doc.data();
