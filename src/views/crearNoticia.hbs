@@ -1,98 +1,131 @@
-
 <head>
-    <link rel="stylesheet" type="text/css" href="./css/agregar.css">
-	<link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/crear_noticiam.css">
-    <link rel="stylesheet" href="./css/crear_noticiat.css" media="screen and (min-width:600px)">
-    <link rel="stylesheet" href="./css/crear_noticiaw.css" media="screen and (min-width:1000px)">
+  <link rel="stylesheet" type="text/css" href="./css/agregar.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/crear_noticiam.css">
+  <link rel="stylesheet" href="./css/crear_noticiat.css" media="screen and (min-width:600px)">
+  <link rel="stylesheet" href="./css/crear_noticiaw.css" media="screen and (min-width:1000px)">
 </head>
+<div class="erroresinternos">
+  <p align="">
+  <h5>{{mensajeError}}</h5>
+  </p>
+</div>
 
-    
-    
-    
-<body class="body gridContainer " >
-<div class="">
-         <h2><b> ADMINISTRADOR DE NOTICIAS</b></h2>
+<body class="body gridContainer ">
+  <div class="">
+    <h2><b> ADMINISTRADOR DE NOTICIAS</b></h2>
     <button id="ver" class="ver" onclick="verLista">VER TODOS</button><br>
 
-    <div class=" eContenido formulario " style="display: none;" id="fo" >
-        <table style="width:100%">
-        
-        </table>
-        <table style="width:100%"id="contenedorn">
-        
-        </table>
+    <div class=" eContenido formulario " style="display: none;" id="formularioN">
+      <table style="width:100%">
+
+      </table>
+      <table style="width:100%" id="contenedorn">
+
+      </table>
 
     </div>
     <br>
     <h2> REGISTRAR</h2>
     <div>
-    <form action="/new-noticia" method="POST" enctype="multipart/form-data" class="formulario" id="formularioN" >
-      <div>
-            <label class="" >TITULAR DE LA NOTICIA</label>
-    
-      <input required id="titular" name="titular" type="text" placeholder="Titular de la Noticia" class="espaciotext1" >
-   
-      </div>
+      <form action="/new-noticia" method="POST" enctype="multipart/form-data" class="formulario" id="formulario">
+        <div>
+          <label class="">TITULAR DE LA NOTICIA</label>
 
-    
-  
-  <section class="row justify-content-center noticias">
-	<div  class="espaciotext2">
-    <div>
-	
-    <label class=""  >RESUMEN</label>
-  </div>
-    
-      <textarea id="resumen" required name="resumen" spellcheck="true" rows="10" cols="25" tabindex="9" placeholder="Resumen de la noticia"></textarea>
-	  </div>
-	   <div  class="espaciotext2">
-		<div>
-    <label  >NOTICIA COMPLETA</label>
-  </div>
-   
-      <textarea id="completa" name="completa" required spellcheck="true" rows="10" cols="40" tabindex="4" placeholder="Noticia Completa"></textarea>
-   
-  </div>
-   <div class="imagen">
-            <div class="fotos"></div>
-           <img  id="imagenicono" class="imagenicono" src="/img/imagenicono.png" alt="Imagen" />
-                <input required id="archivo" type="file" name="input0" class="foto_publicacion f1" accept="image/png, .jpeg, .jpg" style="display:none" >
+          <input required id="titular" name="titular" type="text" placeholder="Titular de la Noticia"
+            class="espaciotext1">
 
         </div>
-    </section>
+
+
+
+        <section class="row justify-content-center noticias">
+          <div class="espaciotext2">
+            <div>
+
+              <label class="">RESUMEN</label>
+            </div>
+
+            <textarea id="resumen" required name="resumen" spellcheck="true" rows="10" cols="25" tabindex="9"
+              placeholder="Resumen de la noticia"></textarea>
+          </div>
+          <div class="espaciotext2">
+            <div>
+              <label>NOTICIA COMPLETA</label>
+            </div>
+
+            <textarea id="completa" name="completa" required spellcheck="true" rows="10" cols="40" tabindex="4"
+              placeholder="Noticia Completa"></textarea>
+
+          </div>
+          <div class="imagen">
+            <div class="fotos"></div>
+            <img id="imagenicono" class="imagenicono" src="/img/imagenicono.png" alt="Imagen" />
+            <input required id="archivo" type="file" name="input0" class="foto_publicacion f1"
+              accept="image/png, .jpeg, .jpg" style="display:none">
+
+          </div>
+        </section>
         </section>
 
-    <script>
-        const imagen = document.getElementById('imagenicono');
-const archivo = document.getElementById('archivo');
+        <script>
+          const imagen = document.getElementById('imagenicono');
+          const archivo = document.getElementById('archivo');
 
-imagen.addEventListener('click', () => {
-  archivo.click();
-});
+          imagen.addEventListener('click', () => {
+            archivo.click();
+          });
 
-const listaVer = document.getElementById("fo");
-const botonVer = document.getElementById("ver");
-
-
+          const listaVer = document.getElementById("fo");
+          const botonVer = document.getElementById("ver");
 
 
-  botonVer.addEventListener('click', () =>{
 
-     if (listaVer.style.display === "block") {
-    listaVer.style.display = "none";
-  } else {
-        listaVer.style.display = "block";
 
-  }
+          botonVer.addEventListener('click', () => {
 
-  })
-        
-    </script>
-    <br>
-        <input type="submit" value="AGREGAR"  id="btn-task-form" class="subir btn btn-primary">
-    </form>
+            if (listaVer.style.display === "block") {
+              listaVer.style.display = "none";
+            } else {
+              listaVer.style.display = "block";
+
+            }
+
+          })
+
+        </script>
+        <br>
+        <input type="submit" value="AGREGAR" id="btn-task-form" class="subir btn btn-primary">
+      </form>
     </div>
+
+    <script>const listaVer = document.getElementById("formularioN");
+      const botonVer = document.getElementById("ver");
+      const formulario = document.getElementById("formulario");
+      const btnguardar = document.getElementById("btn-task-form");
+
+
+      botonVer.addEventListener('click', () => {
+
+        if (listaVer.style.display === "block") {
+          listaVer.style.display = "none";
+          btnguardar.style.display = "none";
+          formulario.style.display = "block";
+          document.getElementById("ver").innerHTML = "VER TODAS";
+
+        } else if (listaVer.style.display === "none") {
+          listaVer.style.display = "block";
+          formulario.style.display = "none";
+          btnguardar.style.display = "none";
+          formulario.reset();
+
+          document.getElementById("ver").innerHTML = "OCULTAR";
+
+        }
+
+      })
+    </script>
+
     <script src="/js/editarn.js" type="module"></script>
 
 </body>
