@@ -540,7 +540,7 @@ router.get('/atractivos', async (req, res) => {
 		.then((publicaciones) => {
 			Users()
 				.then((users) => {
-					let publicacion = unir(publicaciones, users);
+					let publicacion = (publicaciones, users);
 					//res.send(a);
 					setTimeout(() => {
 						let actual = req.session.idUser
@@ -567,6 +567,40 @@ router.get('/atractivos', async (req, res) => {
 		})
 		.catch((error) => { console.log("No hay publicaiones", error); });
 });
+
+// router.get('/atractivos', async (req, res) => {
+// 	modal = true;
+// 	publicaciones('atractivos')
+// 		.then((publicaciones) => {
+// 			Users()
+// 				.then((users) => {
+// 					let publicacion = unir(publicaciones, users);
+// 					//res.send(a);
+// 					setTimeout(() => {
+// 						let actual = req.session.idUser
+// 						let users = db.collection('usuarios');
+// 						if (actual === users) {
+
+// 						}
+// 						let info = {
+// 							// photo: globalThis.photo,
+// 							// name: globalThis.name,
+// 							photo: req.session.photo,
+// 							name: req.session.name,
+// 						}
+
+
+
+// 						console.log("usuario actual ", actual);
+// 						verificarEstado(req, res, 'atractivos', 'index', publicacion, info, () => {
+// 							//...
+// 						});
+// 					}, 500);
+// 				})
+// 				.catch((error) => { console.log("No hay Usuarios", error); });
+// 		})
+// 		.catch((error) => { console.log("No hay publicaiones", error); });
+// });
 
 //abrir publicaciones detalladas en otra ventana
 router.post('/abrir-publicaciones', async (req, res) => {
@@ -718,28 +752,7 @@ async function publicaciones_propias(dataBase, idUser) {
 }
 
 //funion para unir las publicaciones
-function unir(publicaciones, user) {
-	let publicacionesUser = [];
-	let union;
-	publicaciones.forEach(element => {
-		user.forEach(element2 => {
-			if (element.iduser === element2.id) {
-				console.log('entre');
-				let use = {
-					name: element2.name,
-					phone: element2.phone,
-					ubication: element2.ubication,
-					photo: element2.photo,
-				};
-				union = { ...use, ...element };
-				publicacionesUser.push(union);
-			}
-		})
-	});
-	//console.log("**********************************");
-	//console.log(publicacionesUser);
-	return publicacionesUser;
-}
+
 // --------------- Probando la seccion traer datos del perfil ----------------------
 //traer todos los usuarios
 async function data_perfil(idUser) {
