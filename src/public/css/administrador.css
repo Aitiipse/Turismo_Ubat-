@@ -818,21 +818,21 @@ html *::after {
   }
 
   .card-n{
-    width: 100%;
-   height: auto;
+	width: 100%;
+    height: auto;
     border-radius: 10px;
-    display:flex;
-    align-items: center;
-    justify-content: center;
+    display: flex;
     cursor: pointer;
     transition: all .25s ease;
     backface-visibility: hidden;
     flex-direction: column;
     word-wrap: break-word;
-	background-repeat: no-repeat;
-	background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-clip: border-box;
     border: 1.125rem solid rgba(0, 0, 0, 0.145);
+    overflow: scroll;
+    /* overflow: hidden; */
     word-wrap: break-word;
   }
 
@@ -869,7 +869,7 @@ html *::after {
 
   .ruta-admin {
 	width: 20%;
-	height: 200px;
+	height: 400px;
 	font-size: 24px;
   }
   
@@ -904,3 +904,18 @@ html *::after {
 		width: 100%;
   }
   
+  .fruta1 {
+    background-color: rgba(196, 104, 23, 0.397);
+}
+.fruta2 {
+    background-color:rgba(221, 32, 155, 0.396);
+}
+.fruta3 {
+    background-color: rgba(52, 113, 211, 0.488);
+}
+.fruta4 {
+    background-color:rgba(218, 162, 20, 0.493);
+}
+.fruta5 {
+    background-color:rgba(24, 118, 16, 0.3);
+}

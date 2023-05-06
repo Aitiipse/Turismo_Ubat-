@@ -1,4 +1,4 @@
-import { getAtractivo, listar, listarAtractivos ,listarsitios1,listarsitios2,listarsitios3,listarsitios4,listarsitios5, listarNoticia, listarRutas, getNoticia } from "./firebaseConfig.js";
+import { getAtractivo, listar, listarAtractivos ,listarsitios1,listarsitios2,listarsitios3,listarsitios4,listarsitios5, listarNoticia, listarNoticias, listarRutas, getNoticia } from "./firebaseConfig.js";
   
   const formrespuesta = document.getElementById("formulario-container");
   var span = document.getElementsByClassName("close")[0];
@@ -11,6 +11,7 @@ import { getAtractivo, listar, listarAtractivos ,listarsitios1,listarsitios2,lis
   const formsitios5 = document.getElementById("sitios-container5");
   const formlista = document.getElementById("lista");
   const formrespuestan = document.getElementById("formulario-noticias");
+  const formrespuestanes = document.getElementById("espacio-noticias");
   const formrespuestaruta = document.getElementById("formulario-rutas");
   
   
@@ -116,14 +117,14 @@ let input0 = document.querySelectorAll(".input0")[0];
   
       querySnapshot.forEach((doc) => {
         const noticia = doc.data();
-        formrespuestan.innerHTML += `
+        formrespuestanes.innerHTML += `
         <div class=" centrado-content-align cardnoticias " style="  background-image: url(${noticia.url});">
             <div class=""></div>
-            <div class="cardnoticias-content centrado-content-align">
+            <div class="cardnoticias-content centrado-content-align flex">
               <div class="title">
-              ${noticia.titular}
-              </div>
-              <div class="description">${noticia.resumen}</div>
+              <b> ${noticia.titular}  </b>
+              </div><br>
+              <div class="description">${noticia.completa}</div>
             </div>
           </div>
           
@@ -136,21 +137,71 @@ let input0 = document.querySelectorAll(".input0")[0];
   });
 
 
+  listarNoticias((querySnapshot) => {
+  
+    querySnapshot.forEach((doc) => {
+      const noticia = doc.data();
+      formrespuestan.innerHTML += `
+      <div class=" centrado-content-align cardnoticias " >
+          <div class=""></div>
+          <div class="cardnoticias-content centrado-content-align flex">
+            <div class="title">
+            <b> ${noticia.titular} : : : >> </b>
+            </div><br>
+            <div class="description">${noticia.resumen}</div>
+          </div>
+        </div>
+        
+        
+    
+
+    `;
+    });  
+    
+    
+   
+
+});
+
+
 
   listarRutas((querySnapshot) => {
     
-    querySnapshot.forEach((doc) => {
-      const rut = doc.data();
-      formrespuestaruta.innerHTML += `
-      <div class="ruta-admin card-n">
-      <article class= "con-text">
-          <h5>${rut.ruta}   </h5>
-          <h6>RESUMEN ${rut.info}</h6>
-          </article>
+      querySnapshot.forEach((doc) => {
+        const rut = doc.data();
+        let clase;
+        switch (rut.ruta) {
+          case "Siguiendo los pasos Ebatenses":
+            clase = "fruta1";
+            break;
+          case "Sabores y saberes":
+            clase = "fruta2";
+            break;
+          case "Promeseros y Romeros":
+            clase = "fruta3";
+            break;
+          case "Naturaleza":
+            clase = "fruta4";
+            break;
+          case "Biciturismo":
+            clase = "fruta5";
+            break;
+          default:
+            clase = "";
+        }
+        formrespuestaruta.innerHTML += `
+          <div class="ruta-admin card-n ${clase}">
+            <article class= "con-text">
+              <h5><b>${rut.ruta}</b></h5>
+              <h6>${rut.info}</h6>
+            </article>
           </div>
-    `;
-    });   
-});
+        `;
+      });   
+    });
+
+   
+   
 
 listarsitios1((querySnapshot) => {
      
