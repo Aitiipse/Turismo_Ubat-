@@ -203,41 +203,43 @@ let input0 = document.querySelectorAll(".input0")[0];
    
    
 
-listarsitios1((querySnapshot) => {
-     
-  querySnapshot.forEach((doc) => {
-    const atractivo = doc.data();
-
-    if(atractivo.ruta == "Cultura e Historia"){
+    listarsitios1((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        const atractivo = doc.data();
     
-    formsitios1.innerHTML += `
-
-    <div class="card5" >
-    <div class="imgcard3 "  style=" background-image: url(${atractivo.input0});"   >
+        if (atractivo.ruta === "Cultura e Historia") {
+          const cardHTML = `
+            <div class="card5">
+              <div class="imgcard3" style="background-image: url(${atractivo.input0});">
+                <div class="nombresitios">
+                  <a><b>${atractivo.nombre}</b></a>
+                </div>
+              </div>
     
-    <div class="nombresitios">
-        <a><b>${atractivo.nombre} </b> </a>
-        </div></div>
-         
-        <div class="card4" style=" background-image: url(${atractivo.input0});" display="none"   >
-        <div class="to-contents"  onclick="document.querySelector('.modal1').classList.remove('expand');event.stopPropagation();">
-           <a><b>${atractivo.nombre} </b> </a>
-          <div class="top">
-             <a><b>${atractivo.ruta} </b> </a>
-            <div class="name-large"> </div>
-             <a><b>${atractivo.descripcion} </b> </a>
-          </div>
-        </div>
-      <script>
-      document.getElementById("card3").addEventListener("click", myFunction);
-
-function myFunction() {
-document.getElementById("card4").style.visible="visible";
-}
-      </script>
-  `;
-}});
-});
+              <div class="card4" style="background-image: url(${atractivo.input0}); display: none;">
+                <div class="to-contents">
+                  <a><b>${atractivo.nombre}</b></a>
+                  <div class="top">
+                    <a><b>${atractivo.ruta}</b></a>
+                    <div class="name-large"></div>
+                    <a><b>${atractivo.descripcion}</b></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+    
+          formsitios1.insertAdjacentHTML("beforeend", cardHTML);
+    
+          const card3 = formsitios1.lastElementChild.querySelector(".imgcard3");
+          const card4 = formsitios1.lastElementChild.querySelector(".card4");
+          card3.addEventListener("click", (event) => {
+            card4.style.display = "block";
+            event.stopPropagation();
+          });
+        }
+      });
+    });
 
 listarsitios2((querySnapshot) => {
      
