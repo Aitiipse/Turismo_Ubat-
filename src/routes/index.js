@@ -271,6 +271,11 @@ router.get('/registro', async (req, res) => {
 	});
 });
 
+router.get('/error', async (req, res) => {
+	modal = false;
+	res.render('error')
+});
+
 //ruta inicial para renderizar publicaciones
 router.get('/publicaciones', async (req, res) => {
 	publicaciones()
@@ -836,6 +841,8 @@ router.get('/ruta5', (req, res) => {
 router.get('/lista', (req, res) => {
 	res.render("lista", { layout: 'rutas.hbs' })
 })
+
+
 
 
 module.exports = router;

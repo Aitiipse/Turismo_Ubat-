@@ -1,9 +1,8 @@
-
 <head>
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
     <link rel="stylesheet" type="text/css" href="./css/agregar.css">
     <link rel="stylesheet" href="./css/administrador.css">
-	<link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/sweetalert2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./css/crear/crearPub_m.css">
@@ -13,25 +12,55 @@
 
 <body class="body gridContainer" onload="cargar()">
 
-    
 
-<div class=" formRegisto ">
-    <h2>REGISTRAR USUARIO NUEVO</h2>
-    <div>Espacio para <b>REGISTRAR</b> un nuevo usuario para la colaboracion en el manejo de la página.</div>
-    <div>Por favor llenar todos los espacios correctamente</div>
 
-   <form class=" formRegisto " id="register-form" action="/new-user-email" method="POST" class="contenido" autocomplete="off" >  
-                 <b>  <div> NOMBRE<input type="text" name="name" id="name" placeholder="Nombre Completo" required></div>
-                   <div> NUMERO DE TELEFONO<input type="number" name="phone" id="phone" placeholder="Número de Teléfono" min="3000000000" max="9999999999" required></div>
-                   <div>CORREO ELECTRÓNICO<input type="email" name="email" id="email-a" placeholder="Correo Electronico" autocomplete="off" required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></div>
-                   <div> CONTRASEÑA<input type="password" name="passwordd" id="passwordd" placeholder="Contraseña" minlength="8" autocomplete="off" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="La contraseña debe tener al menos 8 caracteres, incluyendo mayúsculas, minúsculas y números" required   >
-                    VERIFICAR CONTRASEÑA<input type="password" name="confirmPassword" id="confirmPassword" placeholder="Verificar Contraseña" autocomplete="off" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="La contraseña debe tener al menos 8 caracteres, incluyendo mayúsculas, minúsculas y números" required></div>
-                    <br></b>
-                    <button id="boton" type="submit">Registrar</button>
-                </form>
+    <div class=" formRegisto ">
+        <h2>REGISTRAR USUARIO NUEVO</h2>
+        <div>Espacio para <b>REGISTRAR</b> un nuevo usuario para la colaboracion en el manejo de la página.</div>
+        <div>Por favor llenar todos los espacios correctamente</div>
+
+        <form class=" formRegisto " id="register-form" action="/new-user-email" method="POST" class="contenido"
+            autocomplete="off">
+            <b>
+                <div> NOMBRE<input type="text" name="name" id="name" placeholder="Nombre Completo" required></div>
+                <div> NUMERO DE TELEFONO<input type="number" name="phone" id="phone" placeholder="Número de Teléfono"
+                        min="3000000000" max="9999999999" required></div>
+                <div>CORREO ELECTRÓNICO<input type="email" name="email" id="email-a" placeholder="Correo Electronico"
+                        autocomplete="off" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></div>
+                <div> CONTRASEÑA<input type="password" name="passwordd" id="passwordd" placeholder="Contraseña"
+                        minlength="8" autocomplete="off" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        title="La contraseña debe tener al menos 8 caracteres, incluyendo mayúsculas, minúsculas y números"
+                        required>
+                    VERIFICAR CONTRASEÑA<input type="password" name="confirmPassword" id="confirmPassword"
+                        placeholder="Verificar Contraseña" autocomplete="off" minlength="8"
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        title="La contraseña debe tener al menos 8 caracteres, incluyendo mayúsculas, minúsculas y números"
+                        required></div>
+                <button id="togglePassword" type="button">Mostrar Contraseña</button>
+                <br>
+            </b>
+            <button id="boton" type="submit">Registrar</button>
+
+            <script>
+                const togglePasswordButton = document.getElementById("togglePassword");
+                const passwordInputt = document.getElementById("passwordd");
+                const passwordInput = document.getElementById("confirmPassword");
+
+                togglePasswordButton.addEventListener("mousedown", function () {
+                    passwordInputt.type = "text";
+                    passwordInput.type = "text";
+                });
+
+                togglePasswordButton.addEventListener("mouseup", function () {
+                    passwordInputt.type = "password";
+                    passwordInput.type = "password";
+                });
+
+            </script>
+        </form>
     </div>
-    
-    
+
+
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"
         integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
     <script src="/js/index.js"></script>

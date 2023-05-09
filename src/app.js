@@ -31,5 +31,23 @@ app.use(require('./routes/publicaciones'));
 app.use(express.static(path.join(__dirname, 'public')));//archivos estaticos
 
 
+// Importar rutas
+const indexRoutes = require('./routes/index');
+
+// Usar rutas
+app.use('/', indexRoutes);
+
+// Manejador de errores para rutas no encontradas
+app.use((req, res, next) => {
+	modal = false;
+
+	res.status(404).render('error', {layout: false });
+  });
+
+app.use((err, req, res, next) => {
+	console.error(err.stack);
+	res.status(500).render('error', { error: err,layout: false });
+  });
+
 module.exports = app;
 
