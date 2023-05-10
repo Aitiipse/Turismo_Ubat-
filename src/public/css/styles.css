@@ -13141,7 +13141,6 @@ form button {
 .streetview {
   max-width: 300px;
   max-height: 200px;
-  margin-left: 20pt;
 }
 
 .streetview>iframe {

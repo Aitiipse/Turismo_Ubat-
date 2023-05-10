@@ -252,6 +252,50 @@ body {
   width: 100%;
 }
 
+/* Estilos base */
+.espacio p {
+    font-style: oblique;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 576px) {
+  .espacio p {
+    font-size: 0.8rem;
+  font-weight: bold;
+  font-style: oblique;
+  }
+}
+
+/* Media query para pantallas medianas */
+@media (min-width: 576px) and (max-width: 992px) {
+  .espacio p {
+    font-style: oblique;
+  font-weight: bold;
+  font-size: 1rem;
+  }
+}
+
+/* Media query para pantallas grandes */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .espacio p {
+    font-style: oblique;
+  font-weight: bold;
+  font-size: 1.2rem;
+  }
+}
+
+/* Media query para pantallas extra grandes */
+@media (min-width: 1200px) {
+  .espacio p {
+    font-style: oblique;
+    font-size: 1.5rem;
+  font-weight: bold;
+  }
+}
+
+
 .centrado {
   justify-content: center;
   align-items: center;
