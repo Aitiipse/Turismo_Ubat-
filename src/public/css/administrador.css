@@ -919,3 +919,12 @@ html *::after {
 .fruta5 {
     background-color:rgba(24, 118, 16, 0.3);
 }
+
+.btnG{   
+	overflow: hidden;
+    border-radius: 30px 20px 20px 30px;
+    background-color: rgb(37 146 201 / 0%);
+    border-color: #496d8ded;
+    border-style: solid;
+	color: #000;
+}
