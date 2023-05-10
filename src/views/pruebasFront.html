@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Ejemplo de cambio de fondo en función de la ruta</title>
-	<style>
-		body {
-			background-color: #f1f1f1;
-		}
-
-		.home {
-			background-color: #e0ffff;
-		}
-
-		.about {
-			background-color: #fafad2;
-		}
-
-		.contact {
-			background-color: #ffe4b5;
-		}
-	</style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mi página web</title>
+	<link rel="stylesheet" href="prueba.css">
 </head>
 <body>
-	<h1>Ejemplo de cambio de fondo en función de la ruta</h1>
-	<ul>
-		<li><a href="/">Inicio</a></li>
-		<li><a href="/about">Acerca de</a></li>
-		<li><a href="/contact">Contacto</a></li>
-	</ul>
-	<script>
-		// Obtener la ruta actual
-		var ruta = location.pathname;
-
-		// Quitar la barra diagonal inicial
-		ruta = ruta.substring(1);
-
-		// Cambiar el fondo de la página según la ruta
-		if (ruta === "") {
-			document.body.classList.add("home");
-		} else if (ruta === "about") {
-			document.body.classList.add("about");
-		} else if (ruta === "contact") {
-			document.body.classList.add("contact");
-		}
-	</script>
+	<div class="cards-container">
+		<div class="card">
+			<img src="https://via.placeholder.com/150" alt="Card image">
+			<h3>Card title</h3>
+			<p>Card description</p>
+		</div>
+		<div class="card">
+			<img src="https://via.placeholder.com/150" alt="Card image">
+			<h3>Card title</h3>
+			<p>Card description</p>
+		</div>
+		<div class="card">
+			<img src="https://via.placeholder.com/150" alt="Card image">
+			<h3>Card title</h3>
+			<p>Card description</p>
+		</div>
+		<div class="card">
+			<img src="https://via.placeholder.com/150" alt="Card image">
+			<h3>Card title</h3>
+			<p>Card description</p>
+		</div>
+	</div>
+	<div class="streetview">
+		<div class="street-container">
+			<iframe class="img"
+		src="https://www.google.com/maps/d/embed?mid=1SiT5_d_gGCEkzOra5acVThGL8u77oks&ehbc=2E312F"
+		></iframe>
+		</div>
+	</div>
+	<div class="content-section">
+		<div class="image-container">
+			<img src="https://via.placeholder.com/400x400" alt="Image">
+		</div>
+		<div class="text-container">
+			<h2>Section title</h2>
+			<p>Section text</p>
+		</div>
+	</div>
+	<script src="app.js"></script>
 </body>
 </html>

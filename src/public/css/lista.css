@@ -1,0 +1,90 @@
+.bodylis {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+.sectionlis{
+	width: 100%;
+}
+
+.cards-containerlis {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.cardlis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 10%;
+    margin: 1%;
+    height: 0;
+    padding-bottom: 20%;
+    /* padding: 1%; */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cardlis img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	margin-bottom: 10px;
+}
+
+.cardlis p {
+	font-size: 2vw;
+}
+
+.content-sectionlis {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px;
+	background-color:rgba(140, 145, 148, 0.47);
+	margin: 2%;
+
+}
+
+.image-containerlis {
+	margin-right: 20px;
+}
+
+.image-containerlis img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.text-containerlis {
+	flex: 1 1 auto;
+}
+
+.text-containerlis h2 {
+	margin-top: 0;
+}
+
+.streetviewlis {
+    width: 100%;
+	min-height: 100px;
+  }
+  .street-containerlis {
+    width: 100%;
+    height: 0;
+    padding-bottom: 30.25%; /* Relación de aspecto 16:9 para iframe de Google Maps */
+    position: relative;
+  }
+  .imglis {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  
+
+
