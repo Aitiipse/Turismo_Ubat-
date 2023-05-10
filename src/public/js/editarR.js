@@ -102,7 +102,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
         // await guardarRuta(nombre.value, ruta.value, descripcion.value, street.value, a1.value, a2.value, a3.value, a4.value, a5.value, a6.value, a7.value, a8.value, a9.value, a10.value);
       } else {
         await actualizarRuta(id, {
-          ruta: nombre.value,
+          // ruta: nombre.value,
           info: descripcion.value,
           
         })

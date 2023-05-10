@@ -294,6 +294,19 @@ router.get('/crearPublicacion', async (req, res) => {
 		//...
 	});
 });
+
+
+router.get('/editarAtractivos', async (req, res) => {
+	//modal = false;
+	modal = true;
+	verificarEstado(req, res, 'editarAtractivos', 'index', datos = '', data = '', () => {
+const usuarioactual = req.session.idUser 
+		console.log(usuarioactual +"hola estoy aqui")
+		console.log("usuarioactuadsfdsjfhsdfjl")
+	});
+});
+
+
 router.get('/editarRuta', async (req, res) => {
 	modal = true;
 	//res.render('crearPublicacion');
@@ -426,15 +439,6 @@ router.post('/perfilA', async (req, res) => {
 
 
 
-router.get('/editarAtractivos', async (req, res) => {
-	//modal = false;
-	modal = true;
-	verificarEstado(req, res, 'editarAtractivos', 'index', datos = '', data = '', () => {
-const usuarioactual = req.session.idUser 
-		console.log(usuarioactual +"hola estoy aqui")
-		console.log("usuarioactuadsfdsjfhsdfjl")
-	});
-});
 // router.get('/buscarAcarreos', async (req, res) => {
 // 	modal = false;
 // 	verificarEstado(req, res, 'buscarAcarreos', 'index', datos = '', data = '', () => {

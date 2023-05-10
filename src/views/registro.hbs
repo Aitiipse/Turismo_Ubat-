@@ -16,7 +16,8 @@
 
     <div class=" formRegisto ">
         <h2>REGISTRAR USUARIO NUEVO</h2>
-        <div class="regleyenda">Espacio para <b>REGISTRAR</b> un nuevo usuario para la colaboracion en el manejo de la página.
+        <div class="regleyenda">Espacio para <b>REGISTRAR</b> un nuevo usuario para la colaboracion en el manejo de la
+            página. <a href=""><b> RECUERDE QUE...</b></a>
             <div>Por favor llenar todos los espacios correctamente</div>
         </div>
         <form class=" formRegisto " id="register-form" action="/new-user-email" method="POST" class="contenido"
@@ -36,25 +37,27 @@
                         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                         title="La contraseña debe tener al menos 8 caracteres, incluyendo mayúsculas, minúsculas y números"
                         required></div>
-                <button id="togglePassword" type="button">Mostrar Contraseña</button>
+                <button id="togglePassword" type="button" class="btn btn-primary">MOSTRAR</button>
                 <br>
             </b>
-            <button id="boton" type="submit">Registrar</button>
+            <button id="boton" type="submit" class="btn btn-primary">Registrar</button>
 
             <script>
                 const togglePasswordButton = document.getElementById("togglePassword");
                 const passwordInputt = document.getElementById("passwordd");
-                const passwordInput = document.getElementById("confirmPassword");
 
-                togglePasswordButton.addEventListener("mousedown", function () {
-                    passwordInputt.type = "text";
-                    passwordInput.type = "text";
+                togglePasswordButton.addEventListener("click", function () {
+                    if (passwordInputt.type === "text"){
+                        passwordInputt.type = "password";
+                        togglePasswordButton.innerHTML = "MOSTRAR";
+
+                    } else {
+                        togglePasswordButton.innerHTML = "OCULTAR";
+                        passwordInputt.type = "text";
+
+                    }
                 });
 
-                togglePasswordButton.addEventListener("mouseup", function () {
-                    passwordInputt.type = "password";
-                    passwordInput.type = "password";
-                });
 
             </script>
         </form>
