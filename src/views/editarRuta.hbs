@@ -62,14 +62,14 @@
             botonVer.addEventListener('click', () => {
 
                 if (listaVer.style.display === "block") {
-                    listaVer.style.display = "block";
+                    listaVer.style.display = "none";
                     btnguardar.style.display = "none";
                     formulario.style.display = "block";
                     document.getElementById("ver").innerHTML = "VER TODAS";
                     
                 } else if(listaVer.style.display === "none") {
                     listaVer.style.display = "block";
-                    formulario.style.display = "block";
+                    formulario.style.display = "none";
                     btnguardar.style.display = "none";
                     formulario.reset();
 
