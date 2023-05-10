@@ -70,7 +70,8 @@ li:hover {
 .lista-item{
   padding: 5px;
   border-color: black;
-  
+  border-bottom: brown;
+  box-shadow: 0 0 0 2px #4b7bab;
 }
 
 section#mapa1 {
