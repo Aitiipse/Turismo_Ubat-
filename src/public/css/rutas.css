@@ -93,7 +93,12 @@
 
 .aside-1 {}
 
-.aside-2 {}
+.aside-2 {
+  border-style: solid;
+  border-radius: 8px;
+  border-color: firebrick;
+  overflow: scroll;
+}
 
 @media all and (min-width: 600px) {
   .aside {
@@ -257,4 +262,3 @@ body {
   display: flex;
   flex-direction: row;
 }
-
