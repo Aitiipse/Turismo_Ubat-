@@ -34,7 +34,6 @@ main{
 form{
     margin-top: 5%;
     margin-bottom: 5%;
-    width: 80%;
     height: auto;
     display: flex;
     flex-direction: column;

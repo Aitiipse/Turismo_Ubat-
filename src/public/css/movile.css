@@ -243,10 +243,13 @@
     justify-content: center;
     align-items: center;
 }
+
 .modal_IS {
     width: 90%;
     background-image: url(../img/basilica.jpg);
+    background-repeat: no-repeat;
     height: 70%;
+    background-size: cover;
     display: flex;
     align-items: flex-end;
     flex-direction: column;
