@@ -92,9 +92,18 @@
                     alert("Estamos redireccionando a Google Calendar para ingresar eventos");
 
                     // Espera 3 segundos antes de redireccionar a la URL especificada
-                    setTimeout(function () {
-                        window.location.href = "/Atractivos";
-                    }, 3000);
+                    //setTimeout(function () {
+                      //  window.location.href = "/Atractivos";
+                   // }, 3000);
+                }
+                function mostrarmensaje2() {
+                    // Muestra una alerta de redireccionamiento
+                    alert("Estamos redireccionando a Google My Maps");
+
+                    // Espera 3 segundos antes de redireccionar a la URL especificada
+                    //setTimeout(function () {
+                      //  window.location.href = "/Atractivos";
+                   // }, 3000);
                 }
             </script>
             <li>
@@ -134,9 +143,7 @@
     <div style="display: flex; flex-direction: row; width: 100%; height: auto; justify-content:center;">
         <div style="display: flex; flex-direction: row; width: 50%; height: 100%;"></div>
         <div style="display: flex; flex-direction: row; width: 50%; height: 100%; justify-content: space-evenly;">
-            <div class="btnG" type="button"><a href="https://www.google.com/maps/d/ " target="_blank">My Maps</a></div>
-            <div class="btnG" type="button"><a href="https://calendar.google.com/calendar/u/0/r?pli=1" target="_blank" onclick="mostrarmensaje()"
-                    class="btn-sideBar-SubMenu">Calendar</a></div>
+            
 
    
         </div>
