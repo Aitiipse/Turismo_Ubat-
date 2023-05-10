@@ -88,6 +88,8 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       const atractivo = doc.data();
 
       formlista.innerHTML += `
+        
+
 
         <div class="lista-item" >
                 <div class="" >
