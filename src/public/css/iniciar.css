@@ -391,3 +391,8 @@ border-bottom-left-radius: 30px;
   border-bottom-left-radius: 50%;
   background-color: rgb(3 91 123);
   }
+
+
+  .atracmodal{
+    cursor: pointer;
+  }

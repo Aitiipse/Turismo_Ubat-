@@ -83,6 +83,14 @@ img.imgmultimedia {
   border: solid 0px;
   text-align: center;
 }
+.rutas{
+  width: auto;
+  height: 40%;
+  border-radius: 30px;
+  margin: 0% 5% 0% 5%;
+  border: solid 0px;
+  text-align: center;
+}
 .noticias {
   width: auto;
   height: 40%;
@@ -126,7 +134,7 @@ li:hover {
 
 
 .pu {
-  background-color: rgba(255, 255, 255, 0.652);
+  /* background-color: rgba(255, 255, 255, 0.652); */
 
 }
 
@@ -139,7 +147,7 @@ li:hover {
 }
 
 .pb {
-  background-color: rgb(255, 255, 255, 0.652);
+  /* background-color: rgb(255, 255, 255, 0.652); */
 
 }
 
@@ -152,7 +160,7 @@ li:hover {
 }
 
 .pa {
-  background-color: rgb(255, 255, 255, 0.652);
+  /* background-color: rgb(255, 255, 255, 0.652); */
 
 }
 
@@ -165,7 +173,7 @@ li:hover {
 }
 
 .pt {
-  background-color: rgb(255, 255, 255, 0.652);
+  /* background-color: rgb(255, 255, 255, 0.652); */
 
 }
 
@@ -178,7 +186,7 @@ li:hover {
 }
 
 .pe {
-  background-color: rgb(255, 255, 255, 0.652);
+  /* background-color: rgb(255, 255, 255, 0.652); */
 
 }
 

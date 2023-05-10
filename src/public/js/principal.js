@@ -33,11 +33,11 @@ let input0 = document.querySelectorAll(".input0")[0];
         
         formrespuesta.innerHTML += `
 
-        <div class="card3-sm card3-md card3-lg  card3-2 card3-xl card3-xxl " >
-        <div class="imgcard3 "  style=" background-image: url(${atractivo.input0});"   >
+        <div class="card3-sm card3-md card3-lg  card3-2 card3-xl card3-xxl atracmodal" >
+        <div class="imgcard3 "   style=" background-image: url(${atractivo.input0});" data-id="${doc.id}"  >
         
         
-            <button  class="tn btn-secondary btn-modal" data-id="${doc.id}">
+            <button  class="tn btn-secondary btn-modal" type="button" data-id="${doc.id}" >
           ${atractivo.nombre} </button>
             </div>
              
@@ -46,7 +46,7 @@ let input0 = document.querySelectorAll(".input0")[0];
       `;
        });
       
-    const btnsModal = formrespuesta.querySelectorAll(".btn-modal");
+    const btnsModal = formrespuesta.querySelectorAll(".imgcard3");
     btnsModal.forEach((btn) => {
       btn.addEventListener("click", async (e) => {
         try {
