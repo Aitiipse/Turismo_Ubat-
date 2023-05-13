@@ -218,7 +218,7 @@ body {font-family: Montserrat, Arial, Helvetica, sans-serif;}
 .menuAdmin > li{
   overflow: hidden;
   border-radius:  30px 20px 20px 30px;
-  background-color: rgba(179, 189, 194, 0.278);
+  /* background-color: rgba(179, 189, 194, 0.278); */
 }
 
 .menuAdmin > li > a{
@@ -351,3 +351,8 @@ body {font-family: Montserrat, Arial, Helvetica, sans-serif;}
   width: 100%;
   display: flex;
 }
+
+.t-white{
+	color: #fff;
+}
+

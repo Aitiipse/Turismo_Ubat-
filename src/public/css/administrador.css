@@ -941,3 +941,7 @@ html *::after {
 	padding: 7%;
 	font-size: 1em;
 }
+
+.t-white{
+	color: #fff;
+}

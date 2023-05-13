@@ -91,24 +91,10 @@ window.addEventListener("DOMContentLoaded", async (e) => {
         
 
 
-        <div class="lista-item" >
-                <div class="" >
-                <div class="">
-            <a><b><h4>${atractivo.nombre} </h4></b> </a>
-            
-                  <div class="street ">  <p class="texto">${atractivo.descripcion} 
-                    </p><b>${atractivo.ruta}</b></div>
-                    <section class="cstreet" style=" background-image: url(${atractivo.input0});" >
-                    <div class="streetview"   >          
-                </div>
-                    <div class="streetview" >          
-                    ${atractivo.street} 
-                </div>
-                </section>
-                
-            </div><br><br>
-        </div>
-</div>
+      <div class="cardlis">
+      <p class="cardlisp" >${atractivo.nombre}</p>
+			<img class="cardlistimg" style=" background-image:url(${atractivo.input0});" alt="Crd image">
+		</div>
   
       `;
     });

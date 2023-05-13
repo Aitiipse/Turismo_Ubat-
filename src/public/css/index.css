@@ -80,9 +80,13 @@ img.imgmultimedia {
   height: 40%;
   border-radius: 30px;
   margin: 0% 5% 0% 5%;
-  background-color: rgba(138, 177, 189, 0.534);
+  /* background-color: rgba(138, 177, 189, 0.534); */
   border: solid 0px;
-  text-align: center;
+  text-align: justify;
+}
+
+.atractivos p {
+  margin: 2% ;
 }
 .rutas{
   width: auto;
@@ -599,7 +603,7 @@ li:hover {
 .frente {
   /* position:absolute; */
   top: 0;
-  width: 92%;
+  width: 100%;
   right: 0;
   left: 0;
   bottom: 0;
@@ -607,15 +611,14 @@ li:hover {
 }
 
 .rutaOrden {
-
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin-top: calc(-1 * var(--bs-gutter-y));
   margin-right: calc(1 * var(--bs-gutter-x));
   margin-left: calc(1 * var(--bs-gutter-x));
-  align-items: flex-end;
   width: 100%;
-
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 /* fin de solucion del error del menu en responsive (index.hbs) */
