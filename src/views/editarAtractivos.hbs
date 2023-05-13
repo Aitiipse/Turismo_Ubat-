@@ -8,22 +8,20 @@
 <body class="body gridContainer " >
 <div class="">
     <h2><b>ATRACTIVOS REGISTRADOS </b></h2> 
-        <button id="ver" class="ver" >VER TODOS</button><br>
+         <button id="ver" class="ver" onclick="ver">VER TODAS</button><br>
 
         <script>
 
 </script>
 
-       <div class=" eContenido formulario " style="display: none;" id="formulario" >
-        <table style="width:100%">
+       <div class=" eContenido formulario "  id="formulario" >
         
-        </table>
-        <table style="width:100%"id="contenedor">
+        <table style="width:100%" id="contenedor">
         
         </table>
 
     </div>
-    <br>
+    <br> 
     <h2> REGISTRAR</h2>
     <div>
     <form action="/new_publication" method="POST" enctype="multipart/form-data" class="formulario" id="formularioeditar">
@@ -148,7 +146,7 @@ const botonVer = document.getElementById("ver");
     </div>
     
     
-    <script src="/js/editar.js" type=""></script>
+    <script src="/js/editar.js" type="module"></script>
    
 
 </body>

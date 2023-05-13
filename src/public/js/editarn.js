@@ -1,7 +1,7 @@
 import {listarNoticias,guardarNoticia, eliminarNoticia, getNoticia, actualizarNoticia, getNoticias} from "./firebaseConfig.js";
   
   const formularioNoticias = document.getElementById("formularioN");
-  const containerNoticias = document.getElementById("contenedorn");
+  const containerNoticias = document.getElementById("contenedorN");
   
   let editStatus = false;
   let id = "";
@@ -57,60 +57,39 @@ import {listarNoticias,guardarNoticia, eliminarNoticia, getNoticia, actualizarNo
   
       const btnsEdit = containerNoticias.querySelectorAll(".btn-edit");
       
-      btnsEdit.forEach((btn) => {
-        btn.addEventListener("click", async (e) => {
-            // formularioNoticias.reset();
-          try {
-            const doc = await getNoticia(e.target.dataset.id);
-            const noticia = doc.data();
-            formularioNoticias["titular"].value = noticia.titular;
-            formularioNoticias["resumen"].value = noticia.resumen;
-            formularioNoticias["completa"].value = noticia.completa;            
-  
-            editStatus = true;
-            id = doc.id;
-            formularioNoticias["btn-task-form"].innerText = "Actualizar";
-          } catch (error) {
-            console.log(error);
-          }
-        });
-      });
-    });
-
-    formularioNoticias.addEventListener("submit", async (e) => {
-      e.preventDefault();
-    
-      const titular = formularioNoticias["titular"];
-      const resumen = formularioNoticias["resumen"];
-      const completa = formularioNoticias["completa"];
-      
-    
-      try {
-        if (!editStatus) {
-
-
-        } else {
-          await actualizarNoticia(id, {
-            titular: titular.value,
-            resumen: resumen.value,
-            completa: completa.value,
-           
-          });
-    
-          editStatus = false;
-          id = "";
-          formularioNoticias["btn-task-form"].innerText = "Actualizar";
-        }
-    
-        formularioNoticias.reset();
-        titular.focus();
-      } catch (error) {
-        console.log(error);
-      }
-    });
-
-
+btnsEdit.forEach((btn) => {
+  btn.addEventListener("click", async (e) => {
+    const doc = await getNoticia(e.target.dataset.id);
+    const { titular, resumen, completa } = doc.data();
+    formularioNoticias.titular.value = titular;
+    formularioNoticias.resumen.value = resumen;
+    formularioNoticias.completa.value = completa;
+    editStatus = true;
+    id = doc.id;
+    formularioNoticias["btn-task-form"].innerText = "Actualizar";
   });
+});
+
+formularioNoticias.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const { titular, resumen, completa } = formularioNoticias;
+  try {
+    if (!editStatus) {
+      // realizar una nueva publicación
+    } else {
+      await actualizarNoticia(id, { titular: titular.value, resumen: resumen.value, completa: completa.value });
+      editStatus = false;
+      id = "";
+      formularioNoticias["btn-task-form"].innerText = "Actualizar";
+    }
+    formularioNoticias.reset();
+    titular.focus();
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+});});
   
   
   

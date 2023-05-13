@@ -1,4 +1,4 @@
-import { listarAtractivos, guardarAtractivo, eliminarAtractivo, getAtractivo, actualizarAtractivo, getAtractivos, listarNoticias, guardarNoticia, eliminarNoticia, getNoticia, actualizarNoticia, getNoticias } from "./firebaseConfig.js";
+import { listarAtractivos, guardarAtractivo, eliminarAtractivo, getAtractivo, actualizarAtractivo, getAtractivos } from "./firebaseConfig.js";
 
 const formularioAtractivos = document.getElementById("formularioeditar");
 const containerAtractivos = document.getElementById("contenedor");
@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
   // ---------------------------------------------------ATRACTIVOS-----------------------------------------
 
   listarAtractivos((querySnapshot) => {
-    containerAtractivos.innerHTML = "";
+   
 
     querySnapshot.forEach((doc) => {
       const atractivo = doc.data();

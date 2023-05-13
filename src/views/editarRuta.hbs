@@ -6,10 +6,11 @@
     <link rel="stylesheet" href="./css/crear/crearPub_w.css" media="screen and (min-width:1000px)">
 </head>
 <div class="erroresinternos">
-        <p align="">
-        <h5>{{mensajeError}}</h5>
-        </p>
-    </div>
+    <p align="">
+    <h5>{{mensajeError}}</h5>
+    </p>
+</div>
+
 <body class="body gridContainer ">
     <div class="">
         <h2><b>RUTAS DISPONIBLES </b></h2>
@@ -41,7 +42,9 @@
                             <h5><label class="">Descripción</label></h5>
                         </div>
                         <h6><textarea id="descripcion" name="descripcion" spellcheck="true" rows="10" cols="90"
-                                tabindex="" maxlength="3000" title="el texto debe ser menor a 3000 (tres mil) caracteres" placeholder="Descripción"></textarea></h6>
+                                tabindex="" maxlength="3000"
+                                title="el texto debe ser menor a 3000 (tres mil) caracteres"
+                                placeholder="Descripción"></textarea></h6>
                     </div>
 
                 </section>
@@ -56,8 +59,8 @@
         <script>const listaVer = document.getElementById("formularioR");
             const botonVer = document.getElementById("ver");
             const formulario = document.getElementById("formulario");
-             const btnguardar = document.getElementById("btn-task-form");
-            
+            const btnguardar = document.getElementById("btn-task-form");
+
 
             botonVer.addEventListener('click', () => {
 
@@ -66,8 +69,8 @@
                     btnguardar.style.display = "none";
                     formulario.style.display = "block";
                     document.getElementById("ver").innerHTML = "VER TODAS";
-                    
-                } else if(listaVer.style.display === "none") {
+
+                } else if (listaVer.style.display === "none") {
                     listaVer.style.display = "block";
                     formulario.style.display = "none";
                     btnguardar.style.display = "none";
@@ -78,7 +81,7 @@
                 }
 
             })
-            </script>
+        </script>
 
         <script src="/js/editarR.js" type="module"></script>
 
