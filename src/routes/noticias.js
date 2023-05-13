@@ -4,7 +4,7 @@ const { storage } = require('../firebaseCloud');//importar la base de datos
 const { ref, uploadBytes, getDownloadURL } = require("firebase/storage");
 const { db, } = require('../firebase');//importar la base de datos
 
-const  envioImg  = require('../functions');
+const  envioImg  = require('../noticias_img');
 
 const router = Router();
 const storageLocal = multer.memoryStorage();
@@ -19,7 +19,7 @@ router.get('/imgaa', (req, res) => {
 	res.render('img', { layout: false });
 });
 //nuevo acarreo
-router.post('/new-noticia', upload.single('vehiculo'), (req, res) => {
+router.post('/new-noticia', upload.single('input0'), (req, res) => {
 	let img = req.file;
 	let data = {
 		titular,
@@ -36,29 +36,14 @@ router.post('/new-noticia', upload.single('vehiculo'), (req, res) => {
 });
 
 //edit acarreo
-router.post('/edit-noticia', upload.single('vehiculo'), async(req, res) => {
+router.post('/edit-noticia', upload.single('noticia'), async(req, res) => {
 	let img = req.file;
 	let data = {
-		otro_R,
-		id,
-		url : vehiculof,
-		ubication,
-		tipoveh,
-		ubate,
-		carupa,
-		tausa,
-		suta,
-		lenguazaque,
-		guacheta,
-		simijaca,
-		susa,
-		cucunuba,
-		descripcion,
+		titular,
+		resumen,
+		completa,
 	} = req.body;
-
-	if (tipoveh === 'Otro') {
-		data.tipoveh = otro_R;
-	}
+	
 	let a = data;
 	data['updatedAt'] = imagen.getDate();
 	imagen.sendImages(img, imagen.editData, id);

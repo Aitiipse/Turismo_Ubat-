@@ -15,7 +15,7 @@ const { createUserWithEmailAndPassword,
 } = require('firebase/auth');
 const { async } = require('@firebase/util');
 const { doc, deleteDoc, updateDoc, setDoc, collection } = require('firebase/firestore'); //crud
-const envioImg = require('../functions');
+const envioImg = require('../noticias_img');
 
 const router = Router();
 var imagen = new envioImg();
