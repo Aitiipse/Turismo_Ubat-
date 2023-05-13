@@ -1,11 +1,12 @@
 :root {
-    --blanco: #ffff;
-    --gris_claro: #E5E5E5;
-    --gris_oscuro: #A6A6A6;
-    --cafe: #A96224;
-    --font1: 'Port Lligat Sans', sans-serif;
-    --font2: 'Inter', sans-serif;
-}
+	--cafe: #8d4a32;
+	--azul: #0f6973;
+	--rosado: #a71737;
+	--negro: #010101;
+	--blanco-opaco: #c6c6c6;
+  }
+
+  
 .bodyError{
     background-size: 25%;
 }

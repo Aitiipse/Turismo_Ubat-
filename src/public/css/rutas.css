@@ -1,11 +1,10 @@
 :root {
-
-  --bs-cabecera1: rgb(167, 135, 30);
-  --bs-cont: #c56658;
-  --bs-cabecera1-rgb: 207, 172, 52;
-  --bs-cont-rgb: 240, 165, 0;
-
-}
+	--cafe: #8d4a32;
+	--azul: #0f6973;
+	--rosado: #a71737;
+	--negro: #010101;
+	--blanco-opaco: #c6c6c6;
+  }
 
 .texto {
   font-size: normal;
@@ -16,7 +15,7 @@
 
 .round {
   border-radius: 0.5rem !important;
-  background: #ffffffee;
+  background: #ffffff3e;
 }
 
 .fondo1 {
@@ -146,16 +145,13 @@ body {
 }
 
 .navP {
-  background-color: white;
-  border-radius: 10px;
-
-}
-
-.navP {
-  background-color: white;
+  background-color: var(--azul);
   border-radius: 10px;
   overflow: hidden;
+
 }
+
+
 
 @media (max-width: 300px) {
 
