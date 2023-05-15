@@ -15,7 +15,8 @@
 
 .round {
   border-radius: 0.5rem !important;
-  background: #ffffff3e;
+  /* background: #ffffff3e; */
+  color: white;
 }
 
 .fondo1 {
@@ -93,9 +94,9 @@
 .aside-1 {}
 
 .aside-2 {
-  border-style: solid;
+  /* border-style: solid;
   border-radius: 8px;
-  border-color: firebrick;
+  border-color: firebrick; */
   overflow: scroll;
 }
 
@@ -250,7 +251,7 @@ body {
 
 /* Estilos base */
 .espacio p {
-    font-style: oblique;
+    /* font-style: oblique; */
   font-weight: bold;
   font-size: 1rem;
 }
@@ -260,14 +261,14 @@ body {
   .espacio p {
     font-size: 0.8rem;
   font-weight: bold;
-  font-style: oblique;
+  /* font-style: oblique; */
   }
 }
 
 /* Media query para pantallas medianas */
 @media (min-width: 576px) and (max-width: 992px) {
   .espacio p {
-    font-style: oblique;
+    /* font-style: oblique; */
   font-weight: bold;
   font-size: 1rem;
   }
@@ -276,7 +277,7 @@ body {
 /* Media query para pantallas grandes */
 @media (min-width: 992px) and (max-width: 1200px) {
   .espacio p {
-    font-style: oblique;
+    /* font-style: oblique; */
   font-weight: bold;
   font-size: 1.2rem;
   }
@@ -285,7 +286,7 @@ body {
 /* Media query para pantallas extra grandes */
 @media (min-width: 1200px) {
   .espacio p {
-    font-style: oblique;
+    /* font-style: oblique; */
     font-size: 1.5rem;
   font-weight: bold;
   }

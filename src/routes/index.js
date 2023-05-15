@@ -297,12 +297,19 @@ router.get('/crearPublicacion', async (req, res) => {
 
 
 router.get('/editarAtractivos', async (req, res) => {
-	//modal = false;
 	modal = true;
 	verificarEstado(req, res, 'editarAtractivos', 'index', datos = '', data = '', () => {
 const usuarioactual = req.session.idUser 
 		console.log(usuarioactual +"hola estoy aqui")
 		console.log("usuarioactuadsfdsjfhsdfjl")
+	});
+});
+
+router.get('/crearAtractivos', async (req, res) => {
+	modal = true;
+	verificarEstado(req, res, 'crearAtractivos', 'index', datos = '', data = '', () => {
+const usuarioactual = req.session.idUser 
+		console.log(usuarioactual +"hola estoy aqui")
 	});
 });
 
@@ -329,16 +336,18 @@ let multpleInput = upload.fields([
 	{ name: 'input4' }
 ]);
 
-// router.get('/editarAcarreos', async (req, res) => {
-// 	//res.render('crearPublicacion');
-// 	verificarEstado(res, '/editarAcarreos', 'index', datos = '', globalThis.photo, () => {
-// 		//...
-// 	});
-// });
-router.get('/crearNoticia', async (req, res) => {
+router.get('/crearNoticias', async (req, res) => {
 	modal = true;
 	//res.render('crearPublicacion');
-	verificarEstado(req, res, 'crearNoticia', 'index', datos = '', req.session.photo, () => {
+	verificarEstado(req, res, 'crearNoticias', 'index', datos = '', req.session.photo, () => {
+		//...
+	});
+});
+
+router.get('/editarNoticias', async (req, res) => {
+	modal = true;
+	//res.render('crearPublicacion');
+	verificarEstado(req, res, 'editarNoticias', 'index', datos = '', req.session.photo, () => {
 		//...
 	});
 });

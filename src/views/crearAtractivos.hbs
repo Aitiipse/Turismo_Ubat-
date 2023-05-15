@@ -7,22 +7,13 @@
 </head>
 
 <body class="body gridContainer ">
+  <button class="ver btnG crear" onclick="ver"><a class="ver" href="/editarAtractivos">EDITAR-ELIMINAR
+      ATRACTIVOS</a></button>
   <div class="">
-<button class="ver btnG crear" ><a  class="ver" href="/crearAtractivos"> CREAR ATRACTIVOS</a></button>
-    <h2><b>ADMINISTRAR ATRACTIVOS </b></h2>
-    <br>
-    <button id="ver" class="ver btnG" onclick="ver">VER TODAS</button><br>
-    <script>
+    <h2><b>CREAR ATRACTIVOS</b></h2>
 
-    </script>
 
-    <div class=" eContenido formulario " id="formulario">
 
-      <table style="width:100%" id="contenedor">
-
-      </table>
-
-    </div>
     <br>
     <h2> REGISTRAR</h2>
     <div>
@@ -96,11 +87,13 @@
                 <option value="Deportivo">Deportivo</option>
               </select>
             </div>
+            <label>POR FAVOR INSERTAR IMAGEN *</label>
+
             <div class="file" required>
               <img id="imagenicono" class="imagenicono" src="/img/imagenicono.png" alt="Imagen" />
               <input id="archivo" type="file" name="input0" class="foto_publicacion f1" accept="image/.png, .jpeg, .jpg"
                 style="display:none" required>
-
+              <span id="nombre-archivo">SELECCIONA UNA IMAGEN</span>
             </div>
 
           </div>
@@ -123,43 +116,30 @@
 
           const imagen = document.getElementById('imagenicono');
           const archivo = document.getElementById('archivo');
+          const nombreArchivo = document.getElementById('nombre-archivo');
 
           imagen.addEventListener('click', () => {
             archivo.click();
           });
 
-          const listaVer = document.getElementById("formulario");
-          const botonVer = document.getElementById("ver");
-
-
-
-
-          botonVer.addEventListener('click', () => {
-
-            if (listaVer.style.display === "block") {
-              listaVer.style.display = "none";
-
-            } else {
-              listaVer.style.display = "block";
-
-            }
-
-          })
+          archivo.addEventListener('change', () => {
+            nombreArchivo.textContent = archivo.files[0].name;
+            const file = archivo.files[0];
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = () => {
+              imagen.src = reader.result;
+            };
+          });
 
 
 
         </script>
 
         <br>
-        <input type="submit" value="ACTUALIZAR" id="btn-task-send" class="subir btn btn-primary">
-        <input type="button" value="CANCELAR" id="btn-task-form" class=" btn-abort"
-          style="background-color: #d9534f ;">
+        <input type="submit" value="AGREGAR" id="btn-task-send" class="subir btn btn-primary">
       </form>
     </div>
-
-
-    <script src="/js/editar.js" type="module"></script>
-    <script src="/js/publicaciones.js" type="module"></script>
 
 
 </body>

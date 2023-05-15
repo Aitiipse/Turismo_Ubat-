@@ -1,0 +1,125 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="./css/agregar.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/crear_noticiam.css">
+  <link rel="stylesheet" href="./css/crear_noticiat.css" media="screen and (min-width:600px)">
+  <link rel="stylesheet" href="./css/crear_noticiaw.css" media="screen and (min-width:1000px)">
+</head>
+<div class="erroresinternos">
+  <p align="">
+  <h5>{{mensajeError}}</h5>
+  </p>
+</div>
+
+<body class="body gridContainer ">
+  <div class="">
+    <button class="ver btnG crear" ><a  class="ver" href="/crearNoticias"> CREAR NOTICIAS</a></button>
+
+    <h2><b> ADMINISTRAR NOTICIAS</b></h2>
+<br>
+    <button id="ver" class="ver  btnG" onclick="ver">VER TODAS</button><br>
+
+
+    <div class=" eContenido formulario " id="formularioN">
+      <table style="width:100%" id="contenedorN">
+
+      </table>
+
+    </div>
+    <br>
+    <h2> REGISTRAR</h2>
+    <div>
+      <form action="" method="POST" enctype="multipart/form-data" class="formulario" id="formulario">
+        <div>
+          <label class="">TITULAR DE LA NOTICIA</label>
+
+          <input required id="titular" name="titular" type="text" placeholder="Titular de la Noticia" maxlength="50"
+                        class="espaciotext1" title="el nombre debe tener máximo 50 caracteres">
+            
+
+        </div>
+
+
+
+        <section class="row justify-content-center noticias">
+          <div class="espaciotext2">
+            <div>
+
+              <label class="">RESUMEN</label>
+            </div>
+
+            <textarea id="resumen" required name="resumen" spellcheck="true" rows="10" cols="25" tabindex="9"
+              placeholder="Resumen de la noticia"></textarea>
+          </div>
+          <div class="espaciotext2">
+            <div>
+              <label>NOTICIA COMPLETA</label>
+            </div>
+
+            <textarea id="completa" name="completa" required spellcheck="true" rows="10" cols="40" tabindex="4"
+              placeholder="Noticia Completa"></textarea>
+
+          </div>
+           <div>
+              <label>POR FAVOR INSERTAR IMAGEN *</label>
+            </div>
+          <div class="imagen">
+            <div class="fotos"></div>
+            <img id="imagenicono" class="imagenicono" src="/img/imagenicono.png" alt="Imagen" />
+            <input required id="archivo" type="file" name="input0" class="foto_publicacion f1"
+              accept="image/.png, .jpeg, .jpg" style="display:none">
+
+          </div>
+        </section>
+        </section>
+
+       
+        <br>
+        <input type="submit" value="AGREGAR" id="btn-task-form" class="subir btn btn-primary">
+          <script>
+          const imagen = document.getElementById('imagenicono');
+          const archivo = document.getElementById('archivo');
+
+          imagen.addEventListener('click', () => {
+            archivo.click();
+          });
+
+         const listaVer = document.getElementById("formularioN");
+      const botonVer = document.getElementById("ver");
+      const formulario = document.getElementById("formulario");
+      const btnguardar = document.getElementById("btn-task-form");
+
+
+      botonVer.addEventListener('click', () => {
+
+        if (listaVer.style.display = "block") {
+          listaVer.style.display = "none";
+          btnguardar.style.display = "none";
+          formulario.style.display = "block";
+          document.getElementById("ver").innerHTML = "VER TODAS";
+
+        } else if (listaVer.style.display === "none") {
+          listaVer.style.display = "block";
+          formulario.style.display = "none";
+          btnguardar.style.display = "none";
+          formulario.reset();
+
+          document.getElementById("ver").innerHTML = "OCULTAR";
+
+        }
+
+      })
+
+        </script> 
+      </form>
+    </div>
+
+
+    <script>
+    </script>
+
+    <script src="/js/editarn.js" type="module"></script>
+
+</body>
+
+</html>

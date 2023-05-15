@@ -702,6 +702,7 @@ html{
     width: 1.6em;
     height: 1.6em;
     stroke: rgb(19, 17, 17);
+	color: white;
     fill: transparent;
     stroke-width: 0.8pt;
     stroke-miterlimit: 2;
@@ -934,6 +935,14 @@ html *::after {
     background-color: rgb(37 146 201 / 0%);
     border-color: #496d8ded;
     border-style: solid;
+	color: #000;
+}
+
+.crear{   
+	background-color: #ff8c00;
+}
+
+.crear a{   
 	color: #000;
 }
 

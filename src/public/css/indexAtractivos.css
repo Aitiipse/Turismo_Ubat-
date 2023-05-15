@@ -247,7 +247,7 @@ body {font-family: Montserrat, Arial, Helvetica, sans-serif;}
   
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: flex-start;
   width: 100%;
 }
 

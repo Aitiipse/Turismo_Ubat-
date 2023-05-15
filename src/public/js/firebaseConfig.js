@@ -51,7 +51,7 @@ export const provider = new GoogleAuthProvider(app);
 
 
 
-export const guardarAtractivo = (nombre, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, descripcion, ruta) =>
+export const guardarAtractivo = (nombre, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, descripcion, street, ruta) =>
   addDoc(collection(db, "atractivos"), { nombre, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, descripcion, ruta });
 
 // listar pagina principal

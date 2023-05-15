@@ -4,47 +4,120 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Mi página web</title>
-	<link rel="stylesheet" href="prueba.css">
+	<link rel="stylesheet" href="pruea.css">
 </head>
 <body>
-	<div class="cards-container">
-		<div class="card">
-			<img src="https://via.placeholder.com/150" alt="Card image">
-			<h3>Card title</h3>
-			<p>Card description</p>
-		</div>
-		<div class="card">
-			<img src="https://via.placeholder.com/150" alt="Card image">
-			<h3>Card title</h3>
-			<p>Card description</p>
-		</div>
-		<div class="card">
-			<img src="https://via.placeholder.com/150" alt="Card image">
-			<h3>Card title</h3>
-			<p>Card description</p>
-		</div>
-		<div class="card">
-			<img src="https://via.placeholder.com/150" alt="Card image">
-			<h3>Card title</h3>
-			<p>Card description</p>
-		</div>
-	</div>
-	<div class="streetview">
-		<div class="street-container">
-			<iframe class="img"
-		src="https://www.google.com/maps/d/embed?mid=1SiT5_d_gGCEkzOra5acVThGL8u77oks&ehbc=2E312F"
-		></iframe>
-		</div>
-	</div>
-	<div class="content-section">
-		<div class="image-container">
-			<img src="https://via.placeholder.com/400x400" alt="Image">
-		</div>
-		<div class="text-container">
-			<h2>Section title</h2>
-			<p>Section text</p>
-		</div>
-	</div>
-	<script src="app.js"></script>
+	<nav class="menu-superior">
+		<ul>
+		  <li><a href="#">Inicio</a></li>
+		  <li><a href="#">Acerca de</a></li>
+		  <li>
+			<a href="#">Servicios</a>
+			<ul>
+			  <li><a href="#">Diseño web</a></li>
+			  <li><a href="#">Desarrollo web</a></li>
+			  <li><a href="#">Marketing digital</a></li>
+			</ul>
+		  </li>
+		  <li><a href="#">Contacto</a></li>
+		</ul>
+	  </nav>
+
+	  
+	  <style>
+
+		/* Estilo para el menú */
+.menu-superior {
+  background-color: #333;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.menu-superior ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-superior li {
+  display: inline-block;
+  position: relative;
+}
+
+.menu-superior a {
+  color: #fff;
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+/* Estilo para los submenús */
+.menu-superior ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: aqua;
+}
+
+.menu-superior ul li:hover > ul {
+  display: inherit;
+  box-shadow: #b61b1b;
+}
+
+.menu-superior ul ul li {
+  display: list-item;
+  position: relative;
+}
+
+.menu-superior ul ul ul li {
+  position: relative;
+  top: -60px;
+  left: 150px;
+}
+
+.menu-superior a:hover {
+  background-color: #b61b1b;
+  color: #333;
+}
+
+/* Estilo para el menú en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .menu-superior {
+    text-align: center;
+  }
+  
+  .menu-superior ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+  
+  .menu-superior ul li {
+    display: block;
+    width: 100%;
+  }
+  
+  .menu-superior a:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .menu-superior ul ul {
+    position: static;
+    display: none;
+    height: auto;
+    width: auto;
+  }
+  
+  .menu-superior ul li:hover > ul,
+  .menu-superior ul li:focus-within > ul {
+    display: block;
+	background-color: red;
+  }
+}
+
+	  </style>
 </body>
 </html>
