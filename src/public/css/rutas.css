@@ -303,3 +303,7 @@ body {
   display: flex;
   flex-direction: row;
 }
+
+.content-display{
+ display: contents;
+}
