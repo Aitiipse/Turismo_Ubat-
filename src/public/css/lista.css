@@ -17,10 +17,11 @@
 }
 
 .cards-containerlis {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
 }
 
 .cardlis {
@@ -29,8 +30,9 @@
     align-items: center;
     width: 10%;
     margin: 1%;
-    height: 0;
-    padding-bottom: 20%;
+	cursor: pointer;
+    height: 10rem;
+    /* padding-bottom: 20%; */
     /* padding: 1%; */
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -46,8 +48,18 @@
 }
 
 .cardlisp {
-	font-size: 2vw;
-	height: 30%;
+	/* font-size: 2vw; */
+	height: 100%;
+	width: 100%;
+	border: 0.125rem solid rgba(0, 0, 0, 0.125);
+	border-radius:15px 15px 20px 20px;
+	overflow: hidden;
+	/* margin: 10pt; */
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(../img/marca.png);
+  
 }
 
 .content-sectionlis {

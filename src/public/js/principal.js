@@ -1,4 +1,4 @@
-import { getAtractivo, listar, listarAtractivos, listarsitios1, listarsitios2, listarsitios3, listarsitios4, listarsitios5, listarNoticia, listarNoticias, listarRutas, getNoticia } from "./firebaseConfig.js";
+import { getAtractivo, getAtractivos , listar, listarAtractivos, listarsitios1, listarsitios2, listarsitios3, listarsitios4, listarsitios5, listarNoticia, listarNoticias, listarRutas, getNoticia } from "./firebaseConfig.js";
 
 const formrespuesta = document.getElementById("formulario-container");
 var span = document.getElementsByClassName("close")[0];
@@ -9,10 +9,12 @@ const formsitios2 = document.getElementById("sitios-container2");
 const formsitios3 = document.getElementById("sitios-container3");
 const formsitios4 = document.getElementById("sitios-container4");
 const formsitios5 = document.getElementById("sitios-container5");
-const formlista = document.getElementById("lista");
+// const formlista = document.getElementById("lista");
+// const sectionlista = document.getElementById("sectionlista");
 const formrespuestan = document.getElementById("formulario-noticias");
 const formrespuestanes = document.getElementById("espacio-noticias");
 const formrespuestaruta = document.getElementById("formulario-rutas");
+
 
 
 let editStatus = false;
@@ -49,6 +51,8 @@ window.addEventListener("DOMContentLoaded", async (e) => {
     const btnsModal = formrespuesta.querySelectorAll(".imgcard3");
     btnsModal.forEach((btn) => {
       btn.addEventListener("click", async (e) => {
+        console.log("llega aca");
+
         try {
           const doc = await getAtractivo(e.target.dataset.id);
           const task = doc.data();
@@ -92,11 +96,31 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 
 
       <div class="cardlis">
-      <p class="cardlisp" >${atractivo.nombre}</p>
-			<img class="cardlistimg" style=" background-image:url(${atractivo.input0});" alt="Crd image">
-		</div>
+      <p class="cardlisp" style=" background-image:url(${atractivo.input0});" data-id="${doc.id}" >${atractivo.nombre}
+      </p>
+      </div>
   
       `;
+    });
+
+    const btnlista = formrespuesta.querySelectorAll(".cardlis");
+    btnlista.forEach((btn) => {
+      btn.addEventListener("click", async (e) => {
+        console.log('click');
+
+        try {
+          const doc = await getAtractivos(e.target.dataset.id);
+          const actual = doc.data();
+          sectionlista.style.display = "block";
+          sectionlista["nombre"].value = actual.nombre;
+          sectionlista["actividades"].src = actual.actividades;
+          sectionlista["descripcion"].value = actual.descripcion;
+          sectionlista["ruta"].value = actual.ruta;
+          
+        } catch (error) {
+          console.log(error);
+        }
+      });
     });
   });
 

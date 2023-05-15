@@ -61,6 +61,9 @@ export const listar = (callback) =>
 export const listarAtractivos = (callback) =>
   onSnapshot(collection(db, "atractivos"), callback);
 
+export const listarlista = (callback) =>
+  onSnapshot(collection(db, "atractivos"), callback);
+
 export const listar_p = (callback) =>
   onSnapshot(collection(db, "atractivos"), callback);
 
@@ -85,6 +88,7 @@ export const listarsitios5 = (callback) =>
 export const eliminarAtractivo = (id) => deleteDoc(doc(db, "atractivos", id));
 
 export const getAtractivo = (id) => getDoc(doc(db, "atractivos", id));
+export const getAtractivolista = (id) => getDoc(doc(db, "atractivos", id));
 
 export const actualizarAtractivo = (id, newFields) =>
   updateDoc(doc(db, "atractivos", id), newFields);
