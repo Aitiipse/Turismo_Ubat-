@@ -227,3 +227,20 @@
   }
 
 
+#nombre{
+	font-weight: bold;
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+
+#descripcion {
+    display: flex;
+    font-size: 1rem;
+    text-align: justify;
+    width: 75%;
+}
+
+#ruta{
+	font-size: 0.8rem;
+	font-style: italic;
+}

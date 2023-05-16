@@ -119,6 +119,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       }
       location.reload()
       formularioRutas.reset();
+      titular.focus();
       nombre.focus();
     } catch (error) {
       console.log(error);

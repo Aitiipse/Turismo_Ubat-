@@ -102,7 +102,7 @@ section#mapa1 {
     line-height: 5rem;
     shape-outside: content-box;
     shape-margin: 1rem;
-    float: left;
+    float: inherit;
     max-width: 100%;
     padding:10px;
   }

@@ -172,6 +172,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       }
 
       formularioAtractivos.reset();
+      location.reload();
       nombre.focus();
     } catch (error) {
       console.log(error);

@@ -120,6 +120,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       }
 
       formularioNoticias.reset();
+      location.reload();
       titular.focus();
     } catch (error) {
       console.log(error);

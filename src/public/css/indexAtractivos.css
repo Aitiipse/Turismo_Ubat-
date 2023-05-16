@@ -132,7 +132,7 @@ body {font-family: Montserrat, Arial, Helvetica, sans-serif;}
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(189, 239, 238, 0.63);
+        background: rgba(7, 72, 71, 0.797);
         transform: translateX(-100%);
         transition: 0.5s;
       }
