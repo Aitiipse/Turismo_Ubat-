@@ -1,4 +1,4 @@
-import { getAtractivo, getAtractivos , listar, listarAtractivos, listarsitios1, listarsitios2, listarsitios3, listarsitios4, listarsitios5, listarNoticia, listarNoticias, listarRutas, getNoticia } from "./firebaseConfig.js";
+import { getAtractivo, getAtractivos, listar, listarAtractivos, listarsitios1, listarsitios2, listarsitios3, listarsitios4, listarsitios5, listarNoticia, listarNoticias, listarRutas, getRuta, getNoticia, listarRutasFront } from "./firebaseConfig.js";
 
 const formrespuesta = document.getElementById("formulario-container");
 var span = document.getElementsByClassName("close")[0];
@@ -14,6 +14,7 @@ const formsitios5 = document.getElementById("sitios-container5");
 const formrespuestan = document.getElementById("formulario-noticias");
 const formrespuestanes = document.getElementById("espacio-noticias");
 const formrespuestaruta = document.getElementById("formulario-rutas");
+const textoruta = document.getElementById("textoruta");
 
 
 
@@ -116,7 +117,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
           sectionlista["actividades"].src = actual.actividades;
           sectionlista["descripcion"].value = actual.descripcion;
           sectionlista["ruta"].value = actual.ruta;
-          
+
         } catch (error) {
           console.log(error);
         }
@@ -213,8 +214,24 @@ window.addEventListener("DOMContentLoaded", async (e) => {
   });
 
 
+  listarRutasFront((querySnapshot) => {
+    const textoruta = document.getElementById('textoruta'); // Obtén el elemento HTML
+    const urlActual = location.pathname;
+    const identificador = urlActual.substring(urlActual.lastIndexOf('/') + 1);
+    
+    querySnapshot.forEach((doc) => {
+      const rut = doc.data();
+      
+      if (rut.url === identificador) {
+        // Si el identificador coincide, muestra el campo de texto correspondiente al identificador
+        textoruta.innerHTML += `<p>${rut.info}</p>`;
+        return; // Sal del loop, ya que encontraste el identificador coincidente
+      }
+    });
+  });
+  
 
-
+  
   listarsitios1((querySnapshot) => {
     querySnapshot.forEach((doc) => {
       const atractivo = doc.data();

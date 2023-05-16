@@ -1,4 +1,4 @@
-import { listarRutas, guardarRuta, eliminarRuta, getRuta, actualizarRuta, getRutas } from "./firebaseConfig.js";
+import { listarRutas, getRuta, actualizarRuta, getRutas } from "./firebaseConfig.js";
 
 const formularioRutas = document.getElementById("formulario");
 const containerRuta = document.getElementById("contenedorR");
@@ -28,7 +28,6 @@ window.addEventListener("DOMContentLoaded", async (e) => {
         <th>Ruta</th>
         <th>info</th>
         <th>Editar</th>
-        <th>Eliminar</th>
       </tr>
       <tr>
         <td style="font-style: italic;">${ruta.ruta} </td>
@@ -37,26 +36,10 @@ window.addEventListener("DOMContentLoaded", async (e) => {
         <b> 🖉 </b>
       </button>
         </td>
-        <td><button class="btn  btn-delete" data-id="${doc.id}">
-        <b>🗑</b> 
-      </button></td>
       </tr>
     
   `;
     });
-
-    const btnsDelete = containerRuta.querySelectorAll(".btn-delete");
-    btnsDelete.forEach((btn) =>
-      btn.addEventListener("click", async ({ target: { dataset } }) => {
-        try {
-          await eliminarRuta(dataset.id);
-        
-        } catch (error) {
-          console.log(error);
-         
-        }
-      })
-    );
 
     const btnsEdit = containerRuta.querySelectorAll(".btn-edit");
 

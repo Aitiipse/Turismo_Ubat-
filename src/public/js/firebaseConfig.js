@@ -141,6 +141,9 @@ export const guardarRuta = (ruta, info) =>
 export const listarRutas = (callback) =>
   onSnapshot(collection(db, "rutas"), callback);
 
+  export const listarRutasFront = (callback) =>
+  onSnapshot(collection(db, "rutas"), callback);
+
 
 /**
  *
