@@ -1,11 +1,11 @@
-import {  listarlista, getAtractivolista  } from "./firebaseConfig.js";
+import { listarlista, getAtractivolista } from "./firebaseConfig.js";
 
 const formlista = document.getElementById("lista");
 const sectionlista = document.getElementById("sectionlista");
 
 
 window.addEventListener("DOMContentLoaded", async (e) => {
- 
+
 
 
   listarlista((querySnapshot) => {
@@ -22,14 +22,14 @@ window.addEventListener("DOMContentLoaded", async (e) => {
   
       `;
       console.log("llega a mostrar");
-      
+
     });
 
     const btnlista = formlista.querySelectorAll(".cardlisp");
     btnlista.forEach((btn) => {
       btn.addEventListener("click", async (e) => {
         console.log("llega aca");
-        
+
 
         try {
           const doc = await getAtractivolista(e.target.dataset.id);
@@ -39,11 +39,20 @@ window.addEventListener("DOMContentLoaded", async (e) => {
           sectionlista.querySelector(".imglista").style.backgroundImage = `url(${actual.input0})`;
           sectionlista["descripcion"].value = actual.descripcion;
           sectionlista["ruta"].value = `pertenece a la ruta ${actual.ruta}.`;
-          const street = actual.street;
-         document.querySelector('#street').insertAdjacentHTML("beforeend", street)
 
+
+
+          const html = actual.street;
+          const urlRegex = /src="([^"]*)"/; // Expresión regular que busca el texto dentro de src=""
+          const urlMatch = html.match(urlRegex); // Ejecuta la expresión regular en el código HTML y devuelve un array con la coincidencia
+
+          if (urlMatch && urlMatch[1]) { // Comprueba que haya una coincidencia y que exista el índice 1 del array (que contiene la URL)
+            const url = urlMatch[1]; // Asigna la URL a una variable
+            console.log(url); // Imprime la URL en la consola
           
-          
+          sectionlista.querySelector("#street").src = url;
+          }
+
         } catch (error) {
           console.log(error);
           console.log("no llega");
@@ -56,5 +65,5 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 
 
 
-  });
+});
 
