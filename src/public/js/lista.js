@@ -36,10 +36,12 @@ window.addEventListener("DOMContentLoaded", async (e) => {
           const actual = doc.data();
           sectionlista.style.display = "block";
           sectionlista["nombre"].value = actual.nombre;
-          sectionlista["imagen"].style.background = actual.input0;
-          // sectionlista["actividades"].src = actual.actividades;
+          sectionlista.querySelector(".imglista").style.backgroundImage = `url(${actual.input0})`;
           sectionlista["descripcion"].value = actual.descripcion;
-          sectionlista["ruta"].value = actual.ruta;
+          sectionlista["ruta"].value = `pertenece a la ruta ${actual.ruta}.`;
+          sectionlista.querySelector(".imglis").value = actual.street;
+
+          
           
         } catch (error) {
           console.log(error);

@@ -940,6 +940,7 @@ html *::after {
 
 .crear{   
 	background-color: #ff8c00;
+	text-transform: capitalize;
 }
 
 .crear a{   

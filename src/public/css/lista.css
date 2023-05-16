@@ -62,6 +62,14 @@
   
 }
 
+.imglista {
+	width: 400px;
+	height: 400px;
+	background-color: #0f6973;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
 .content-sectionlis {
 	display: flex;
 	flex-direction: column;
@@ -74,7 +82,19 @@
 }
 
 .image-containerlis {
-	margin-right: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.image-containerlis-lista {
+    margin: 3%;
+    width: 100%;
+    justify-content: center;
+    display: contents;
 }
 
 .image-containerlis img {
