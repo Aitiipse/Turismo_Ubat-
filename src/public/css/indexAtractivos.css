@@ -224,7 +224,7 @@ body {font-family: Montserrat, Arial, Helvetica, sans-serif;}
 .menuAdmin > li > a{
   display: block;
   padding: 15px 20px;
-  color: #000000;
+  color: #fff;
   text-decoration: none;
   overflow: visible;
 }
