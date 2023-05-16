@@ -16,12 +16,24 @@ html {
 }
 
 
-.info {
+/* .info {
   color: black;
   border-color: black;
   border-radius: 10px;
   margin: 50px,50px;
 
+} */
+
+
+.info {
+  color: black;
+  border-color: black;
+  border-radius: 10px;
+  margin: 50px,50px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .texto-blanco {
@@ -40,21 +52,22 @@ li:hover {
 }
 
 .mapa {
-  width: 90%;
+  width: 80%;
   height: 300px; 
   /* max-height: 100%; */
   border-radius: 5%;
 }
 
 .mapaPrincipal {
-  width: 100%;
-  height: 400px;
+  width: 87%;
+  height: 350px;
 }
 
 .texto {
   font-size: 0.9rem;
   font-weight: 300;
   padding: 5vw;
+  width: 85%;
 }
 
 @media (max-width: 768px) {
@@ -106,4 +119,8 @@ section#mapa1 {
     max-width: 100%;
     padding:10px;
   }
+}
+
+.espacio-mapa p {
+  padding: 0;
 }

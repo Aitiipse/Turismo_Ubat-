@@ -212,6 +212,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
         `;
     });
   });
+  
 
 
   listarRutasFront((querySnapshot) => {

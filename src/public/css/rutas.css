@@ -113,7 +113,7 @@
   }
 
   .main {
-    flex: 3 0px;
+    flex: 2 0px;
   }
 
   .aside-1 {
@@ -307,4 +307,8 @@ body {
 
 .content-display{
  display: contents;
+}
+
+.iframemapa{
+  width: 80%;
 }

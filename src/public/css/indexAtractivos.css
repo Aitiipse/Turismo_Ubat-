@@ -247,7 +247,7 @@ body {font-family: Montserrat, Arial, Helvetica, sans-serif;}
   
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
 }
 
@@ -339,11 +339,12 @@ body {font-family: Montserrat, Arial, Helvetica, sans-serif;}
   text-transform: uppercase;
 }
 
-.linea{
+.linea {
   border: 1px solid rgba(94, 22, 22, 0.293);
   width: 90%;
   margin: auto;
-  height: 2px; /* Altura personalizada */
+  height: 20%;
+  background-color: var(--cafe);
 }
 
 .burguer{
