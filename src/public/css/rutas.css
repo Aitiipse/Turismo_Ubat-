@@ -37,6 +37,7 @@
   height: 100%;
   overflow: hidden;
   border-radius: 810px 10% / 30px 2em 90px 5em;
+  background-position: center;
 }
 
 .mapa {

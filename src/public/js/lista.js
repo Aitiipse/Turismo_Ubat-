@@ -25,7 +25,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 
     });
 
-    const btnlista = formlista.querySelectorAll(".cardlisp");
+    const btnlista = formlista.querySelectorAll(".cardlis");
     btnlista.forEach((btn) => {
       btn.addEventListener("click", async (e) => {
         console.log("llega aca");
