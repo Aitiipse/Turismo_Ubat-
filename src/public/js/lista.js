@@ -39,7 +39,8 @@ window.addEventListener("DOMContentLoaded", async (e) => {
           sectionlista.querySelector(".imglista").style.backgroundImage = `url(${actual.input0})`;
           sectionlista["descripcion"].value = actual.descripcion;
           sectionlista["ruta"].value = `pertenece a la ruta ${actual.ruta}.`;
-          sectionlista.querySelector(".imglis").value = actual.street;
+          const street = actual.street;
+         document.querySelector('#street').insertAdjacentHTML("beforeend", street)
 
           
           
