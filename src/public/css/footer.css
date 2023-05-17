@@ -11,6 +11,11 @@ footer {
 footer a {
   color: white;
   font-size: unset;
+  margin-top: 1rem;
+}
+
+footer li {
+  margin-top: 1rem;
 }
 
 .footer-content {
@@ -30,10 +35,6 @@ footer a {
   color: white;
   background-color: #12273a;
   border-radius: 12px 20% 19px 50%;
-}
-
-.footer-row {
-
 }
 
 /* Media queries para la responsividad */
