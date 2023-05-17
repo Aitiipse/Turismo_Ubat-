@@ -1,5 +1,5 @@
 footer {
-  background-color: #f0f0f0;
+  color: #f0f0f0;
   padding: 20px;
   width: 90%;
   margin: auto;
@@ -16,6 +16,12 @@ footer a {
 
 footer li {
   margin-top: 1rem;
+}
+
+.footerImg{
+  max-width: 30%;
+  height: auto;
+  max-height: 300px;
 }
 
 .footer-content {
