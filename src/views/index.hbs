@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/footer.css">
     <link rel="stylesheet" type="text/css" href="./css/iniciar.css">
     <link rel="stylesheet" type="text/css" href="./css/indexAtractivos.css">
     <link rel="icon" type="image/png" href="./img/basilica.jpg" sizes="100x100">
@@ -34,9 +35,9 @@
         <!-- Logo -->
         <div class="burguer">
             <button class="header__button-nav--open" x-on:click="open = true">
-                <svg xmlns="http://www.w3.org/2000/svg"
-                    class="icon icon-tabler icon-tabler-letter-m" width="20" height="20" viewBox="0 0 24 24"
-                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-letter-m" width="20"
+                    height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M6 20v-16l6 14l6 -14v16"></path>
                 </svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-letter-e" width="20"
@@ -253,7 +254,7 @@
             </div>
             <div class="linea"></div>
             <br><br>
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">EVENTOS</h2><br>
+            <h2 id="eventos" class="page-section-heading text-center text-uppercase text-secondary mb-0">EVENTOS</h2><br>
 
             <div class="  ">
                 {{!-- <iframe class="calendario"
@@ -347,33 +348,58 @@
     <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
     <script src="./js/firebaseAuth.js"></script>
 </body>
-
-<footer class="footer text-center" id="contactanos" name="contactanos">
-    <div class="container">
-        <div class="" id="contacto">
-
-            <div>
-                <h4 class="text-uppercase mb-4">UBICACIÓN</h4>
-                <p class="lead me-auto">
-                <h6> VILLA DE SAN DIEGO DE UBATÉ
-                    <br />
-                    ESTUDIANTES 9° SEMESTRE <br> UNIVERSIDAD DE CUNDINAMARCA
-                    </p>
-                </h6><br>
-
-
-
-                <h4 class="text-uppercase mb-4">REDES TURISMO UBATÉ</h4><br>
-
-            </div>
-
-
-            <h4 class="text-uppercase mb-2">IIPA 2022</h4><br>
+<br><br>
+<footer id="contactanos">
+    <div class="footer-content">
+        <div class="footer-column">
+            <h4 class="text-uppercase ">TURISMO UBATÉ</h4>
+            <article>
+                <ul>
+                    <li><a href="#rutas" class="footer-route">Rutas</a></li>
+                    <li><a href="/lista" class="footer-route">Atractivos</a></li>
+                    <li><a href="#noticias" class="footer-route">Noticias</a></li>
+                    <li><a href="/tipos" class="footer-route">Tipos De Turismo</a></li>
+                    <li><a href="#eventos" class="footer-route">Eventos</a></li>
+                </ul>
+            </article>
 
         </div>
-    </div>
-    </div>
-</footer>
+        <div class="footer-column">
+            <h4 class="text-uppercase ">REDES TURISMO UBATÉ</h4>
+            <div class="botones-redes">
+                <ul class="display-flex">
+                    <li class="d-f-social">
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-instagram fa-2xl" style="color: #4f4f4f;"></i>
+                        </a>
+                    </li>
 
+                    <li class="d-f-social">
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-facebook fa-2xl" style="color: #696969;"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-column">
+            <ul>
+                <li> <a href="https://www.pitscolombia.com.co/es/pits/ubate-pit-parque-principal" target="_blank">Punto
+                        De Información Turística Ubaté</a></li>
+                <li><a href="http://www.ubate-cundinamarca.gov.co/">Página De La Alcaldía de Ubaté </a></li>
+                <li><a href="/contacto" target="_blank">CONTÁCTANOS</a></li>
+            </ul>
+        </div>
+        <div class="footer-row">
+            <p class="lead me-auto">
+            <h4> VILLA DE SAN DIEGO DE UBATÉ
+                <br />
+            </h4>
+            </p>
+        </div>
+
+    </div>
+
+</footer>
 
 </html>

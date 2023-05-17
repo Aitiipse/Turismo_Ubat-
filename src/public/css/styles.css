@@ -12842,16 +12842,14 @@ html {
 }
 
 .card5 {
-  width: auto;
-  height: 100px;
+  width: 120px;
+  height: 100%;
   border-radius: 11px;
-  overflow: hidden;
+  /* overflow: hidden; */
   align-items: center;
   justify-content: center;
   margin: 6pt;
   /* background: rgba(255, 255, 254, 0.5); */
-
-
 }
 
 .cardruta {
