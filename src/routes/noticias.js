@@ -22,20 +22,21 @@ router.get('/imgaa', (req, res) => {
 router.post('/new-noticia', upload.single('input0'), (req, res) => {
 	let img = req.file;
 	let data = {
-		titular,
-		resumen,
-		completa,
+	  titular,
+	  resumen,
+	  completa,
 	} = req.body;
-
+  
 	console.log("-------------------");
 	console.log(data);
 	console.log("-------------------");
 	console.log(img);
 	imagen.sendImages(img, imagen.enviarPublication, data);
-	alert('REGISTRO CREADO');
-
-	res.redirect('/atractivos');
-});
+	const mensajeError = 'REGISTRO CREADO'; // Agregar la variable mensajeError con el mensaje deseado
+  
+	res.render('atractivos', { mensajeError });
+  });
+  
 
 //edit acarreo
 router.post('/edit-noticia', upload.single('noticia'), async(req, res) => {

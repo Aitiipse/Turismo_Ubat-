@@ -77,9 +77,21 @@
 }
 
 .menu {
-  width: 100%;
+  width: 70%;
   height: auto;
+  margin: 0;
+  display: flex;
+  font-size: 1em;
+  position:flex;
+  align-items: center;
 }
+
+@media (max-width: 642px) {
+  .menu {
+    width: 100%;
+  }
+}
+
 
 .info p {
   /* background: rgb(111, 116, 58); */
@@ -108,9 +120,7 @@
 }
 
 @media all and (min-width: 800px) {
-  .menu {
-    flex: 3 0px;
-  }
+  
 
   .main {
     flex: 2 0px;
@@ -239,60 +249,15 @@ body {
 }
 
 .espacio {
-  margin: 2px;
   cursor: pointer;
   position: relative;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   flex-wrap: nowrap;
-  justify-content: center;
   align-items: center;
   width: 100%;
 }
-
-/* Estilos base */
-.espacio p {
-    /* font-style: oblique; */
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-/* Media query para pantallas pequeñas */
-@media (max-width: 576px) {
-  .espacio p {
-    font-size: 0.8rem;
-  font-weight: bold;
-  /* font-style: oblique; */
-  }
-}
-
-/* Media query para pantallas medianas */
-@media (min-width: 576px) and (max-width: 992px) {
-  .espacio p {
-    /* font-style: oblique; */
-  font-weight: bold;
-  font-size: 1rem;
-  }
-}
-
-/* Media query para pantallas grandes */
-@media (min-width: 992px) and (max-width: 1200px) {
-  .espacio p {
-    /* font-style: oblique; */
-  font-weight: bold;
-  font-size: 1.2rem;
-  }
-}
-
-/* Media query para pantallas extra grandes */
-@media (min-width: 1200px) {
-  .espacio p {
-    /* font-style: oblique; */
-    font-size: 1.5rem;
-  font-weight: bold;
-  }
-}
-
 
 .centrado {
   justify-content: center;
@@ -303,6 +268,8 @@ body {
 .botones-redes {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
 }
 
 .content-display{

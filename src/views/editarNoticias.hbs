@@ -29,7 +29,7 @@
     <br>
     <h2> REGISTRAR</h2>
     <div>
-      <form action="" method="POST" enctype="multipart/form-data" class="formulario" id="formulario">
+      <form action="/edit-noticia" method="POST" enctype="multipart/form-data" class="formulario" id="formulario">
         <div>
           <label class="">TITULAR DE LA NOTICIA</label>
 
@@ -79,36 +79,24 @@
           <script>
           const imagen = document.getElementById('imagenicono');
           const archivo = document.getElementById('archivo');
+          const nombreArchivo = document.getElementById('nombre-archivo');
 
           imagen.addEventListener('click', () => {
             archivo.click();
           });
 
-         const listaVer = document.getElementById("formularioN");
-      const botonVer = document.getElementById("ver");
-      const formulario = document.getElementById("formulario");
-      const btnguardar = document.getElementById("btn-task-form");
+          archivo.addEventListener('change', () => {
+            nombreArchivo.textContent = archivo.files[0].name;
+            const file = archivo.files[0];
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = () => {
+              imagen.src = reader.result;
+            };
+          });
 
-
-      botonVer.addEventListener('click', () => {
-
-        if (listaVer.style.display = "block") {
-          listaVer.style.display = "none";
-          btnguardar.style.display = "none";
-          formulario.style.display = "block";
-          document.getElementById("ver").innerHTML = "VER TODAS";
-
-        } else if (listaVer.style.display === "none") {
-          listaVer.style.display = "block";
-          formulario.style.display = "none";
-          btnguardar.style.display = "none";
-          formulario.reset();
-
-          document.getElementById("ver").innerHTML = "OCULTAR";
-
-        }
-
-      })
+        
+       
 
         </script> 
       </form>
