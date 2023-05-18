@@ -251,8 +251,16 @@ body {font-family: Montserrat, Arial, Helvetica, sans-serif;}
   width: 100%;
 }
 
-
-
+.ruta-nowrap{
+  
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+  overflow: scroll;
+  height: 20rem;
+  flex-direction: row;
+}
 
 /* ------------------------ */
 

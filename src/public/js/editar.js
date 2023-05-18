@@ -2,6 +2,7 @@ import { listarAtractivos, guardarAtractivo, eliminarAtractivo, getAtractivo, ac
 
 const formularioAtractivos = document.getElementById("formularioeditar");
 const containerAtractivos = document.getElementById("contenedor");
+let mensaje = undefined;
 
 
 let editStatus = false;
@@ -47,18 +48,26 @@ window.addEventListener("DOMContentLoaded", async (e) => {
     const btnsDelete = containerAtractivos.getElementsByClassName("btn-delete");
 
     const deleteAtractivo = async (id) => {
-      try {
-        await eliminarAtractivo(id);
-      } catch (error) {
-        console.log(error);
+      if (confirm('ESTA SEGURO QUE DESEA ELIMINAR?')) {
+        try {
+          await eliminarAtractivo(id);
+          alert('REGISTRO ELIMINADO');
+
+        } catch (error) {
+          console.log(error);
+          alert('NO SE COMPLETO LA ACCIÓN');
+
+        }
+        location.reload(); // Recargar la página después de eliminar
       }
     };
-
+    
     Array.from(btnsDelete).forEach((btn) =>
       btn.addEventListener("click", ({ target: { dataset: { id } } }) =>
         deleteAtractivo(id)
       )
     );
+    
 
     const btnsEdit = containerAtractivos.querySelectorAll(".btn-edit");
 
@@ -166,15 +175,32 @@ window.addEventListener("DOMContentLoaded", async (e) => {
           a10: a10.value,
         });
 
+        if (actualizarAtractivo === true) {
+          mensaje = 'ACTUALIZADO CON EXITO';
+          if (mensaje !== undefined) {
+            let mensajeError = mensaje;
+            mensaje = undefined;
+            console.log('EDITADO CON EXITO');
+            res.render('editarAtractivos', { mensajeError });
+            location.reload();
+          }
+        }
+
+
         editStatus = false;
         id = "";
         formularioAtractivos["btn-task-form"].innerText = "Actualizar";
       }
 
+      alert('ACTUALIZADO CON EXITO');
+      mensaje = 'ACTUALIZADO CON ÉXITO';
+      location.onload();
       formularioAtractivos.reset();
+
       location.reload();
-      nombre.focus();
+      containerAtractivos.focus();
     } catch (error) {
+      alert('NO SE PUDO ACTUALIZAR');
       console.log(error);
     }
   });

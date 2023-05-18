@@ -2,6 +2,7 @@ import { listarNoticias, guardarNoticia, eliminarNoticia, getNoticia, actualizar
 
 const formularioNoticias = document.getElementById("formulario");
 const containerNoticias = document.getElementById("contenedorN");
+let mensaje = undefined;
 
 let editStatus = false;
 let id = "";
@@ -47,10 +48,17 @@ window.addEventListener("DOMContentLoaded", async (e) => {
     const btnsDelete = containerNoticias.getElementsByClassName("btn-delete");
 
     const deleteNoticia = async (id) => {
-      try {
-        await eliminarNoticia(id);
-      } catch (error) {
-        console.log(error);
+      if (confirm('ESTA SEGURO QUE DESEA ELIMINAR?')) {
+        try {
+          await eliminarNoticia(id);
+          alert('REGISTRO ELIMINADO');
+
+        } catch (error) {
+          console.log(error);
+          alert('NO SE COMPLETO LA ACCIÓN');
+
+        }
+        location.reload(); // Recargar la página después de eliminar
       }
     };
 
@@ -114,16 +122,35 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 
         });
 
+        if (actualizarNoticia === true) {
+          mensaje = 'ACTUALIZADO CON EXITO';
+          if (mensaje !== undefined) {
+            let mensajeError = mensaje;
+            mensaje = undefined;
+            console.log('EDITADO CON EXITO');
+            res.render('editarNoticias', { mensajeError });
+            location.reload();
+          }
+        }
+
         editStatus = false;
         id = "";
         formularioNoticias["btn-task-form"].innerText = "Actualizar";
       }
+      alert('ACTUALIZADO CON EXITO');
+      mensaje = 'ACTUALIZADO CON ÉXITO';
+      location.onload();
 
-      formularioNoticias.reset();
       location.reload();
-      titular.focus();
+      containerNoticias.focus();
     } catch (error) {
       console.log(error);
+      mensaje = 'NO SE PUDO ACTUALIZAR';
+      if (mensaje !== undefined) {
+        let mensajeError = mensaje;
+        mensaje = undefined;
+        res.render('editarNoticias', { mensajeError });
+      }
     }
   });
 

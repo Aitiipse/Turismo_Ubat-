@@ -11,6 +11,8 @@ var imagen = new envioImg();
 const router = Router();
 const storageLocal = multer.memoryStorage();
 const upload = multer({ storage: storageLocal });
+let mensajeError = undefined;
+
 
 //envio post de imagenes con multer y firebase storage
 router.post('/new_publication',  upload.single('input0'),  (req, res) => {
@@ -51,8 +53,13 @@ router.post('/new_publication',  upload.single('input0'),  (req, res) => {
 	//Object.keys(files).length -> longitud de los archivos que se subieron
 	//sendImages(files, enviar, text1, text2);
 	//guardar publicaciones en firebase database
+	mensajeError = 'CREADO CON ÉXITO';
 	imagen.sendImages(img, imagen.enviarPublication, data);
-	res.redirect('/atractivos');
+	res.render('atractivos', { mensajeError });
+	// res.redirect('/atractivos');
+	// alert('REGISTRO CREADO');
+	// mensaje = 'ACTUALIZADO CON EXITO';
+
 	
 });
 

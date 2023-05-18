@@ -46,7 +46,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
     btnsEdit.forEach((btn) => {
       btn.addEventListener("click", async (e) => {
         formularioRutas.reset();
-        
+
         try {
           const listaVer = document.getElementById("formularioR");
           const doc = await getRuta(e.target.dataset.id);
@@ -87,30 +87,36 @@ window.addEventListener("DOMContentLoaded", async (e) => {
         await actualizarRuta(id, {
           // ruta: nombre.value,
           info: descripcion.value,
-          
-        })
-        mensaje = 'ACTUALIZADO CON EXITO'
-        if (mensaje !== undefined) {
-          let mensajeError = mensaje;
-          mensaje = undefined;
-          console.log('editado con exito')
-          res.render('editarruta', { mensajeError });};
+        });
+
+        if (actualizarRuta === true) {
+          mensaje = 'ACTUALIZADO CON EXITO';
+          if (mensaje !== undefined) {
+            let mensajeError = mensaje;
+            mensaje = undefined;
+            console.log('editado con exito');
+            res.render('editarruta', { mensajeError });
+            location.reload();
+          }
+        }
 
         editStatus = false;
         id = "";
-        formularioRutas["btn-task-form"].innerText = "Actualizar";
       }
-      location.reload()
+      alert('ACTUALIZADO CON EXITO');
+      mensaje = 'ACTUALIZADO CON ÉXITO';
+      
+      location.reload();
       formularioRutas.reset();
-      titular.focus();
-      nombre.focus();
     } catch (error) {
       console.log(error);
-      mensaje = 'NO SE PUDO ACTUALIZAR'
+      alert('NO SE PUDO ACTUALIZAR');
+      mensaje = 'NO SE PUDO ACTUALIZAR';
       if (mensaje !== undefined) {
         let mensajeError = mensaje;
         mensaje = undefined;
-        res.render('editarruta', { mensajeError });};
+        res.render('editarruta', { mensajeError });
+      }
     }
   });
 

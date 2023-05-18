@@ -12883,9 +12883,9 @@ html {
   width: 100%;
   text-transform: uppercase;
   background: rgba(255, 255, 254, 0.5);
-  font-size: medium;
+  font-size: small;
   overflow: hidden;
-  border-radius: 30px;
+  border-radius: 8px;
 }
 
 .imgcard3 {

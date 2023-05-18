@@ -152,6 +152,7 @@ export const listarRutas = (callback) =>
 export const eliminarRuta = (id) => deleteDoc(doc(db, "rutas", id));
 
 export const getRuta = (id) => getDoc(doc(db, "rutas", id));
+export const getRutaR = (id) => getDoc(doc(db, "rutas", id));
 
 export const actualizarRuta = (id, newFields) =>
   updateDoc(doc(db, "rutas", id), newFields);

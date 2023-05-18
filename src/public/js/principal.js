@@ -1,4 +1,4 @@
-import { getAtractivo, getAtractivos, listar, listarAtractivos, listarsitios1, listarsitios2, listarsitios3, listarsitios4, listarsitios5, listarNoticia, listarNoticias, listarRutas, getRuta, getNoticia, listarRutasFront } from "./firebaseConfig.js";
+import { getAtractivo, getAtractivos, listar, listarAtractivos, listarsitios1, listarsitios2, listarsitios3, listarsitios4, listarsitios5, listarNoticia, listarNoticias, listarRutas, getNoticia, listarRutasFront } from "./firebaseConfig.js";
 
 const formrespuesta = document.getElementById("formulario-container");
 var span = document.getElementsByClassName("close")[0];
@@ -240,7 +240,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       if (atractivo.ruta === "Cultura e Historia") {
         const cardHTML = `
             <div class="card5">
-              <div class="imgcard3" style="background-image: url(${atractivo.input0});">
+              <div class="imgcard3-rutas" style="background-image: url(${atractivo.input0});">
                 <div class="nombresitios">
                   <a><b>${atractivo.nombre}</b></a>
                 </div>
@@ -281,7 +281,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
         formsitios2.innerHTML += `
 
     <div class="card5" >
-    <div class="imgcard3 "  style=" background-image: url(${atractivo.input0});"   >
+    <div class="imgcard3-rutas "  style=" background-image: url(${atractivo.input0});"   >
     
     <div class="nombresitios">
         <a><b>${atractivo.nombre} </b> </a>
@@ -318,7 +318,7 @@ document.getElementById("card4").style.visible="visible";
         formsitios3.innerHTML += `
 
     <div class="card5" >
-    <div class="imgcard3 "  style=" background-image: url(${atractivo.input0});"   >
+    <div class="imgcard3-rutas "  style=" background-image: url(${atractivo.input0});"   >
     
     <div class="nombresitios">
         <a><b>${atractivo.nombre} </b> </a>
@@ -355,7 +355,7 @@ document.getElementById("card4").style.visible="visible";
         formsitios4.innerHTML += `
 
     <div class="card5" >
-    <div class="imgcard3 "  style=" background-image: url(${atractivo.input0});"   >
+    <div class="imgcard3-rutas "  style=" background-image: url(${atractivo.input0});"   >
     
     <div class="nombresitios">
         <a><b>${atractivo.nombre} </b> </a>
@@ -392,7 +392,7 @@ document.getElementById("card4").style.visible="visible";
         formsitios5.innerHTML += `
 
     <div class="card5" >
-    <div class="imgcard3 "  style=" background-image: url(${atractivo.input0});"   >
+    <div class="imgcard3-rutas "  style=" background-image: url(${atractivo.input0});"   >
     
     <div class="nombresitios">
         <a><b>${atractivo.nombre} </b> </a>

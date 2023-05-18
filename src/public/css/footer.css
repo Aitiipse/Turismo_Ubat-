@@ -16,6 +16,7 @@ footer a {
 
 footer li {
   margin-top: 1rem;
+  list-style-type: none;
 }
 
 .footerImg{

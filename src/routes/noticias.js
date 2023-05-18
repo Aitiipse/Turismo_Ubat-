@@ -32,6 +32,8 @@ router.post('/new-noticia', upload.single('input0'), (req, res) => {
 	console.log("-------------------");
 	console.log(img);
 	imagen.sendImages(img, imagen.enviarPublication, data);
+	alert('REGISTRO CREADO');
+
 	res.redirect('/atractivos');
 });
 

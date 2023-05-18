@@ -1,4 +1,4 @@
-import { listarruta,guardarruta, eliminarruta, getruta, actualizarruta, getrutas, } from "./firebaseConfig.js";
+import { listarruta,guardarruta, eliminarruta, getRutaR, actualizarruta, getRutaRs, } from "./firebaseConfig.js";
   
   const formrutas = document.getElementById("formulariorutas");
   const formrespuesta = document.getElementById("formulario-rutas");
@@ -54,7 +54,7 @@ import { listarruta,guardarruta, eliminarruta, getruta, actualizarruta, getrutas
       btnsEdit.forEach((btn) => {
         btn.addEventListener("click", async (e) => {
           try {
-            const doc = await getruta(e.target.dataset.id);
+            const doc = await getRutaR(e.target.dataset.id);
             const ruta = doc.data();
             const atractivo = doc.data();
 
