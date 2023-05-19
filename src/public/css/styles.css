@@ -127,7 +127,7 @@ h6,
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 
 abbr[title],
@@ -12839,7 +12839,7 @@ html {
 }
 
 .card5 {
-  width: 120px;
+  width: 210px;
   height: 100%;
   border-radius: 11px;
   /* overflow: hidden; */

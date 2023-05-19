@@ -30,7 +30,7 @@ html{
 /*============ Estilos generales*/
 .body{
 	height: 100%;
-	background-color: #01589b50;
+	/* background-color: #01589b50; */
 	font-family: 'Quicksand', 'Montserrat', Verdana, Geneva, Tahoma, sans-serif, cursive;
 }
 .full-box{
@@ -599,7 +599,7 @@ html{
 	max-height: 400px;
     border-radius: 30px;
     margin: 0% 1% 0% 1%;
-    background-color: rgba(138, 177, 189, 0.534);
+    /* background-color: rgba(138, 177, 189, 0.534); */
     border: solid 0px;
     text-align: center;
 	overflow: scroll;

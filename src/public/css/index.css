@@ -424,9 +424,9 @@ li:hover {
 @media (min-width: 1200px) {
 
   .carousel {
-    width: 92%;
-    border-radius: 50px;
-    height: 450px;
+    width: 98%;
+    /* border-radius: 50px; */
+    height: 570px;
     overflow: hidden;
     position: relative;
     background-repeat: no-repeat;

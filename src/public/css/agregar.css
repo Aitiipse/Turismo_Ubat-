@@ -188,7 +188,7 @@ input[type=submit]{
 .gridContainer {
   display: grid;
   grid-template-columns: auto auto;
-  background-color: #d3e1ec;
+  /* background-color: #d3e1ec; */
 }
 
 .gridContainer > div {

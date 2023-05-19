@@ -118,7 +118,7 @@ body {font-family: Montserrat, Arial, Helvetica, sans-serif;}
       width: 100%;
       text-align: center;
       justify-content: center;
-      background-color: var(--blanco-opaco);
+      /* background-color: var(--blanco-opaco); */
     }
 
   
@@ -242,13 +242,15 @@ body {font-family: Montserrat, Arial, Helvetica, sans-serif;}
   color: aliceblue;
 }
 
-  
-.rutarow{
-  
+.rutarow {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100%;
+  flex-direction: column;
 }
 
 .ruta-nowrap{
@@ -260,6 +262,7 @@ body {font-family: Montserrat, Arial, Helvetica, sans-serif;}
   overflow: scroll;
   height: 20rem;
   flex-direction: row;
+  overflow-y: hidden;
 }
 
 /* ------------------------ */

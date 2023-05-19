@@ -136,7 +136,9 @@
 
   .aside-2 {
     order: 3;
-  }
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
 
   .footer {
     order: 4;
