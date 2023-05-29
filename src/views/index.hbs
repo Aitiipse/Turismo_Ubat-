@@ -116,18 +116,66 @@
 
 
 
+<<<<<<< HEAD
+        <div id="carosel" class="carousel">
+ <div class="banner" id="carousel">
+  <img src='/img/banner1.jpg' alt="Imagen 1">
+  <img src='/img/banner2.jpg' alt="Imagen 2">
+  <img src='/img/banner3.JPG' alt="Imagen 3">
+  <img src='/img/banner4.JPG' alt="Imagen 4">
+  <img src='/img/banner5.jpg' alt="Imagen 5">
+  <img src='/img/banner6.JPG' alt="Imagen 6">
+</div>
+=======
         <div id="carousel" class="carousel">
             
+>>>>>>> 0633f14df031cdd1f943236ab814578c4972815d
 
-        </div>
+<style>
+    @keyframes banner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
-        <script>
-            var backgrounds = ['/img/banner1.jpg', '/img/banner2.jpg', '/img/banner3.JPG', '/img/banner4.JPG', '/img/banner5.jpg', '/img/banner6.JPG']; // aquí debes reemplazar las imágenes con las que desees utilizar
-            var randomIndex = Math.floor(Math.random() * backgrounds.length);
-            var selectedBackground = backgrounds[randomIndex];
-            document.getElementById('carousel').style.backgroundImage = 'url(' + selectedBackground + ')';
+.banner {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    animation: banner 3s  ease-in-out 2s  ;
 
-        </script>
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  
+}
+
+
+</style>
+
+<script>
+  var backgrounds = ['/img/banner1.jpg', '/img/banner2.jpg', '/img/banner3.JPG', '/img/banner4.JPG', '/img/banner5.jpg', '/img/banner6.JPG'];
+  var currentIndex = 0 ;
+
+  function changeBackground() {
+    var selectedBackground = backgrounds[currentIndex];
+    document.getElementById('carousel').style.backgroundImage = 'url(' + selectedBackground + ')';
+    currentIndex = (currentIndex + 1) % backgrounds.length;
+  }
+
+  setInterval(changeBackground, 5000); // Cambiar imagen cada 5 segundos
+</script>
+
+
         <br>
     </header>
     {{!-- FIN DE MULTIMEDIA --}} <br>
