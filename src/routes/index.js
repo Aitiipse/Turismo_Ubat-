@@ -31,35 +31,144 @@ globalThis.idUser = _idUser;
 globalThis.photo = '';
 globalThis.name = '';
 //verificando estados de la sesion con las rutas
-function verificarEstado(req, res, ruta, ruta2, datos = '', data = '', callback) {
+// function verificarEstado(req, res, ruta, ruta2, datos = '', data = '', callback) {
 
-	//console.log(mensaje);
-	// if (estado) {
+// 	//console.log(mensaje);
+// 	// if (estado) {
+// 	if (req.session.idUser !== undefined) {
+// 		console.log(req.session.idUser);
+// 		console.log("req.session.idUser");
+// 		// res.render('home');
+// 		callback();
+// 		if (modal) {
+// 			res.render(ruta, { datos, data });
+// 		} else {
+// 			res.render(ruta, { layout: false, datos });
+// 			modal = true;
+// 		}
+// 	} else if (mensaje !== undefined) {
+// 		let mensajeError = mensaje;
+// 		mensaje = undefined;
+// 		res.render(ruta2, { layout: false, mensajeError });
+// 	} else {
+// 		console.log('raiz raiz');
+// 		// res.render('index')
+// 		res.render(ruta2, { layout: false });
+// 	}
+// }
+
+// //logout
+router.use('/logout', async (req, res, next) => {
+	auth.signOut().then(() => {
+		// Sign-out successful.
+		estado = false;
+		buscarGlobal = "";
+		// globalThis.idUser = '';
+		// globalThis.photo = '';
+		// globalThis.name = '';
+		delete req.session.name;
+		delete req.session.idUser;
+		console.log('logout');
+		//next();
+		res.redirect('/');
+	}).catch((error) => {
+		// An error happened.
+	});
+});
+
+// ...
+
+// Definir la duración del tiempo de inactividad en milisegundos (por ejemplo, 30 minutos)
+const inactivityTimeout = 9 * 1000; // 30 minutos en milisegundos
+
+// Variable para almacenar el temporizador de inactividad
+let inactivityTimer;
+
+// Función para cerrar sesión por inactividad
+// function signOutOnInactivity(req, res) {
+// 	auth.signOut()
+// 		.then(() => {
+// 			// Cierre de sesión exitoso
+// 			estado = false;
+// 			buscarGlobal = "";
+// 			delete req.session.name;
+// 			delete req.session.idUser;
+// 			console.log('logout');
+// 			res.redirect('/');
+// 		})
+// 		.catch((error) => {
+// 			// Ocurrió un error al cerrar sesión
+// 			console.log('Error al cerrar sesión:', error);
+// 			// Puedes manejar el error de alguna manera
+// 			res.render('/'); // Redirige a la página principal en caso de error
+// 		});
+//}
+
+// Función para reiniciar el temporizador de inactividad
+// function resetInactivityTimer(req, res) {
+// 	clearTimeout(inactivityTimer);
+// 	inactivityTimer = setTimeout(signOutOnInactivity, inactivityTimeout, req, res);
+// }
+
+// // ...
+
+// router.get('/logoutt', async (req, res, next) => {
+// 	resetInactivityTimer(req, res); // Reiniciar el temporizador al realizar una acción antes del cierre de sesión
+// 	signOutOnInactivity(req, res); // Cerrar sesión manualmente
+// });
+// // ...
+
+function verificarEstado(req, res, ruta, ruta2, datos = '', data = '', callback) {
+	// Verificar si el usuario ha iniciado sesión
 	if (req.session.idUser !== undefined) {
+	  console.log(req.session.idUser);
+  
+	  // Ejecutar la función de callback
+	  callback();
+  
+	  setTimeout(() => {
+		req.session.idUser = undefined;
 		console.log(req.session.idUser);
-		console.log("req.session.idUser");
-		// res.render('home');
-		callback();
+		// Lógica adicional aquí
+		// resetInactivityTimer();
+		// signOutOnInactivity();
+  
+		// Renderizar la página correspondiente
 		if (modal) {
-			res.render(ruta, { datos, data });
+		  res.render(ruta, { datos, data });
 		} else {
-			res.render(ruta, { layout: false, datos });
-			modal = true;
+		  res.render(ruta, { layout: false, datos });
+		  modal = true;
 		}
+	  }, 1000);
+	  console.log(req.session.idUser);
 	} else if (mensaje !== undefined) {
-		let mensajeError = mensaje;
-		mensaje = undefined;
-		res.render(ruta2, { layout: false, mensajeError });
+	  let mensajeError = mensaje;
+	  mensaje = undefined;
+	  res.render(ruta2, { layout: false, mensajeError });
 	} else {
-		console.log('raiz raiz');
-		// res.render('index')
-		res.render(ruta2, { layout: false });
+	  console.log('raiz raiz');
+	  res.render(ruta2, { layout: false });
 	}
-}
+  }
+  
+
+
+// ...
+
+// Agrega eventos de actividad del usuario para reiniciar el temporizador de inactividad
+// Ejemplo: document.addEventListener('mousemove', resetInactivityTimer);
+// Ejemplo: document.addEventListener('keydown', resetInactivityTimer);
+// Agrega otros eventos relevantes para tu aplicación
+
+// ...
+
+
 
 function verificar(req, res, ruta, ruta2, datos = '', data = '') {
-	//console.log(mensaje);
-	// if (estado) {
+	const usuario = firebase.auth().currentUser;
+	const horaActual = Date.now();
+	const horaInicioSesion = req.session.horaInicioSesion;
 
 	if (req.session.idUser !== undefined) {
 		console.log('home raiz');
@@ -117,25 +226,7 @@ router.get('/', async (req, res) => {
 
 
 
-// //logout
-router.use('/logout', async (req, res, next) => {
-	auth.signOut().then(() => {
-		// Sign-out successful.
-		estado = false;
-		buscarGlobal = "";
-		// globalThis.idUser = '';
-		// globalThis.photo = '';
-		// globalThis.name = '';
-		delete req.session.name;
-		delete req.session.photo;
-		delete req.session.idUser;
-		console.log('logout');
-		//next();
-		res.redirect('/');
-	}).catch((error) => {
-		// An error happened.
-	});
-});
+
 
 
 
@@ -155,9 +246,10 @@ router.post('/new-user-email', async (req, res) => {
 		console.log(mensaje);
 		console.log(confirmPassword);
 		if (mensaje !== undefined) {
-		let mensajeError = mensaje;
-		mensaje = undefined;
-		res.render('registro', { mensajeError });}
+			let mensajeError = mensaje;
+			mensaje = undefined;
+			res.render('registro', { mensajeError });
+		}
 	} else {
 		verficEmail(res, email, () => {
 			createUserWithEmailAndPassword(auth, email, passwordd)
@@ -178,7 +270,8 @@ router.post('/new-user-email', async (req, res) => {
 					if (mensaje !== undefined) {
 						let mensajeError = mensaje;
 						mensaje = undefined;
-						res.render('atractivos', { mensajeError });}
+						res.render('atractivos', { mensajeError });
+					}
 				})
 				.catch((error) => {
 					const errorCode = error.code;
@@ -199,28 +292,18 @@ router.post('/login-email', async (req, res) => {
 	let contador = 0;
 
 	setPersistence(auth, browserSessionPersistence)
-		//console.log('entro')
 
 
 		.then(() => {
-			console.log('aca si entro');
-			//res.render('home');
 			signInWithEmailAndPassword(auth, email, password)
 				.then((userCredential) => {
-					// Signed in
 					const user = userCredential.user;
-					console.log('Login exitoso');
-					// globalThis.idUser = user.uid; //id user global
 					req.session.idUser = user.uid;
 					estado = true;
 					mensaje = undefined;
 					data_perfil(user.uid)
 						.then((data) => {
 							setTimeout(() => {
-								// globalThis.photo = data[0].photo;
-								// globalThis.name = data[0].name;
-								// req.session.name = data[0].name;
-								// req.session.photo = data[0].photo;
 								res.redirect('/atractivos',);
 							}, 1000);
 						})
@@ -228,11 +311,8 @@ router.post('/login-email', async (req, res) => {
 				.catch((error) => {
 					const errorCode = error.code;
 					const errorMessage = error.message;
-					//console.log('error', errorCode);
-					//res.sendStatus(errorCode).send(errorMessage);
 					console.log(typeof (errorCode));
 					console.log('error del codigooo ', errorCode);
-					//res.render('error', { layout: false });
 					console.log('Este es el mensaje de error ', errorMessage);
 					if (errorCode === 'auth/user-not-found') {
 						console.log(`Intento: ${contador}`);
@@ -248,12 +328,8 @@ router.post('/login-email', async (req, res) => {
 				});
 		})
 		.catch((error) => {
-			// Handle Errors here.
 			const errorCode = error.code;
 			const errorMessage = error.message;
-			console.log('error del codigooo ', errorCode);
-			//res.render('error', { layout: false });
-			console.log('Este es el mensaje de error ', errorMessage);
 		});
 });
 
@@ -299,8 +375,8 @@ router.get('/crearPublicacion', async (req, res) => {
 router.get('/editarAtractivos', async (req, res) => {
 	modal = true;
 	verificarEstado(req, res, 'editarAtractivos', 'index', datos = '', data = '', () => {
-const usuarioactual = req.session.idUser 
-		console.log(usuarioactual +"hola estoy aqui")
+		const usuarioactual = req.session.idUser
+		console.log(usuarioactual + "hola estoy aqui")
 		console.log("usuarioactuadsfdsjfhsdfjl")
 	});
 });
@@ -308,8 +384,8 @@ const usuarioactual = req.session.idUser
 router.get('/crearAtractivos', async (req, res) => {
 	modal = true;
 	verificarEstado(req, res, 'crearAtractivos', 'index', datos = '', data = '', () => {
-const usuarioactual = req.session.idUser 
-		console.log(usuarioactual +"hola estoy aqui")
+		const usuarioactual = req.session.idUser
+		console.log(usuarioactual + "hola estoy aqui")
 	});
 });
 
@@ -352,7 +428,7 @@ router.get('/editarNoticias', async (req, res) => {
 	});
 });
 
-// rufa de los acarreos
+// rufa de los noticias
 router.get('/noticias', async (req, res) => {
 	publicaciones('noticias')
 		.then((publicaciones) => {
@@ -395,65 +471,6 @@ router.get('/noticias', async (req, res) => {
 		})
 		.catch((error) => { console.log("No hay publicaiones", error); });
 });
-
-
-router.post('/perfilA', async (req, res) => {
-	let { id_p } = req.body;
-	console.log(id_p);
-	console.log('abri publicaciones');
-	publicaciones('noticias')
-		.then((publicaciones) => {
-			let idusuariover;
-			publicaciones.forEach((doc) => {
-				console.log(doc);
-				if (doc.id === id_p) {
-					console.log("entre al ifffff");
-					console.log(doc.iduser);
-					idusuariover = doc.iduser;
-				}
-			});
-			console.log('1111111111111111111111111111111111111111');
-			console.log(idusuariover);
-			data_perfil(idusuariover)
-				.then((data) => {
-					publicaciones_propias("noticias", idusuariover)
-						.then((result) => {
-							//console.log("---------------------------------");
-							// //result.push(data)
-							// console.log(result);
-							console.log("&&&&&&&&&&&&&&&&&&&&&&&&&");
-							console.log(result);
-							let unir_publicaciones = unir(result, data);
-							console.log(unir_publicaciones);
-							// data[0]['photoprincipal'] = globalThis.photo;
-							// data[0]['name_us'] = globalThis.name;
-							data[0]['photoprincipal'] = req.session.photo;
-							data[0]['name_us'] = req.session.name;
-							verificarEstado(req, res, 'perfilAcarreos', 'index', unir_publicaciones, data[0], () => {
-								console.log('Estoy dentro del perfil con un callback');
-							});
-						}).catch((error) => {
-							console.log(error);
-						});
-				})
-				.catch((error) => {
-					console.log(error);
-				});
-		})
-	// let { id_p } = req.body;
-	// console.log(id_p);
-	// res.render('perfilAcarreos')
-});
-
-
-
-
-// router.get('/buscarAcarreos', async (req, res) => {
-// 	modal = false;
-// 	verificarEstado(req, res, 'buscarAcarreos', 'index', datos = '', data = '', () => {
-// 		//...
-// 	});
-// });
 
 // ruta del perfil
 router.get('/perfil', async (req, res) => {
@@ -538,7 +555,7 @@ router.post('/eliminarPublicacion', async (req, res) => {
 	res.redirect('/perfil');
 });
 
-//elimiinar acarreo
+//elimiinar noticia
 router.post('/eliminarA', async (req, res) => {
 	let { id_p } = req.body;
 	console.log(id_p);
@@ -548,7 +565,7 @@ router.post('/eliminarA', async (req, res) => {
 		console.error("Error removing document: ", error);
 	});
 	//await deleteDoc(doc(db, "publications", id_p));
-	res.redirect('/misacarreos');
+	res.redirect('/misnoticias');
 });
 
 //unir publicacion con usuario y mostrarlas publicaciones pgina de inicio
@@ -637,7 +654,8 @@ async function verficEmail(res, email, callback) {
 		if (mensaje !== undefined) {
 			let mensajeError = mensaje;
 			mensaje = undefined;
-			res.render('registro', { mensajeError });}
+			res.render('registro', { mensajeError });
+		}
 	}
 }
 

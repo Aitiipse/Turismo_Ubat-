@@ -1,11 +1,6 @@
-//const { Router } = require('express');
-//const multer = require('multer')
 const { storage } = require('./firebaseCloud');//importar la base de datos
 const { db, } = require('./firebase');//importar la base de datos
 const { ref, uploadBytes, getDownloadURL } = require("firebase/storage");
-//const router = Router();
-//const storageLocal = multer.memoryStorage();
-//const upload = multer({ storage: storageLocal });
 
 class envioImg {
 	getDate() {
@@ -15,10 +10,8 @@ class envioImg {
 	}
 	// funciones para guardar imagenes en firebase storage
 	sendImages(files, callback, data) {
-		//console.log(files);
 
 		console.log(files);
-		//ref de la imagen y asignacion de nombre unico
 		if(files!==undefined){
 			const storageRef = ref(
 				storage,

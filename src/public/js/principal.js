@@ -31,8 +31,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 
     querySnapshot.forEach((doc) => {
       const atractivo = doc.data();
-      var nombre = atractivo.nombre;
-      var input0 = atractivo.input0;
+
 
       formrespuesta.innerHTML += `
 

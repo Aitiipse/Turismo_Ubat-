@@ -8,6 +8,7 @@
 *
 {
   transition:all 0.5s ease-in-out;
+  
 }
 .scroll-lateral {
     overflow-x: auto; /* Permite el desplazamiento horizontal */
