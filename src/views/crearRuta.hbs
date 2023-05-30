@@ -1,0 +1,91 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/agregar.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/crear/crearPub_m.css">
+    <link rel="stylesheet" href="./css/crear/crearPub_t.css" media="screen and (min-width:600px)">
+    <link rel="stylesheet" href="./css/crear/crearPub_w.css" media="screen and (min-width:1000px)">
+</head>
+<div class="erroresinternos">
+    <p align="">
+    <h5>{{mensajeError}}</h5>
+    </p>
+</div>
+
+<body class="body gridContainer ">
+    <div class="">
+        <h2><b>RUTAS DISPONIBLES </b></h2>
+        <button id="ver" class="ver" onclick="ver">VER TODAS</button><br>
+
+
+        <div class=" eContenido formulario " style="display: none;" id="formularioR">
+            <table style="width:100%" id="contenedorR">
+
+            </table>
+
+        </div>
+        <div>
+            <form action="" method="POST" enctype="multipart/form-data" class="formulario"
+                id="formulario">
+                <div class="espaciotext1">
+                    <label class="">NOMBRE DE LA RUTA</label>
+
+                    <input id="nombre" name="nombre" type="text" placeholder="Nombre" maxlength="50"
+                        title="el nombre debe tener máximo 50 caracteres">
+
+
+                </div>
+
+                <section class="row justify-content-center noticias">
+                    <div class="espaciotext2">
+                        <div>
+
+                            <h5><label class="">Descripción</label></h5>
+                        </div>
+                        <h6><textarea id="descripcion" name="descripcion" spellcheck="true" rows="10" cols="90"
+                                tabindex="" maxlength="3000"
+                                title="el texto debe ser menor a 3000 (tres mil) caracteres"
+                                placeholder="Descripción"></textarea></h6>
+                    </div>
+
+                </section>
+
+                <br>
+                <input  type="submit" value="Guardar" id="btn-task-form" class="subir btn btn-primary">
+            </form>
+        </div>
+
+
+
+        <script>const listaVer = document.getElementById("formularioR");
+            const botonVer = document.getElementById("ver");
+            const formulario = document.getElementById("formulario");
+            const btnguardar = document.getElementById("btn-task-form");
+
+
+            botonVer.addEventListener('click', () => {
+
+                if (listaVer.style.display === "block") {
+                    listaVer.style.display = "none";
+                    btnguardar.style.display = "none";
+                    formulario.style.display = "block";
+                    document.getElementById("ver").innerHTML = "VER TODAS";
+
+                } else if (listaVer.style.display === "none") {
+                    listaVer.style.display = "block";
+                    formulario.style.display = "none";
+                    btnguardar.style.display = "none";
+                    formulario.reset();
+
+                    document.getElementById("ver").innerHTML = "OCULTAR";
+
+                }
+
+            })
+        </script>
+
+        <script src="/js/editarR.js" type="module"></script>
+
+
+</body>
+
+</html>

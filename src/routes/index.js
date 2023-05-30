@@ -79,7 +79,7 @@ router.use('/logout', async (req, res, next) => {
 
 
 function verificarEstado(req, res, ruta, ruta2, datos = '', data = '', callback) {
-	
+
 	//console.log(mensaje);
 	// if (estado) {
 	if (req.session.idUser !== undefined) {
@@ -153,7 +153,6 @@ router.get('/', async (req, res) => {
 						// 	photo: globalThis.photo,
 						// }
 						name: req.session.name,
-						photo: req.session.photo,
 					}
 					console.log("🚀 ~ file: index.js ~ line 71 ~ .then ~ info", info)
 					verificarEstado(req, res, 'atractivos', 'index', publicacion, info, () => {
@@ -333,6 +332,15 @@ router.get('/crearAtractivos', async (req, res) => {
 
 
 router.get('/editarRuta', async (req, res) => {
+	modal = true;
+	//res.render('crearPublicacion');
+	verificarEstado(req, res, 'editarRuta', 'index', datos = '', /*globalThis.photo*/ req.session.photo, () => {
+		//verificarEstado(req, res, 'crearPublicacion', 'crearPublicacion', datos = '', /*globalThis.photo*/ req.session.photo, () => {
+		//...
+	});
+});
+
+router.get('/crearRuta', async (req, res) => {
 	modal = true;
 	//res.render('crearPublicacion');
 	verificarEstado(req, res, 'editarRuta', 'index', datos = '', /*globalThis.photo*/ req.session.photo, () => {
@@ -523,18 +531,17 @@ router.get('/atractivos', async (req, res) => {
 						let actual = req.session.idUser
 						let users = db.collection('usuarios');
 						if (actual === users) {
-
+							usser= db.collection("usuarios").doc()
 						}
 						let info = {
-							// photo: globalThis.photo,
-							// name: globalThis.name,
-							photo: req.session.photo,
 							name: req.session.name,
 						}
 
 
 
 						console.log("usuario actual ", actual);
+						console.log(info)
+
 						verificarEstado(req, res, 'atractivos', 'index', publicacion, info, () => {
 							//...
 						});
@@ -652,7 +659,6 @@ async function publicaciones(dataBase) {
 	console.log(typeof (userRegister));//-> salida: object
 	//console.log(userRegister);//-> Estructura de datos
 	if (userRegister.length > 0) {
-		console.log('existe');
 		return userRegister;
 	} else {
 		console.log('no existen mas publicaciones');
