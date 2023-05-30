@@ -116,14 +116,14 @@
 <br>
    <b><h1> <div id="titulo-ruta" class="info page-section-heading titulo-rutas text-uppercase">Nombre de la Pagina Actual</div></h1></b>
 <br>
-    <div class="linea" ></div>
+    <div class="linea" id="linea"></div>
 
     {{!-- CONTENIDO DE LA PAGINA --}}
 
 
     <nav class=" navbar-expand-lg bg-transparent text-uppercase  opciones navrutas elemento-a-ocultar <%= ruta === '/lista' ? 'oculto' : '' %> " id="mainNav">
 
-        <div class="menu">
+        <div class="menu" >
             <ul class="navbar-nav ms-auto rouned espacio navP" style=" background-color: var(--cafe);">
 
                 <li class=" espacio flecha"><a href="#page-top"> <svg xmlns="http://www.w3.org/2000/svg"
@@ -142,12 +142,27 @@
                         <p>MAPA</p>
                     </a></li>
                 
-                <li class=" espacio"><a class="nav-link round" href="#eventos">
+                <li class=" espacio"><a class="nav-link round" href="/#eventos">
                         <p>EVENTOS</p>
                     </a></li>
             </ul>
         </div>
     </nav>
+    <script>
+// JavaScript para ocultar la sección si la ruta es /lista
+window.addEventListener('DOMContentLoaded', function() {
+  var rutaActual = window.location.pathname; // Obtiene la ruta actual
+
+  // Verifica si la ruta actual coincide con '/lista'
+  if (rutaActual === '/lista') {
+    var seccionLista = document.getElementById('mainNav');
+    var linea = document.getElementById('linea');
+    if (seccionLista) {
+      seccionLista.style.display = 'none'; // Oculta la sección
+      linea.style.display = 'none'; // Oculta la linea superior
+    }
+  }
+});</script>
 
 
     {{{body}}}
