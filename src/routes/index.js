@@ -76,92 +76,34 @@ router.use('/logout', async (req, res, next) => {
 	});
 });
 
-// ...
 
-// Definir la duración del tiempo de inactividad en milisegundos (por ejemplo, 30 minutos)
-const inactivityTimeout = 9 * 1000; // 30 minutos en milisegundos
-
-// Variable para almacenar el temporizador de inactividad
-let inactivityTimer;
-
-// Función para cerrar sesión por inactividad
-// function signOutOnInactivity(req, res) {
-// 	auth.signOut()
-// 		.then(() => {
-// 			// Cierre de sesión exitoso
-// 			estado = false;
-// 			buscarGlobal = "";
-// 			delete req.session.name;
-// 			delete req.session.idUser;
-// 			console.log('logout');
-// 			res.redirect('/');
-// 		})
-// 		.catch((error) => {
-// 			// Ocurrió un error al cerrar sesión
-// 			console.log('Error al cerrar sesión:', error);
-// 			// Puedes manejar el error de alguna manera
-// 			res.render('/'); // Redirige a la página principal en caso de error
-// 		});
-//}
-
-// Función para reiniciar el temporizador de inactividad
-// function resetInactivityTimer(req, res) {
-// 	clearTimeout(inactivityTimer);
-// 	inactivityTimer = setTimeout(signOutOnInactivity, inactivityTimeout, req, res);
-// }
-
-// // ...
-
-// router.get('/logoutt', async (req, res, next) => {
-// 	resetInactivityTimer(req, res); // Reiniciar el temporizador al realizar una acción antes del cierre de sesión
-// 	signOutOnInactivity(req, res); // Cerrar sesión manualmente
-// });
-// // ...
 
 function verificarEstado(req, res, ruta, ruta2, datos = '', data = '', callback) {
-	// Verificar si el usuario ha iniciado sesión
+	
+	//console.log(mensaje);
+	// if (estado) {
 	if (req.session.idUser !== undefined) {
-	  console.log(req.session.idUser);
-  
-	  // Ejecutar la función de callback
-	  callback();
-  
-	  setTimeout(() => {
-		req.session.idUser = undefined;
 		console.log(req.session.idUser);
-		// Lógica adicional aquí
-		// resetInactivityTimer();
-		// signOutOnInactivity();
-  
-		// Renderizar la página correspondiente
+		// res.render('home');
+		callback();
 		if (modal) {
-		  res.render(ruta, { datos, data });
+			res.render(ruta, { datos, data });
 		} else {
-		  res.render(ruta, { layout: false, datos });
-		  modal = true;
+			res.render(ruta, { layout: false, datos });
+			modal = true;
 		}
-	  }, 1000);
-	  console.log(req.session.idUser);
 	} else if (mensaje !== undefined) {
-	  let mensajeError = mensaje;
-	  mensaje = undefined;
-	  res.render(ruta2, { layout: false, mensajeError });
+		let mensajeError = mensaje;
+		mensaje = undefined;
+		res.render(ruta2, { layout: false, mensajeError });
 	} else {
-	  console.log('raiz raiz');
-	  res.render(ruta2, { layout: false });
+		console.log('raiz raiz');
+		// res.render('index')
+		res.render(ruta2, { layout: false });
 	}
-  }
-  
+}
 
 
-// ...
-
-// Agrega eventos de actividad del usuario para reiniciar el temporizador de inactividad
-// Ejemplo: document.addEventListener('mousemove', resetInactivityTimer);
-// Ejemplo: document.addEventListener('keydown', resetInactivityTimer);
-// Agrega otros eventos relevantes para tu aplicación
-
-// ...
 
 
 

@@ -115,67 +115,46 @@
 
 
 
-
-<<<<<<< HEAD
-        <div id="carosel" class="carousel">
- <div class="banner" id="carousel">
-  <img src='/img/banner1.jpg' alt="Imagen 1">
-  <img src='/img/banner2.jpg' alt="Imagen 2">
-  <img src='/img/banner3.JPG' alt="Imagen 3">
-  <img src='/img/banner4.JPG' alt="Imagen 4">
-  <img src='/img/banner5.jpg' alt="Imagen 5">
-  <img src='/img/banner6.JPG' alt="Imagen 6">
+<div class="carousel" id="carouse">
+<div class="banner " id="carousel">
+  <div class="slide" style="background-image: url('/img/banner1.jpg');" data-name="DIA UBATENSE"></div>
+  <div class="slide" style="background-image: url('/img/banner2.jpg');" data-name="BASILICA MENOR"></div>
+  <div class="slide" style="background-image: url('/img/banner3.JPG');" data-name="BAUTISTERIO DE LA BASILICA MENOR"></div>
+  <div class="slide" style="background-image: url('/img/banner4.JPG');" data-name="INTERIOR BASILICA MENOR"></div>
+  <div class="slide" style="background-image: url('/img/banner5.jpg');" data-name="SANTA BARBARA"></div>
+  <div class="slide" style="background-image: url('/img/banner6.JPG');" data-name="AMANECER UBATENSE"></div>
 </div>
-=======
-        <div id="carousel" class="carousel">
-            
->>>>>>> 0633f14df031cdd1f943236ab814578c4972815d
 
-<style>
-    @keyframes banner {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-.banner {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    animation: banner 3s  ease-in-out 2s  ;
-
-}
-
-.banner img {
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  
-}
-
-
-</style>
+<div id="image-name"></div>
 
 <script>
-  var backgrounds = ['/img/banner1.jpg', '/img/banner2.jpg', '/img/banner3.JPG', '/img/banner4.JPG', '/img/banner5.jpg', '/img/banner6.JPG'];
-  var currentIndex = 0 ;
+window.addEventListener('load', function() {
+  var carousel = document.getElementById('carousel');
+  var imageName = document.getElementById('image-name');
+  var slides = carousel.getElementsByClassName('slide');
+  var currentSlide = 0;
 
-  function changeBackground() {
-    var selectedBackground = backgrounds[currentIndex];
-    document.getElementById('carousel').style.backgroundImage = 'url(' + selectedBackground + ')';
-    currentIndex = (currentIndex + 1) % backgrounds.length;
+  function showImageName() {
+    var currentName = slides[currentSlide].getAttribute('data-name');
+    imageName.innerText = currentName;
   }
 
-  setInterval(changeBackground, 5000); // Cambiar imagen cada 5 segundos
+  function nextSlide() {
+    slides[currentSlide].style.opacity = 0;
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].style.opacity = 1;
+    showImageName();
+  }
+
+  // Show initial slide
+  slides[currentSlide].style.opacity = 1;
+  showImageName();
+
+  // Switch to next slide every 3 seconds
+  setInterval(nextSlide, 3000);
+});
 </script>
-
-
+</div>
         <br>
     </header>
     {{!-- FIN DE MULTIMEDIA --}} <br>
@@ -408,7 +387,7 @@
      
     <div class="footer-content">
         
-        <img class="footerImg" src="img/error.gif" alt=""><div class="footer-column">
+        <img class="footerImg" src="img/bmu.png" alt=""><div class="footer-column">
             <h4 class="text-uppercase ">TURISMO</h4>
             <article>
                 <ul>

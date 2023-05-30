@@ -418,3 +418,51 @@ border-bottom-left-radius: 30px;
     cursor: pointer;
     margin-top: 1.7%;
   }
+
+  @keyframes banner {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .banner {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      animation: banner 3s  ease-in-out 2s  ;
+  
+  }
+  
+  .banner img {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    
+  }
+  
+  .slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  #image-name {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: bold;
+    background-color: white;
+  }
