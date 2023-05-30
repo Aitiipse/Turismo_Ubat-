@@ -113,6 +113,10 @@
 	bottom: 0;
 }
 
+.cardlisp:hover {
+	transform: scale(1.2, 1.3);
+}
+
 .imglista {
     width: 80%;
     height: 400px;
