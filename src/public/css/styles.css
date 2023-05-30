@@ -12898,7 +12898,11 @@ html {
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(../img/marca.png);
+  transition: transform 0.3s ease; /* Agregamos una transición suave para el efecto hover */
+}
 
+.imgcard3:hover {
+    transform: scale(1.1); /* Escalamos la imagen al 110% cuando se realiza un hover */
 }
 
 .sitios {
