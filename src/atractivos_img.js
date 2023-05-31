@@ -1,11 +1,22 @@
 //const { Router } = require('express');
 //const multer = require('multer')
-const { storage } = require('./firebaseCloud');//importar la base de datos
+const { storage, auth } = require('./firebaseCloud');//importar la base de datos
 const { db, } = require('./firebase');//importar la base de datos
+const {
+	browserSessionPersistence,
+	setPersistence, //percistencia de la sesion
+} = require('firebase/auth');
 const { ref, uploadBytes, getDownloadURL } = require("firebase/storage");
 //const router = Router();
 //const storageLocal = multer.memoryStorage();
 //const upload = multer({ storage: storageLocal });
+
+
+setPersistence(auth, browserSessionPersistence)
+
+const user = auth.currentUser ;
+userEmail = user;
+ 
 
 class envioImg {
 	getDate() {
@@ -86,8 +97,9 @@ class envioImg {
 		let fecha = new envioImg();
 		data.updatedAt = fecha.getDate();
 		data.input0 = url;
-		data.iduser = globalThis.idUser;
+		data.iduser = userEmail;
 		const publication = await db.collection('atractivos').add(data);
+		console.log(publication.id);
 		console.log(publication.id);
 		return publication.id;
 	}

@@ -8,10 +8,6 @@ const { createUserWithEmailAndPassword,
 	signOut,
 	browserSessionPersistence,
 	setPersistence, //percistencia de la sesion
-	signInWithPopup,
-	signInWithRedirect,
-	getRedirectResult,
-	GoogleAuthProvider,
 } = require('firebase/auth');
 const { async } = require('@firebase/util');
 const { doc, deleteDoc, updateDoc, setDoc, collection } = require('firebase/firestore'); //crud
@@ -30,32 +26,7 @@ var _idUser = ''; //id del usuario
 globalThis.idUser = _idUser;
 globalThis.photo = '';
 globalThis.name = '';
-//verificando estados de la sesion con las rutas
-// function verificarEstado(req, res, ruta, ruta2, datos = '', data = '', callback) {
-
-// 	//console.log(mensaje);
-// 	// if (estado) {
-// 	if (req.session.idUser !== undefined) {
-// 		console.log(req.session.idUser);
-// 		console.log("req.session.idUser");
-// 		// res.render('home');
-// 		callback();
-// 		if (modal) {
-// 			res.render(ruta, { datos, data });
-// 		} else {
-// 			res.render(ruta, { layout: false, datos });
-// 			modal = true;
-// 		}
-// 	} else if (mensaje !== undefined) {
-// 		let mensajeError = mensaje;
-// 		mensaje = undefined;
-// 		res.render(ruta2, { layout: false, mensajeError });
-// 	} else {
-// 		console.log('raiz raiz');
-// 		// res.render('index')
-// 		res.render(ruta2, { layout: false });
-// 	}
-// }
+userEmail='';
 
 // //logout
 router.use('/logout', async (req, res, next) => {
@@ -238,14 +209,21 @@ router.post('/login-email', async (req, res) => {
 		.then(() => {
 			signInWithEmailAndPassword(auth, email, password)
 				.then((userCredential) => {
-					const user = userCredential.user;
+					const user = auth.currentUser;
 					req.session.idUser = user.uid;
+					userEmail = user.email;
 					estado = true;
 					mensaje = undefined;
 					data_perfil(user.uid)
 						.then((data) => {
 							setTimeout(() => {
 								res.redirect('/atractivos',);
+								
+								console.log('dfsdgsfdgsdg');
+
+					console.log(userEmail);
+					console.log('dfsdgsfdgsdg');
+
 							}, 1000);
 						})
 				})
@@ -531,12 +509,16 @@ router.get('/atractivos', async (req, res) => {
 						let actual = req.session.idUser
 						let users = db.collection('usuarios');
 						if (actual === users) {
-							usser= db.collection("usuarios").doc()
+
 						}
 						let info = {
-							name: req.session.name,
+							// photo: globalThis.photo,
+							// name: globalThis.name,
+							photo: req.session.photo,
+							name: req.session.username,
 						}
 
+						console.log(data_perfil(actual))
 
 
 						console.log("usuario actual ", actual);

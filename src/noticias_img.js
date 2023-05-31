@@ -1,6 +1,16 @@
-const { storage } = require('./firebaseCloud');//importar la base de datos
+const { storage, auth } = require('./firebaseCloud');//importar la base de datos
 const { db, } = require('./firebase');//importar la base de datos
+const {
+	browserSessionPersistence,
+	setPersistence, //percistencia de la sesion
+} = require('firebase/auth');
 const { ref, uploadBytes, getDownloadURL } = require("firebase/storage");
+
+
+setPersistence(auth, browserSessionPersistence)
+
+const user = auth.currentUser ;
+userEmail = user;
 
 class envioImg {
 	getDate() {
@@ -79,7 +89,7 @@ class envioImg {
 		let fecha = new envioImg();
 		data.updatedAt = fecha.getDate();
 		data.url = url;
-		data.iduser = globalThis.idUser;
+		data.iduser = userEmail;
 		const publication = await db.collection('noticias').add(data);
 		console.log(publication.id);
 		return publication.id;
