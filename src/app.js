@@ -3,6 +3,7 @@ const morgan = require('morgan'); //sirve para mostrar los request en consola
 const path = require('path');//permite trabajar con rutas
 const exphbs = require('express-handlebars');//permite trabajar con handlebars
 const session = require('express-session');//permite trabajar con sesiones
+const rateLimit = require('express-rate-limit');
 
 const app = express();
 
@@ -45,6 +46,11 @@ app.use((req, res, next) => {
   });
 
 app.use((err, req, res, next) => {
+	console.error(err.stack);
+	res.status(500).render('error', { error: err,layout: false });
+  });
+
+  app.use((err, req, res, next) => {
 	console.error(err.stack);
 	res.status(500).render('error', { error: err,layout: false });
   });

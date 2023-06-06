@@ -468,6 +468,132 @@ li:hover {
   height: auto; /* altura automática para mantener la proporción */
 }
 
+
+
+.carousel_extra {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+@media (max-width: 300px) {
+
+  .carousel_extra {
+    width: 100%;
+    height: 95px;
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+
+  }
+}
+
+@media (min-width: 300px) {
+
+  .carousel_extra {
+    width: 96%;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+
+  }
+}
+
+@media (min-width: 490px) {
+
+  .carousel_extra {
+    width: 92%;
+    height: 130px;
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+
+  }
+}
+
+@media (min-width: 576px) {
+
+  .carousel_extra {
+    width: 92%;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+
+  }
+}
+
+@media (min-width: 768px) {
+
+  .carousel_extra {
+    width: 92%;
+    height: 190px;
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+
+  }
+}
+
+@media (min-width: 992px) {
+
+  .carousel_extra {
+    width: 92%;
+    height: 210px;
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .carousel_extra {
+    width: 98%;
+    /* border-radius: 50px; */
+    height: 270px;
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+   
+    
+  }
+}
+
+
+@media (min-width: 1400px) {
+  .carousel_extra {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+  }
+
+}
+
+
 #imagen {
   width: 100%;
   height: 400px;
@@ -648,4 +774,23 @@ background-color: rgba(138, 177, 189, 0.534);
 .marquilla{
   width: 60px;
   height: 60px;
+}
+
+.slide_extra{
+  background-image: url(../img/convento\ San\ Luis\ 3.jpg);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  /* filter: blur(5px); */
+}
+
+.slide_extra p {
+  text-transform: uppercase;
+  text-shadow: solid 1px #b11616;
+  filter: brightness(5px);
+  font-weight: bolder;
+  font-size: 4.5vw;
+  color: crimson;
 }

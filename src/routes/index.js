@@ -1,4 +1,5 @@
 const { Router, query } = require('express');
+const rateLimit = require('express-rate-limit');
 const multer = require('multer');
 const { db, } = require('../firebase');//importar la base de datos
 const { dbFirebase, app, auth, provider, user } = require('../firebaseCloud');//importar la base de datos
@@ -199,58 +200,66 @@ router.post('/new-user-email', async (req, res) => {
 
 //------------------------------------------------- Logins ----------------------------------------------//
 //login user email
-router.post('/login-email', async (req, res) => {
+
+const limiter = rateLimit({
+	windowMs: 1 * 60 * 1000, // 1 minuto
+	max: 2, // 5 intentos
+	handler: (req, res, next) => {
+		res.redirect('/intentos');
+  }});
+
+router.post('/login-email', limiter, async (req, res) => {
 	let { email, password } = req.body;
 	let contador = 0;
-
+  
 	setPersistence(auth, browserSessionPersistence)
-
-
-		.then(() => {
-			signInWithEmailAndPassword(auth, email, password)
-				.then((userCredential) => {
-					const user = auth.currentUser;
-					req.session.idUser = user.uid;
-					userEmail = user.email;
-					estado = true;
-					mensaje = undefined;
-					data_perfil(user.uid)
-						.then((data) => {
-							setTimeout(() => {
-								res.redirect('/atractivos',);
-								
-								console.log('dfsdgsfdgsdg');
-
-					console.log(userEmail);
-					console.log('dfsdgsfdgsdg');
-
-							}, 1000);
-						})
-				})
-				.catch((error) => {
-					const errorCode = error.code;
-					const errorMessage = error.message;
-					console.log(typeof (errorCode));
-					console.log('error del codigooo ', errorCode);
-					console.log('Este es el mensaje de error ', errorMessage);
-					if (errorCode === 'auth/user-not-found') {
-						console.log(`Intento: ${contador}`);
-
-						mensaje = 'CREDENCIALES INCORRECTAS';
-
-						res.redirect('/');
-					} else {
-						mensaje = 'CREDENCIALES INCORRECTAS';
-
-						res.redirect('/');
-					}
-				});
-		})
-		.catch((error) => {
+	  .then(() => {
+		signInWithEmailAndPassword(auth, email, password)
+		  .then((userCredential) => {
+			const user = auth.currentUser;
+			req.session.idUser = user.uid;
+			userEmail = user.email;
+			estado = true;
+			mensaje = undefined;
+			data_perfil(user.uid)
+			  .then((data) => {
+				setTimeout(() => {
+				  res.redirect('/atractivos');
+				}, 1000);
+			  });
+		  })
+		  .catch((error) => {
 			const errorCode = error.code;
 			const errorMessage = error.message;
-		});
-});
+			console.log(typeof errorCode);
+			console.log('error del codigooo ', errorCode);
+			console.log('Este es el mensaje de error ', errorMessage);
+  
+			if (errorCode === 'auth/user-not-found') {
+			  contador++;
+  
+			  console.log(`Intento: ${contador}`);
+  
+			  mensaje = 'CREDENCIALES INCORRECTAS';
+  
+			  res.redirect('/');
+			} else {
+			  mensaje = 'CREDENCIALES INCORRECTAS';
+  
+			  res.redirect('/');
+			}
+		  });
+	  })
+	  .catch((error) => {
+		mensaje = 'CREDENCIALES INCORRECTAS 123';
+  
+		
+		const errorCode = error.code;
+		const errorMessage = error.message;
+		
+	  });
+  });
+  
 
 
 
@@ -267,9 +276,10 @@ router.get('/registro', async (req, res) => {
 });
 
 router.get('/error', async (req, res) => {
-	modal = false;
+	// modal = false;
 	res.render('error')
 });
+
 
 //ruta inicial para renderizar publicaciones
 router.get('/publicaciones', async (req, res) => {
@@ -738,23 +748,7 @@ async function update_data(bdatos, id, dataUpdate) {
 	const data = db.collection(bdatos).doc(id);
 	await data.update(dataUpdate);
 }
-//subida de imagenes
-router.get('/img', async (req, res) => {
-	// let id = globalThis.idUser;
-	let id = req.session.idUser;
-	console.log("Este es el ID ");
-	console.log(id);
-	data_perfil(id)
-		.then(result => {
-			console.log('Este es el resultado');
-			console.log(result);
-		}
-		)
-		.catch((error) => {
-			console.log("No se encontro info ", error);
-		})
-	res.render('imagenes', { layout: 'menu copy.hbs' });
-});
+
 const { ref, uploadString } = require('firebase/storage');
 //subir imagnes	a la base de datos
 router.post('/storage', async (req, res) => {
@@ -801,6 +795,11 @@ router.get('/ruta5', (req, res) => {
 
 router.get('/lista', (req, res) => {
 	res.render("lista", { layout: 'rutas.hbs' })
+})
+
+router.get('/intentos', (req, res) => {
+	
+	res.render("intentos", { layout: 'extra.hbs' })
 })
 
 
