@@ -56,7 +56,8 @@ router.post('/new-noticia', (req, res, next) => {
 	if (!allowedMimeTypes.includes(img.mimetype)) {
 		// El tipo de archivo no es permitido
 		const mensajeError = 'El tipo de archivo no es permitido. Por favor, seleccione una imagen válida (JPEG o PNG).';
-		return res.status(400).json({ error: mensajeError });
+	//	return res.status(400).json({ error: mensajeError });
+                        return res.send(`<script>alert("${mensajeError}"); window.history.back();</script>`);
 	}
 
 	// Verificar si se cargó un archivo
