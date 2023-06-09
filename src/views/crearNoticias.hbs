@@ -87,6 +87,32 @@
 
         </script>
       </form>
+      
+<div id="errorMessage"></div>
+
+<script>
+  // Escucha el evento submit del formulario
+  document.getElementById('myForm').addEventListener('submit', async (event) => {
+    event.preventDefault(); // Evita el envío del formulario por defecto
+
+    // Envía la solicitud al servidor utilizando Fetch API
+    const formData = new FormData(document.getElementById('myForm'));
+    const response = await fetch('/new-noticia', {
+      method: 'POST',
+      body: formData
+    });
+
+    if (response.ok) {
+      // La solicitud se procesó correctamente
+      const data = await response.json();
+      // Continuar con el manejo de la respuesta exitosa, si es necesario
+    } else {
+      // La solicitud produjo un error
+      const error = await response.json();
+      document.getElementById('errorMessage').innerText = error.error;
+    }
+  });
+</script>
     </div>
 
 

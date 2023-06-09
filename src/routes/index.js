@@ -17,7 +17,10 @@ const envioImg = require('../noticias_img');
 const router = Router();
 var imagen = new envioImg();
 const storageLocal = multer.memoryStorage();
-const upload = multer({ storage: storageLocal });
+const upload = multer({ storage: storageLocal,
+	limits: {
+		fileSize: 4 * 1024 * 1024, // Tamaño máximo de 4 MB
+	  }, });
 let a;
 let buscarGlobal = "";
 let mensaje = undefined; //mensaje de error
@@ -135,12 +138,6 @@ router.get('/', async (req, res) => {
 		})
 		.catch((error) => { console.log("No hay publicaiones", error); });
 });
-
-
-
-
-
-
 
 
 // -------------------------------------------- register ------------------------------------------ //

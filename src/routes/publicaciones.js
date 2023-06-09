@@ -14,16 +14,42 @@ const envioImg = require('../atractivos_img');
 var imagen = new envioImg();
 const router = Router();
 const storageLocal = multer.memoryStorage();
-const upload = multer({ storage: storageLocal });
+const upload = multer({
+	storage: storageLocal,
+	limits: {
+		fileSize: 4 * 1024 * 1024, // Tamaño máximo de 4 MB
+	},
+});
 let mensajeError = undefined;
 
 setPersistence(auth, browserSessionPersistence)
 
-const user = auth.currentUser ;
+const user = auth.currentUser;
 userEmail = user;
 
 //envio post de imagenes con multer y firebase storage
-router.post('/new_publication', upload.single('input0'), (req, res) => {
+
+
+router.post('/new_publication', (req, res, next) => {
+
+	upload.single('input0')(req, res, (err) => {
+		if (err instanceof multer.MulterError && err.code === 'LIMIT_FILE_SIZE') {
+			mensaje = 'Revisa tu imagen, excede las dimensiones o el peso maximo de 2 Mb';
+			let mensajeError = mensaje;
+			return res.send(`<script>alert("${mensajeError}"); window.history.back();</script>`);
+
+
+		} else if (err) {
+			// Otro tipo de error de Multer u otro error en general
+			mensaje = 'Ocurrió un error al cargar el archivo.';
+			let mensajeError = mensaje;
+			console.error(err);
+			return res.send(`<script>alert("${mensajeError}"); window.history.back();</script>`);
+		}
+
+		next();
+	});
+}, (req, res) => {
 	let img = req.file;
 
 	let data = {
@@ -51,19 +77,35 @@ router.post('/new_publication', upload.single('input0'), (req, res) => {
 	let fecha = getDate();
 	let publication = {
 		createdAt: fecha,
-		iduser: userEmail ,
+		iduser: userEmail,
 		...data,
 		input0: '',
 		updatedAt: fecha,
 	};
 	console.log(publication);
-	
-	mensajeError = 'CREADO CON ÉXITO';
-	imagen.sendImages(img, imagen.enviarPublication, data);
-	res.render('atractivos', { mensajeError });
-	
 
+	const allowedMimeTypes = ['image/jpeg', 'image/png']; // Lista de tipos MIME permitidos
+	if (!allowedMimeTypes.includes(img.mimetype)) {
+		// El tipo de archivo no es permitido
+		const mensajeError = 'El tipo de archivo no es permitido. Por favor, seleccione una imagen válida (JPEG o PNG).';
+		return res.status(400).json({ error: mensajeError });
+	}
+
+	// Verificar si se cargó un archivo
+	if (!img) {
+		// No se cargó ninguna imagen
+		const mensajeError = 'Debe seleccionar una imagen.';
+		return res.render('atractivos', { mensajeError });
+	}
+
+	// El archivo se cargó correctamente
+	imagen.sendImages(img, imagen.enviarPublication, data);
+	const mensajeError = 'REGISTRO CREADO'; // Agregar el mensaje deseado
+
+	res.render('atractivos', { mensajeError });
 });
+
+
 
 //obtener la fecha actual en formato dd/mm/yyyy
 function getDate() {
