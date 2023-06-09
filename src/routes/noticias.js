@@ -11,7 +11,7 @@ const storageLocal = multer.memoryStorage();
 const upload = multer({
 	storage: storageLocal,
 	limits: {
-		fileSize: 4 * 1024 * 1024, // Tamaño máximo de 4 MB
+		fileSize: 2 * 1024 * 1024, // Tamaño máximo de 2MB
 	},
 });
 var imagen = new envioImg();
