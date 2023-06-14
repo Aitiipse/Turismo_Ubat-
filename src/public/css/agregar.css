@@ -13,9 +13,7 @@ html{
     
     color: black;
 }
-header{
-  /* margin: 10pt; */
-}
+
 
 body {
     background-color: antiquewhite;
@@ -47,6 +45,50 @@ body {
     border-radius: 12px;
     border: 1px solid rgba(0, 0, 0, 0.3);
 
+}
+
+
+.horarios {
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="time"] {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 600px) {
+  .horarios {
+      flex-direction: row;
+      align-items: center;
+  }
+
+  .form-group {
+      margin-right: 20px;
+      margin-bottom: 0;
+  }
+
+  label {
+      display: inline-block;
+      margin-bottom: 5px;
+  }
+
+  input[type="time"] {
+      width: 150px;
+  }
 }
 
 @media (min-width: 992px) {

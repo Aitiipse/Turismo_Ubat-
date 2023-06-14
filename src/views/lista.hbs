@@ -24,7 +24,77 @@
 			</div>
 			<br>
 
-		</div>
+		<div class="tabla-container">
+        <table class="tabla">
+            <tr>
+                <th>HORARIO</th>
+                <td>Domingo</td>
+                <td>Lunes</td>
+                <td>Martes</td>
+                <td>Miercoles</td>
+                <td>Jueves</td>
+                <td>Viernes</td>
+                <td>Sabado</td>
+            </tr>
+            <tr>
+                <th>Abre</th>
+                <td><output id="entradaDo" name="entradaDo"></output></td>
+                <td><output id="entradaLu" name="entradaLu"></output></td>
+                <td><output id="entradaMa" name="entradaMa"></output></td>
+                <td><output id="entradaMi" name="entradaMi"></output></td>
+                <td><output id="entradaJu" name="entradaJu"></output></td>
+                <td><output id="entradaVi" name="entradaVi"></output></td>
+                <td><output id="entradaSa" name="entradaSa"></output></td>
+            </tr>
+            <tr>
+                <th>Cierra</th>
+                <td><output id="salidaDo<" name="salidaDo"></output></td>
+                <td><output id="salidaLu<" name="salidaLu"></output></td>
+                <td><output id="salidaMa<" name="salidaMa"></output></td>
+                <td><output id="salidaMi<" name="salidaMi"></output></td>
+                <td><output id="salidaJu<" name="salidaJu"></output></td>
+                <td><output id="salidaVi<" name="salidaVi"></output></td>
+                <td><output id="salidaSa<" name="salidaSa"></output></td>
+            </tr>
+        </table>
+		<style>
+			body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.tabla-container {
+    overflow-x: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+	width: 90%;
+}
+
+.tabla {
+    border-collapse: collapse;
+	width: 90%;
+}
+
+.tabla th,
+.tabla td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+.tabla th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+		</style>
+    </div>
+
 		<br><br>
 			<p><a href="#lista" class="btnG crear">volver arriba</a></p>
 

@@ -1,53 +1,121 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+    <title>Horarios de Atención</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-<div class="pimg">
-  <div class="pimg-content">
-    <!-- Contenido de la tarjeta -->
-    uktdyhgfj
-  </div>
-</div>
+    <h1>Horarios de Atención</h1>
 
+    <form id="horariosForm" class="formlario">
+        <div class="form-group">
+            <label for="domingo">Domingo:</label>
+           Abre  <input type="time" id="domingoA" name="domingoA">
+           Cierra <input type="time" id="domingoB" name="domingoB">
+        </div> <br>
+        <div class="form-group">
+            <label for="lunes">Lunes:</label>
+           Abre  <input type="time" id="lunesA" name="lunesA">
+           Cierra <input type="time" id="lunesB" name="lunesB">
+        </div> <br>
+        <div class="form-group">
+            <label for="martes">Martes:</label>
+           Abre  <input type="time" id="martesA" name="martesA">
+           Cierra <input type="time" id="martesB" name="martesB">
+        </div> <br>
+        <div class="form-group">
+            <label for="miercoles">Miércoles:</label>
+           Abre  <input type="time" id="miercolesA" name="miercolesA">
+           Cierra <input type="time" id="miercolesB" name="miercolesB">
+        </div> <br>
+        <div class="form-group">
+            <label for="jueves">Jueves:</label>
+           Abre  <input type="time" id="juevesA" name="juevesA">
+           Cierra <input type="time" id="juevesB" name="juevesB">
+        </div> <br>
+        <div class="form-group">
+            <label for="viernes">Viernes:</label>
+           Abre  <input type="time" id="viernesA" name="viernesA">
+           Cierra <input type="time" id="viernesB" name="viernesB">
+        </div> <br>
+        <div class="form-group">
+            <label for="sabado">Sábado:</label>
+           Abre  <input type="time" id="sabadoA" name="sabadoA">
+           Cierra <input type="time" id="sabadoB" name="sabadoB">
+        </div> <br>
+
+        <button type="submit">Guardar</button>
+    </form>
+
+    
+</body>
 <style>
-.pimg {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  perspective: 1000px;
+
+
+
+.form-group {
+    margin-bottom: 10px;
 }
 
-.pimg-content {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-  transition: transform 0.6s;
+.formulario {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: column;
 }
 
-.pimg:hover .pimg-content {
-  transform: rotateY(180deg);
+label {
+    display: block;
+    font-weight: bold;
+    align-content: center;
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.pimg-content::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(237, 35, 35);
-  backface-visibility: hidden;
-  transform: rotateY(180deg);
-  transition: transform 0.6s;
-  pointer-events: none;
+input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
 }
+
+button[type="submit"] {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
 
 </style>
-</body>
-</html>
 
+
+<script>
+
+document.getElementById('horariosForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita el envío del formulario
+
+    // Obtener los valores de los campos de texto
+    var domingo = document.getElementById('domingo').value;
+    var lunes = document.getElementById('lunes').value;
+    var martes = document.getElementById('martes').value;
+    var miercoles = document.getElementById('miercoles').value;
+    var jueves = document.getElementById('jueves').value;
+    var viernes = document.getElementById('viernes').value;
+    var sabado = document.getElementById('sabado').value;
+
+    // Realizar aquí las acciones necesarias con los valores
+    // Por ejemplo, puedes enviarlos a un servidor mediante una petición AJAX
+
+    // Ejemplo de impresión en consola
+    console.log('Domingo:', domingo);
+    console.log('Lunes:', lunes);
+    console.log('Martes:', martes);
+    console.log('Miércoles:', miercoles);
+    console.log('Jueves:', jueves);
+    console.log('Viernes:', viernes);
+    console.log('Sábado:', sabado);
+});
+
+
+</script>
+</html>
