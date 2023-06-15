@@ -5,13 +5,7 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
-:root {
-	--cafe: #8d4a32;
-	--azul: #0f6973;
-	--rosado: #a71737;
-	--negro: #010101;
-	--blanco-opaco: #c6c6c6;
-  }
+
 
 html {
     font-family: sans-serif;

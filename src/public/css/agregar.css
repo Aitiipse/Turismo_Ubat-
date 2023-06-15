@@ -1,12 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 
-:root {
-	--cafe: #8d4a32;
-	--azul: #0f6973;
-	--rosado: #a71737;
-	--negro: #010101;
-	--blanco-opaco: #c6c6c6;
-  }
+
 
 html{
     font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif, cursive;

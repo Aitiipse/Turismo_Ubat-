@@ -1,10 +1,4 @@
-:root {
-	--cafe: #8d4a32;
-	--azul: #0f6973;
-	--rosado: #a71737;
-	--negro: #010101;
-	--blanco-opaco: #c6c6c6;
-  }
+
 
 .lista_editar{
     width: 100%;
@@ -252,8 +246,7 @@ body {font-family: Montserrat, Arial, Helvetica, sans-serif;}
   flex-direction: column;
 }
 
-.ruta-nowrap{
-
+.ruta-nowrap {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -262,6 +255,7 @@ body {font-family: Montserrat, Arial, Helvetica, sans-serif;}
   height: 20rem;
   flex-direction: row;
   overflow-y: hidden;
+  width: 80%;
 }
 
 /* ------------------------ */

@@ -1,14 +1,14 @@
 footer {
-  color: #f0f0f0;
+  color: var(--gris);
   padding: 20px;
   width: 100%;
   margin: auto;
-  background-color: #2d3c4a;
+  background-color: var(--azul_claro);
 
 }
 
 footer a {
-  color: white;
+  color: var(--gris);
   font-size: unset;
   margin-top: 1rem;
 }
@@ -29,7 +29,7 @@ footer li {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #202d39;
+  background-color: var(--blanco);
 
 }
 
@@ -37,8 +37,8 @@ footer li {
   flex-basis: 30%;
   margin-bottom: 20px;
   width: 80%;
-  color: white;
-  background-color: #12273a;
+  color: var(--gris);
+  background-color: var(--blanco_opaco);
 }
 
 /* Media queries para la responsividad */
