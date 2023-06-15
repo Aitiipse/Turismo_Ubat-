@@ -36,7 +36,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       formrespuesta.innerHTML += `
 
         <div class="card3-sm card3-md card3-lg  card3-2 card3-xl card3-xxl atracmodal" >
-        <div class="imgcard3 "   style=" background-image: url(${atractivo.input0});" data-id="${doc.id}"  >
+        <div class="imgcard3 "   style="object-fit: contain; background-image: url(${atractivo.input0});" data-id="${doc.id}"  >
         
         
             <button  class="tn btn-secondary btn-modal" type="button" data-id="${doc.id}" >
@@ -95,8 +95,8 @@ window.addEventListener("DOMContentLoaded", async (e) => {
         
 
 
-      <div class="cardlis">
-      <p class="cardlisp" style=" background-image:url(${atractivo.input0});" data-id="${doc.id}" >${atractivo.nombre}
+      <div class="cardlisp"  style=" background-image:url(${atractivo.input0});" data-id="${doc.id}" >
+      <p class="cardlis-title">${atractivo.nombre}
       </p>
       </div>
   

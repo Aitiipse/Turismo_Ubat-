@@ -12905,6 +12905,10 @@ html {
     transform: scale(1.1); /* Escalamos la imagen al 110% cuando se realiza un hover */
 }
 
+.imgcard3 img{
+  object-fit: contain;
+}
+
 .sitios {
   overflow: scroll;
 }

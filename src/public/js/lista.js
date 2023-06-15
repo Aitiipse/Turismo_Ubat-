@@ -15,17 +15,19 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 
       formlista.innerHTML += `
         
-      <div class="cardlis">
-      <p class="cardlisp" style=" background-image:url(${atractivo.input0});" data-id="${doc.id}" >${atractivo.nombre}
+     
+      <div class="cardlisp"  style=" background-image:url(${atractivo.input0});" data-id="${doc.id}" >
+      <p class="cardlis-title"  data-id="${doc.id}" >${atractivo.nombre}
       </p>
       </div>
+  
   
       `;
       console.log("llega a mostrar");
 
     });
 
-    const btnlista = formlista.querySelectorAll(".cardlis");
+    const btnlista = formlista.querySelectorAll(".cardlisp");
     btnlista.forEach((btn) => {
       btn.addEventListener("click", async (e) => {
         console.log("llega aca");

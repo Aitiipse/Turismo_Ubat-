@@ -146,9 +146,10 @@
 
 }
 
-body {
+/* body {
   padding: 1em;
-}
+  padding-top: 0em;
+} */
 
 .menu-fixed {
   position: sticky;
@@ -295,9 +296,8 @@ body {
 footer {
   background-color: #f0f0f0;
   padding: 20px;
-  width: 90%;
+  width: 100%;
   background-color: #2d3c4a;
-  border-radius: 12px 20% 30px 20%;
 
 }
 
@@ -307,7 +307,6 @@ footer {
   align-items: center;
   flex-wrap: wrap;
   background-color: #202d39;
-  border-radius: 12px 20% 30px 10%;
 
 }
 
@@ -317,7 +316,6 @@ footer {
   width: 80%;
   color: white;
   background-color: #12273a;
-  border-radius: 12px 20% 19px 50%;
 }
 
 /* Media queries para la responsividad */

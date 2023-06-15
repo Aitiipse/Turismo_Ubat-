@@ -7,6 +7,7 @@
 	--rosado: #a71737;
 	--negro: #010101;
 	--blanco-opaco: #c6c6c6;
+	--sombra: #3a3939ef;
   }
 
 .bg-cont {
@@ -137,8 +138,10 @@ li:hover {
   overflow: hidden;
 }
 
-.pimg img{
- width: 100%;
+.pimg img {
+  width: 100%;
+  display: inline-block;
+  box-shadow: 2vw 1em 1em 4px rgba(0, 0, 0, 0.4);
 }
 
 .pu img:hover{
@@ -189,28 +192,36 @@ li:hover {
 .pimg-content1::after {
   background-color: hsla(34, 74%, 39%, 0.648);
   content: "SIGUIENDO LOS PASOS EBATENSES";
-  
+  background-image: url(../img/PUL.png);
+     box-shadow: 0px 5px 10px  var(--sombra);
+     
 }
 .pimg-content2::after {
   background-color: rgba(159, 18, 122, 0.456);
   content: "SABORES Y SABERES EBATENSES";
-  
+  background-image: url(../img/PBL.png);
+      box-shadow: 0px 5px 10px  var(--sombra);
+
 }
 .pimg-content3::after {
   background-color: rgba(26, 124, 229, 0.64);
   content: "PROMESEROS Y ROMEROS UBATENSES";
-  
+  background-image: url(../img/PAL.png);
+      box-shadow: 0px 5px 10px  var(--sombra);
+
 }
 .pimg-content4::after {
   background-color: rgba(206, 206, 41, 0.586);
   content: "NATURALEZA EN UBATÉ";
+  background-image: url(../img/PTL.png);
+      box-shadow: 0px 5px 10px  var(--sombra);
 
-  
 }
 .pimg-content5::after {
   background-color: rgba(26, 208, 20, 0.444);
   content: "BICITURISMO EN UBATÉ";
-
+  background-image: url(../img/PEL.png);
+     box-shadow: 0px 5px 10px  var(--sombra);
 }
 
 
@@ -772,8 +783,9 @@ background-color: rgba(138, 177, 189, 0.534);
 }
 
 .marquilla{
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
+  margin: 0.5em;
 }
 
 .slide_extra{

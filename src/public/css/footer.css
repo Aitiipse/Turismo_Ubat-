@@ -1,10 +1,9 @@
 footer {
   color: #f0f0f0;
   padding: 20px;
-  width: 90%;
+  width: 100%;
   margin: auto;
   background-color: #2d3c4a;
-  border-radius: 12px 20% 30px 20%;
 
 }
 
@@ -31,7 +30,6 @@ footer li {
   align-items: center;
   flex-wrap: wrap;
   background-color: #202d39;
-  border-radius: 12px 20% 30px 10%;
 
 }
 
@@ -41,7 +39,6 @@ footer li {
   width: 80%;
   color: white;
   background-color: #12273a;
-  border-radius: 12px 20% 19px 50%;
 }
 
 /* Media queries para la responsividad */

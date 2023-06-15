@@ -68,7 +68,7 @@ body {font-family: Montserrat, Arial, Helvetica, sans-serif;}
 
 /* Add Animation */
 @-webkit-keyframes animatetop {
-  from {top:-300px; opacity:0} 
+  from {top:-300px; opacity:0}
   to {top:0; opacity:1}
 }
 
@@ -121,7 +121,7 @@ body {font-family: Montserrat, Arial, Helvetica, sans-serif;}
       /* background-color: var(--blanco-opaco); */
     }
 
-  
+
     /* Estilos móvil/celular */
     @media all and (max-width: 700px) {
 
@@ -180,7 +180,7 @@ body {font-family: Montserrat, Arial, Helvetica, sans-serif;}
         background: var(--azul);
         justify-content: space-evenly;
         align-items: baseline;
-        border-radius: 30px 20px 20px 30px;
+        /* border-radius: 30px 20px 20px 30px; */
         flex-wrap: wrap;
         align-content: stretch;
       }
@@ -217,13 +217,12 @@ body {font-family: Montserrat, Arial, Helvetica, sans-serif;}
 
 .menuAdmin > li{
   overflow: hidden;
-  border-radius:  30px 20px 20px 30px;
+  /* border-radius:  30px 20px 20px 30px; */
   /* background-color: rgba(179, 189, 194, 0.278); */
 }
 
 .menuAdmin > li > a{
   display: block;
-  padding: 15px 20px;
   color: #fff;
   text-decoration: none;
   overflow: visible;
@@ -254,7 +253,7 @@ body {font-family: Montserrat, Arial, Helvetica, sans-serif;}
 }
 
 .ruta-nowrap{
-  
+
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -329,7 +328,7 @@ body {font-family: Montserrat, Arial, Helvetica, sans-serif;}
 }
 
 @media screen and (max-width: 768px) {
-	
+
   .caja {
     width: 90%;
     height: 90%;
@@ -343,7 +342,7 @@ body {font-family: Montserrat, Arial, Helvetica, sans-serif;}
   height:50%;
   background-color: white;
   overflow: hidden;
-  
+
 }
 
 #nombre .nombre{
