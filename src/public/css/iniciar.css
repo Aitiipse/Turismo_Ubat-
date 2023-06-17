@@ -400,10 +400,12 @@ body {
   }
 
 
-  .atracmodal{
+  .atracmodal {
     cursor: pointer;
     margin-top: 1.7%;
-  }
+    border-radius: 10%;
+    /* box-shadow: 4px 0.5vw 1rem var(--sombra); */
+}
 
   @keyframes banner {
     0% {

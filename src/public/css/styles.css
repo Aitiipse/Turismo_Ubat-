@@ -324,7 +324,7 @@ optgroup,
 textarea {
   margin: 0;
   font-family: inherit;
-  font-size: inherit;
+  /* font-size: inherit; */
   line-height: inherit;
 }
 
@@ -765,6 +765,7 @@ progress {
   width: 90px;
     height: 111px;
     font-size: 12px;
+    overflow: hidden;
 }
 
 .col-3 {
@@ -980,6 +981,8 @@ progress {
     width: 90px;
     height: 111px;
     font-size: 12px;
+    overflow: hidden;
+
   }
 
   .col-sm-3 {
@@ -1201,6 +1204,8 @@ progress {
     width: 120px;
   height: 148px;
   font-size: 14px;
+  overflow: hidden;
+
   }
 
   .col-md-3 {
@@ -1421,6 +1426,8 @@ progress {
     width: 159px;
   height: 197px;
   font-size: 14px;
+    overflow: hidden;
+
   }
 
   .col-lg-3 {
@@ -1643,6 +1650,7 @@ progress {
     width: 190px;
   height: 234px;
   font-size: 16px;
+  overflow: hidden;
   
 
   }
@@ -1866,6 +1874,8 @@ progress {
     width: 190px;
   height: 234px;
   font-size: 16px;
+  overflow: hidden;
+
   }
 
   .col-xxl-3 {
@@ -3298,22 +3308,28 @@ fieldset:disabled .btn {
 }
 
 .btn-secondary {
-  color: #fff;
-  background-color: #2c3e50;
-  border-color: #2c3e50;
+  color: var(--gris);
+  /* background-color: #2c3e50; */
+  /* border-color: #2c3e50; */
+  background-color: var(--blanco);
+  border-width: thin;
+  border-top-style: hidden;
+  border-bottom-style: hidden;
+  border-left-style: hidden;
+  border-right-style: hidden;
 }
 
 .btn-secondary:hover {
-  color: #fff;
-  background-color: #253544;
-  border-color: #233240;
+  color: var(--gris);
+  /* background-color: #253544;
+  border-color: #233240; */
 }
 
 .btn-check:focus+.btn-secondary,
 .btn-secondary:focus {
-  color: #fff;
-  background-color: #253544;
-  border-color: #233240;
+  color: var(--gris);
+  /* background-color: #253544;
+  border-color: #233240; */
   box-shadow: 0 0 0 0.25rem rgba(76, 91, 106, 0.5);
 }
 
@@ -3322,9 +3338,9 @@ fieldset:disabled .btn {
 .btn-secondary:active,
 .btn-secondary.active,
 .show>.btn-secondary.dropdown-toggle {
-  color: #fff;
-  background-color: #233240;
-  border-color: #212f3c;
+  color: var(--gris);
+  /* background-color: #233240;
+  border-color: #212f3c; */
 }
 
 .btn-check:checked+.btn-secondary:focus,
@@ -12818,6 +12834,8 @@ html {
   margin: 6pt;
   cursor: pointer;
   font-size: 16px;
+  overflow: hidden;
+
 }
 
 
@@ -12888,13 +12906,13 @@ html {
   border: 0.125rem solid rgba(0, 0, 0, 0.125);
   border-radius: 15px 15px 20px 20px;
   overflow: hidden;
-  margin: 10pt;
+  /* margin: 10pt; */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(../img/marca.png);
   transition: transform 0.3s ease;
-  box-shadow: 4px 0.5vw 1rem  var(--sombra);
+  box-shadow: 0px 01vw 1rem 2px  var(--sombra);
 }
 
 .imgcard3:hover {
