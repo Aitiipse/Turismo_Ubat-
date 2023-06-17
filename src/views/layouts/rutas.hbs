@@ -32,7 +32,7 @@
 
 
 
-    
+
 </head>
 
 
@@ -44,142 +44,154 @@
 <header x-data="{ open: false }" class="header " id="page-top">
     <!-- Logo -->
     <div class="header">
-        <button class="header__button-nav--open hbb" x-on:click="open = true"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-letter-m" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-   <path d="M6 20v-16l6 14l6 -14v16"></path>
-</svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-letter-e" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-   <path d="M17 4h-10v16h10"></path>
-   <path d="M7 12l8 0"></path>
-</svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-letter-n" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-   <path d="M7 20v-16l10 16v-16"></path>
-</svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-letter-u" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-   <path d="M6 4v11a5 5 0 0 0 5 5h2a5 5 0 0 0 5 -5v-11"></path>
-</svg></button>
+        <button class="header__button-nav--open hbb" x-on:click="open = true"><svg xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-letter-m" width="20" height="20" viewBox="0 0 24 24"
+                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M6 20v-16l6 14l6 -14v16"></path>
+            </svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-letter-e" width="20"
+                height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M17 4h-10v16h10"></path>
+                <path d="M7 12l8 0"></path>
+            </svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-letter-n" width="20"
+                height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M7 20v-16l10 16v-16"></path>
+            </svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-letter-u" width="20"
+                height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M6 4v11a5 5 0 0 0 5 5h2a5 5 0 0 0 5 -5v-11"></path>
+            </svg></button>
 
     </div>
          <nav class="navPrin text-uppercase frente " x-bind:class="open ? 'nav--show' : ''">
-      
+
 
         <ul class="nav__ul menuAdmin ">
-             <li class="inicio-boton"><a class="btn-sideBar-SubMenu " x-on:click="open = false" href="./#page-top"><i class="zmdi zmdi-shield-security zmdi-hc-fw"></i>
-                        <img src="/img/marca.png" class="marquilla" alt=""><i class="zmdi zmdi-caret-down pull-right"></i>
-                    </a></li>
-            
-            <li class="inicio-boton"><li class="inicio-boton"><a class="btn-sideBar-SubMenu " x-on:click="open = false" href="./#page-top"><i class="zmdi zmdi-shield-security zmdi-hc-fw"></i>
-                        <h6 class="t-white">INICIO</h6><i class="zmdi zmdi-caret-down pull-right"></i>
-                    </a></li></li><li><a class="btn-sideBar-SubMenu " x-on:click="open = false" href="#rutas"><i class="zmdi zmdi-shield-security zmdi-hc-fw"></i>
-                    <h6 class="t-white" >RUTAS TURÍSTICAS</h6><i class="zmdi zmdi-caret-down pull-right"></i>
+            <li class="inicio-boton"><a class="btn-sideBar-SubMenu " x-on:click="open = false" href="./#page-top"><i
+                        class="zmdi zmdi-shield-security zmdi-hc-fw"></i>
+                    <img src="/img/marca.png" class="marquilla" alt=""><i class="zmdi zmdi-caret-down pull-right"></i>
                 </a></li>
-            <li><a class="btn-sideBar-SubMenu " x-on:click="open = false" href="/lista"><i class="zmdi zmdi-shield-security zmdi-hc-fw"></i>
+
+            <li class="inicio-boton">
+            <li class="inicio-boton"><a class="btn-sideBar-SubMenu " x-on:click="open = false" href="./#page-top"><i
+                        class="zmdi zmdi-shield-security zmdi-hc-fw"></i>
+                    <h6 class="t-white">INICIO</h6><i class="zmdi zmdi-caret-down pull-right"></i>
+                </a></li>
+            </li>
+            <li><a class="btn-sideBar-SubMenu " x-on:click="open = false" href="#rutas"><i
+                        class="zmdi zmdi-shield-security zmdi-hc-fw"></i>
+                    <h6 class="t-white">RUTAS TURÍSTICAS</h6><i class="zmdi zmdi-caret-down pull-right"></i>
+                </a></li>
+            <li><a class="btn-sideBar-SubMenu " x-on:click="open = false" href="/lista"><i
+                        class="zmdi zmdi-shield-security zmdi-hc-fw"></i>
                     <h6 class="t-white">ATRACTIVOS</h6><i class="zmdi zmdi-caret-down pull-right"></i>
                 </a></li>
-            <li><a class="btn-sideBar-SubMenu " x-on:click="open = false" href="./#noticias"><i class="zmdi zmdi-shield-security zmdi-hc-fw"></i>
+            <li><a class="btn-sideBar-SubMenu " x-on:click="open = false" href="./#noticias"><i
+                        class="zmdi zmdi-shield-security zmdi-hc-fw"></i>
                     <h6 class="t-white">NOTICIAS</h6><i class="zmdi zmdi-caret-down pull-right"></i>
                 </a></li>
-            <li><a class="btn-sideBar-SubMenu " x-on:click="open = false" href="./tipos"><i class="zmdi zmdi-shield-security zmdi-hc-fw"></i>
+            <li><a class="btn-sideBar-SubMenu " x-on:click="open = false" href="./tipos"><i
+                        class="zmdi zmdi-shield-security zmdi-hc-fw"></i>
                     <h6 class="t-white">TIPOS DE TURISMO</h6><i class="zmdi zmdi-caret-down pull-right"></i>
                 </a></li>
-            <li><a class="btn-sideBar-SubMenu " x-on:click="open = false" href="./#contactanos"><i class="zmdi zmdi-shield-security zmdi-hc-fw"></i>
+            <li><a class="btn-sideBar-SubMenu " x-on:click="open = false" href="./#contactanos"><i
+                        class="zmdi zmdi-shield-security zmdi-hc-fw"></i>
                     <h6 class="t-white">CONTACTANOS!!!</h6><i class="zmdi zmdi-caret-down pull-right"></i>
                 </a></li>
-            <li class=" perfil-boton  modal_IS_abrir  " x-on:click="open = false"><a class="  px-lg-4 "><i class="zmdi zmdi-shield-security zmdi-hc-fw"></i><svg xmlns="http://www.w3.org/2000/svg" width="40" height="30" color="white" fill="currentColor" class="" viewBox="0 0 16 16">
-                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"></path>
+            <li class=" perfil-boton  modal_IS_abrir  " x-on:click="open = false"><a class="  px-lg-4 "><i
+                        class="zmdi zmdi-shield-security zmdi-hc-fw"></i><svg xmlns="http://www.w3.org/2000/svg"
+                        width="40" height="30" color="white" fill="currentColor" class="" viewBox="0 0 16 16">
+                        <path
+                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z">
+                        </path>
                     </svg><i class="zmdi zmdi-caret-down pull-right"></i></a></li>
         </ul>
         <div class="nav__button" x-on:click="open = false">
             <button class="header__button-nav--close">Cerrar</button>
         </div>
     </nav>
-
-
     <!-- Logo -->
 
     <!-- Boton abrir -->
 
     <!-- Navegador -->
     <!--header-->
+    <br>
+    <b>
+        <h1>
+            <div id="titulo-ruta" class="info page-section-heading titulo-rutas text-uppercase">Nombre de la Pagina
+                Actual</div>
+        </h1>
+    </b>
+    <br>
+    <div class="info" id="info">
+        <p class="texto1 texto texto_inicial_index" id="textoruta">
+
+
+    </div>
+    <br>
     <div id="carouselExampleCaptions" class="ocultar carousel" data-bs-ride="true">
         <div class="carousel-inner ruta " id="imgBanner">
-            
+
 
         </div>
     </div>
 
-
+    <br>
 
 
     {{!-- NAVBAR --}}
 
     {{!-- FIN DEL NAVBAR --}}
-<br>
-   <b><h1> <div id="titulo-ruta" class="info page-section-heading titulo-rutas text-uppercase">Nombre de la Pagina Actual</div></h1></b>
-<br>
+
     <div class="linea" id="linea"></div>
 
     {{!-- CONTENIDO DE LA PAGINA --}}
 
 
-    <nav class=" navbar-expand-lg bg-transparent text-uppercase  opciones navrutas elemento-a-ocultar <%= ruta === '/lista' ? 'oculto' : '' %> " id="mainNav">
-
-        <div class="menu" >
-            <ul class="navbar-nav ms-auto rouned espacio navP" style=" background-color: var(--cafe);">
-
-                <li class=" espacio flecha"><a href="#page-top"> <svg xmlns="http://www.w3.org/2000/svg"
-                            class="icon icon-tabler icon-tabler-circle-arrow-up-filled" width="34" height="34"
-                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                            <path
-                                d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-4.98 3.66l-.163 .01l-.086 .016l-.142 .045l-.113 .054l-.07 .043l-.095 .071l-.058 .054l-4 4l-.083 .094a1 1 0 0 0 1.497 1.32l2.293 -2.293v5.586l.007 .117a1 1 0 0 0 1.993 -.117v-5.585l2.293 2.292l.094 .083a1 1 0 0 0 1.32 -1.497l-4 -4l-.082 -.073l-.089 -.064l-.113 -.062l-.081 -.034l-.113 -.034l-.112 -.02l-.098 -.006z"
-                                stroke-width="0" fill="currentColor"></path>
-                        </svg> </a></li>
-                <li class=" espacio"><a class="nav-link round" href="#info">
-                        <p>INFORMACIÓN</p>
-                    </a></li>
-                <li class=" espacio"><a class="nav-link round" href="#map">
-                        <p>MAPA</p>
-                    </a></li>
-                
-                <li class=" espacio"><a class="nav-link round" href="/#eventos">
-                        <p>EVENTOS</p>
-                    </a></li>
-            </ul>
-        </div>
-    </nav>
+   
     <script>
-// JavaScript para ocultar la sección si la ruta es /lista
-window.addEventListener('DOMContentLoaded', function() {
-var rutaActual = window.location.pathname; // Obtiene la ruta actual
-var imgBanner = document.getElementById('carouselExampleCaptions');
-var seccionLista = document.getElementById('mainNav');
-var linea = document.getElementById('linea');
-var lineaeventos = document.getElementById('lineaeventos');
-var eventos = document.getElementById('eventos');
-  // Verifica si la ruta actual coincide con '/lista'
-  if (rutaActual === '/lista') {
-    
-    if (seccionLista) {
-      imgBanner.style.display = 'none'; // Oculta la imagen
-      seccionLista.style.display = 'none'; // Oculta la sección
-      linea.style.display = 'none'; // Oculta la linea superior
-    }
-  }
-   if (rutaActual === '/ruta1' || rutaActual === '/ruta2' || rutaActual === '/ruta3' || rutaActual === '/ruta4' || rutaActual === '/ruta5') {
-    if (seccionLista) {
-      eventos.style.display = 'none'; // Oculta los eventos
-      lineaeventos.style.display = 'none'; // Oculta la linea superior
-    }
-  }
-});</script>
+        // JavaScript para ocultar la sección si la ruta es /lista
+        window.addEventListener('DOMContentLoaded', function () {
+            var rutaActual = window.location.pathname; // Obtiene la ruta actual
+            var imgBanner = document.getElementById('carouselExampleCaptions');
+            {{!-- var seccionLista = document.getElementById('mainNav'); --}}
+            var linea = document.getElementById('linea');
+            var lineaeventos = document.getElementById('lineaeventos');
+            var eventos = document.getElementById('eventos');
+            // Verifica si la ruta actual coincide con '/lista'
+            if (rutaActual === '/lista') {
+
+                if (seccionLista) {
+                    imgBanner.style.display = 'none'; // Oculta la imagen
+                    linea.style.display = 'none'; // Oculta la linea superior
+                }
+            }
+             else if (rutaActual === '/tipos') {
+
+                if (seccionLista) {
+                    imgBanner.style.display = 'none'; // Oculta la imagen
+                    linea.style.display = 'none'; // Oculta la linea superior
+                }
+            }
+             else if (rutaActual === '/ruta1' || rutaActual === '/ruta2' || rutaActual === '/ruta3' || rutaActual === '/ruta4' || rutaActual === '/ruta5') {
+                if (seccionLista) {
+                    eventos.style.display = 'none'; // Oculta los eventos
+                    lineaeventos.style.display = 'none'; // Oculta la linea superior
+                }
+            }
+        });</script>
 
 
     {{{body}}}
-<br>
-    <div class="linea" ></div>
-<br><br>
+    <br>
+    <div class="linea"></div>
+    <br><br>
     <section class="modal_container_IS ">
         <section class="modal_IS modal_cerrado_IS align-content-center">
             <div class="modal_ContendorC"><span class="cerrar_modal_IS">CANCELAR</span></div>
@@ -191,23 +203,24 @@ var eventos = document.getElementById('eventos');
                     <h5>CONTRASEÑA</h5>
                     <input type="password" name="password" id="password" placeholder="Contraseña" minlength="7"
                         required>
-                         <button id="showPassword" type="button" style="background-color: rgb(255, 170, 0); border: #ff9900;">Mostrar</button>
+                    <button id="showPassword" type="button"
+                        style="background-color: rgb(255, 170, 0); border: #ff9900;">Mostrar</button>
                     <button type="submit" class="ingresar ">Ingresar</button>
 
-                                  <script>
-                const passwordInput = document.getElementById("password");
-  const showPasswordButton = document.getElementById("showPassword");
+                    <script>
+                        const passwordInput = document.getElementById("password");
+                        const showPasswordButton = document.getElementById("showPassword");
 
-  showPasswordButton.addEventListener("click", () => {
-    if (passwordInput.type === "password") {
-      passwordInput.type = "text";
-      showPasswordButton.textContent = "Ocultar";
-    } else {
-      passwordInput.type = "password";
-      showPasswordButton.textContent = "Mostrar";
-    }
-  });
-</script>
+                        showPasswordButton.addEventListener("click", () => {
+                            if (passwordInput.type === "password") {
+                                passwordInput.type = "text";
+                                showPasswordButton.textContent = "Ocultar";
+                            } else {
+                                passwordInput.type = "password";
+                                showPasswordButton.textContent = "Mostrar";
+                            }
+                        });
+                    </script>
                 </form>
 
             </div>
@@ -215,23 +228,14 @@ var eventos = document.getElementById('eventos');
     </section>
 
     <div class="col-md-6" id="modal"> <a href="" id="nombre"></a></div>
-    
-    <section class="page-section portfolio content-display" id="eventos">
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">EVENTOS</h2>
-<br>
-        <iframe class="iframemapa"
-            src="https://calendar.google.com/calendar/embed?height=300&wkst=1&bgcolor=%23ffffff&ctz=America%2FBogota&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0&showTz=0&mode=MONTH&src=d2VidHVyaXNtb3ViYXRlQGdtYWlsLmNvbQ&color=%23039BE5"
-            style="border-width:0" width="100%" height="300" frameborder="0" scrolling="no"></iframe>
-    </section>
-<br>
-    <div class="linea" ></div>
-<br><br>
 
-     <section class="page-section portfolio rutas" id="rutas">
+    
+
+    <section class="page-section portfolio rutas" id="rutas">
         <div class="container grid">
 
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0" >RUTAS TURÍSTICAS</h2>
-<br>
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">RUTAS TURÍSTICAS</h2>
+            <br>
             <div class="rutaOrden  ">
 
                 <div class="pimg col-sm-2 col-md-2 col-lg-2  col-2 px-0"> <a href="/ruta1">
@@ -243,21 +247,21 @@ var eventos = document.getElementById('eventos');
 
                 <div class="pimg col-sm-2 col-md-2 col-lg-2  col-2 px-0"><a href="/ruta2">
                         <div class="pimg-content pimg-content2  mx-0" data-bs-toggle="modal" data-bs-target="#ruta2">
-                            <img src="/img/PB.png"  />
+                            <img src="/img/PB.png" />
                         </div>
                     </a>
                 </div>
 
                 <div class="pimg col-sm-2 col-md-2 col-lg-2  col-2 px-0 "><a href="/ruta3">
                         <div class="pimg-content pimg-content3  mx-0" data-bs-toggle="modal" data-bs-target="#ruta3">
-                            <img src="/img/PA.png"  />
+                            <img src="/img/PA.png" />
                         </div>
                     </a>
                 </div>
 
                 <div class="pimg col-sm-2 col-md-2 col-lg-2  col-2 px-0"><a href="/ruta4">
                         <div class="pimg-content pimg-content4  mx-0" data-bs-toggle="modal" data-bs-target="#ruta4">
-                            <img src="/img/PT.png"  />
+                            <img src="/img/PT.png" />
                         </div>
                     </a>
                 </div>
@@ -265,7 +269,7 @@ var eventos = document.getElementById('eventos');
                 <div class="pimg col-sm-2 col-md-2 col-lg-2  col-2 px-0">
                     <a href="/ruta5">
                         <div class="pimg-content pimg-content5  mx-0" data-bs-toggle="modal" data-bs-target="#ruta5">
-                            <img src="..//img/PE.png"  />
+                            <img src="..//img/PE.png" />
                         </div>
                     </a>
                 </div>
@@ -273,8 +277,8 @@ var eventos = document.getElementById('eventos');
         </div>
     </section>
     {{!-- FIN DE RUTAS --}}
-<br>
-    <div class="linea" ></div>
+    <br>
+    <div class="linea"></div>
     {{!-- Inicio de sesion --}}
 
     <section class="modal_container_IS ">
@@ -294,136 +298,162 @@ var eventos = document.getElementById('eventos');
             </div>
         </section>
     </section>
-<br> <br>
+    <br> <br>
 
 
-   <footer id="contactanos">
-     
-    <div class="footer-content">
-        
-        <img class="footerImg" src="img/bmu.png" alt=""><div class="footer-column">
-            <h4 class="text-uppercase ">TURISMO</h4>
-            <article>
+    <footer id="contactanos">
+
+        <div class="footer-content">
+
+            <img class="footerImg" src="img/bmu.png" alt="">
+            <div class="footer-column">
+                <h4 class="text-uppercase ">TURISMO</h4>
+                <article>
+                    <ul>
+                        <li><a href="#rutas" class="footer-route">RUTAS TURÍSTICAS</a></li>
+                        <li><a href="/lista" class="footer-route">Atractivos</a></li>
+                        <li><a href="/#noticias" class="footer-route">Noticias</a></li>
+                        <li><a href="/tipos" class="footer-route">Tipos De Turismo</a></li>
+                        <li><a href="/#eventos" class="footer-route">Eventos</a></li>
+                    </ul>
+                </article>
+
+            </div>
+            <div class="footer-column">
                 <ul>
-                    <li><a href="#rutas" class="footer-route" >RUTAS TURÍSTICAS</a></li>
-                    <li><a href="/lista" class="footer-route">Atractivos</a></li>
-                    <li><a href="/#noticias" class="footer-route">Noticias</a></li>
-                    <li><a href="/tipos" class="footer-route">Tipos De Turismo</a></li>
-                    <li><a href="/#eventos" class="footer-route">Eventos</a></li>
-                </ul>
-            </article>
-
-        </div><div class="footer-column">
-            <ul>
-                <li> <a href="https://www.pitscolombia.com.co/es/pits/ubate-pit-parque-principal" target="_blank">Punto
-                        De Información Turística </a></li>
-                <li><a href="http://www.ubate-cundinamarca.gov.co/">Página De La Alcaldía Municipal </a></li>
-                <li><a href="/contacto" target="_blank">CONTÁCTANOS</a></li>
-            </ul>
-        </div>
-        
-        <div class="footer-row">
-            <p class="lead me-auto">
-            </p><h4> VILLA DE SAN DIEGO DE UBATÉ </h4>
-            <p></p>
-        </div><div class="footer-column">
-            <div class="botones-redes">
-                <ul class="display-flex">
-                    <li class="d-f-social">
-                        <a href="https://www.instagram.com/" target="_blank" rel="noopener">
-                            <svg class="svg-inline--fa fa-instagram fa-2xl" style="color: #4f4f4f;" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg><!-- <i class="fa-brands fa-instagram fa-2xl" style="color: #4f4f4f;"></i> Font Awesome fontawesome.com -->
-                        </a>
-                    </li>
-
-                    <li class="d-f-social">
-                        <a href="https://www.facebook.com/" target="_blank" rel="noopener">
-                            <svg class="svg-inline--fa fa-facebook fa-2xl" style="color: #696969;" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.8 90.69 226.4 209.3 245V327.7h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.3 482.4 504 379.8 504 256z"></path></svg><!-- <i class="fa-brands fa-facebook fa-2xl" style="color: #696969;"></i> Font Awesome fontawesome.com -->
-                        </a>
-                    </li>
+                    <li> <a href="https://www.pitscolombia.com.co/es/pits/ubate-pit-parque-principal"
+                            target="_blank">Punto
+                            De Información Turística </a></li>
+                    <li><a href="http://www.ubate-cundinamarca.gov.co/">Página De La Alcaldía Municipal </a></li>
+                    <li><a href="/contacto" target="_blank">CONTÁCTANOS</a></li>
                 </ul>
             </div>
+
+            <div class="footer-row">
+                <p class="lead me-auto">
+                </p>
+                <h4> VILLA DE SAN DIEGO DE UBATÉ </h4>
+                <p></p>
+            </div>
+            <div class="footer-column">
+                <div class="botones-redes">
+                    <ul class="display-flex">
+                        <li class="d-f-social">
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+                                <svg class="svg-inline--fa fa-instagram fa-2xl" style="color: #4f4f4f;"
+                                    aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram"
+                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                                    data-fa-i2svg="">
+                                    <path fill="currentColor"
+                                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                                    </path>
+                                </svg>
+                                <!-- <i class="fa-brands fa-instagram fa-2xl" style="color: #4f4f4f;"></i> Font Awesome fontawesome.com -->
+                            </a>
+                        </li>
+
+                        <li class="d-f-social">
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+                                <svg class="svg-inline--fa fa-facebook fa-2xl" style="color: #696969;"
+                                    aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook"
+                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                    data-fa-i2svg="">
+                                    <path fill="currentColor"
+                                        d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.8 90.69 226.4 209.3 245V327.7h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.3 482.4 504 379.8 504 256z">
+                                    </path>
+                                </svg>
+                                <!-- <i class="fa-brands fa-facebook fa-2xl" style="color: #696969;"></i> Font Awesome fontawesome.com -->
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
 
-    </div>
-
-</footer>
+    </footer>
     <style>
-		.ruta11 {
-			background-image: url(/img/siguiendolospasosebatensesbanner.jpg);
-             background-repeat: no-repeat;
-            background-size: cover;
-		}
-        .ruta2 {
-			background-image: url(/img/saboresysaberesbanner.jpg);
+        .ruta11 {
+            background-image: url(/img/siguiendolospasosebatensesbanner.jpg);
             background-repeat: no-repeat;
             background-size: cover;
-		}
+        }
+
+        .ruta2 {
+            background-image: url(/img/saboresysaberesbanner.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
         .ruta3 {
-			background-image: url(/img/promeserosyromerosbanner.jpg);
-             background-repeat: no-repeat;
+            background-image: url(/img/promeserosyromerosbanner.jpg);
+            background-repeat: no-repeat;
             background-size: cover;
-		}
+        }
+
         .ruta4 {
-			background-image: url(/img/naturalezaenubatebanner.jpg);
-             background-repeat: no-repeat;
+            background-image: url(/img/naturalezaenubatebanner.jpg);
+            background-repeat: no-repeat;
             background-size: cover;
-		}
+        }
+
         .ruta5 {
-			background-image: url(/img/biciturismoenubatebanner.jpg);
-             background-repeat: no-repeat;
+            background-image: url(/img/biciturismoenubatebanner.jpg);
+            background-repeat: no-repeat;
             background-size: cover;
-		}
-         .rutatipos {
-			background-image: url(/img/rutatiposbanner.jpg);
-             background-repeat: no-repeat;
+        }
+
+        .rutatipos {
+            background-image: url(/img/rutatiposbanner.jpg);
+            background-repeat: no-repeat;
             background-size: cover;
-		}
+        }
+
         .rutaextra {
-			background-image: url(/img/rutaextrabanner.jpg);
-             background-repeat: no-repeat;
+            background-image: url(/img/rutaextrabanner.jpg);
+            background-repeat: no-repeat;
             background-size: cover;
-		}
-        
-	</style>
+        }
+    </style>
     <script>
-		// Obtener la ruta actual
-		var ruta = location.pathname;
+        // Obtener la ruta actual
+        var ruta = location.pathname;
         var imgb = document.getElementById("imgBanner");
         var miDiv = document.getElementById('titulo-ruta');
 
-		// Quitar la barra diagonal inicial
-		ruta = ruta.substring(1);
+        // Quitar la barra diagonal inicial
+        ruta = ruta.substring(1);
 
-		// Cambiar el fondo de la página según la ruta
-		if (ruta === "") {
-			imgb.classList.add("");
-		} else if (ruta === "ruta1") {
-			imgb.classList.add("ruta11");
+        // Cambiar el fondo de la página según la ruta
+        if (ruta === "") {
+            imgb.classList.add("");
+        } else if (ruta === "ruta1") {
+            imgb.classList.add("ruta11");
             miDiv.innerHTML = 'SIGUIENDO LOS PASOS EBATENSES';
-            
-		} else if (ruta === "ruta2") {
-			imgb.classList.add("ruta2");
+
+        } else if (ruta === "ruta2") {
+            imgb.classList.add("ruta2");
             miDiv.innerHTML = 'SABORES Y SABERES EBATENSES';
 
-		} else if (ruta === "ruta3") {
-			imgb.classList.add("ruta3");
+        } else if (ruta === "ruta3") {
+            imgb.classList.add("ruta3");
             miDiv.innerHTML = 'PROMESEROS Y ROMEROS UBATENSES';
-		}else if (ruta === "ruta4") {
-			imgb.classList.add("ruta4");
+        } else if (ruta === "ruta4") {
+            imgb.classList.add("ruta4");
             miDiv.innerHTML = 'NATURALEZA EN UBATÉ';
-		}else if (ruta === "ruta5") {
-			imgb.classList.add("ruta5");
+        } else if (ruta === "ruta5") {
+            imgb.classList.add("ruta5");
             miDiv.innerHTML = 'BICITURISMO EN UBATÉ';
-		}else if (ruta === "tipos") {
-			imgb.classList.add("rutatipos");
+        } else if (ruta === "tipos") {
+            imgb.classList.add("rutatipos");
             miDiv.innerHTML = 'TIPOS DE TURISMO';
-		} else if (ruta === "lista") {
+        } else if (ruta === "lista") {
             miDiv.innerHTML = 'LISTA DE ATRACTIVOS';
         } else {
             imgb.classList.add("rutaextra");
             miDiv.innerHTML = 'UBATE POR DESCUBRIR';
         }
-	</script>
+    </script>
 
 
     <script>

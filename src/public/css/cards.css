@@ -149,20 +149,20 @@
    background:rgba(0,50,100,0.7);
 }
 
-.cardnoticias-content
-{
+.cardnoticias-content {
   color: #000;
   /* overflow: scroll; */
   white-space: normal;
   text-overflow: ellipsis;
-  text-align: center; 
-  justify-items: center; 
+  text-align: center;
+  justify-items: center;
   padding: 5px;
-  top: 170px; 
-  opacity: 0; 
+  display: flex;
+  top: 170px;
+  opacity: 0;
   transform: scale(0);
   font-size: 11px;
-  background-color: rgba(248, 248, 255, 0.528);
+  background-color: rgba(248, 248, 255, 0.809);
   /* margin: auto; */
   height: 100%;
   width: 100%;
@@ -170,6 +170,11 @@
   justify-self: center;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 *::-webkit-scrollbar {

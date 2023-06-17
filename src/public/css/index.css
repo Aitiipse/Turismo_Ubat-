@@ -783,8 +783,8 @@ li:hover {
   white-space: nowrap;
 
 }
-.botonglobal{
-background-color: rgba(138, 177, 189, 0.534);
+.botonglobal {
+  background-color: var(--azul);
 }
 
 .marquilla{
