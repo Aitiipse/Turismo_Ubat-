@@ -811,3 +811,8 @@ background-color: rgba(138, 177, 189, 0.534);
   font-size: 4.5vw;
   color: crimson;
 }
+
+p.texto_inicial_index {
+  font-size: 1.5vw;
+  line-height: 1.5;
+}

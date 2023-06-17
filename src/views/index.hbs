@@ -26,15 +26,16 @@
     <link rel="icon" type="image/png" href="./img/basilica.jpg" sizes="100x100">
     <title>UBATÉ, ¡¡¡ DESTINO DE TRADICIONES !!!</title>
 
-<link rel="stylesheet" type="text/css" href="engine1/style.css" />
-<script type="text/javascript" src="engine1/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="engine1/style.css" />
+    <script type="text/javascript" src="engine1/jquery.js"></script>
 
 </head>
 
 <body id="page-top">
     <div class="errores">
         <p align="">
-        {{!-- <h5>{{mensajeError}}</h5> --}}
+            {{!--
+        <h5>{{mensajeError}}</h5> --}}
         </p>
     </div>
     <header x-data="{ open: false }" class="header" id="page-top">
@@ -82,7 +83,7 @@
                     </li>
                     <li><a class="btn-sideBar-SubMenu " x-on:click="open = false" href="#rutas"><i
                                 class="zmdi zmdi-shield-security zmdi-hc-fw"></i>
-                            <h6 class="t-white" >RUTAS TURÍSTICAS</h6><i class="zmdi zmdi-caret-down pull-right"></i>
+                            <h6 class="t-white">RUTAS TURÍSTICAS</h6><i class="zmdi zmdi-caret-down pull-right"></i>
                         </a></li>
                     <li><a class="btn-sideBar-SubMenu " x-on:click="open = false" href="/lista"><i
                                 class="zmdi zmdi-shield-security zmdi-hc-fw"></i>
@@ -117,58 +118,57 @@
 
 
 
-<div class="carousel" id="carouse">
-<div class="banner " id="carousel">
-  <div class="slide" style="background-image: url('/img/banner1.jpg');" data-name="DIA UBATENSE"></div>
-  <div class="slide" style="background-image: url('/img/banner2.jpg');" data-name="BASILICA MENOR"></div>
-  <div class="slide" style="background-image: url('/img/banner3.JPG');" data-name="BAUTISTERIO DE LA BASILICA MENOR"></div>
-  <div class="slide" style="background-image: url('/img/banner4.JPG');" data-name="INTERIOR BASILICA MENOR"></div>
-  <div class="slide" style="background-image: url('/img/banner5.jpg');" data-name="SANTA BARBARA"></div>
-  <div class="slide" style="background-image: url('/img/banner6.JPG');" data-name="AMANECER UBATENSE"></div>
-</div>
+        <div class="carousel" id="carouse">
+            <div class="banner " id="carousel">
+                <div class="slide" style="background-image: url('/img/banner1.jpg');" data-name="DIA UBATENSE"></div>
+                <div class="slide" style="background-image: url('/img/banner2.jpg');" data-name="BASILICA MENOR"></div>
+                <div class="slide" style="background-image: url('/img/banner3.JPG');"
+                    data-name="BAUTISTERIO DE LA BASILICA MENOR"></div>
+                <div class="slide" style="background-image: url('/img/banner4.JPG');"
+                    data-name="INTERIOR BASILICA MENOR"></div>
+                <div class="slide" style="background-image: url('/img/banner5.jpg');" data-name="SANTA BARBARA"></div>
+                <div class="slide" style="background-image: url('/img/banner6.JPG');" data-name="AMANECER UBATENSE">
+                </div>
+            </div>
 
-<div id="image-name"></div>
+            <div id="image-name"></div>
 
-<script>
-window.addEventListener('load', function() {
-  var carousel = document.getElementById('carousel');
-  var imageName = document.getElementById('image-name');
-  var slides = carousel.getElementsByClassName('slide');
-  var currentSlide = 0;
+            <script>
+                window.addEventListener('load', function () {
+                    var carousel = document.getElementById('carousel');
+                    var imageName = document.getElementById('image-name');
+                    var slides = carousel.getElementsByClassName('slide');
+                    var currentSlide = 0;
 
-  function showImageName() {
-    var currentName = slides[currentSlide].getAttribute('data-name');
-    imageName.innerText = currentName;
-  }
+                    function showImageName() {
+                        var currentName = slides[currentSlide].getAttribute('data-name');
+                        imageName.innerText = currentName;
+                    }
 
-  function nextSlide() {
-    slides[currentSlide].style.opacity = 0;
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].style.opacity = 1;
-    showImageName();
-  }
+                    function nextSlide() {
+                        slides[currentSlide].style.opacity = 0;
+                        currentSlide = (currentSlide + 1) % slides.length;
+                        slides[currentSlide].style.opacity = 1;
+                        showImageName();
+                    }
 
-  // Show initial slide
-  slides[currentSlide].style.opacity = 1;
-  showImageName();
+                    // Show initial slide
+                    slides[currentSlide].style.opacity = 1;
+                    showImageName();
 
-  // Switch to next slide every 3 seconds
-  setInterval(nextSlide, 3000);
-});
-</script>
-</div>
+                    // Switch to next slide every 3 seconds
+                    setInterval(nextSlide, 3000);
+                });
+            </script>
+        </div>
         <br>
     </header>
     {{!-- FIN DE MULTIMEDIA --}} <br>
     <div class="page-section portfolio atractivos">
-        <p>¡Bienvenido a nuestra página de turismo de Ubate! aquí encontrarás toda la información que necesitas para
-            conocer los atractivos y características que tiene nuestro municipio para ofrecerte como visitante. Ubaté es
-            una ciudad con una rica historia y cultura, y está rodeada de paisajes naturales impresionantes. Además,
-            cuenta con una amplia variedad eventos culturales que muestran la historia y tradiciones de la ciudad. Para
-            aquellos que disfrutan de actividades al aire libre, ofrece una amplia variedad de parques, hacer
-            senderismo, ciclismo o acampar, siempre rodeado de bellos paisajes. Estamos seguros de que tu visita a Ubaté
-            será una experiencia inolvidable, y esperamos poder ayudarte a planificar tu viaje y descubrir todo lo que
-            esta hermosa municipio tiene para ofrecer. ¡Bienvenido a Ubaté!
+        <p class="texto_inicial_index">¡Bienvenido a nuestra página de turismo de Ubaté! Aquí encontrarás toda la
+            información necesaria para conocer los atractivos y características de nuestro municipio. Ubaté, una ciudad
+            con historia, cultura y hermosos paisajes naturales. Descubre eventos culturales, parques y actividades al
+            aire libre. Tu visita será inolvidable. ¡Bienvenido a Ubaté!
         </p>
     </div>
 
@@ -176,11 +176,11 @@ window.addEventListener('load', function() {
     <br>
     <div class="linea"></div>
     <br>
-   <section class="page-section portfolio rutas" id="rutas">
+    <section class="page-section portfolio rutas" id="rutas">
         <div class="container grid">
 
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0" >RUTAS TURÍSTICAS</h2>
-<br>
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">RUTAS TURÍSTICAS</h2>
+            <br>
             <div class="rutaOrden  ">
 
                 <div class="pimg col-sm-2 col-md-2 col-lg-2  col-2 px-0"> <a href="/ruta1">
@@ -192,21 +192,21 @@ window.addEventListener('load', function() {
 
                 <div class="pimg col-sm-2 col-md-2 col-lg-2  col-2 px-0"><a href="/ruta2">
                         <div class="pimg-content pimg-content2  mx-0" data-bs-toggle="modal" data-bs-target="#ruta2">
-                            <img src="/img/PB.png"  />
+                            <img src="/img/PB.png" />
                         </div>
                     </a>
                 </div>
 
                 <div class="pimg col-sm-2 col-md-2 col-lg-2  col-2 px-0 "><a href="/ruta3">
                         <div class="pimg-content pimg-content3  mx-0" data-bs-toggle="modal" data-bs-target="#ruta3">
-                            <img src="/img/PA.png"  />
+                            <img src="/img/PA.png" />
                         </div>
                     </a>
                 </div>
 
                 <div class="pimg col-sm-2 col-md-2 col-lg-2  col-2 px-0"><a href="/ruta4">
                         <div class="pimg-content pimg-content4  mx-0" data-bs-toggle="modal" data-bs-target="#ruta4">
-                            <img src="/img/PT.png"  />
+                            <img src="/img/PT.png" />
                         </div>
                     </a>
                 </div>
@@ -214,7 +214,7 @@ window.addEventListener('load', function() {
                 <div class="pimg col-sm-2 col-md-2 col-lg-2  col-2 px-0">
                     <a href="/ruta5">
                         <div class="pimg-content pimg-content5  mx-0" data-bs-toggle="modal" data-bs-target="#ruta5">
-                            <img src="..//img/PE.png"  />
+                            <img src="..//img/PE.png" />
                         </div>
                     </a>
                 </div>
@@ -259,8 +259,9 @@ window.addEventListener('load', function() {
             </div>
             <div class="linea"></div>
             <br><br>
-            <h2 id="eventos" class="page-section-heading text-center text-uppercase text-secondary mb-0">EVENTOS</h2><br>
-<br>
+            <h2 id="eventos" class="page-section-heading text-center text-uppercase text-secondary mb-0">EVENTOS</h2>
+            <br>
+            <br>
             <div class="  ">
                 {{!-- <iframe class="calendario"
                     src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FBogota&showPrint=0&showCalendars=0&showTz=0&src=d2VidHVyaXNtb3ViYXRlQGdtYWlsLmNvbQ&color=%23039BE5"
@@ -278,20 +279,20 @@ window.addEventListener('load', function() {
 
     <section class="modal_container_IS ">
         <section class="modal_IS modal_cerrado_IS align-content-center">
-            <div class="modal_ContendorC"><span class="cerrar_modal_IS">CANCELAR</span></div>
+            <div class="modal_ContendorC"><span style=" color:var(--azul_button)">
+                    <h4>INICIAR SESIÓN</h4>
+                </span><span class="cerrar_modal_IS">X</span></div>
             <br>
             <div class="modal_Cuerpo">
                 <form class="modal_formulario_IS modal_formulario" id="login-form" action="/login-email" method="POST">
-                    <h5>CORREO</h5>
+                    <h5>Correo</h5>
                     <input type="email" name="email" id="email" placeholder="Correo Electronico" required>
                     <input type="email" name="emailb" id="emailb" placeholder="Correo Electronico" style="display:none">
-                    <h5>CONTRASEÑA</h5>
+                    <h5>Contraseña</h5>
                     <input type="password" name="password" id="password" placeholder="Contraseña" minlength="7"
                         required>
-
-                    <button id="showPassword" style="background-color: rgb(255, 170, 0); border: #ff9900;"
+                    <button id="showPassword" style="background-color: var(--azul_button)"
                         type="button">Mostrar</button>
-                    <br>
                     <button type="submit" class="ingresar ">Ingresar</button>
 
                     <script>
@@ -329,10 +330,11 @@ window.addEventListener('load', function() {
             <div class="modalAtractivos-footer">
                 <output id="updatedAt" style="border: none;"></output>
             </div>
-            <div class=" imagen_modal"><img id="iframe" src="" frameborder="0" style="width:100%;height: 100%;object-fit: contain;" /></div>
+            <div class=" imagen_modal"><img id="iframe" src="" frameborder="0"
+                    style="width:100%;height: 100%;object-fit: contain;" /></div>
             <output id="descripcion" style="border: none;"></output>
 
-            <a href="/lista"class="botonglobal"><button class="botonglobal" type="button"> Ver Más</button></a>
+            <a href="/lista" class="botonglobal"><button class="botonglobal" type="button"> Ver Más</button></a>
 
         </div>
 
@@ -356,14 +358,15 @@ window.addEventListener('load', function() {
 <br><br>
 
 <footer id="contactanos">
-     
+
     <div class="footer-content">
-        
-        <img class="footerImg" src="img/bmu.png" alt=""><div class="footer-column">
+
+        <img class="footerImg" src="img/bmu.png" alt="">
+        <div class="footer-column">
             <h4 class="text-uppercase ">TURISMO</h4>
             <article>
                 <ul>
-                    <li><a href="#rutas" class="footer-route" >RUTAS TURÍSTICAS</a></li>
+                    <li><a href="#rutas" class="footer-route">RUTAS TURÍSTICAS</a></li>
                     <li><a href="/lista" class="footer-route">Atractivos</a></li>
                     <li><a href="#noticias" class="footer-route">Noticias</a></li>
                     <li><a href="/tipos" class="footer-route">Tipos De Turismo</a></li>
@@ -371,7 +374,8 @@ window.addEventListener('load', function() {
                 </ul>
             </article>
 
-        </div><div class="footer-column">
+        </div>
+        <div class="footer-column">
             <ul>
                 <li> <a href="https://www.pitscolombia.com.co/es/pits/ubate-pit-parque-principal" target="_blank">Punto
                         De Información Turística </a></li>
@@ -379,23 +383,39 @@ window.addEventListener('load', function() {
                 <li><a href="/contacto" target="_blank">CONTÁCTANOS</a></li>
             </ul>
         </div>
-        
+
         <div class="footer-row">
             <p class="lead me-auto">
-            </p><h4> VILLA DE SAN DIEGO DE UBATÉ </h4>
+            </p>
+            <h4> VILLA DE SAN DIEGO DE UBATÉ </h4>
             <p></p>
-        </div><div class="footer-column">
+        </div>
+        <div class="footer-column">
             <div class="botones-redes">
                 <ul class="display-flex">
                     <li class="d-f-social">
                         <a href="https://www.instagram.com/" target="_blank" rel="noopener">
-                            <svg class="svg-inline--fa fa-instagram fa-2xl" style="color: #4f4f4f;" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg><!-- <i class="fa-brands fa-instagram fa-2xl" style="color: #4f4f4f;"></i> Font Awesome fontawesome.com -->
+                            <svg class="svg-inline--fa fa-instagram fa-2xl" style="color: #4f4f4f;" aria-hidden="true"
+                                focusable="false" data-prefix="fab" data-icon="instagram" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+                                <path fill="currentColor"
+                                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                                </path>
+                            </svg>
+                            <!-- <i class="fa-brands fa-instagram fa-2xl" style="color: #4f4f4f;"></i> Font Awesome fontawesome.com -->
                         </a>
                     </li>
 
                     <li class="d-f-social">
                         <a href="https://www.facebook.com/" target="_blank" rel="noopener">
-                            <svg class="svg-inline--fa fa-facebook fa-2xl" style="color: #696969;" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.8 90.69 226.4 209.3 245V327.7h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.3 482.4 504 379.8 504 256z"></path></svg><!-- <i class="fa-brands fa-facebook fa-2xl" style="color: #696969;"></i> Font Awesome fontawesome.com -->
+                            <svg class="svg-inline--fa fa-facebook fa-2xl" style="color: #696969;" aria-hidden="true"
+                                focusable="false" data-prefix="fab" data-icon="facebook" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                                <path fill="currentColor"
+                                    d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.8 90.69 226.4 209.3 245V327.7h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.3 482.4 504 379.8 504 256z">
+                                </path>
+                            </svg>
+                            <!-- <i class="fa-brands fa-facebook fa-2xl" style="color: #696969;"></i> Font Awesome fontawesome.com -->
                         </a>
                     </li>
                 </ul>

@@ -59,7 +59,7 @@
 /*modal secundario*/
 .modal_IS {
     width: 35%;
-    height: 60%;
+    height: 70%;
 }
 .modal_IS2 {
     width: 35%;
@@ -87,7 +87,7 @@
 
 /*boton iniciar*/
 .modal_formulario button {
-    width: 30%;
+    width: 64%;
     /* font-size: 1.6rem; */
 }
 

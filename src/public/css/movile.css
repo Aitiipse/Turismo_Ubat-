@@ -218,7 +218,7 @@
     height: 100vh;
     top: 0;
     left: 0;
-    background: rgb(0, 0, 0, 0.5);
+    background: var(--negro_claro);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -238,7 +238,8 @@
 
 .modal_IS {
     width: 90%;
-    background-image: url(../img/basilica.jpg);
+    /* background-image: url(../img/basilica.jpg); */
+    background-color: var(--blanco);
     background-repeat: no-repeat;
     height: 70%;
     background-size: cover;
@@ -268,44 +269,48 @@
 
 .cerrar_modal_IS {
     width: min-content;
-   background-color: rgb(175, 104, 104);
-   margin-top: 5pt;
-   border-radius: 5px;
-   color: var(--blanco);
-   border-style: solid;
-   border-bottom-color: #000;
-   border-radius: 1px;
-   border: rgb(170, 73, 73);
-   border-style: solid;
-   color: var(--blanco);
-   padding: 5px;
-   border-radius: 5px;
-   cursor: pointer;
-   font-size: 1rem;
-   margin-bottom: 5px;
-   margin-left: 10pt;
+    background-color: rgb(175, 104, 104);
+    margin-top: 5pt;
+    /* border-radius: 5px; */
+    /* color: var(--blanco); */
+    /* border-style: solid; */
+    /* border-bottom-color: #000; */
+    /* border-radius: 1px; */
+    border: rgb(170, 73, 73);
+    border-style: solid;
+    color: var(--blanco);
+    padding: 5px;
+    /* margin-left: 2%; */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    margin-left: 10pt;
 }
 
 
 
 .modal_formulario_IS {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: left;
     flex-direction: column;
     width: 100%;
-    
+    align-content: center;
+    flex-wrap: wrap;
 }
 
 .modal_formulario_IS input[type=email],
 .modal_formulario_IS input[type=password] {
-    background-color: #ded9d999;
-    margin-bottom: 10px;
-    border: 1.5px solid #000;
-    border-radius: 10px;
-    padding: 5px;
-    width: 70%;
-    height: 30px;
+   
+        background-color: #ded9d999;
+        margin-bottom: 10px;
+        border-color: var(--gris);
+        border-radius: 10px;
+        padding: 5px;
+        width: 70%;
+        height: 30px;
+    
 }
 
 /************************Registrarse***********************************/
@@ -330,6 +335,8 @@
     flex-direction: column;
     height: 95%;
     width: 100%;
+    background-color: #ffffff59;
+    color: var(--gris);
 }
 .modal_Cuerpo h1{
     font-size: var(--font2);
@@ -341,11 +348,10 @@
 .modal_ContendorC {
     width: 100%;
     margin-top: 20pt;
-    display:grid;
-    justify-content: center;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
-    
-   
+    background-color: #ffffff59;
 }
 .modal_logo {
     width: 140px;

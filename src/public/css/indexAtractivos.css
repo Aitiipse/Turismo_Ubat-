@@ -344,11 +344,11 @@ body {font-family: Montserrat, Arial, Helvetica, sans-serif;}
 }
 
 .linea {
-  border: 1px solid rgba(94, 22, 22, 0.293);
+  border: 3px solid rgba(94, 22, 22, 0.293);
   width: 90%;
   margin: auto;
   height: 20%;
-  background-color: var(--cafe);
+  background-color: var(--azul);
 }
 
 .burguer{

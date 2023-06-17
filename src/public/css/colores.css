@@ -5,8 +5,10 @@
 	--azul_claro: #3b76fb;
 	--rosado: #a71737;
 	--negro: #010101;
+    --negro_claro: rgb(0 0 0 / 88%);
 	--blanco_opaco: #d8d4d4;
 	--blanco: #fff ;
     --sombra: #3a3939ef;
     --gris: #434343;
+    --azul_button: rgb(18 74 131);
   }
