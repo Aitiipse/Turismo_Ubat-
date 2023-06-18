@@ -33,7 +33,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
   
         formrespuesta.innerHTML += `
           <div class="card3-sm card3-md card3-lg  card3-2 card3-xl card3-xxl atracmodal">
-            <button class="tn btn-secondary btn-modal" type="" data-id="${doc.id}">
+            <button class="btn_name btn-secondary btn-modal" type="" data-id="${doc.id}">
               ${atractivo.nombre}
             </button>
             <div class="imgcard3" style="object-fit: contain; background-image: url(${atractivo.input0});" data-id="${doc.id}">
