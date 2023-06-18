@@ -27,62 +27,57 @@ let input0 = document.querySelectorAll(".input0")[0];
 
 
 window.addEventListener("DOMContentLoaded", async (e) => {
-  listar((querySnapshot) => {
-
-    querySnapshot.forEach((doc) => {
-      const atractivo = doc.data();
-
-
-      formrespuesta.innerHTML += `
-
-        <div class="card3-sm card3-md card3-lg  card3-2 card3-xl card3-xxl atracmodal" >
-        <button  class="tn btn-secondary btn-modal" type="" data-id="${doc.id}" >
-          ${atractivo.nombre} </button>
-        <div class="imgcard3 "   style="object-fit: contain; background-image: url(${atractivo.input0});" data-id="${doc.id}"  >
+    listar((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        const atractivo = doc.data();
+  
+        formrespuesta.innerHTML += `
+          <div class="card3-sm card3-md card3-lg  card3-2 card3-xl card3-xxl atracmodal">
+            <button class="tn btn-secondary btn-modal" type="" data-id="${doc.id}">
+              ${atractivo.nombre}
+            </button>
+            <div class="imgcard3" style="object-fit: contain; background-image: url(${atractivo.input0});" data-id="${doc.id}">
             </div>
-             
-            
-            </div>
-      `;
-    });
-
-    const btnsModal = formrespuesta.querySelectorAll(".imgcard3");
-    btnsModal.forEach((btn) => {
-      btn.addEventListener("click", async (e) => {
-        console.log("llega aca");
-
-        try {
-          const doc = await getAtractivo(e.target.dataset.id);
-          const task = doc.data();
-          modal.style.display = "block";
-          modal["nombre"].value = task.nombre;
-          modal["descripcion"].value = task.descripcion;
-          modal["ruta"].value = task.ruta;
-          modal["updatedAt"].value = task.updatedAt;
-          modal["iframe"].src = task.input0;
-
-
-          // formularioAtractivos["task-title"].value = task.nombre;
-          // formularioAtractivos["task-description"].value = task.ruta;
-
-          // editStatus = true;
-          // id = doc.id;
-          // formularioAtractivos["btn-task-form"].innerText = "modal";
-        } catch (error) {
-          console.log(error);
-        }
+          </div>
+        `;
       });
-    });
-    span.onclick = function () {
-      modal.style.display = "none";
-    }
-    window.onclick = function (event) {
-      if (event.target == modal) {
+  
+      const btnsModal = formrespuesta.querySelectorAll(".imgcard3");
+      btnsModal.forEach((btn) => {
+        btn.addEventListener("click", async (e) => {
+          console.log("llega aca");
+  
+          try {
+            const doc = await getAtractivo(e.target.dataset.id);
+            const task = doc.data();
+            modal.style.display = "block";
+            modal["nombre"].value = task.nombre;
+            modal["descripcion"].value = task.descripcion;
+            modal["ruta"].value = task.ruta;
+            modal["updatedAt"].value = task.updatedAt;
+            modal["iframe"].src = task.input0;
+            const botonAtractivo = document.getElementById("botonatractivo");
+            botonAtractivo.href = "/lista?atractivoId=" + doc.id;
+  
+            console.log(doc.id);
+          } catch (error) {
+            console.log(error);
+          }
+        });
+      });
+  
+      span.onclick = function () {
         modal.style.display = "none";
-      }
-    }
-  });
-
+      };
+  
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    });
+  
+  
 
   listarAtractivos((querySnapshot) => {
 

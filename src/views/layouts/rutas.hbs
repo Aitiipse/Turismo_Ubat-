@@ -129,7 +129,7 @@
         </h1>
     </b>
     <br>
-    <div class="info" id="info">
+    <div class="" id="info">
         <p class="texto1 texto texto_inicial_index" id="textoruta">
 
 
@@ -155,37 +155,45 @@
 
 
    
-    <script>
-        // JavaScript para ocultar la sección si la ruta es /lista
-        window.addEventListener('DOMContentLoaded', function () {
-            var rutaActual = window.location.pathname; // Obtiene la ruta actual
-            var imgBanner = document.getElementById('carouselExampleCaptions');
-            {{!-- var seccionLista = document.getElementById('mainNav'); --}}
-            var linea = document.getElementById('linea');
-            var lineaeventos = document.getElementById('lineaeventos');
-            var eventos = document.getElementById('eventos');
-            // Verifica si la ruta actual coincide con '/lista'
-            if (rutaActual === '/lista') {
+  <script>
+  window.addEventListener('DOMContentLoaded', function() {
+    var rutaActual = window.location.pathname; // Obtiene la ruta actual
+    var imgBanner = document.getElementById('carouselExampleCaptions');
+    var linea = document.getElementById('linea');
+    var lineaeventos = document.getElementById('lineaeventos');
+    var eventos = document.getElementById('eventos');
 
-                if (seccionLista) {
-                    imgBanner.style.display = 'none'; // Oculta la imagen
-                    linea.style.display = 'none'; // Oculta la linea superior
-                }
-            }
-             else if (rutaActual === '/tipos') {
-
-                if (seccionLista) {
-                    imgBanner.style.display = 'none'; // Oculta la imagen
-                    linea.style.display = 'none'; // Oculta la linea superior
-                }
-            }
-             else if (rutaActual === '/ruta1' || rutaActual === '/ruta2' || rutaActual === '/ruta3' || rutaActual === '/ruta4' || rutaActual === '/ruta5') {
-                if (seccionLista) {
-                    eventos.style.display = 'none'; // Oculta los eventos
-                    lineaeventos.style.display = 'none'; // Oculta la linea superior
-                }
-            }
-        });</script>
+    // Verifica si la ruta actual coincide con '/lista'
+    if (rutaActual === '/lista') {
+      if (imgBanner) {
+        imgBanner.style.display = 'none'; // Oculta la imagen
+      }
+      if (linea) {
+        linea.style.display = 'none'; // Oculta la línea superior
+      }
+    } else if (rutaActual === '/tipos') {
+      if (imgBanner) {
+        imgBanner.style.display = 'none'; // Oculta la imagen
+      }
+      if (linea) {
+        linea.style.display = 'none'; // Oculta la línea superior
+      }
+    } else if (
+      rutaActual === '/ruta1' ||
+      rutaActual === '/ruta2' ||
+      rutaActual === '/ruta3' ||
+      rutaActual === '/ruta4' ||
+      rutaActual === '/ruta5'
+    ) {
+      if (eventos) {
+        eventos.style.display = 'none'; // Oculta los eventos
+      }
+      if (lineaeventos) {
+        lineaeventos.style.display = 'none'; // Oculta la línea superior
+      }
+    }
+  });
+</script>
 
 
     {{{body}}}
