@@ -779,7 +779,7 @@ li:hover {
 
 .espacio-noticias{
   overflow: auto;
-  -webkit-overflow-scrolling:unset;
+  /* -webkit-overflow-scrolling:unset; */
   white-space: nowrap;
 
 }

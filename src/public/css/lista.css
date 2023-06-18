@@ -76,10 +76,10 @@
 	}
   }
 
-  .cardlis-title{
-	background-color: #636363;
-	color: white;
-  }
+  .cardlis-title {
+    background-color: #ffffff94;
+    color: black;
+}
 
 .cardlisimg {
 	width: 100%;
@@ -107,7 +107,7 @@
 	align-items: center;
 	justify-content: space-between;
 	padding: 20px;
-	background-color:rgba(140, 145, 148, 0.47);
+	background-color: var(--blanco);
 	/* margin: 2%; */
 
 }

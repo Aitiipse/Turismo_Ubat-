@@ -454,3 +454,7 @@ body {
     font-weight: bold;
     background-color: white;
   }
+
+  #sectionlista{
+    color: var(--gris);
+  }
