@@ -73,6 +73,10 @@
   flex: 1 100%;
 }
 
+.tamaño-completo{
+  width: 100%;
+}
+
 .menu {
   width: 70%;
   height: auto;
