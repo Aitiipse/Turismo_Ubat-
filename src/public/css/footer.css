@@ -3,7 +3,7 @@ footer {
   padding: 20px;
   width: 100%;
   margin: auto;
-  background-color: var(--azul_claro);
+  background-color: var(--azul);
 
 }
 
@@ -29,7 +29,7 @@ footer li {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  background-color: var(--blanco);
+  background-color: var(--azul_claro);
 
 }
 

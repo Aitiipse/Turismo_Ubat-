@@ -118,3 +118,6 @@ section#mapa1 {
   }
 }
 
+.texto_gris{
+  color: var(--gris);
+}

@@ -9,20 +9,19 @@
 </head>
 
 <body class="body gridContainer ">
-  <button class="ver btnG crear" onclick="ver"><a class="ver" href="/editarAtractivos">EDITAR-ELIMINAR
-      ATRACTIVOS</a></button>
+  <button class="ver btnG crear" onclick="ver"><a class="ver" href="/editarAtractivos">Editar-Eliminar atractivos</a></button>
   <div class="">
-    <h2><b>CREAR ATRACTIVOS</b></h2>
+    <h2><b>Crear Atractivos</b></h2>
 
 
 
     <br>
-    <h2> REGISTRAR</h2>
+    <h2> Registrar</h2>
     <div>
       <form action="/new_publication" method="POST" enctype="multipart/form-data" class="formulario"
         id="formularioeditar">
         <div class="espaciotext1">
-          <label class="">NOMBRE DEL ATRACTIVO</label>
+          <label class="">Nombre del atractivo</label>
 
           <input required id="nombre" name="nombre" type="text" placeholder="Nombre">
           <label>Ubicación geográfica:</label>
@@ -58,7 +57,7 @@
 
         <section class="horarios" id="horarios">
           <div class="form-group">
-            <label for="domingo">HORARIO:</label>
+            <label for="domingo">Horario:</label>
             <input required type="text" id="horario" name="horario">
            {{!-- Cierra <input required type="time" id="salidaDo" name="salidaDo"> --}}
         </div> <br>
@@ -118,7 +117,7 @@
           </div>
           <div class="espaciotext2">
             <div>
-              <label>RUTA A LA QUE PERTENECE</label>
+              <label>Ruta a la que pertenece</label>
               <select required id="ruta" name="ruta">
                 {{!-- <option value="0">Seleccione</option> --}}
                 <option value="Cultura e Historia">Cultura e Historia</option>
@@ -128,13 +127,13 @@
                 <option value="Deportivo">Deportivo</option>
               </select>
             </div>
-            <label>POR FAVOR INSERTAR IMAGEN *</label>
+            <label>Por favor insertar una Imagen *</label>
 
             <div class="file" required>
               <img id="imagenicono" class="imagenicono" src="/img/imagenicono.png" alt="Imagen" />
               <input id="archivo" type="file" name="input0" class="foto_publicacion f1" accept="image/.png, .jpeg, .jpg"
                 style="display:none" required>
-              <span id="nombre-archivo">SELECCIONA UNA IMAGEN</span>
+              <span id="nombre-archivo">Selecciona una imagen.</span>
             </div>
 
           </div>
@@ -178,7 +177,7 @@
         </script>
 
         <br>
-        <input type="submit" value="AGREGAR" id="btn-task-send" class="botonglobal subir btn btn-primary">
+        <input type="submit" value="Agregar" id="btn-task-send" class="botonglobal subir btn btn-primary">
       </form>
     </div>
 
