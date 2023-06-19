@@ -109,6 +109,8 @@ class envioImg {
 		await dataupdate.update({url: url});
 	}
 	
+		
+
 }
 
 module.exports = envioImg;

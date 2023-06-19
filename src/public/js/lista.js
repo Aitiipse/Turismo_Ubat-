@@ -34,20 +34,21 @@ window.addEventListener("DOMContentLoaded", async (e) => {
             sectionlista["descripcion"].value = actual.descripcion;
             sectionlista["ruta"].value = `pertenece a la ruta ${actual.ruta}.`;
   
-            sectionlista["entradaDo"].value = actual.entradaDo || "";
-            sectionlista["entradaLu"].value = actual.entradaLu || "";
-            sectionlista["entradaMa"].value = actual.entradaMa || "";
-            sectionlista["entradaMi"].value = actual.entradaMi || "";
-            sectionlista["entradaJu"].value = actual.entradaJu || "";
-            sectionlista["entradaVi"].value = actual.entradaVi || "";
-            sectionlista["entradaSa"].value = actual.entradaSa || "";
-            sectionlista["salidaDo"].value = actual.salidaDo || "";
-            sectionlista["salidaLu"].value = actual.salidaLu || "";
-            sectionlista["salidaMa"].value = actual.salidaMa || "";
-            sectionlista["salidaMi"].value = actual.salidaMi || "";
-            sectionlista["salidaJu"].value = actual.salidaJu || "";
-            sectionlista["salidaVi"].value = actual.salidaVi || "";
-            sectionlista["salidaSa"].value = actual.salidaSa || "";
+            sectionlista["horario"].value = actual.horario || "";
+            // sectionlista["entradaDo"].value = actual.entradaDo || "";
+            // sectionlista["entradaLu"].value = actual.entradaLu || "";
+            // sectionlista["entradaMa"].value = actual.entradaMa || "";
+            // sectionlista["entradaMi"].value = actual.entradaMi || "";
+            // sectionlista["entradaJu"].value = actual.entradaJu || "";
+            // sectionlista["entradaVi"].value = actual.entradaVi || "";
+            // sectionlista["entradaSa"].value = actual.entradaSa || "";
+            // sectionlista["salidaDo"].value = actual.salidaDo || "";
+            // sectionlista["salidaLu"].value = actual.salidaLu || "";
+            // sectionlista["salidaMa"].value = actual.salidaMa || "";
+            // sectionlista["salidaMi"].value = actual.salidaMi || "";
+            // sectionlista["salidaJu"].value = actual.salidaJu || "";
+            // sectionlista["salidaVi"].value = actual.salidaVi || "";
+            // sectionlista["salidaSa"].value = actual.salidaSa || "";
 
 
             const regex = /^<iframe\s+src="https:\/\/www\.google\.com\/maps\/embed\?.*?"\s+width="\d+"\s+height="\d+"\s+style="border:0;"\s+allowfullscreen=""\s+loading="lazy"\s+referrerpolicy="no-referrer-when-downgrade"><\/iframe>$/

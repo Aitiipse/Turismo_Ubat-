@@ -222,6 +222,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    pointer-events: none;
+
 }
 .modal_container_IS2 {
     position: fixed;
@@ -251,6 +253,8 @@
     transform: translateY(0%);
     transition: transform 1s;
     justify-content: center;
+    pointer-events: auto;
+position: absolute;
 }
 .modal_IS2 {
     width: 90%;
@@ -715,4 +719,14 @@ l
     font-size: 1.2rem;
     font-family: var(--font2);
     margin-left: 2%;
+}
+
+.mostrar_input{
+     background-color: #ded9d999;
+        margin-bottom: 10px;
+        border-color: var(--gris);
+        border-radius: 10px;
+        padding: 5px;
+        width: 70%;
+        height: 30px;
 }

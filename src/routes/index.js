@@ -452,6 +452,7 @@ router.post('/update_data_personal', async (req, res) => {
 		});
 });
 
+
 //actualizar estado de publicacion
 router.post('/estadoPublicacion', async (req, res) => {
 	let { id_p } = req.body;
@@ -797,6 +798,11 @@ router.get('/lista', (req, res) => {
 router.get('/intentos', (req, res) => {
 	
 	res.render("intentos", { layout: 'extra.hbs' })
+})
+
+router.get('/contacto', (req, res) => {
+	
+	res.render("contacto", { layout: 'rutas.hbs' })
 })
 
 

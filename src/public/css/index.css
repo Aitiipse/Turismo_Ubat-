@@ -804,12 +804,12 @@ li:hover {
 }
 
 .slide_extra p {
-  text-transform: uppercase;
-  text-shadow: solid 1px #b11616;
+  /* text-transform: uppercase; */
+  text-shadow: solid 1px var(--sombra);
   filter: brightness(5px);
   font-weight: bolder;
-  font-size: 4.5vw;
-  color: crimson;
+  font-size: 2.7vw;
+  color: var(--gris);
 }
 
 p.texto_inicial_index {

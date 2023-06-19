@@ -25,17 +25,17 @@
         <form class=" formRegisto " id="register-form" action="/new-user-email" method="POST" class="contenido"
             autocomplete="off">
             <b>
-                <div> NOMBRE<input type="text" name="name" id="name" placeholder="Nombre Completo" required></div>
-                <div> NUMERO DE TELEFONO<input type="number" name="phone" id="phone" placeholder="Número de Teléfono"
+                <div> NOMBRE<input type="text" name="name" id="name"  required></div>
+                <div> NUMERO DE TELEFONO<input type="number" name="phone" id="phone" 
                         min="3000000000" max="9999999999" required></div>
-                <div>CORREO ELECTRÓNICO<input type="email" name="email" id="email-a" placeholder="Correo Electronico"
+                <div>CORREO ELECTRÓNICO<input type="email" name="email" id="email-a" 
                         autocomplete="off" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></div>
-                <div> CONTRASEÑA<input type="password" name="passwordd" id="passwordd" placeholder="Contraseña"
+                <div> CONTRASEÑA<input type="password" name="passwordd" id="passwordd" 
                         minlength="8" autocomplete="off" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                         title="La contraseña debe tener al menos 8 caracteres, incluyendo mayúsculas, minúsculas y números"
                         required>
                     VERIFICAR CONTRASEÑA<input type="password" name="confirmPassword" id="confirmPassword"
-                        placeholder="Verificar Contraseña" autocomplete="off" minlength="8"
+                         autocomplete="off" minlength="8"
                         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                         title="La contraseña debe tener al menos 8 caracteres, incluyendo mayúsculas, minúsculas y números"
                         required></div>
@@ -43,10 +43,10 @@
             <div class="btnG" type="button"><a href="https://calendar.google.com/calendar/u/0/r?pli=1" target="_blank" onclick="mostrarmensaje()"
                     class="btn-sideBar-SubMenu">Calendar</a></div>
                     <br>
-                <button id="togglePassword" type="button" class="btn btn-primary">MOSTRAR</button>
+                <button id="togglePassword" type="button" class="btn btn-primary">Mostrar</button>
                 <br>
             </b>
-            <button id="boton" type="submit" class="btn btn-primary">Registrar</button>
+            <button id="boton" type="submit" class="btn btn-primary" style=" width: 24%;">Registrar</button>
 
             <script>
                 const togglePasswordButton = document.getElementById("togglePassword");

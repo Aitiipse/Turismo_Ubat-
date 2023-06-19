@@ -4,8 +4,8 @@
   <link rel="stylesheet" href="./css/crear/crearPub_m.css">
   <link rel="stylesheet" href="./css/crear/crearPub_t.css" media="screen and (min-width:600px)">
   <link rel="stylesheet" href="./css/crear/crearPub_w.css" media="screen and (min-width:1000px)">
-    <link rel="stylesheet" type="text/css" href="./css/colores.css">
-
+  <link rel="stylesheet" href="./css/colores.css" media="screen and (min-width:1000px)">
+  
 </head>
 
 <body class="body gridContainer ">
@@ -58,11 +58,11 @@
 
         <section class="horarios" id="horarios">
           <div class="form-group">
-            <label for="domingo">Domingo:</label>
-           Abre  <input required type="time" id="entradaDo" name="entradaDo">
-           Cierra <input required type="time" id="salidaDo" name="salidaDo">
+            <label for="domingo">HORARIO:</label>
+            <input required type="text" id="horario" name="horario">
+           {{!-- Cierra <input required type="time" id="salidaDo" name="salidaDo"> --}}
         </div> <br>
-        <div class="form-group">
+        {{!-- <div class="form-group">
             <label for="lunes">Lunes:</label>
            Abre  <input required type="time" id="entradaLu" name="entradaLu">
            Cierra <input required type="time" id="salidaLu" nasalidame="salidaLu">
@@ -91,7 +91,7 @@
             <label for="sabado">Sábado:</label>
            Abre  <input required type="time" id="entradaSa" name="entradaSa">
            Cierra <input required type="time" id="salidaSa" name="salidaSa">
-        </div> <br>
+        </div> <br> --}}
         </section>
         <section class="row justify-content-center noticias">
           <div class="espaciotext2">
@@ -178,7 +178,7 @@
         </script>
 
         <br>
-        <input type="submit" value="AGREGAR" id="btn-task-send" class="subir btn btn-primary">
+        <input type="submit" value="AGREGAR" id="btn-task-send" class="botonglobal subir btn btn-primary">
       </form>
     </div>
 

@@ -108,7 +108,8 @@
                                 <path
                                     d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z">
                                 </path>
-                            </svg><i class="zmdi zmdi-caret-down pull-right"></i></a></li>
+                            </svg><i class="zmdi zmdi-caret-down pull-right"></i></a>
+                            </li>
                 </ul>
                 <div class="nav__button" x-on:click="open = false">
                     <button class="header__button-nav--close">Cerrar</button>
@@ -177,6 +178,13 @@
       if (linea) {
         linea.style.display = 'none'; // Oculta la línea superior
       }
+    } else if (rutaActual === '/contacto') {
+      if (imgBanner) {
+        imgBanner.style.display = 'none'; // Oculta la imagen
+      }
+      if (linea) {
+        linea.style.display = 'none'; // Oculta la línea superior
+      }
     } else if (
       rutaActual === '/ruta1' ||
       rutaActual === '/ruta2' ||
@@ -199,19 +207,22 @@
     <br>
     <div class="linea"></div>
     <br><br>
-    <section class="modal_container_IS ">
+        <section class="modal_container_IS ">
         <section class="modal_IS modal_cerrado_IS align-content-center">
-            <div class="modal_ContendorC"><span class="cerrar_modal_IS">CANCELAR</span></div>
+            <div class="modal_ContendorC"><span style=" color:var(--azul_button)">
+                    <h4>INICIAR SESIÓN</h4>
+                </span><span class="cerrar_modal_IS">X</span></div>
+            <br>
             <div class="modal_Cuerpo">
                 <form class="modal_formulario_IS modal_formulario" id="login-form" action="/login-email" method="POST">
-                    <h5>CORREO</h5>
+                    <h5>Correo</h5>
                     <input type="email" name="email" id="email" placeholder="Correo Electronico" required>
                     <input type="email" name="emailb" id="emailb" placeholder="Correo Electronico" style="display:none">
-                    <h5>CONTRASEÑA</h5>
+                    <h5>Contraseña</h5>
                     <input type="password" name="password" id="password" placeholder="Contraseña" minlength="7"
                         required>
-                    <button id="showPassword" type="button"
-                        style="background-color: rgb(255, 170, 0); border: #ff9900;">Mostrar</button>
+                    <button id="showPassword" style="background-color: var(--azul_button)"
+                        type="button">Mostrar</button>
                     <button type="submit" class="ingresar ">Ingresar</button>
 
                     <script>
@@ -233,7 +244,6 @@
             </div>
         </section>
     </section>
-
     <div class="col-md-6" id="modal"> <a href="" id="nombre"></a></div>
 
     
@@ -456,6 +466,8 @@
             miDiv.innerHTML = 'TIPOS DE TURISMO';
         } else if (ruta === "lista") {
             miDiv.innerHTML = 'LISTA DE ATRACTIVOS';
+        } else if (ruta === "contacto") {
+            miDiv.innerHTML = 'Contactanos!!!';
         } else {
             imgb.classList.add("rutaextra");
             miDiv.innerHTML = 'UBATE POR DESCUBRIR';

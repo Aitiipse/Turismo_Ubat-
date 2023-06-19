@@ -153,7 +153,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
           <div class=""></div>
           <div class="cardnoticias-content centrado-content-align flex">
             <div class="title">
-            <b> ${noticia.titular} : : : >> </b>
+            <b> ${noticia.titular}  </b>
             </div><br>
             <div class="description">${noticia.resumen}</div>
           </div>
@@ -412,6 +412,8 @@ document.getElementById("card4").style.visible="visible";
       }
     });
   });
+
+  
 
 });
 

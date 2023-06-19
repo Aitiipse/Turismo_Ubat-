@@ -13200,3 +13200,7 @@ form button {
 .calendario_admin_content {
   width: 90%;
 }
+
+.botonglobal {
+  background-color: var(--azul);
+}

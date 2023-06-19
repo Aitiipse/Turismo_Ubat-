@@ -91,6 +91,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
           const atractivo = doc.data();
           formularioAtractivos["nombre"].value = atractivo.nombre;
           formularioAtractivos["ruta"].value = atractivo.ruta;
+          formularioAtractivos["horario"].value = atractivo.horario;
           formularioAtractivos["descripcion"].value = atractivo.descripcion;
           formularioAtractivos["street"].value = atractivo.street;
           if (atractivo.a1) {
@@ -141,6 +142,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 
     const nombre = formularioAtractivos["nombre"];
     const ruta = formularioAtractivos["ruta"];
+    const horario = formularioAtractivos["horario"];
     const descripcion = formularioAtractivos["descripcion"];
     const street = formularioAtractivos["street"];
     const a1 = formularioAtractivos["a1"];
@@ -161,6 +163,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
         await actualizarAtractivo(id, {
           nombre: nombre.value,
           ruta: ruta.value,
+          horario: horario.value,
           descripcion: descripcion.value,
           street: street.value,
           a1: a1.value,

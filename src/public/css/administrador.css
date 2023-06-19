@@ -877,10 +877,10 @@ html *::after {
 	}
   }
 
-  .cardnoticias{
-	border: 3px solid rgba(74, 74, 74, 0.962);
-	border-radius: 0px 20px 12px 5px ;
-  }
+  .cardnoticias {
+    /* border: 3px solid rgba(74, 74, 74, 0.962); */
+    border-radius: 0px 20px 12px 5px;
+}
   .cardnoticias-content{
 	background-color: #99b1c490;
   }
@@ -897,6 +897,7 @@ html *::after {
 		display: flex;
 		flex-wrap: wrap;
 		width: 100%;
+		margin-top: 1vw;
   }
   
   .fruta1 {
@@ -925,7 +926,7 @@ html *::after {
 }
 
 .crear{   
-	background-color: #ff8c00;
+	background-color: var( --blanco);
 	text-transform: capitalize;
 }
 
