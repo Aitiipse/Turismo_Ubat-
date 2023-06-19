@@ -126,7 +126,7 @@ body {font-family: Montserrat, Arial, Helvetica, sans-serif;}
         left: 0;
         right: 0;
         bottom: 0;
-        background: var(--azul_claro_transparente);
+        background: var(--azul);
         transform: translateX(-100%);
         transition: 0.5s;
       }

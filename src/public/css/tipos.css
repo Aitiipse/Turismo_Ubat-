@@ -67,6 +67,31 @@ li:hover {
   line-height: 1.6vw;
 }
 
+@media (max-width: 700px) {
+.texto {
+  font-size: 0.9rem;
+  font-weight: 300;
+  padding-left: 16%;
+  /* width: 85%; */
+  padding-right: 16%;
+  /* line-height: 1.6vw; */
+}
+
+.info p {
+  /* background: rgb(111, 116, 58); */
+  text-align: justify;
+   padding-left: 16%; 
+}
+.texto {
+  font-size: 0.9rem;
+  font-weight: 300;
+  padding-left: 16%;
+  /* width: 85%; */
+  padding-right: 16%;
+  line-height: 1; */
+}
+}
+
 @media (max-width: 768px) {
   body {
     font-size: small;
