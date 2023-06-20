@@ -230,31 +230,21 @@ window.addEventListener("DOMContentLoaded", async (e) => {
   listarsitios1((querySnapshot) => {
     querySnapshot.forEach((doc) => {
       const atractivo = doc.data();
-
+  
       if (atractivo.ruta === "Cultura e Historia") {
         const cardHTML = `
-            <div class="card5">
-              <div class="imgcard3-rutas" style="background-image: url(${atractivo.input0});">
-                <div class="nombresitios">
-                  <a><b>${atractivo.nombre}</b></a>
-                </div>
-              </div>
-    
-              <div class="card4" style="background-image: url(${atractivo.input0}); display: none;">
-                <div class="to-contents">
-                  <a><b>${atractivo.nombre}</b></a>
-                  <div class="top">
-                    <a><b>${atractivo.ruta}</b></a>
-                    <div class="name-large"></div>
-                    <a><b>${atractivo.descripcion}</b></a>
-                  </div>
-                </div>
-              </div>
+          <br>
+          <div class="card3-sm card3-md card3-lg  card3-2 card3-xl card3-xxl atracmodal abc">
+            <button class="btn_name btn-secondary btn-modal" id="btn_name" type="" data-id="${doc.id}">
+              ${atractivo.nombre}
+            </button>
+            <div class="imgcard3 abc" style="object-fit: contain; background-image: url(${atractivo.input0});" data-id="${doc.id}">
             </div>
-          `;
-
+          </div>
+        `;
+  
         formsitios1.insertAdjacentHTML("beforeend", cardHTML);
-
+  
         const card3 = formsitios1.lastElementChild.querySelector(".imgcard3");
         const card4 = formsitios1.lastElementChild.querySelector(".card4");
         card3.addEventListener("click", (event) => {
@@ -262,154 +252,278 @@ window.addEventListener("DOMContentLoaded", async (e) => {
           event.stopPropagation();
         });
       }
+  
+      const btnsModal = formsitios1.querySelectorAll(".abc");
+      btnsModal.forEach((btn) => {
+        btn.addEventListener("click", async (e) => {
+          try {
+            const doc = await getAtractivo(e.target.dataset.id);
+            const task = doc.data();
+            modal.style.display = "block";
+  
+            // Renderizar los datos en el formulario modal
+            modal.querySelector("#nombre").textContent = task.nombre;
+            modal.querySelector("#descripcion").textContent = task.descripcion;
+            modal.querySelector("#ruta").textContent = task.ruta;
+            modal.querySelector("#updatedAt").textContent = task.updatedAt;
+            modal.querySelector("#iframe").src = task.input0;
+            const botonAtractivo = document.getElementById("botonatractivo");
+            botonAtractivo.href = "/lista?atractivoId=" + doc.id;
+          } catch (error) {
+            console.log(error);
+          }
+        });
+      });
+  
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+  
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
     });
   });
 
   listarsitios2((querySnapshot) => {
-
     querySnapshot.forEach((doc) => {
       const atractivo = doc.data();
-
-      if (atractivo.ruta == "Gastronómico") {
-
-        formsitios2.innerHTML += `
-
-    <div class="card5" >
-    <div class="imgcard3-rutas "  style=" background-image: url(${atractivo.input0});"   >
-    
-    <div class="nombresitios">
-        <a><b>${atractivo.nombre} </b> </a>
-        </div></div>
-         
-        <div class="card4" style=" background-image: url(${atractivo.input0});" display="none"   >
-        <div class="to-contents"  onclick="document.querySelector('.modal1').classList.remove('expand');event.stopPropagation();">
-           <a><b>${atractivo.nombre} </b> </a>
-          <div class="top">
-             <a><b>${atractivo.ruta} </b> </a>
-            <div class="name-large"> </div>
-             <a><b>${atractivo.descripcion} </b> </a>
+  
+      if (atractivo.ruta === "Gastronómico") {
+        const cardHTML = `
+          <br>
+          <div class="card3-sm card3-md card3-lg  card3-2 card3-xl card3-xxl atracmodal abc">
+            <button class="btn_name btn-secondary btn-modal" id="btn_name" type="" data-id="${doc.id}">
+              ${atractivo.nombre}
+            </button>
+            <div class="imgcard3 abc" style="object-fit: contain; background-image: url(${atractivo.input0});" data-id="${doc.id}">
+            </div>
           </div>
-        </div>
-      <script>
-      document.getElementById("card3").addEventListener("click", myFunction);
-
-function myFunction() {
-document.getElementById("card4").style.visible="visible";
-}
-      </script>
-  `;
+        `;
+  
+        formsitios2.insertAdjacentHTML("beforeend", cardHTML);
+  
+        const card3 = formsitios2.lastElementChild.querySelector(".imgcard3");
+        const card4 = formsitios2.lastElementChild.querySelector(".card4");
+        card3.addEventListener("click", (event) => {
+          card4.style.display = "block";
+          event.stopPropagation();
+        });
       }
+  
+      const btnsModal = formsitios2.querySelectorAll(".abc");
+      btnsModal.forEach((btn) => {
+        btn.addEventListener("click", async (e) => {
+          try {
+            const doc = await getAtractivo(e.target.dataset.id);
+            const task = doc.data();
+            modal.style.display = "block";
+  
+            // Renderizar los datos en el formulario modal
+            modal.querySelector("#nombre").textContent = task.nombre;
+            modal.querySelector("#descripcion").textContent = task.descripcion;
+            modal.querySelector("#ruta").textContent = task.ruta;
+            modal.querySelector("#updatedAt").textContent = task.updatedAt;
+            modal.querySelector("#iframe").src = task.input0;
+            const botonAtractivo = document.getElementById("botonatractivo");
+            botonAtractivo.href = "/lista?atractivoId=" + doc.id;
+          } catch (error) {
+            console.log(error);
+          }
+        });
+      });
+  
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+  
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
     });
   });
-
+  
   listarsitios3((querySnapshot) => {
-
     querySnapshot.forEach((doc) => {
       const atractivo = doc.data();
-
-      if (atractivo.ruta == "Religioso") {
-
-        formsitios3.innerHTML += `
-
-    <div class="card5" >
-    <div class="imgcard3-rutas "  style=" background-image: url(${atractivo.input0});"   >
-    
-    <div class="nombresitios">
-        <a><b>${atractivo.nombre} </b> </a>
-        </div></div>
-         
-        <div class="card4" style=" background-image: url(${atractivo.input0});" display="none"   >
-        <div class="to-contents"  onclick="document.querySelector('.modal1').classList.remove('expand');event.stopPropagation();">
-           <a><b>${atractivo.nombre} </b> </a>
-          <div class="top">
-             <a><b>${atractivo.ruta} </b> </a>
-            <div class="name-large"> </div>
-             <a><b>${atractivo.descripcion} </b> </a>
+  
+      if (atractivo.ruta === "Religioso") {
+        const cardHTML = `
+          <br>
+          <div class="card3-sm card3-md card3-lg  card3-2 card3-xl card3-xxl atracmodal abc">
+            <button class="btn_name btn-secondary btn-modal" id="btn_name" type="" data-id="${doc.id}">
+              ${atractivo.nombre}
+            </button>
+            <div class="imgcard3 abc" style="object-fit: contain; background-image: url(${atractivo.input0});" data-id="${doc.id}">
+            </div>
           </div>
-        </div>
-      <script>
-      document.getElementById("card3").addEventListener("click", myFunction);
-
-function myFunction() {
-document.getElementById("card4").style.visible="visible";
-}
-      </script>
-  `;
+        `;
+  
+        formsitios3.insertAdjacentHTML("beforeend", cardHTML);
+  
+        const card3 = formsitios3.lastElementChild.querySelector(".imgcard3");
+        const card4 = formsitios3.lastElementChild.querySelector(".card4");
+        card3.addEventListener("click", (event) => {
+          card4.style.display = "block";
+          event.stopPropagation();
+        });
       }
+  
+      const btnsModal = formsitios3.querySelectorAll(".abc");
+      btnsModal.forEach((btn) => {
+        btn.addEventListener("click", async (e) => {
+          try {
+            const doc = await getAtractivo(e.target.dataset.id);
+            const task = doc.data();
+            modal.style.display = "block";
+  
+            // Renderizar los datos en el formulario modal
+            modal.querySelector("#nombre").textContent = task.nombre;
+            modal.querySelector("#descripcion").textContent = task.descripcion;
+            modal.querySelector("#ruta").textContent = task.ruta;
+            modal.querySelector("#updatedAt").textContent = task.updatedAt;
+            modal.querySelector("#iframe").src = task.input0;
+            const botonAtractivo = document.getElementById("botonatractivo");
+            botonAtractivo.href = "/lista?atractivoId=" + doc.id;
+          } catch (error) {
+            console.log(error);
+          }
+        });
+      });
+  
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+  
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
     });
   });
 
   listarsitios4((querySnapshot) => {
-
     querySnapshot.forEach((doc) => {
       const atractivo = doc.data();
-
-      if (atractivo.ruta == "Naturaleza") {
-
-        formsitios4.innerHTML += `
-
-    <div class="card5" >
-    <div class="imgcard3-rutas "  style=" background-image: url(${atractivo.input0});"   >
-    
-    <div class="nombresitios">
-        <a><b>${atractivo.nombre} </b> </a>
-        </div></div>
-         
-        <div class="card4" style=" background-image: url(${atractivo.input0});" display="none"   >
-        <div class="to-contents"  onclick="document.querySelector('.modal1').classList.remove('expand');event.stopPropagation();">
-           <a><b>${atractivo.nombre} </b> </a>
-          <div class="top">
-             <a><b>${atractivo.ruta} </b> </a>
-            <div class="name-large"> </div>
-             <a><b>${atractivo.descripcion} </b> </a>
+  
+      if (atractivo.ruta === "Naturaleza") {
+        const cardHTML = `
+          <br>
+          <div class="card3-sm card3-md card3-lg  card3-2 card3-xl card3-xxl atracmodal abc">
+            <button class="btn_name btn-secondary btn-modal" id="btn_name" type="" data-id="${doc.id}">
+              ${atractivo.nombre}
+            </button>
+            <div class="imgcard3 abc" style="object-fit: contain; background-image: url(${atractivo.input0});" data-id="${doc.id}">
+            </div>
           </div>
-        </div>
-      <script>
-      document.getElementById("card3").addEventListener("click", myFunction);
-
-function myFunction() {
-document.getElementById("card4").style.visible="visible";
-}
-      </script>
-  `;
+        `;
+  
+        formsitios4.insertAdjacentHTML("beforeend", cardHTML);
+  
+        const card3 = formsitios4.lastElementChild.querySelector(".imgcard3");
+        const card4 = formsitios4.lastElementChild.querySelector(".card4");
+        card3.addEventListener("click", (event) => {
+          card4.style.display = "block";
+          event.stopPropagation();
+        });
       }
+  
+      const btnsModal = formsitios4.querySelectorAll(".abc");
+      btnsModal.forEach((btn) => {
+        btn.addEventListener("click", async (e) => {
+          try {
+            const doc = await getAtractivo(e.target.dataset.id);
+            const task = doc.data();
+            modal.style.display = "block";
+  
+            // Renderizar los datos en el formulario modal
+            modal.querySelector("#nombre").textContent = task.nombre;
+            modal.querySelector("#descripcion").textContent = task.descripcion;
+            modal.querySelector("#ruta").textContent = task.ruta;
+            modal.querySelector("#updatedAt").textContent = task.updatedAt;
+            modal.querySelector("#iframe").src = task.input0;
+            const botonAtractivo = document.getElementById("botonatractivo");
+            botonAtractivo.href = "/lista?atractivoId=" + doc.id;
+          } catch (error) {
+            console.log(error);
+          }
+        });
+      });
+  
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+  
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
     });
   });
 
   listarsitios5((querySnapshot) => {
-
     querySnapshot.forEach((doc) => {
       const atractivo = doc.data();
-
-      if (atractivo.ruta == "Deportivo") {
-
-        formsitios5.innerHTML += `
-
-    <div class="card5" >
-    <div class="imgcard3-rutas "  style=" background-image: url(${atractivo.input0});"   >
-    
-    <div class="nombresitios">
-        <a><b>${atractivo.nombre} </b> </a>
-        </div></div>
-         
-        <div class="card4" style=" background-image: url(${atractivo.input0});" display="none"   >
-        <div class="to-contents"  onclick="document.querySelector('.modal1').classList.remove('expand');event.stopPropagation();">
-           <a><b>${atractivo.nombre} </b> </a>
-          <div class="top">
-             <a><b>${atractivo.ruta} </b> </a>
-            <div class="name-large"> </div>
-             <a><b>${atractivo.descripcion} </b> </a>
+  
+      if (atractivo.ruta === "Deportivo") {
+        const cardHTML = `
+          <br>
+          <div class="card3-sm card3-md card3-lg  card3-2 card3-xl card3-xxl atracmodal abc">
+            <button class="btn_name btn-secondary btn-modal" id="btn_name" type="" data-id="${doc.id}">
+              ${atractivo.nombre}
+            </button>
+            <div class="imgcard3 abc" style="object-fit: contain; background-image: url(${atractivo.input0});" data-id="${doc.id}">
+            </div>
           </div>
-        </div>
-      <script>
-      document.getElementById("card3").addEventListener("click", myFunction);
-
-function myFunction() {
-document.getElementById("card4").style.visible="visible";
-}
-      </script>
-  `;
+        `;
+  
+        formsitios5.insertAdjacentHTML("beforeend", cardHTML);
+  
+        const card3 = formsitios5.lastElementChild.querySelector(".imgcard3");
+        const card4 = formsitios5.lastElementChild.querySelector(".card4");
+        card3.addEventListener("click", (event) => {
+          card4.style.display = "block";
+          event.stopPropagation();
+        });
       }
+  
+      const btnsModal = formsitios5.querySelectorAll(".abc");
+      btnsModal.forEach((btn) => {
+        btn.addEventListener("click", async (e) => {
+          try {
+            const doc = await getAtractivo(e.target.dataset.id);
+            const task = doc.data();
+            modal.style.display = "block";
+  
+            // Renderizar los datos en el formulario modal
+            modal.querySelector("#nombre").textContent = task.nombre;
+            modal.querySelector("#descripcion").textContent = task.descripcion;
+            modal.querySelector("#ruta").textContent = task.ruta;
+            modal.querySelector("#updatedAt").textContent = task.updatedAt;
+            modal.querySelector("#iframe").src = task.input0;
+            const botonAtractivo = document.getElementById("botonatractivo");
+            botonAtractivo.href = "/lista?atractivoId=" + doc.id;
+          } catch (error) {
+            console.log(error);
+          }
+        });
+      });
+  
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+  
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
     });
   });
 
