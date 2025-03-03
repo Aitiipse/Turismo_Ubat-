@@ -1,4 +1,14 @@
-{
+{ "type": "service_account",
+  "project_id": "ubate-travel",
+  "private_key_id": "e27c77875a6fce96763ade9a61c38366b6fbc993",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC1EUDD0LnNcipS\nIoldG9rb8a11wq5wjsJ2I6Wv1xMH/kNiU2emec1GRyC3ZaWGneggFZIvcRz0epZv\n/QwmzdSbV/1ImLDQPNeeFROn9YmqVVhB3qjtgAwzbB/Lzsrre4TUKQDqVXrCOBdO\nhsOUMignBY6sxoDt2AFYwrLUX61kqVwzLVzT720/VPG0Y6yLF8ccLPde9xWmUpri\n1CGyuGJ+BllBgw1N6EqzeArPcwsT/AnAsjGIPlngbbvilB7clN46PgrQoBT24Zja\nHmh1n6wZOb+7NvXF1/g08ASY+/LFESFHD9fWmQ+Scwg3u9lD3sScQGSK/Id96KV+\nMhwNtJf3AgMBAAECggEAE2CIy0vbjnpwwAB1LdMszUvkUc1nSKFmeykecp50KW9S\n+8NMPNsdFi/Hdwj4OVtNu51DWzNiM2GpFswAUGjHn2Y/s1Sv22EffAnqZBeZR3LB\nsq7m6h/BboFcN73mJmQ+F0xaDjnenMlO6Tbv2Dyz4lUsax4FLy7mGf8gDy08C6EM\nHO6Zp0NyZeAII7Ed5AXIfGUj5xHLav5IGoqpyN05O9u54NWkzRiQ3weAxh2Iq7+N\nnM17ZoFvMWVwVst7PiMymW6hO3xBGDH0+oY/+9oXIIxDOE32flcGElcrUDGDAUmF\nUdaJaWWB3itvWB7Swpfr+l7t4r4QR1XXgkr5Jj6HvQKBgQDhgQIa5rW69w1ApMtf\nmPMnOyAyKi21x7e3TbW6WO6FOFGznjLL9OX+KoKBxTXq0FZfCKw4Ix4zYE/4t7Ql\nJCRXYu9zsd9J3t86+LLs+Uogt7k0ZfhvGDxwL9fNWcoqxYh6pOfOlFlmCrbOgLuP\nr+ZJrsDqBl/qlEg/XADldjTBqwKBgQDNjde4x2zGEojrIDrkM3k7zhU+90seLOkk\nx6BfOm8Qf52yjp3Z/HvUkiTLB5AecnhDwTMsXoG13UxwSIneP8Tx6X6QnmXPxIw5\ni2DqPo2vDjqikD3SWhxdbZtEZGnk82odKE2M1EYmVstozJXa0ZPmI4qHbuCTvH0X\nAz1xdcQO5QKBgBWEBpxkeOBu4//P+WuUn1aV6JuAtL3MYXYG3xj5lUB2wCzgIj6d\njjgy/CK/m0ZdPHBy1mPAzgfe36J+fJyylxkTYn9qcECPGEN7KS89FdqLTQt30z1e\nVZ3qoq+AKq7sC/qPs2Jdey4mRYzscXjjMpjDKLrrgslR/pa1A4zhO2VjAoGBAIgb\nSuMUUccZ0MV30ub12mmqPNEzp+60KDBtapiDtbUD+2SXIJiNoWUQ3AH/4QL4IwAi\nNoNDlLnabdnPflLGgN76EA8sgxe++mbEDoksoF5wmoy32+ekOTH3+J6hqqiqMPJb\nlHYSvNx4Djo3dWat7TOvBvREi7nnTiDlyVKOeyKtAoGBANL+6sjfD+0p4FtIEQc0\nN0W+CXfNmsoretB/hDGUwmk3QKu6hm4OKFrhnaHwMjt1g+fZGv5DloG7CKzUKESy\nTtP0NkyUWjgK3D3PGfKsyDQnglL/S1JwcUVAF0gGj8QFyKX80dvuUTSUq0NweBZJ\nTwUY6XwJH3+XBFl02fr23y2b\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-vt90i@ubate-travel.iam.gserviceaccount.com",
+  "client_id": "114555553056733841315",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-vt90i%40ubate-travel.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
 	"type": "service_account",
 	"project_id": "ubate-travel",
 	"private_key_id": "bd2a1ed27a53a5b11e2cb565053ce2da0ca03545",
